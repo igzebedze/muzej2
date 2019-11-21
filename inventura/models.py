@@ -251,7 +251,7 @@ class Primerek(models.Model):
 	stevilka.short_description = u'Številka'
 
 	def __str__(self):
-		return self.inventarna_st
+		return "%d" % (self.inventarna_st,)
 
 	def get_absolute_url(self):
 		return "/admin/inventura/primerek/%d/" % (self.pk,)
