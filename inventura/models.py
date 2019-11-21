@@ -255,6 +255,10 @@ class Primerek(models.Model):
 
 	def get_absolute_url(self):
 		return "/admin/inventura/primerek/%d/" % (self.pk,)
+		
+	def st_razstav(self):
+		return "%d" % self.razstava_set.count()
+	st_razstav.short_description = u'Št razstav'
 
 	class Meta:
 		verbose_name_plural = "Primerki"
