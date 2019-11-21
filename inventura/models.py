@@ -121,7 +121,7 @@ class Proizvajalec(models.Model):
 	opis = models.TextField(blank=True)
 
 	def __str__(self):
-		return self.ime
+		return "%s, %s" % (self.ime, self.drzava)
 
 	class Meta:
 		verbose_name_plural = "Proizvajalci"
@@ -251,7 +251,7 @@ class Primerek(models.Model):
 	stevilka.short_description = u'Številka'
 
 	def __str__(self):
-		return "%d" % (self.inventarna_st,)
+		return "#%d : %s" % (self.inventarna_st, self.eksponat)
 
 	def get_absolute_url(self):
 		return "/admin/inventura/primerek/%d/" % (self.pk,)
@@ -263,14 +263,14 @@ class Razstava(models.Model):
 	primerki = models.ManyToManyField(Primerek)
 	naslov = models.CharField(max_length=255)
 	lokacija = models.ForeignKey(Lokacija, on_delete=models.PROTECT)
-	otvoritev = models.DateField()
-	zakljucek = models.DateField()
+	otvoritev = models.DateField(blank=True, null=True)
+	zakljucek = models.DateField(blank=True, null=True)
 	avtorji = models.ManyToManyField(Oseba)
 	opis = models.TextField()
 	dnevnik = HistoricalRecords()
 
 	def __str__(self):
-		return self.naslov
+		return "%s, %s, %s" % (self.naslov, self.lokacija, self.otvoritev)
 	class Meta:
 		verbose_name_plural = "Razstave"
     

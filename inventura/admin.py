@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
+from simple_history.admin import SimpleHistoryAdmin
 
 from inventura import models
 
@@ -7,7 +8,7 @@ class PrimerekInline(admin.StackedInline):
 	model = models.Primerek
 	extra = 0
 
-class EksponatAdmin(admin.ModelAdmin):
+class EksponatAdmin(SimpleHistoryAdmin):
 	inlines = [
 			PrimerekInline,
 	]
@@ -21,19 +22,22 @@ class OsebaAdmin(admin.ModelAdmin):
 class ProizvajalecAdmin(admin.ModelAdmin):
 	list_filter = ('drzava',)
 
-class PrimerekAdmin(admin.ModelAdmin):
+class RazstaveAdmin(admin.StackedInline):
+	model = models.Primerek.razstava_set.through
+
+class PrimerekAdmin(SimpleHistoryAdmin):
 	list_display = ('stevilka', 'eksponat', 'serijska_st', 'leto_proizvodnje')
 	list_filter = ('lokacija',)
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime')
-
+	inlines = [ RazstaveAdmin ]
 
 	def save_model(self, request, obj, form, change):
 		if not change:
 			obj.inventariziral = request.user
 		obj.save()
 
-class VhodAdmin(admin.ModelAdmin):
+class VhodAdmin(SimpleHistoryAdmin):
 	list_display = ('stevilka', 'lastnik', 'razlog', 'prevzel', 'cas_prevzema', 'inventorizirano')
 
 	search_fields = ('opis',)
@@ -55,5 +59,5 @@ admin.site.register(models.Oseba, OsebaAdmin)
 admin.site.register(models.Vhod, VhodAdmin)
 admin.site.register(models.Lokacija)
 admin.site.register(models.Primerek, PrimerekAdmin)
-admin.site.register(models.Razstava)
-admin.site.register(models.Izhod)
+admin.site.register(models.Razstava, SimpleHistoryAdmin)
+admin.site.register(models.Izhod, SimpleHistoryAdmin)
