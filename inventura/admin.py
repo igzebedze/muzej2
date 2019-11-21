@@ -26,7 +26,7 @@ class RazstaveAdmin(admin.StackedInline):
 	model = models.Primerek.razstava_set.through
 
 class PrimerekAdmin(SimpleHistoryAdmin):
-	list_display = ('stevilka', 'eksponat', 'serijska_st', 'leto_proizvodnje')
+	list_display = ('stevilka', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'st_razstav')
 	list_filter = ('lokacija',)
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime')
