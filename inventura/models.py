@@ -251,7 +251,7 @@ class Primerek(models.Model):
 	stevilka.short_description = u'Številka'
 
 	def __str__(self):
-		return unicode(self.inventarna_st)
+		return self.inventarna_st
 
 	def get_absolute_url(self):
 		return "/admin/inventura/primerek/%d/" % (self.pk,)
@@ -270,7 +270,7 @@ class Razstava(models.Model):
 	dnevnik = HistoricalRecords()
 
 	def __str__(self):
-		return unicode(self.naslov)
+		return self.naslov
 	class Meta:
 		verbose_name_plural = "Razstave"
     
