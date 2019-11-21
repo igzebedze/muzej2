@@ -10,7 +10,7 @@ class Lokacija(models.Model):
 
 	naslov = models.TextField(blank=True)
 
-	def __unicode__(self):
+	def __str__(self):
 		return self.ime
 
 	class Meta:
@@ -30,7 +30,7 @@ class Oseba(models.Model):
 
 	email = models.EmailField(blank=True, null=True)
 
-	def __unicode__(self):
+	def __str__(self):
 		return self.ime
 
 	class Meta:
@@ -86,7 +86,7 @@ class Vhod(models.Model):
 		else:
 			return ""
 
-	def __unicode__(self):
+	def __str__(self):
 		return self.stevilka()
 
 	def get_absolute_url(self):
@@ -101,7 +101,7 @@ class Kategorija(models.Model):
 
 	opis = models.TextField()
 
-	def __unicode__(self):
+	def __str__(self):
 		return self.ime
 
 	class Meta:
@@ -120,7 +120,7 @@ class Proizvajalec(models.Model):
 
 	opis = models.TextField(blank=True)
 
-	def __unicode__(self):
+	def __str__(self):
 		return self.ime
 
 	class Meta:
@@ -178,7 +178,7 @@ class Eksponat(models.Model):
 		return "%d" % self.primerek_set.count()
 	st_primerkov.short_description = u'Št primerkov'
 
-	def __unicode__(self):
+	def __str__(self):
 		return self.ime
 
 	class Meta:
@@ -250,7 +250,7 @@ class Primerek(models.Model):
 		return "%04d" % (self.inventarna_st,)
 	stevilka.short_description = u'Številka'
 
-	def __unicode__(self):
+	def __str__(self):
 		return unicode(self.inventarna_st)
 
 	def get_absolute_url(self):
@@ -269,7 +269,7 @@ class Razstava(models.Model):
 	opis = models.TextField()
 	dnevnik = HistoricalRecords()
 
-	def __unicode__(self):
+	def __str__(self):
 		return unicode(self.naslov)
 	class Meta:
 		verbose_name_plural = "Razstave"
@@ -330,7 +330,7 @@ class Izhod(models.Model):
 		else:
 			return ""
 
-	def __unicode__(self):
+	def __str__(self):
 		return self.stevilka()
 
 	def get_absolute_url(self):
