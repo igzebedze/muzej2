@@ -264,7 +264,7 @@ class Razstava(models.Model):
 	naslov = models.CharField(max_length=255)
 	lokacija = models.ForeignKey(Lokacija, on_delete=models.PROTECT)
 	otvoritev = models.DateField()
-	zaključek = models.DateField()
+	zakljucek = models.DateField()
 	avtorji = models.ManyToManyField(Oseba)
 	opis = models.TextField()
 	dnevnik = HistoricalRecords()
