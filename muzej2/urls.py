@@ -16,6 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from inventura.views import root, vhod, vhod_short, premik, primerek_short, izhod, izhod_short
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', root),
+	path('vhod/<int:id>/', vhod),	#  r'^vhod/([0-9]+)/'
+	path('v/<int:id>/', vhod_short),	# r'^[vV]/([0-9]+)/?'
+	path('izhod/<int:id>/', izhod),
+	path('x/<int:id>/', izhod_short),
+	path('i/<int:id>/', primerek_short),	# r'^[iI]/([0-9]+)/?'
+	path('premik/', premik),
+#	path(r'^wiki/', include('wiki.urls')),
 ]
