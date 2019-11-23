@@ -181,6 +181,7 @@ class Eksponat(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Eksponati"
+		ordering = ['ime']
 
 class Primerek(models.Model):
 	inventarna_st = models.PositiveIntegerField(
