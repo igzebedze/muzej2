@@ -11,3 +11,6 @@
 	{% if object.leto_proizvodnje %}<li>{{ object.leto_proizvodnje }}</li>{% endif %}
 	<li>stevilo primerkov: {{ object.st_primerkov }}</li>
 </ul>
+{% if user.is_authenticated %}
+        <p><a target="_blank" href="/admin/inventura/eksponat/{{ object.id }}/change/">Uredi</a></p>       
+{% endif %}    
