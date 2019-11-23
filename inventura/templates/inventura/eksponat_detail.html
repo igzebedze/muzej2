@@ -1,0 +1,13 @@
+<h3>{{ object.kategorija }}</h3>
+<h1>{{ object.ime }}</h1>
+<h2>{{ object.proizvajalec }}</h2>
+<ul>
+	<li>{{ object.tip }}</li>
+	<li>{{ object.opis }}</li>
+	{% if object.wikipedia %}<li>{{ object.wikipedia }}</li>{% endif %}
+	{% if object.oldcomputers %}<li>{{ object.oldcomputers }}</li>{% endif %}
+	{% if object.uradnastran %}<li>{{ object.uradnastran }}</li>{% endif %}
+	{% if object.vir %}<li>{{ object.vir }}</li>{% endif %}
+	{% if object.leto_proizvodnje %}<li>{{ object.leto_proizvodnje }}</li>{% endif %}
+	<li>stevilo primerkov: {{ object.st_primerkov }}</li>
+</ul>

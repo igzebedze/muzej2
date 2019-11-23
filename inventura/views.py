@@ -5,11 +5,18 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.http import Http404
 from django import forms
+from django.views.generic import ListView, DetailView
 
-from inventura.models import Vhod, Primerek, Lokacija, Izhod
+from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija
 
 def root(request):
 	return redirect('/admin/')
+
+class KategorijaList(ListView):
+	model = Kategorija
+
+class EksponatView(DetailView):
+	model = Eksponat
 
 @login_required
 def izhod(request, id):

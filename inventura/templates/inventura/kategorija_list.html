@@ -1,0 +1,19 @@
+<h1>Računalniški muzej</h1>
+<p>Seznam vseh eksponatov v zbirki Društva računalniški muzej</p>
+<h3>Kazalo po kategorijah</h3>
+<ul>
+{% for kategorija in object_list %}
+	<li><a href="#{{ kategorija.ime }}">{{ kategorija.ime }}</a> ({{ kategorija.eksponat_set.count }})</li>
+{% endfor %}
+</ul>
+<hr />
+{% for kategorija in object_list %}
+<h2><a name="{{ kategorija.ime }}">{{ kategorija.ime }}</a></h2>
+<p>{{ kategorija.opis }}</p>
+<ul>
+	{% for eksponat in kategorija.eksponat_set.all %}
+	<li><a href="/eksponat/{{ eksponat.id }}/">{{ eksponat }}</a>, {{ eksponat.proizvajalec }}</li>
+	{% endfor %}
+</ul>
+<hr />
+{% endfor %}

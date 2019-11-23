@@ -96,9 +96,7 @@ class Vhod(models.Model):
 		verbose_name_plural = "Vhodi"
 
 class Kategorija(models.Model):
-	ime = models.CharField(
-			max_length=255)
-
+	ime = models.CharField(max_length=255)
 	opis = models.TextField()
 
 	def __str__(self):
