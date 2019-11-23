@@ -55,6 +55,9 @@ class RazstavaAdmin(SimpleHistoryAdmin):
 	list_display = ('naslov', 'otvoritev', 'lokacija')
 	search_fields = ('naslov', 'lokacija', 'opis', 'naslov', 'avtorji',)
 	list_filter = ('lokacija',)
+	
+class IzhodAdmin(SimpleHistoryAdmin):
+	filter_horizontal = ('primerki',)
 
 admin.site.register(models.Kategorija)
 admin.site.register(models.Proizvajalec, ProizvajalecAdmin)
@@ -64,4 +67,4 @@ admin.site.register(models.Vhod, VhodAdmin)
 admin.site.register(models.Lokacija)
 admin.site.register(models.Primerek, PrimerekAdmin)
 admin.site.register(models.Razstava, RazstavaAdmin)
-admin.site.register(models.Izhod, SimpleHistoryAdmin)
+admin.site.register(models.Izhod, IzhodAdmin)
