@@ -39,9 +39,7 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 
 class VhodAdmin(SimpleHistoryAdmin):
 	list_display = ('stevilka', 'lastnik', 'razlog', 'prevzel', 'cas_prevzema', 'inventorizirano')
-
 	search_fields = ('opis',)
-
 	fieldsets = (
 			(None, {
 				'fields': (	'izrocitelj', 'lastnik', 'opis', 'razlog',
@@ -52,6 +50,12 @@ class VhodAdmin(SimpleHistoryAdmin):
 			}),
 		)
 
+class RazstavaAdmin(SimpleHistoryAdmin):
+	filter_horizontal = ('primerki','avtorji')
+	list_display = ('naslov', 'otvoritev', 'lokacija')
+	search_fields = ('naslov', 'lokacija', 'opis', 'naslov', 'avtorji',)
+	list_filter = ('lokacija',)
+
 admin.site.register(models.Kategorija)
 admin.site.register(models.Proizvajalec, ProizvajalecAdmin)
 admin.site.register(models.Eksponat, EksponatAdmin)
@@ -59,5 +63,5 @@ admin.site.register(models.Oseba, OsebaAdmin)
 admin.site.register(models.Vhod, VhodAdmin)
 admin.site.register(models.Lokacija)
 admin.site.register(models.Primerek, PrimerekAdmin)
-admin.site.register(models.Razstava, SimpleHistoryAdmin)
+admin.site.register(models.Razstava, RazstavaAdmin)
 admin.site.register(models.Izhod, SimpleHistoryAdmin)
