@@ -274,8 +274,24 @@ class Razstava(models.Model):
 
 	def __str__(self):
 		return "%s, %s, %s" % (self.naslov, self.lokacija, self.otvoritev)
+	def get_absolute_url(self):
+		return "/razstava/%d/" % (self.pk,)
 	class Meta:
 		verbose_name_plural = "Razstave"
+    
+class Pregled(models.Model):
+	primerek = models.ForeignKey(Primerek, on_delete=models.PROTECT)
+	izvajalec = models.ForeignKey(Oseba, on_delete=models.PROTECT)
+	datum = models.DateTimeField()
+	deluje = models.BooleanField(default=False)
+	zapiski = models.TextField()
+	dnevnik = HistoricalRecords()
+	
+	def __str__(self):
+		return "%s, %s, %s" % (self.primerek, self.datum, self.izvajalec)
+	
+	class Meta:
+		verbose_name_plural = "Pregledi"
     
 class Izhod(models.Model):
 
