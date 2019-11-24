@@ -179,6 +179,9 @@ class Eksponat(models.Model):
 	def __str__(self):
 		return self.ime
 
+	def get_absolute_url(self):
+		return "/eksponat/%d/" % (self.id,)
+
 	class Meta:
 		verbose_name_plural = "Eksponati"
 		ordering = ['ime']
