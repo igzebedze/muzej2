@@ -26,6 +26,7 @@ class RazstaveAdmin(admin.StackedInline):
 	model = models.Primerek.razstava_set.through
 
 class PrimerekAdmin(SimpleHistoryAdmin):
+	filter_horizontal = ('povezani',)
 	list_display = ('stevilka', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'st_razstav')
 	list_filter = ('lokacija',)
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
@@ -58,6 +59,8 @@ class RazstavaAdmin(SimpleHistoryAdmin):
 	
 class IzhodAdmin(SimpleHistoryAdmin):
 	filter_horizontal = ('primerki',)
+	list_display = ('prevzemnik', 'ustanova', 'namen')
+	list_filter = ('namen', 'ustanova')
 
 admin.site.register(models.Kategorija)
 admin.site.register(models.Proizvajalec, ProizvajalecAdmin)

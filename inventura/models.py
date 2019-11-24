@@ -236,10 +236,21 @@ class Primerek(models.Model):
 		verbose_name="polica, regal",
 		help_text="čimbolj točna pozicija znotraj lokacije, npr: A-1.1 za prvo polico v skladišč"
 	)
+	
+	fotografija = models.ImageField(upload_to='primerki', blank=True, null=True,
+		help_text='vzorčna fotografija, ki se uporablja v spletnem katalogu'
+	)
+	fotografije = models.URLField(blank=True, null=True,
+		help_text="spletno mesto kjer se hranijo fotografije, npr gdrive ali dropbox"
+	)
 
 	posegi = models.TextField(
 		blank=True,
 		help_text="dnevnik vseh premikov, čiščenj, popravil ipd."
+	)
+
+	povezani = models.ManyToManyField('self', blank=True, 
+		help_text="drugi primerki, ki običajno potujejo skupaj. Npr: celoten računalnik z monitorjem in tipkovnico."
 	)
 
 	vhodni_dokument = models.ForeignKey(Vhod, blank=True, null=True, on_delete=models.PROTECT)

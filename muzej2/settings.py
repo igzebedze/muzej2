@@ -121,3 +121,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_ROOT = '/Users/bspetic/Development/muzej2/media/'
+STATIC_ROOT = '/Users/bspetic/Development/muzej2/static/'
+MEDIA_URL = '/media/'

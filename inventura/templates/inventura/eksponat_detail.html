@@ -1,6 +1,11 @@
 <h3>{{ object.kategorija }}</h3>
 <h1>{{ object.ime }}</h1>
 <h2>{{ object.proizvajalec }}</h2>
+{% for primerek in object.primerek_set.all %}
+	{% if primerek.fotografija %}
+	<img src="{{ primerek.fotografija.url }}" height="200px" />
+	{% endif %}
+{% endfor %}
 <ul>
 	<li>{{ object.tip }}</li>
 	<li>{{ object.opis }}</li>
