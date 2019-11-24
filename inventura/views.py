@@ -7,7 +7,7 @@ from django.http import Http404
 from django import forms
 from django.views.generic import ListView, DetailView
 
-from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija
+from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava
 
 def root(request):
 	return redirect('/admin/')
@@ -17,6 +17,16 @@ class KategorijaList(ListView):
 
 class EksponatView(DetailView):
 	model = Eksponat
+
+class RazstavaView(DetailView):
+	model = Razstava
+
+def HomeView(request):
+	context = {
+		'razstave': Razstava.objects.order_by('-otvoritev'),
+		'novosti': Primerek.objects.order_by('-datum_inventarizacije')[0:10]	
+	}
+	return render(request, 'home.html', context)
 
 @login_required
 def izhod(request, id):

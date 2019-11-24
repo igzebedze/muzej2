@@ -1,0 +1,22 @@
+<h1>Računalniški muzej</h1>
+<p>Spletna dostop do zbirk Društva računalniški muzej</p>
+
+<h3>Razstave in zbirke</h3>
+<ul>
+	{% for razstava in razstave %}
+	<li><a href="/razstava/{{ razstava.id }}/">{{ razstava }}</a></li>
+	{% endfor %}
+</ul>
+
+<hr />
+<h3>Novi primerki</h3>
+<ul>
+	{% for primerek in novosti %}
+	<li><a href="/eksponat/{{ primerek.exponat.id }}/">{{ primerek.eksponat }}</a></li>
+	{% endfor %}
+</ul>
+<p>
+	<a href="/eksponat/">Celoten katalog</a>
+</p>
+
+<hr />

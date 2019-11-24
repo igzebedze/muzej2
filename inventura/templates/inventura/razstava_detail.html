@@ -1,0 +1,22 @@
+<h3>Razstava / zbirka</h3>
+<h1>{{ object.naslov }}</h1>
+<h2>{{ objet.otvoritev }} - {{ object.zakljucek }}, {{ object.lokacija }}</h2>
+
+<p>{{ object.opis }}</p>
+{% if user.is_authenticated %}
+        <p><a target="_blank" href="/admin/inventura/razstava/{{ object.id }}/change/">Uredi</a></p>       
+{% endif %}    
+
+<h4>Avtorji</h4>
+<ul>
+	{% for avtor in object.avtorji.all %}
+	<li>{{ avtor }}</li>
+	{% endfor %}
+</ul>
+
+<h4>Kazalo</h4>
+<ul>
+	{% for primerek in object.primerki.all %}
+	<li>{{ primerek }}</li>
+	{% endfor %}
+</ul>

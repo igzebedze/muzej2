@@ -16,12 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from inventura.views import root, vhod, vhod_short, premik, primerek_short, izhod, izhod_short, EksponatView, KategorijaList
+from inventura.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', root),
-    path('', KategorijaList.as_view(), name='root'),
+    path('',HomeView, name='home'),
+    path('eksponat/', KategorijaList.as_view(), name='kazalo'),
 	path('vhod/<int:id>/', vhod),	#  r'^vhod/([0-9]+)/'
 	path('v/<int:id>/', vhod_short),	# r'^[vV]/([0-9]+)/?'
 	path('izhod/<int:id>/', izhod),
@@ -29,5 +29,6 @@ urlpatterns = [
 	path('i/<int:id>/', primerek_short),	# r'^[iI]/([0-9]+)/?'
 	path('premik/', premik),
 	path('eksponat/<int:pk>/', EksponatView.as_view(), name='eksponat-detail'),
+	path('razstava/<int:pk>/', RazstavaView.as_view(), name='razstava-detail'),
 #	path(r'^wiki/', include('wiki.urls')),
 ]
