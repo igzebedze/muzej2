@@ -61,6 +61,11 @@ class IzhodAdmin(SimpleHistoryAdmin):
 	filter_horizontal = ('primerki',)
 	list_display = ('prevzemnik', 'ustanova', 'namen')
 	list_filter = ('namen', 'ustanova')
+	
+class PregledAdmin(SimpleHistoryAdmin):
+	list_display = ('primerek', 'izvajalec', 'datum', 'deluje')
+	list_filter = ('izvajalec', 'deluje')
+	date_hierarchy = 'datum'
 
 admin.site.register(models.Kategorija)
 admin.site.register(models.Proizvajalec, ProizvajalecAdmin)
@@ -71,4 +76,4 @@ admin.site.register(models.Lokacija)
 admin.site.register(models.Primerek, PrimerekAdmin)
 admin.site.register(models.Razstava, RazstavaAdmin)
 admin.site.register(models.Izhod, IzhodAdmin)
-admin.site.register(models.Pregled)
+admin.site.register(models.Pregled, PregledAdmin)

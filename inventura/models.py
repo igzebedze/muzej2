@@ -4,6 +4,13 @@ from django.db import models
 from django.contrib.auth.models import User
 from simple_history.models import HistoricalRecords
 
+import requests
+headers = {
+    'Content-type': 'application/json',
+}
+
+# curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
+
 class Lokacija(models.Model):
 	ime = models.CharField(
 			max_length=255)
@@ -276,6 +283,13 @@ class Primerek(models.Model):
 	class Meta:
 		verbose_name_plural = "Primerki"
 
+	def save (self, *args, **kw ):
+		data = "{'text':'nov primerek %s pod stevilko %s'}" % (self.eksponat, self.pk)
+		data = data.encode('utf-8')
+		response = requests.post('https://hooks.slack.com/services/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', headers=headers, data=data)
+		super( Primerek, self ).save( *args, **kw )
+
+
 class Razstava(models.Model):
 	primerki = models.ManyToManyField(Primerek)
 	naslov = models.CharField(max_length=255)
@@ -306,6 +320,12 @@ class Pregled(models.Model):
 	
 	class Meta:
 		verbose_name_plural = "Pregledi"
+		
+	def save (self, *args, **kw ):
+		data = "{'text':'%s je pregledal %s in odkril sledece: %s'}" % (self.izvajalec, self.primerek, self.zapiski)
+		data = data.encode('utf-8')
+		response = requests.post('https://hooks.slack.com/services/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', headers=headers, data=data)
+		super( Pregled, self ).save( *args, **kw )
     
 class Izhod(models.Model):
 
