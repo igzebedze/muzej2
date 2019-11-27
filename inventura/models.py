@@ -176,6 +176,7 @@ class Eksponat(models.Model):
 	oldcomputers = models.URLField(blank=True, null=True)
 	uradnastran = models.URLField(blank=True, null=True)
 	vir = models.URLField(blank=True, null=True)
+	onlinephoto = models.URLField(blank=True, null=True)
 
 	dnevnik = HistoricalRecords()
 	
