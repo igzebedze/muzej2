@@ -21,6 +21,14 @@ class EksponatAdmin(SimpleHistoryAdmin):
 	date_hierarchy = ('created_at')
 	ordering = ('-updated_at',)
 	
+	def get_form(self, request, obj=None, **kwargs):
+		form = super(EksponatAdmin, self).get_form(request, obj, **kwargs)
+		if obj and obj.ime:
+			wiki = wikipedia.page(wikipedia.search(obj.ime, results=1)).url
+			form.base_fields['wikipedia'].initial = wiki
+			obj.wikipedia = wiki
+		return form
+	
 class OsebaAdmin(admin.ModelAdmin):
 	search_fields = ('ime',)
 
@@ -37,8 +45,6 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime')
 	inlines = [ RazstaveAdmin ]
-
-#	wikipedia.suggest()
 
 	def save_model(self, request, obj, form, change):
 		if not change:
