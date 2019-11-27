@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
+
 from simple_history.admin import SimpleHistoryAdmin
+import wikipedia
 
 from inventura import models
 
@@ -9,13 +11,16 @@ class PrimerekInline(admin.StackedInline):
 	extra = 0
 
 class EksponatAdmin(SimpleHistoryAdmin):
+	list_select_related = True
 	inlines = [
 			PrimerekInline,
 	]
 	list_display = ('ime', 'tip', 'proizvajalec', 'leto_proizvodnje', 'st_primerkov')
 	list_filter = ('kategorija', 'proizvajalec')
 	search_fields = ('ime', 'tip')
-
+	date_hierarchy = ('created_at')
+	ordering = ('-updated_at',)
+	
 class OsebaAdmin(admin.ModelAdmin):
 	search_fields = ('ime',)
 
@@ -32,6 +37,8 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime')
 	inlines = [ RazstaveAdmin ]
+
+#	wikipedia.suggest()
 
 	def save_model(self, request, obj, form, change):
 		if not change:

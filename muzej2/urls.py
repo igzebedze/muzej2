@@ -13,8 +13,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path
+from django.contrib import admin
 
 from inventura.views import *
 
@@ -31,4 +31,5 @@ urlpatterns = [
 	path('eksponat/<int:pk>/', EksponatView.as_view(), name='eksponat-detail'),
 	path('razstava/<int:pk>/', RazstavaView.as_view(), name='razstava-detail'),
 #	path(r'^wiki/', include('wiki.urls')),
+#	path(r'^autocomplete/', include('autocomplete_light.urls')),
 ]

@@ -16,6 +16,9 @@ class Lokacija(models.Model):
 			max_length=255)
 
 	naslov = models.TextField(blank=True)
+	
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
 
 	def __str__(self):
 		return self.ime
@@ -32,10 +35,11 @@ class Oseba(models.Model):
 			help_text="za fizične osebe uporabi obliko \"priimek, ime\"")
 
 	naslov = models.TextField(blank=True)
-
 	telefon = models.CharField(max_length=255, blank=True)
-
 	email = models.EmailField(blank=True, null=True)
+
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
 
 	def __str__(self):
 		return self.ime
@@ -82,6 +86,9 @@ class Vhod(models.Model):
 
 	cas_prevzema = models.DateTimeField(verbose_name="čas prevzema")
 	dnevnik = HistoricalRecords()
+	
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
     
 	def stevilka(self):
 		return "VH%05d" % (self.id,)
@@ -105,6 +112,9 @@ class Vhod(models.Model):
 class Kategorija(models.Model):
 	ime = models.CharField(max_length=255)
 	opis = models.TextField()
+	
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
 
 	def __str__(self):
 		return self.ime
@@ -124,6 +134,9 @@ class Proizvajalec(models.Model):
 	propadel = models.PositiveIntegerField(blank=True, null=True)
 
 	opis = models.TextField(blank=True)
+
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
 
 	def __str__(self):
 		return "%s, %s" % (self.ime, self.drzava)
@@ -165,6 +178,9 @@ class Eksponat(models.Model):
 	vir = models.URLField(blank=True, null=True)
 
 	dnevnik = HistoricalRecords()
+	
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
 
 	def leto_proizvodnje(self):
 		agg = self.primerek_set.aggregate(
@@ -265,6 +281,9 @@ class Primerek(models.Model):
 
 	vhodni_dokument = models.ForeignKey(Vhod, blank=True, null=True, on_delete=models.PROTECT)
 	dnevnik = HistoricalRecords()
+	
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
 
 	def stevilka(self):
 		return "%04d" % (self.inventarna_st,)
@@ -284,9 +303,10 @@ class Primerek(models.Model):
 		verbose_name_plural = "Primerki"
 
 	def save (self, *args, **kw ):
-		data = "{'text':'nov primerek %s pod stevilko %s'}" % (self.eksponat, self.pk)
-		data = data.encode('utf-8')
-		response = requests.post('https://hooks.slack.com/services/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', headers=headers, data=data)
+		if not self.pk:	# if it's a new primerek
+			data = "{'text':'nov primerek %s pod stevilko %s'}" % (self.eksponat, self.pk)
+			data = data.encode('utf-8')
+			response = requests.post('https://hooks.slack.com/services/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', headers=headers, data=data)
 		super( Primerek, self ).save( *args, **kw )
 
 
@@ -299,6 +319,9 @@ class Razstava(models.Model):
 	avtorji = models.ManyToManyField(Oseba)
 	opis = models.TextField()
 	dnevnik = HistoricalRecords()
+	
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
 
 	def __str__(self):
 		return "%s, %s, %s" % (self.naslov, self.lokacija, self.otvoritev)
@@ -315,6 +338,9 @@ class Pregled(models.Model):
 	zapiski = models.TextField()
 	dnevnik = HistoricalRecords()
 	
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
+	
 	def __str__(self):
 		return "%s, %s, %s" % (self.primerek, self.datum, self.izvajalec)
 	
@@ -322,9 +348,10 @@ class Pregled(models.Model):
 		verbose_name_plural = "Pregledi"
 		
 	def save (self, *args, **kw ):
-		data = "{'text':'%s je pregledal %s in odkril sledece: %s'}" % (self.izvajalec, self.primerek, self.zapiski)
-		data = data.encode('utf-8')
-		response = requests.post('https://hooks.slack.com/services/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', headers=headers, data=data)
+		if not self.pk:	# if it's a new pregled
+			data = "{'text':'%s je pregledal %s in odkril sledece: %s'}" % (self.izvajalec, self.primerek, self.zapiski)
+			data = data.encode('utf-8')
+			response = requests.post('https://hooks.slack.com/services/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', headers=headers, data=data)
 		super( Pregled, self ).save( *args, **kw )
     
 class Izhod(models.Model):
@@ -372,6 +399,9 @@ class Izhod(models.Model):
 			help_text="datum dejanske vrnitve")
 
 	dnevnik = HistoricalRecords()
+	
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
 
 	def stevilka(self):
 		return "IZH%05d" % (self.id,)
