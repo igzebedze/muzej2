@@ -23,7 +23,7 @@ class EksponatAdmin(SimpleHistoryAdmin):
 	
 	def get_form(self, request, obj=None, **kwargs):
 		form = super(EksponatAdmin, self).get_form(request, obj, **kwargs)
-		if obj and obj.ime:
+		if obj and obj.ime and not obj.wikipedia:
 			wiki = wikipedia.page(wikipedia.search(obj.ime, results=1)).url
 			form.base_fields['wikipedia'].initial = wiki
 			obj.wikipedia = wiki
