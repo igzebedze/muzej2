@@ -21,16 +21,16 @@ class EksponatAdmin(SimpleHistoryAdmin):
 	date_hierarchy = ('created_at')
 	ordering = ('-updated_at',)
 	
-	def get_form(self, request, obj=None, **kwargs):
-		form = super(EksponatAdmin, self).get_form(request, obj, **kwargs)
-		if obj and obj.ime and not obj.wikipedia:
-			wiki = wikipedia.page(wikipedia.search(obj.ime, results=1))
-			if wiki:
-				form.base_fields['onlinephoto'].initial = wiki.images[0]
-				form.base_fields['wikipedia'].initial = wiki.url
-				obj.wikipedia = wiki.url
-				obj.onlinephoto = wiki.images[0]
-		return form
+#	def get_form(self, request, obj=None, **kwargs):
+#		form = super(EksponatAdmin, self).get_form(request, obj, **kwargs)
+#		if obj and obj.ime and not obj.wikipedia:
+#			wiki = wikipedia.page(wikipedia.search(obj.ime, results=1))
+#			if wiki:
+#				form.base_fields['onlinephoto'].initial = wiki.images[0]
+#				form.base_fields['wikipedia'].initial = wiki.url
+#				obj.wikipedia = wiki.url
+#				obj.onlinephoto = wiki.images[0]
+#		return form
 	
 class OsebaAdmin(admin.ModelAdmin):
 	search_fields = ('ime',)
