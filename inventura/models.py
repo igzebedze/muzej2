@@ -307,7 +307,7 @@ class Primerek(models.Model):
 		if not self.pk:	# if it's a new primerek
 			data = "{'text':'nov primerek %s pod stevilko %s'}" % (self.eksponat, self.pk)
 			data = data.encode('utf-8')
-			response = requests.post('https://hooks.slack.com/services/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', headers=headers, data=data)
+			response = requests.post('https://hooks.slack.com/services/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', headers=headers, data=data)
 		super( Primerek, self ).save( *args, **kw )
 
 
@@ -352,7 +352,7 @@ class Pregled(models.Model):
 		if not self.pk:	# if it's a new pregled
 			data = "{'text':'%s je pregledal %s in odkril sledece: %s'}" % (self.izvajalec, self.primerek, self.zapiski)
 			data = data.encode('utf-8')
-			response = requests.post('https://hooks.slack.com/services/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', headers=headers, data=data)
+			response = requests.post('https://hooks.slack.com/services/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', headers=headers, data=data)
 		super( Pregled, self ).save( *args, **kw )
     
 class Izhod(models.Model):
