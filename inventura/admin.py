@@ -2,9 +2,14 @@ from django.contrib import admin
 from django.contrib.auth.models import User
 
 from simple_history.admin import SimpleHistoryAdmin
+#from import_export import resources
 import wikipedia
 
 from inventura import models
+
+#class EksponatResource(resources.ModelResource):
+#    class Meta:
+#        model = Eksponat
 
 class PrimerekInline(admin.StackedInline):
 	model = models.Primerek
@@ -15,7 +20,7 @@ class EksponatAdmin(SimpleHistoryAdmin):
 	inlines = [
 			PrimerekInline,
 	]
-	list_display = ('ime', 'tip', 'proizvajalec', 'leto_proizvodnje', 'st_primerkov')
+	list_display = ('ime', 'kategorija', 'proizvajalec', 'leto_proizvodnje', 'st_primerkov')
 	list_filter = ('kategorija', 'proizvajalec')
 	search_fields = ('ime', 'tip')
 	date_hierarchy = ('created_at')
@@ -44,7 +49,7 @@ class RazstaveAdmin(admin.StackedInline):
 class PrimerekAdmin(SimpleHistoryAdmin):
 	filter_horizontal = ('povezani',)
 	list_display = ('stevilka', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'st_razstav')
-	list_filter = ('lokacija',)
+	list_filter = ('lokacija', 'eksponat__kategorija')
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime')
 	inlines = [ RazstaveAdmin ]

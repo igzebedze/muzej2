@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'simple_history',
     'inventura',
+#    'import_export',
 ]
 
 MIDDLEWARE = [
