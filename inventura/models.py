@@ -173,11 +173,11 @@ class Eksponat(models.Model):
 
 	kategorija = models.ForeignKey(Kategorija, on_delete=models.PROTECT)
 
-	wikipedia = models.URLField(blank=True, null=True)
-	oldcomputers = models.URLField(blank=True, null=True)
-	uradnastran = models.URLField(blank=True, null=True)
-	vir = models.URLField(blank=True, null=True)
-	onlinephoto = models.URLField(blank=True, null=True)
+	wikipedia = models.URLField(blank=True, null=True, help_text="Članek na katerikoli Wikipediji")
+	oldcomputers = models.URLField(blank=True, null=True, help_text="Najbolj relevanten vir za dotično področje, na primer oldcomputers.net, atarimuseum, tomcat")
+	uradnastran = models.URLField(blank=True, null=True, help_text="Uradna stran če še obstaja, npr IBM")
+	vir = models.URLField(blank=True, null=True, help_text="kakršenkoli drug vir, npr Cobiss")
+	onlinephoto = models.URLField(blank=True, null=True, help_text="Reprezentativna slika iz enega od zgornjih virov")
 
 	dnevnik = HistoricalRecords()
 	
@@ -262,7 +262,7 @@ class Primerek(models.Model):
 	polica = models.CharField(
 		max_length=255, blank=True, 
 		verbose_name="polica, regal",
-		help_text="čimbolj točna pozicija znotraj lokacije, npr: A-1.1 za prvo polico v skladišč"
+		help_text="čimbolj točna pozicija znotraj lokacije, npr: A-1.1 za prvo polico v skladišču"
 	)
 	
 	fotografija = models.ImageField(upload_to='primerki', blank=True, null=True,

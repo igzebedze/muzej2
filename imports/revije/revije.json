@@ -1,0 +1,35 @@
+[
+   {
+      "model" : "inventura.eksponat",
+      "fields" : {
+         "ime" : "Galaksija",
+         "updated_at" : "2019-12-01 01:27:18.059691",
+         "visina_cm" : 1,
+         "vir" : "https://plus.si.cobiss.net/opac7/bib/15885058",
+         "kategorija_id" : 10,
+         "oldcomputers" : "http://pc.sux.org/indexGal.html",
+         "dolzina_cm" : 30,
+         "created_at" : "2019-12-01 01:27:18.059691",
+         "uradnastran" : "",
+         "sirina_cm" : 20
+      },
+      "id" : 425
+   },
+   {
+      "model" : "inventura.primerek",
+      "fields" : {
+         "polica" : "F3",
+         "serijska_st" : "1972-3",
+         "inventariziral_id" : 5,
+         "leto_proizvodnje" : "1972",
+         "datum_inventarizacije" : "2019-12-01 01:27:18.059691",
+         "zgodovina" : "<a href='http://retrospec.sgn.net/users/tomcat/yu/magshow.php?all=GAL_72_03'>http://retrospec.sgn.net/users/tomcat/yu/magshow.php?all=GAL_72_03</a>",
+         "eksponat_id" : 425,
+         "created_at" : "2019-12-01 01:27:18.059691",
+         "inventarna_st" : 545,
+         "updated_at" : "2019-12-01 01:27:18.059691"
+      },
+      "id" : 545
+   }
+]
+
