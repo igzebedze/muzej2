@@ -17,9 +17,9 @@ class PrimerekInline(admin.StackedInline):
 
 class EksponatAdmin(SimpleHistoryAdmin):
 	list_select_related = True
-	inlines = [
-			PrimerekInline,
-	]
+	#inlines = [
+	#		PrimerekInline,
+	#]
 	list_display = ('ime', 'kategorija', 'proizvajalec', 'leto_proizvodnje', 'st_primerkov')
 	list_filter = ('kategorija', 'proizvajalec')
 	search_fields = ('ime', 'tip')

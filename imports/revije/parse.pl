@@ -2,12 +2,13 @@
 
 use strict;
 use JSON;
+use UTF8;
 
 my @outputA;
 my @outputB;
 
 my $i = 0;
-my $pk = 364;	# first available ID for Eksponat
+my $pk = 489;	# last taken ID for Eksponat
 my $ppk = 10000;	# first available ID for Primerek
 my $catid = 10; # id of the category for Eksponat (production: 20)
 my $userid = 5;	# user who created entries
@@ -61,16 +62,20 @@ foreach my $line (readpipe("cat primerki.csv")) {
 	$count++;
 	next if not $count;	# skip header row
 
-	chop $line;
+	#chop $line;
 	my @line = split/,/,$line;	
 	next if not $line[0];	# skip empty rows
 	
 	my $name = shift @line;
-	my $year = int shift @line;
-	$year = undef if not $year;
+		next if not $name;
+
+	my $year = shift @line;
+		next if not $year;
+		$year = int $year;
 	
 	my $deeplink = "";
-	if ($deeplinks{$name} =~ /tomcat/) {
+	
+	if ($deeplinks{$name} and $deeplinks{$name} =~ /tomcat/) {
 		my $d = $deeplinks{$name};
 		my $y = substr $year, -2, 2;
 		$deeplink = $d;
@@ -78,7 +83,11 @@ foreach my $line (readpipe("cat primerki.csv")) {
 	}
 	
 	for (my $mon = 1; $mon <= 12; $mon++) {
-		if ($line[$mon]) {
+		
+		my $index = $mon;
+			$index--;		
+		
+		if ($line[$index] =~  /x/i) {
 			my $d = $deeplink;
 			my $m = sprintf '%02d', $mon;
 			$d .= "_".$m if $d;
@@ -102,6 +111,7 @@ foreach my $line (readpipe("cat primerki.csv")) {
 			$primerek{"fields"}{"zgodovina"} = "<a href='$d'>$d</a>" if $d;
 			
 			push (@outputB, \%primerek);
+			#warn join("\t", $ppk, $primerek{"fields"}{"serijska_st"});
 			$ppk++;
 			$i++;
 		}	
@@ -133,6 +143,7 @@ sub get_or_create_eksponat {
 		#warn "'$name' : $pk";
 		push (@outputA, $eksponati{$name});
 		$i++;
+		#warn join("\t", $pk, $eksponati{$name}{"fields"}{"ime"});
 		return $pk;
 	} else {
 		warn "something's wrong"	

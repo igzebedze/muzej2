@@ -1,354 +1,290 @@
 [
    {
-      "model" : "inventura.eksponat",
-      "id" : 365,
       "fields" : {
-         "uradnastran" : "",
+         "visina_cm" : 1,
          "dolzina_cm" : 30,
+         "sirina_cm" : 20,
+         "created_at" : "2019-12-01 01:27:18.059691",
+         "kategorija_id" : 10,
+         "updated_at" : "2019-12-01 01:27:18.059691",
          "oldcomputers" : "http://pc.sux.org/indexGal.html",
-         "created_at" : "2019-12-01 01:27:18.059691",
-         "ime" : "Galaksija",
-         "kategorija_id" : 10,
-         "visina_cm" : 1,
-         "updated_at" : "2019-12-01 01:27:18.059691",
-         "sirina_cm" : 20,
-         "vir" : "https://plus.si.cobiss.net/opac7/bib/15885058"
-      }
+         "uradnastran" : "",
+         "vir" : "https://plus.si.cobiss.net/opac7/bib/15885058",
+         "ime" : "Galaksija"
+      },
+      "id" : 490,
+      "model" : "inventura.eksponat"
    },
    {
       "model" : "inventura.eksponat",
-      "id" : 366,
       "fields" : {
-         "kategorija_id" : 10,
-         "ime" : "Moj mikro",
-         "oldcomputers" : "http://pc.sux.org/indexMMSlo.html",
-         "created_at" : "2019-12-01 01:27:18.059691",
-         "uradnastran" : "",
-         "dolzina_cm" : 30,
-         "sirina_cm" : 20,
          "vir" : "https://plus.si.cobiss.net/opac7/bib/86807",
+         "ime" : "Moj mikro",
          "updated_at" : "2019-12-01 01:27:18.059691",
-         "visina_cm" : 1
-      }
-   },
-   {
-      "fields" : {
-         "visina_cm" : 1,
-         "updated_at" : "2019-12-01 01:27:18.059691",
-         "vir" : "",
-         "sirina_cm" : 20,
          "uradnastran" : "",
-         "dolzina_cm" : 30,
-         "created_at" : "2019-12-01 01:27:18.059691",
-         "oldcomputers" : "",
-         "ime" : "ALEF",
-         "kategorija_id" : 10
-      },
-      "id" : 367,
-      "model" : "inventura.eksponat"
-   },
-   {
-      "model" : "inventura.eksponat",
-      "fields" : {
-         "ime" : "Science fiction",
+         "oldcomputers" : "http://pc.sux.org/indexMMSlo.html",
          "kategorija_id" : 10,
+         "visina_cm" : 1,
          "dolzina_cm" : 30,
-         "uradnastran" : "",
-         "oldcomputers" : "",
-         "created_at" : "2019-12-01 01:27:18.059691",
-         "updated_at" : "2019-12-01 01:27:18.059691",
-         "vir" : "",
          "sirina_cm" : 20,
-         "visina_cm" : 1
+         "created_at" : "2019-12-01 01:27:18.059691"
       },
-      "id" : 368
+      "id" : 491
    },
    {
-      "model" : "inventura.eksponat",
+      "id" : 492,
       "fields" : {
+         "uradnastran" : "",
+         "oldcomputers" : "http://pc.sux.org/indexRA.html",
          "updated_at" : "2019-12-01 01:27:18.059691",
-         "sirina_cm" : 20,
-         "vir" : "https://plus.si.cobiss.net/opac7/bib/106263",
-         "visina_cm" : 1,
          "ime" : "RaÄunari",
-         "kategorija_id" : 10,
-         "uradnastran" : "",
-         "dolzina_cm" : 30,
+         "vir" : "https://plus.si.cobiss.net/opac7/bib/106263",
          "created_at" : "2019-12-01 01:27:18.059691",
-         "oldcomputers" : "http://pc.sux.org/indexRA.html"
+         "visina_cm" : 1,
+         "dolzina_cm" : 30,
+         "sirina_cm" : 20,
+         "kategorija_id" : 10
       },
-      "id" : 369
+      "model" : "inventura.eksponat"
    },
    {
-      "model" : "inventura.eksponat",
+      "id" : 493,
       "fields" : {
-         "visina_cm" : 1,
-         "updated_at" : "2019-12-01 01:27:18.059691",
-         "vir" : "https://plus.si.cobiss.net/opac7/bib/122647",
-         "sirina_cm" : 20,
-         "dolzina_cm" : 30,
-         "uradnastran" : "",
          "oldcomputers" : "http://pc.sux.org/indexSK.html",
-         "created_at" : "2019-12-01 01:27:18.059691",
+         "uradnastran" : "",
+         "updated_at" : "2019-12-01 01:27:18.059691",
          "ime" : "Svet kompjutera",
-         "kategorija_id" : 10
-      },
-      "id" : 370
-   },
-   {
-      "fields" : {
-         "updated_at" : "2019-12-01 01:27:18.059691",
-         "vir" : "https://plus.si.cobiss.net/opac7/bib/16274434",
+         "vir" : "https://plus.si.cobiss.net/opac7/bib/122647",
+         "created_at" : "2019-12-01 01:27:18.059691",
+         "dolzina_cm" : 30,
          "sirina_cm" : 20,
          "visina_cm" : 1,
+         "kategorija_id" : 10
+      },
+      "model" : "inventura.eksponat"
+   },
+   {
+      "model" : "inventura.eksponat",
+      "id" : 494,
+      "fields" : {
          "ime" : "BIT",
-         "kategorija_id" : 10,
-         "dolzina_cm" : 30,
+         "vir" : "https://plus.si.cobiss.net/opac7/bib/16274434",
+         "oldcomputers" : "http://pc.sux.org/indexBIT.html",
          "uradnastran" : "",
+         "updated_at" : "2019-12-01 01:27:18.059691",
+         "kategorija_id" : 10,
          "created_at" : "2019-12-01 01:27:18.059691",
-         "oldcomputers" : "http://pc.sux.org/indexBIT.html"
-      },
-      "id" : 371,
-      "model" : "inventura.eksponat"
+         "sirina_cm" : 20,
+         "dolzina_cm" : 30,
+         "visina_cm" : 1
+      }
    },
    {
-      "model" : "inventura.eksponat",
-      "id" : 372,
       "fields" : {
-         "kategorija_id" : 10,
-         "ime" : "WIN.INI",
-         "oldcomputers" : "",
-         "created_at" : "2019-12-01 01:27:18.059691",
-         "uradnastran" : "",
-         "dolzina_cm" : 30,
-         "sirina_cm" : 20,
          "vir" : "https://plus.si.cobiss.net/opac7/bib/69628416",
+         "ime" : "WIN.INI",
          "updated_at" : "2019-12-01 01:27:18.059691",
-         "visina_cm" : 1
-      }
+         "oldcomputers" : "",
+         "uradnastran" : "",
+         "kategorija_id" : 10,
+         "dolzina_cm" : 30,
+         "sirina_cm" : 20,
+         "visina_cm" : 1,
+         "created_at" : "2019-12-01 01:27:18.059691"
+      },
+      "id" : 495,
+      "model" : "inventura.eksponat"
    },
    {
       "model" : "inventura.eksponat",
+      "id" : 496,
       "fields" : {
-         "visina_cm" : 1,
+         "kategorija_id" : 10,
+         "created_at" : "2019-12-01 01:27:18.059691",
          "sirina_cm" : 20,
+         "dolzina_cm" : 30,
+         "visina_cm" : 1,
+         "ime" : "Monitor",
          "vir" : "https://plus.si.cobiss.net/opac7/bib/28012800",
-         "updated_at" : "2019-12-01 01:27:18.059691",
-         "oldcomputers" : "",
-         "created_at" : "2019-12-01 01:27:18.059691",
-         "dolzina_cm" : 30,
          "uradnastran" : "www.monitor.si",
-         "kategorija_id" : 10,
-         "ime" : "Monitor"
-      },
-      "id" : 373
+         "oldcomputers" : "",
+         "updated_at" : "2019-12-01 01:27:18.059691"
+      }
    },
    {
-      "id" : 374,
       "fields" : {
-         "visina_cm" : 1,
-         "sirina_cm" : 20,
-         "vir" : "https://plus.si.cobiss.net/opac7/bib/12507397",
-         "updated_at" : "2019-12-01 01:27:18.059691",
          "created_at" : "2019-12-01 01:27:18.059691",
-         "oldcomputers" : "",
+         "visina_cm" : 1,
          "dolzina_cm" : 30,
-         "uradnastran" : "",
+         "sirina_cm" : 20,
          "kategorija_id" : 10,
-         "ime" : "Programer"
+         "uradnastran" : "",
+         "oldcomputers" : "",
+         "updated_at" : "2019-12-01 01:27:18.059691",
+         "ime" : "Programer",
+         "vir" : "https://plus.si.cobiss.net/opac7/bib/12507397"
       },
+      "id" : 497,
       "model" : "inventura.eksponat"
    },
    {
-      "model" : "inventura.eksponat",
+      "id" : 498,
       "fields" : {
-         "kategorija_id" : 10,
-         "ime" : "VIDI",
          "oldcomputers" : "",
-         "created_at" : "2019-12-01 01:27:18.059691",
-         "dolzina_cm" : 30,
          "uradnastran" : "",
-         "sirina_cm" : 20,
-         "vir" : "",
          "updated_at" : "2019-12-01 01:27:18.059691",
-         "visina_cm" : 1
-      },
-      "id" : 375
-   },
-   {
-      "id" : 376,
-      "fields" : {
-         "updated_at" : "2019-12-01 01:27:18.059691",
-         "sirina_cm" : 20,
-         "vir" : "",
-         "visina_cm" : 1,
          "ime" : "Connect",
-         "kategorija_id" : 10,
-         "uradnastran" : "",
-         "dolzina_cm" : 30,
-         "created_at" : "2019-12-01 01:27:18.059691",
-         "oldcomputers" : ""
-      },
-      "model" : "inventura.eksponat"
-   },
-   {
-      "fields" : {
-         "kategorija_id" : 10,
-         "ime" : "Joker",
-         "created_at" : "2019-12-01 01:27:18.059691",
-         "oldcomputers" : "",
-         "dolzina_cm" : 30,
-         "uradnastran" : "",
-         "vir" : "https://plus.si.cobiss.net/opac7/bib/30700032",
-         "sirina_cm" : 20,
-         "updated_at" : "2019-12-01 01:27:18.059691",
-         "visina_cm" : 1
-      },
-      "id" : 377,
-      "model" : "inventura.eksponat"
-   },
-   {
-      "model" : "inventura.eksponat",
-      "id" : 378,
-      "fields" : {
-         "kategorija_id" : 10,
-         "ime" : "Sinclair user",
-         "created_at" : "2019-12-01 01:27:18.059691",
-         "oldcomputers" : "",
-         "uradnastran" : "",
-         "dolzina_cm" : 30,
          "vir" : "",
-         "sirina_cm" : 20,
-         "updated_at" : "2019-12-01 01:27:18.059691",
-         "visina_cm" : 1
-      }
-   },
-   {
-      "model" : "inventura.eksponat",
-      "id" : 379,
-      "fields" : {
-         "vir" : "https://plus.si.cobiss.net/opac7/bib/54227712",
-         "sirina_cm" : 20,
-         "updated_at" : "2019-12-01 01:27:18.059691",
-         "visina_cm" : 1,
-         "kategorija_id" : 10,
-         "ime" : "PC & mediji",
-         "oldcomputers" : "",
          "created_at" : "2019-12-01 01:27:18.059691",
-         "dolzina_cm" : 30,
-         "uradnastran" : ""
-      }
-   },
-   {
-      "fields" : {
          "visina_cm" : 1,
-         "updated_at" : "2019-12-01 01:27:18.059691",
          "sirina_cm" : 20,
-         "vir" : "https://plus.si.cobiss.net/opac7/bib/120040192",
          "dolzina_cm" : 30,
-         "uradnastran" : "",
-         "created_at" : "2019-12-01 01:27:18.059691",
-         "oldcomputers" : "",
-         "ime" : "ESC",
          "kategorija_id" : 10
       },
-      "id" : 380,
       "model" : "inventura.eksponat"
    },
    {
-      "model" : "inventura.eksponat",
-      "id" : 381,
+      "id" : 499,
+      "fields" : {
+         "kategorija_id" : 10,
+         "created_at" : "2019-12-01 01:27:18.059691",
+         "dolzina_cm" : 30,
+         "sirina_cm" : 20,
+         "visina_cm" : 1,
+         "ime" : "Joker",
+         "vir" : "https://plus.si.cobiss.net/opac7/bib/30700032",
+         "uradnastran" : "",
+         "oldcomputers" : "",
+         "updated_at" : "2019-12-01 01:27:18.059691"
+      },
+      "model" : "inventura.eksponat"
+   },
+   {
+      "fields" : {
+         "oldcomputers" : "",
+         "uradnastran" : "",
+         "updated_at" : "2019-12-01 01:27:18.059691",
+         "ime" : "Sinclair user",
+         "vir" : "",
+         "created_at" : "2019-12-01 01:27:18.059691",
+         "sirina_cm" : 20,
+         "dolzina_cm" : 30,
+         "visina_cm" : 1,
+         "kategorija_id" : 10
+      },
+      "id" : 500,
+      "model" : "inventura.eksponat"
+   },
+   {
       "fields" : {
          "created_at" : "2019-12-01 01:27:18.059691",
+         "sirina_cm" : 20,
+         "dolzina_cm" : 30,
+         "visina_cm" : 1,
+         "kategorija_id" : 10,
+         "uradnastran" : "",
+         "oldcomputers" : "",
+         "updated_at" : "2019-12-01 01:27:18.059691",
+         "ime" : "PC & mediji",
+         "vir" : "https://plus.si.cobiss.net/opac7/bib/54227712"
+      },
+      "id" : 501,
+      "model" : "inventura.eksponat"
+   },
+   {
+      "id" : 502,
+      "fields" : {
+         "sirina_cm" : 20,
+         "dolzina_cm" : 30,
+         "visina_cm" : 1,
+         "created_at" : "2019-12-01 01:27:18.059691",
+         "kategorija_id" : 10,
+         "updated_at" : "2019-12-01 01:27:18.059691",
          "oldcomputers" : "http://pc.sux.org/indexMG.html",
-         "dolzina_cm" : 30,
          "uradnastran" : "",
-         "kategorija_id" : 10,
-         "ime" : "Megazin",
-         "visina_cm" : 1,
          "vir" : "https://plus.si.cobiss.net/opac7/bib/36880128",
-         "sirina_cm" : 20,
-         "updated_at" : "2019-12-01 01:27:18.059691"
-      }
+         "ime" : "Megazin"
+      },
+      "model" : "inventura.eksponat"
    },
    {
       "fields" : {
-         "kategorija_id" : 10,
          "ime" : "Monitor pro",
-         "oldcomputers" : "",
-         "created_at" : "2019-12-01 01:27:18.059691",
-         "dolzina_cm" : 30,
-         "uradnastran" : "https://www.monitor.si/arhiv-pro/",
          "vir" : "https://plus.si.cobiss.net/opac7/bib/252457728",
-         "sirina_cm" : 20,
-         "updated_at" : "2019-12-01 01:27:18.059691",
-         "visina_cm" : 1
-      },
-      "id" : 382,
-      "model" : "inventura.eksponat"
-   },
-   {
-      "id" : 383,
-      "fields" : {
-         "uradnastran" : "",
-         "dolzina_cm" : 30,
-         "created_at" : "2019-12-01 01:27:18.059691",
+         "uradnastran" : "https://www.monitor.si/arhiv-pro/",
          "oldcomputers" : "",
-         "ime" : "Avtomatika",
-         "kategorija_id" : 10,
-         "visina_cm" : 1,
          "updated_at" : "2019-12-01 01:27:18.059691",
+         "kategorija_id" : 10,
+         "created_at" : "2019-12-01 01:27:18.059691",
+         "visina_cm" : 1,
          "sirina_cm" : 20,
-         "vir" : ""
+         "dolzina_cm" : 30
       },
+      "id" : 503,
       "model" : "inventura.eksponat"
    },
    {
-      "id" : 384,
       "fields" : {
-         "visina_cm" : 1,
          "vir" : "",
-         "sirina_cm" : 20,
+         "ime" : "Avtomatika",
          "updated_at" : "2019-12-01 01:27:18.059691",
-         "created_at" : "2019-12-01 01:27:18.059691",
          "oldcomputers" : "",
          "uradnastran" : "",
-         "dolzina_cm" : 30,
          "kategorija_id" : 10,
-         "ime" : "PC & mediji CD"
+         "visina_cm" : 1,
+         "dolzina_cm" : 30,
+         "sirina_cm" : 20,
+         "created_at" : "2019-12-01 01:27:18.059691"
       },
+      "id" : 504,
       "model" : "inventura.eksponat"
    },
    {
       "model" : "inventura.eksponat",
-      "id" : 385,
+      "id" : 505,
       "fields" : {
-         "updated_at" : "2019-12-01 01:27:18.059691",
-         "vir" : "",
-         "sirina_cm" : 20,
-         "visina_cm" : 1,
-         "ime" : "Joker TlaÄenka",
-         "kategorija_id" : 10,
-         "dolzina_cm" : 30,
-         "uradnastran" : "",
          "created_at" : "2019-12-01 01:27:18.059691",
-         "oldcomputers" : ""
+         "visina_cm" : 1,
+         "sirina_cm" : 20,
+         "dolzina_cm" : 30,
+         "kategorija_id" : 10,
+         "oldcomputers" : "",
+         "uradnastran" : "",
+         "updated_at" : "2019-12-01 01:27:18.059691",
+         "ime" : "PC & mediji CD",
+         "vir" : ""
       }
    },
    {
+      "model" : "inventura.eksponat",
+      "id" : 506,
       "fields" : {
+         "sirina_cm" : 20,
+         "dolzina_cm" : 30,
+         "visina_cm" : 1,
+         "created_at" : "2019-12-01 01:27:18.059691",
+         "kategorija_id" : 10,
+         "updated_at" : "2019-12-01 01:27:18.059691",
+         "uradnastran" : "",
          "oldcomputers" : "",
+         "vir" : "",
+         "ime" : "Joker TlaÄenka"
+      }
+   },
+   {
+      "model" : "inventura.eksponat",
+      "id" : 507,
+      "fields" : {
+         "ime" : "Joker PDF",
+         "vir" : "",
+         "uradnastran" : "",
+         "oldcomputers" : "",
+         "updated_at" : "2019-12-01 01:27:18.059691",
+         "kategorija_id" : 10,
          "created_at" : "2019-12-01 01:27:18.059691",
          "dolzina_cm" : 30,
-         "uradnastran" : "",
-         "kategorija_id" : 10,
-         "ime" : "Joker PDF",
-         "visina_cm" : 1,
-         "vir" : "",
          "sirina_cm" : 20,
-         "updated_at" : "2019-12-01 01:27:18.059691"
-      },
-      "id" : 386,
-      "model" : "inventura.eksponat"
+         "visina_cm" : 1
+      }
    }
 ]
