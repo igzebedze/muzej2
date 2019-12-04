@@ -22,3 +22,10 @@
 {% if user.is_authenticated %}
         <p><a target="_blank" href="/admin/inventura/eksponat/{{ object.id }}/change/">Uredi</a></p>       
 {% endif %}    
+
+<h3>Primerki</h3>
+<ul>
+	{% for p in object.primerek_set.all %}
+	<li>{{ p }}, {{ p.serijska_st }}</li>
+	{% endfor %}
+</ul>

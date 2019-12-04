@@ -17,9 +17,9 @@ class PrimerekInline(admin.StackedInline):
 
 class EksponatAdmin(SimpleHistoryAdmin):
 	list_select_related = True
-	#inlines = [
-	#		PrimerekInline,
-	#]
+	inlines = [
+			PrimerekInline,
+	]
 	list_display = ('ime', 'kategorija', 'proizvajalec', 'leto_proizvodnje', 'st_primerkov')
 	list_filter = ('kategorija', 'proizvajalec')
 	search_fields = ('ime', 'tip')
@@ -53,6 +53,7 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime')
 	inlines = [ RazstaveAdmin ]
+	autocomplete_fields = ['eksponat']
 
 	def save_model(self, request, obj, form, change):
 		if not change:

@@ -243,7 +243,7 @@ class Primerek(models.Model):
 			"ostale opombe, specifične za ta primerek")
 
 	zgodovina = models.TextField(
-			blank=True,
+			blank=True, null=True,
 			help_text="zgodovina primerka (zakaj se je uporabljal, kdo in kdaj)")
 
 	donator = models.ForeignKey(
