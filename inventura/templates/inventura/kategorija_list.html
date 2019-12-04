@@ -13,7 +13,10 @@
 <p>{{ kategorija.opis }}</p>
 <ul>
 	{% for eksponat in kategorija.eksponat_set.all %}
-	<li><a href="/eksponat/{{ eksponat.id }}/">{{ eksponat }}</a>, {{ eksponat.proizvajalec }}</li>
+	<li><a href="/eksponat/{{ eksponat.id }}/">{{ eksponat }}</a>, 
+		{% if eksponat.proizvajalec %} {{ eksponat.proizvajalec }}{% endif %}
+		({{ eksponat.st_primerkov }})
+	</li>
 	{% endfor %}
 </ul>
 <hr />
