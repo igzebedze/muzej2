@@ -71,15 +71,16 @@ def primerek_short(request, id):
 class PremikForm(forms.Form):
 	zapisnik = forms.CharField(widget=forms.Textarea)
 	lokacija = forms.ModelChoiceField(queryset=Lokacija.objects.all())
+	polica = forms.CharField()
 
 @login_required
 def premik(request):
 	if request.method == 'POST':
 		form = PremikForm(request.POST)
 		if form.is_valid():
-
 			zapisnik = form.cleaned_data['zapisnik']
 			lokacija = form.cleaned_data['lokacija']
+			polica = form.cleaned_data['polica']
 
 			id_set = set()
 			for id in re.findall("http://racunalniski-muzej.si/i/([0-9]+)/?", zapisnik, re.I):
@@ -96,10 +97,11 @@ def premik(request):
 
 			for primerek in primerki:
 				primerek.lokacija = lokacija
+				primerek.polica = polica
 				primerek.save()
 
 			messages.add_message(request, messages.SUCCESS,
-					"Premaknil %d primerkov na lokacijo %s." % (len(primerki), lokacija))
+					"Premaknil %d primerkov na lokacijo %s, polica %s." % (len(primerki), lokacija, polica))
 
 	else:
 		form = PremikForm() # An unbound form
