@@ -17,6 +17,6 @@
 <h4>Kazalo</h4>
 <ul>
 	{% for primerek in object.primerki.all %}
-	<li>{{ primerek }}</li>
+	<li><a href="{{ primerek.eksponat.get_absolute_url }}">{{ primerek }}</a></li>
 	{% endfor %}
 </ul>
