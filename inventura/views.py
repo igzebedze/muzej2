@@ -85,6 +85,8 @@ def premik(request):
 			id_set = set()
 			for id in re.findall("http://racunalniski-muzej.si/i/([0-9]+)/?", zapisnik, re.I):
 				id_set.add(int(id))
+			for id in re.findall("^([0-9]+)$", zapisnik, re.I):
+				id_set.add(int(id))
 
 			primerki = []
 			for id in id_set:
