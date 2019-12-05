@@ -10,18 +10,26 @@
 	<img src="{{ object.onlinephoto }}" height="300px" />
 	{% endif %}
 <ul>
-	<li>{{ object.tip }}</li>
-	<li>{{ object.opis }}</li>
+	{% if object.tip %}<li>{{ object.tip }}</li>{% endif %}
+	{% if object.opis %}<li>{{ object.opis }}</li>{% endif %}
 	{% if object.wikipedia %}<li><a href="{{ object.wikipedia }}" target="_blank">{{ object.wikipedia }}</a></li>{% endif %}
 	{% if object.oldcomputers %}<li><a href="{{ object.oldcomputers }}" target="_blank">{{ object.oldcomputers }}</a></li>{% endif %}
 	{% if object.uradnastran %}<li><a href="{{ object.uradnastran }}" target="_blank">{{ object.uradnastran }}</a></li>{% endif %}
 	{% if object.vir %}<li><a href="{{ object.vir }}" target="_blank">{{ object.vir }}</a></li>{% endif %}
 	{% if object.leto_proizvodnje %}<li>{{ object.leto_proizvodnje }}</li>{% endif %}
 	<li>stevilo primerkov: {{ object.st_primerkov }}</li>
+
+	{% for p in object.primerek_set.all %}
+	{% for r in p.razstava_set.all %}
+	<li>Razstavljen: {% if r %}{{ r }}{% endif %}</li>
+	{% endfor %}
+	{% endfor %}
+
 </ul>
 {% if user.is_authenticated %}
         <p><a target="_blank" href="/admin/inventura/eksponat/{{ object.id }}/change/">Uredi</a></p>       
 {% endif %}    
+
 
 <h3>Primerki</h3>
 <ul>
