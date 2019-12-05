@@ -21,7 +21,7 @@
 
 	{% for p in object.primerek_set.all %}
 	{% for r in p.razstava_set.all %}
-	<li>Razstavljen: {% if r %}{{ r }}{% endif %}</li>
+	<li>Razstavljen: {% if r %}<a href="{{ r.get_absolute_url }}">{{ r }}</a>{% endif %}</li>
 	{% endfor %}
 	{% endfor %}
 
