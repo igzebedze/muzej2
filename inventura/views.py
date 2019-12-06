@@ -12,6 +12,9 @@ from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategori
 def root(request):
 	return redirect('/admin/')
 
+class PrimerekList(ListView):
+	model = Primerek
+
 class KategorijaList(ListView):
 	model = Kategorija
 

@@ -28,6 +28,7 @@ urlpatterns = [
 	path('x/<int:id>/', izhod_short),
 	path('i/<int:id>/', primerek_short),	# r'^[iI]/([0-9]+)/?'
 	path('premik/', premik),
+    path('izvoz/', PrimerekList.as_view(), name='izvoz'),
 	path('eksponat/<int:pk>/', EksponatView.as_view(), name='eksponat-detail'),
 	path('razstava/<int:pk>/', RazstavaView.as_view(), name='razstava-detail'),
 #	path(r'^wiki/', include('wiki.urls')),

@@ -1,0 +1,58 @@
+<h1>Računalniški muzej</h1>
+<p>Seznam vseh primerkov v zbirki Društva računalniški muzej</p>
+
+<table border='1'>
+<th>
+	<th>inventarna st</th>
+	<th>st delov</th>
+	<th>serijska st</th>
+	<th>leto proizvodnje</th>
+	<th>stanje</th>
+	<th>zgodovina</th>
+	<th>donator</th>
+	<th>vrednost</th>
+	<th>lokacija</th>
+	<th>polica</th>
+	<th>eksponat id</th>
+	<th>eksponat ime</th>
+	<th>proizvajalec</th>
+	<th>visina</th>
+	<th>dolzina</th>
+	<th>sirina</th>
+	<th>opis</th>
+	<th>kategorija</th>
+	<th>wikipedia</th>
+	<th>oldcomputers</th>
+	<th>uradna stran</th>
+	<th>vir</th>
+	<th>online photo</th>
+</tr>
+{% for p in object_list %}
+<tr>
+	<td>{{ p.inventarna_st }}</td>
+	<td>{{ p.st_delov }}</td>
+	<td>{{ p.serijska_st }}</td>
+	<td>{{ p.leto_proizvodnje }}</td>
+	<td>{{ p.stanje }}</td>
+	<td>{{ p.zgodovina }}</td>
+	<td>{{ p.donator }}</td>
+	<td>{{ p.vrednost }}</td>
+	<td>{{ p.lokacija }}</td>
+	<td>{{ p.polica }}</td>
+	<td>{{ p.eksponat.id }}</td>
+	<td>{{ p.eksponat.ime }}</td>
+	<td>{{ p.eksponat.tip }}</td>
+	<td>{{ p.eksponat.proizvajalec }}</td>
+	<td>{{ p.eksponat.visina_cm }}</td>
+	<td>{{ p.eksponat.dolzina_cm }}</td>
+	<td>{{ p.eksponat.sirina_cm }}</td>
+	<td>{{ p.eksponat.opis }}</td>
+	<td>{{ p.eksponat.kategorija }}</td>
+	<td>{{ p.eksponat.wikipedia }}</td>
+	<td>{{ p.eksponat.oldcomputers }}</td>
+	<td>{{ p.eksponat.uradnastran }}</td>
+	<td>{{ p.eksponat.vir }}</td>
+	<td>{{ p.eksponat.onlinephoto }}</td>
+</tr>
+{% endfor %}
+</table>
