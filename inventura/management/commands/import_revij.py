@@ -15,7 +15,6 @@ class Command(BaseCommand):
 	def handle(self, *args, **options):
 		pp = pprint.PrettyPrinter(indent=4)
 
-#		start_no = options['start']	# 10973
 		user = User.objects.get(pk=5)
 		kategorija = Kategorija.objects.get(ime="Revija")
 		start_no = 10000
@@ -23,7 +22,6 @@ class Command(BaseCommand):
 		if max:
 			start_no = max[0].inventarna_st + 1
 		self.stdout.write("starting with number %d" % (start_no))
-		sys.exit()
 		
 		# Moj mikro,1987,x,x,x,,x,x,x,,x,x,x,x
 		with open(options['file'][0]) as csvfile:
