@@ -21,7 +21,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'simple_history',
     'inventura',
-#    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -40,7 +39,7 @@ ROOT_URLCONF = 'muzej2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ["templates",],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
