@@ -17,7 +17,7 @@ class Command(BaseCommand):
 
 #		start_no = options['start']	# 10973
 		user = User.objects.get(pk=5)
-		kategorija = Kategorija.objects.get(pk=10)
+		kategorija = Kategorija.objects.get(ime="Revija")
 		start_no = 10000
 		max = Primerek.objects.filter(eksponat__kategorija=kategorija).order_by('-inventarna_st')
 		if max:
