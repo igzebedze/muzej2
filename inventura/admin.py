@@ -89,12 +89,15 @@ class PregledAdmin(SimpleHistoryAdmin):
 	list_filter = ('izvajalec', 'deluje')
 	date_hierarchy = 'datum'
 
+class LokacijaAdmin(admin.ModelAdmin):
+	list_display = ('ime', 'naslov', 'st_primerkov')
+	
 admin.site.register(models.Kategorija)
 admin.site.register(models.Proizvajalec, ProizvajalecAdmin)
 admin.site.register(models.Eksponat, EksponatAdmin)
 admin.site.register(models.Oseba, OsebaAdmin)
 admin.site.register(models.Vhod, VhodAdmin)
-admin.site.register(models.Lokacija)
+admin.site.register(models.Lokacija, LokacijaAdmin)
 admin.site.register(models.Primerek, PrimerekAdmin)
 admin.site.register(models.Razstava, RazstavaAdmin)
 admin.site.register(models.Izhod, IzhodAdmin)

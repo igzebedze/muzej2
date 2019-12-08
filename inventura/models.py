@@ -24,6 +24,10 @@ class Lokacija(models.Model):
 	def __str__(self):
 		return self.ime
 
+	def st_primerkov(self):
+		return "%d" % self.primerek_set.count()
+	st_primerkov.short_description = u'Št primerkov'
+
 	class Meta:
 		verbose_name_plural = "Lokacije"
 
