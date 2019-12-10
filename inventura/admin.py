@@ -17,8 +17,10 @@ class PregledAdmin(SimpleHistoryAdmin):
 	list_filter = ('izvajalec', 'deluje')
 	date_hierarchy = 'datum'
 	
-class PrimerekInline(admin.StackedInline):
+class PrimerekInline(admin.TabularInline):
 	model = models.Primerek
+	fields = ('eksponat', 'serijska_st', 'leto_proizvodnje', 'inventariziral')
+	readonly_fields = ('eksponat', 'serijska_st', 'leto_proizvodnje', 'inventariziral')	
 	extra = 0
 
 class PregledInline(admin.TabularInline):
