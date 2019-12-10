@@ -11,10 +11,20 @@ from inventura import models
 #    class Meta:
 #        model = Eksponat
 
+	
+class PregledAdmin(SimpleHistoryAdmin):
+	list_display = ('primerek', 'izvajalec', 'datum', 'deluje')
+	list_filter = ('izvajalec', 'deluje')
+	date_hierarchy = 'datum'
+	
 class PrimerekInline(admin.StackedInline):
 	model = models.Primerek
 	extra = 0
 
+class PregledInline(admin.TabularInline):
+	model = models.Pregled
+	extra = 0
+	
 class EksponatAdmin(SimpleHistoryAdmin):
 	list_select_related = True
 	inlines = [
@@ -52,7 +62,7 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 	list_filter = ('lokacija', 'eksponat__kategorija')
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime')
-	inlines = [ RazstaveAdmin ]
+	inlines = [ RazstaveAdmin, PregledInline ]
 	autocomplete_fields = ['eksponat']
 
 	def save_model(self, request, obj, form, change):
@@ -62,6 +72,9 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 
 class VhodAdmin(SimpleHistoryAdmin):
 	list_display = ('stevilka', 'lastnik', 'razlog', 'prevzel', 'cas_prevzema', 'inventorizirano')
+	inlines = [
+			PrimerekInline,
+	]
 	search_fields = ('opis',)
 	fieldsets = (
 			(None, {
@@ -83,11 +96,7 @@ class IzhodAdmin(SimpleHistoryAdmin):
 	filter_horizontal = ('primerki',)
 	list_display = ('prevzemnik', 'ustanova', 'namen')
 	list_filter = ('namen', 'ustanova')
-	
-class PregledAdmin(SimpleHistoryAdmin):
-	list_display = ('primerek', 'izvajalec', 'datum', 'deluje')
-	list_filter = ('izvajalec', 'deluje')
-	date_hierarchy = 'datum'
+
 
 class LokacijaAdmin(admin.ModelAdmin):
 	list_display = ('ime', 'naslov', 'st_primerkov')
