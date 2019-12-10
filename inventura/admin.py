@@ -53,7 +53,7 @@ class OsebaAdmin(admin.ModelAdmin):
 class ProizvajalecAdmin(admin.ModelAdmin):
 	list_filter = ('drzava',)
 
-class RazstaveAdmin(admin.StackedInline):
+class RazstaveAdmin(admin.TabularInline):
 	model = models.Primerek.razstava_set.through
 
 class PrimerekAdmin(SimpleHistoryAdmin):
