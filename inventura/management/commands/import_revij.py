@@ -35,6 +35,15 @@ class Command(BaseCommand):
 				if not eksponat:
 					continue;
 
+				popisovalec = row['popisovalec']
+				if popisovalec:
+					try:
+						u = User.objects.get(username=popisovalec)
+					except:
+						pass
+					else:
+						user = u
+
 				try:
 					e = Eksponat.objects.get(ime=eksponat)
 				except:
