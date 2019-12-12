@@ -35,14 +35,13 @@ class Command(BaseCommand):
 				proizvajalec = row['proizvajalec'].capitalize()
 				self.stdout.write("looking at %s %s %s" % (proizvajalec, eksponat, letnik))
 
-				popisovalec = row['popisovalec']
-				if popisovalec:
-					try:
-						u = User.objects.get(username=popisovalec)
-					except:
-						pass
-					else:
-						user = u
+				try:
+					popisovalec = row['popisovalec']
+					u = User.objects.get(username=popisovalec)
+				except:
+					pass
+				else:
+					user = u
 
 				if not eksponat:
 					continue;
