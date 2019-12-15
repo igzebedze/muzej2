@@ -53,6 +53,7 @@ class PregledAdmin(SimpleHistoryAdmin):
 	list_display = ('primerek', 'izvajalec', 'datum', 'deluje')
 	list_filter = ('izvajalec', 'deluje')
 	date_hierarchy = 'datum'
+	search_fields = ('primerek','zapiski',)
 	
 class PrimerekInline(admin.TabularInline):
 	model = models.Primerek
@@ -70,7 +71,7 @@ class EksponatAdmin(SimpleHistoryAdmin):
 	list_display = ('ime', 'kategorija', 'proizvajalec', 'leto_proizvodnje', 'st_primerkov')
 	list_filter = ('kategorija', 'proizvajalec')
 	search_fields = ('ime', 'tip')
-	date_hierarchy = ('created_at')
+	date_hierarchy = 'created_at'
 	ordering = ('-updated_at',)
 	actions = ['spremeni_kategorijo']
 	
@@ -100,6 +101,7 @@ class OsebaAdmin(admin.ModelAdmin):
 
 class ProizvajalecAdmin(admin.ModelAdmin):
 	list_filter = ('drzava',)
+	search_fields = ('ime',)
 
 class RazstaveAdmin(admin.TabularInline):
 	model = models.Primerek.razstava_set.through
@@ -113,13 +115,13 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime')
 	inlines = [ RazstaveAdmin, PregledInline ]
 	autocomplete_fields = ['eksponat']
-
+	
 	def save_model(self, request, obj, form, change):
 		if not change:
 			obj.inventariziral = request.user
 		obj.save()
 
-	actions = ['spremeni_eksponat',]
+	actions = ['spremeni_eksponat', 'premakni_polico']
 	
 	def spremeni_eksponat(self, request, queryset):
 		return batch_update_view(
@@ -130,7 +132,16 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 			field_name='eksponat',
 		)
 	spremeni_eksponat.short_description = "Spremeni eksponat izbranim primerkom"
-
+	def premakni_polico(self, request, queryset):
+		return batch_update_view(
+			model_admin=self,
+			request=request,
+			queryset=queryset,
+			# this is the name of the field on the YourModel model
+			field_name='polica',
+		)
+	premakni_polico.short_description = "Nastavi polico izbranim primerkom"
+	
 class VhodAdmin(SimpleHistoryAdmin):
 	list_display = ('stevilka', 'lastnik', 'razlog', 'prevzel', 'cas_prevzema', 'inventorizirano')
 	inlines = [
@@ -152,6 +163,7 @@ class RazstavaAdmin(SimpleHistoryAdmin):
 	list_display = ('naslov', 'otvoritev', 'lokacija')
 	search_fields = ('naslov', 'lokacija', 'opis', 'naslov', 'avtorji',)
 	list_filter = ('lokacija',)
+	date_hierarchy = 'otvoritev'
 	
 class IzhodAdmin(SimpleHistoryAdmin):
 	filter_horizontal = ('primerki',)
