@@ -114,6 +114,7 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime')
 	inlines = [ RazstaveAdmin, PregledInline ]
+	date_hierarchy = 'leto_proizvodnje'
 	autocomplete_fields = ['eksponat']
 	
 	def save_model(self, request, obj, form, change):
