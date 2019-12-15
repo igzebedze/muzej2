@@ -1,10 +1,21 @@
 <h1>Računalniški muzej</h1>
 <p>Spletni dostop do zbirk Društva računalniški muzej</p>
 
-<h3>Razstave in zbirke</h3>
+<h3>Zbirke</h3>
 <ul>
 	{% for razstava in razstave %}
+	{% if not razstava.otvoritev %}
 	<li><a href="/razstava/{{ razstava.id }}/">{{ razstava }}</a></li>
+	{% endif %}
+	{% endfor %}
+</ul>
+
+<h3>Razstave</h3>
+<ul>
+	{% for razstava in razstave %}
+	{% if razstava.otvoritev %}
+	<li><a href="/razstava/{{ razstava.id }}/">{{ razstava }}</a></li>
+	{% endif %}
 	{% endfor %}
 </ul>
 
