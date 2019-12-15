@@ -26,6 +26,9 @@ class Command(BaseCommand):
 		
 		# vrsta,proizvajalec,program,verzija,leto,stanje,OS,medij,avtor
 		# programska oprema,borland,quattro pro,1.0,1993,rabljeno,win,"5"" floppy",
+
+		# vrsta,proizvajalec,program,stevilo kosov,zgodovina,leto,stanje,OS,medij,polica,popisovalec
+		# Računalniška igra,ZootFly,Prison Break: The Conspiracy,20 kosov,zootfly,2009,,ps3,BluRay,"D1, skatla 8",marko
 		with open(options['file'][0]) as csvfile:
 			reader = csv.DictReader(csvfile)
 			#headers = next(reader, None)
@@ -73,9 +76,9 @@ class Command(BaseCommand):
 					self.stdout.write ("created new eksponat for %s" % (e.ime))
 			
 				serijska = "%s %s" % (row['proizvajalec'].capitalize(), row['program'].capitalize())
-				if row['verzija']:
+				if 'verzija' in row:
 					serijska = serijska + " %s" %(row['verzija'].capitalize())
-				if row['OS']:
+				if "OS" in row and row['OS']:
 					serijska = serijska + " for %s" % (row['OS'].capitalize())
 	
 				try: 
@@ -85,9 +88,9 @@ class Command(BaseCommand):
 								eksponat=e,
 								inventarna_st = start_no,
 								serijska_st = serijska,
-								polica = "F5",
+								polica = row['polica'],
 								inventariziral = user,
-								zgodovina = row['avtor'],
+								zgodovina = row['zgodovina'],
 								stanje = "%s\n%s" % (row['stanje'], row['medij']),
 								datum_inventarizacije = timezone.now(),
 								created_at = timezone.now(),
@@ -97,7 +100,7 @@ class Command(BaseCommand):
 						p.leto_proizvodnje = letnik
 					p.save()
 					start_no = start_no + 1
-					self.stdout.write ("created new primerek for %s %s" % (e, serijska))
+					self.stdout.write ("\tcreated new primerek for %s %s" % (e, serijska))
 				else:
-					self.stdout.write("skipping %s %s" % (e, serijska))
+					self.stdout.write("\tskipping %s %s" % (e, serijska))
 					pass
