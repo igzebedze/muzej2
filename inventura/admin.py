@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
-
+from django.shortcuts import render, redirect
 from simple_history.admin import SimpleHistoryAdmin
 #from import_export import resources
 import wikipedia
@@ -8,9 +8,46 @@ import wikipedia
 from inventura import models
 
 #class EksponatResource(resources.ModelResource):
-#    class Meta:
-#        model = Eksponat
+#	class Meta:
+#		model = Eksponat
 
+def batch_update_view(model_admin, request, queryset, field_name):
+
+		# removes all other fields from the django admin form for a model
+	def remove_fields(form):
+		for field in list(form.base_fields.keys()):
+			if not field == field_name:
+				del form.base_fields[field]
+		return form
+
+		# the return value is the form class, not the form class instance
+	form_class = remove_fields(model_admin.get_form(request))
+
+	if request.method == 'POST':
+		form = form_class()
+
+		# the view is already called via POST from the django admin changelist
+		# here we have to distinguish between just showing the intermediary view via post
+		# and actually confirming the bulk edits
+		# for this there is a hidden field 'form-post' in the html template
+		if 'form-post' in request.POST:
+			form = form_class(request.POST)
+			if form.is_valid():
+				for item in queryset.all():
+					setattr(item, field_name, form.cleaned_data[field_name])
+					item.save()
+				model_admin.message_user(request, "Changed category on {} items".format(queryset.count()))
+				return redirect(request.get_full_path())
+
+		return render(
+			request,
+			'admin/batch_editing_intermediary.html',
+			context={
+				'form': form,
+				'items': queryset,
+				'media': model_admin.media,
+			}
+		)
 	
 class PregledAdmin(SimpleHistoryAdmin):
 	list_display = ('primerek', 'izvajalec', 'datum', 'deluje')
@@ -35,6 +72,17 @@ class EksponatAdmin(SimpleHistoryAdmin):
 	search_fields = ('ime', 'tip')
 	date_hierarchy = ('created_at')
 	ordering = ('-updated_at',)
+	actions = ['spremeni_kategorijo']
+	
+	def spremeni_kategorijo(self, request, queryset):
+		return batch_update_view(
+			model_admin=self,
+			request=request,
+			queryset=queryset,
+			# this is the name of the field on the YourModel model
+			field_name='kategorija',
+		)
+		batch_update_offer.short_description = "spremeni kategorijo izbranim eksponatom"
 	
 #	def get_form(self, request, obj=None, **kwargs):
 #		form = super(EksponatAdmin, self).get_form(request, obj, **kwargs)
