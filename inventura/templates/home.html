@@ -5,7 +5,7 @@
 <ul>
 	{% for razstava in razstave %}
 	{% if not razstava.otvoritev %}
-	<li><a href="/razstava/{{ razstava.id }}/">{{ razstava }}</a></li>
+	<li><a href="/razstava/{{ razstava.id }}/">{{ razstava.naslov }}, {{ razstava.lokacija }}</a></li>
 	{% endif %}
 	{% endfor %}
 </ul>
