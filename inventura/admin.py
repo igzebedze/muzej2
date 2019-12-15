@@ -36,10 +36,10 @@ def batch_update_view(model_admin, request, queryset, field_name):
 				for item in queryset.all():
 					setattr(item, field_name, form.cleaned_data[field_name])
 					item.save()
-				model_admin.message_user(request, "Changed category on {} items".format(queryset.count()))
+				model_admin.message_user(request, "Changed {} on {} items".format(field_name, queryset.count()))
 				return redirect(request.get_full_path())
 
-		return render(
+	return render(
 			request,
 			'admin/batch_editing_intermediary.html',
 			context={
@@ -82,8 +82,8 @@ class EksponatAdmin(SimpleHistoryAdmin):
 			# this is the name of the field on the YourModel model
 			field_name='kategorija',
 		)
-		batch_update_offer.short_description = "spremeni kategorijo izbranim eksponatom"
-	
+	spremeni_kategorijo.short_description = "Spremeni kategorijo izbranim eksponatom"
+		
 #	def get_form(self, request, obj=None, **kwargs):
 #		form = super(EksponatAdmin, self).get_form(request, obj, **kwargs)
 #		if obj and obj.ime and not obj.wikipedia:
@@ -105,6 +105,7 @@ class RazstaveAdmin(admin.TabularInline):
 	model = models.Primerek.razstava_set.through
 
 class PrimerekAdmin(SimpleHistoryAdmin):
+	list_select_related = True
 	filter_horizontal = ('povezani',)
 	list_display = ('stevilka', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'st_razstav')
 	list_filter = ('lokacija', 'eksponat__kategorija')
@@ -117,6 +118,18 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 		if not change:
 			obj.inventariziral = request.user
 		obj.save()
+
+	actions = ['spremeni_eksponat',]
+	
+	def spremeni_eksponat(self, request, queryset):
+		return batch_update_view(
+			model_admin=self,
+			request=request,
+			queryset=queryset,
+			# this is the name of the field on the YourModel model
+			field_name='eksponat',
+		)
+	spremeni_eksponat.short_description = "Spremeni eksponat izbranim primerkom"
 
 class VhodAdmin(SimpleHistoryAdmin):
 	list_display = ('stevilka', 'lastnik', 'razlog', 'prevzel', 'cas_prevzema', 'inventorizirano')
