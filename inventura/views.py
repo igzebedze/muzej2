@@ -7,7 +7,7 @@ from django.http import Http404
 from django import forms
 from django.views.generic import ListView, DetailView
 
-from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava
+from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec
 
 def root(request):
 	return redirect('/admin/')
@@ -37,8 +37,21 @@ def HomeView(request):
 	# primerki po kategorijah
 	# ?
 def stat(request):
+	drzave = {}
+	kategorije = {}
+	
+	for p in Proizvajalec.objects.all():
+		drzave[p.drzava] = 1
+	
+	for e in Eksponat.objects.all():
+		if e.proizvajalec:
+			drzave[e.proizvajalec.drzava] = drzave[e.proizvajalec.drzava] + 1
+	
 	context = {
-			
+			'primerki_vhod_ja': Primerek.objects.filter(vhodni_dokument__isnull=False).count(),
+			'primerki_vhod_ne': Primerek.objects.exclude(vhodni_dokument__isnull=False).count(),
+			'eksponati_kategorije': Kategorija.objects.all(),
+			'eksponati_drzave': drzave,
 		}
 	return render(request, 'stat.html', context)
 
