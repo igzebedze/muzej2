@@ -11,6 +11,39 @@ from inventura import models
 #	class Meta:
 #		model = Eksponat
 
+class VhodiCountListFilter(admin.SimpleListFilter):
+	# Human-readable title which will be displayed in the
+	# right admin sidebar just above the filter options.
+	title = 'Provenienca'
+
+	# Parameter for the filter that will be used in the URL query.
+	parameter_name = 'ima_vhod'
+
+	def lookups(self, request, model_admin):
+		"""
+		Returns a list of tuples. The first element in each
+		tuple is the coded value for the option that will
+		appear in the URL query. The second element is the
+		human-readable name for the option that will appear
+		in the right sidebar.
+		"""
+		return [('yes', "Ima vhod"), ('no', "Nima vhoda")]
+
+	def queryset(self, request, queryset):
+		"""
+		Returns the filtered queryset based on the value
+		provided in the query string and retrievable via
+		`self.value()`.
+		"""
+
+		if self.value() == 'yes':
+			return queryset.exclude(vhodni_dokument__isnull=self.value())
+		elif self.value() == 'no':
+			return queryset.filter(vhodni_dokument__isnull=self.value())
+		else:
+			return queryset
+
+
 def batch_update_view(model_admin, request, queryset, field_name):
 
 		# removes all other fields from the django admin form for a model
@@ -109,20 +142,19 @@ class RazstaveAdmin(admin.TabularInline):
 class PrimerekAdmin(SimpleHistoryAdmin):
 	list_select_related = True
 	filter_horizontal = ('povezani',)
-	list_display = ('stevilka', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'st_razstav')
-	list_filter = ('lokacija', 'eksponat__kategorija')
+	list_display = ('stevilka', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'st_razstav', 'ima_vhod')
+	list_filter = ('lokacija', VhodiCountListFilter, 'eksponat__kategorija')
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime')
 	inlines = [ RazstaveAdmin, PregledInline ]
 	#date_hierarchy = 'leto_proizvodnje'
-	autocomplete_fields = ['eksponat']
-	
+	autocomplete_fields = ['eksponat']	
+	actions = ['spremeni_eksponat', 'premakni_polico', 'naredi_vhod']
+
 	def save_model(self, request, obj, form, change):
 		if not change:
 			obj.inventariziral = request.user
 		obj.save()
-
-	actions = ['spremeni_eksponat', 'premakni_polico']
 	
 	def spremeni_eksponat(self, request, queryset):
 		return batch_update_view(
@@ -142,7 +174,16 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 			field_name='polica',
 		)
 	premakni_polico.short_description = "Nastavi polico izbranim primerkom"
-	
+	def naredi_vhod(self, request, queryset):
+		return batch_update_view(
+			model_admin=self,
+			request=request,
+			queryset=queryset,
+			# this is the name of the field on the YourModel model
+			field_name='vhodni_dokument',
+		)
+	naredi_vhod.short_description = "Nastavi vhodni dokument"
+		
 class VhodAdmin(SimpleHistoryAdmin):
 	list_display = ('stevilka', 'lastnik', 'razlog', 'prevzel', 'cas_prevzema', 'inventorizirano')
 	inlines = [

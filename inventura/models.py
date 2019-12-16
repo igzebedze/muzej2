@@ -298,6 +298,12 @@ class Primerek(models.Model):
 	def __str__(self):
 		return "#%d : %s" % (self.inventarna_st, self.eksponat)
 
+	def ima_vhod(self):
+		if self.vhodni_dokument:
+			return True
+		else:
+			return False
+
 	def get_absolute_url(self):
 		return "/admin/inventura/primerek/%d/" % (self.pk,)
 		

@@ -31,6 +31,17 @@ def HomeView(request):
 	}
 	return render(request, 'home.html', context)
 
+# todo:
+	# imajo vhod vs. ne
+	# drzave pie chart
+	# primerki po kategorijah
+	# ?
+def stat(request):
+	context = {
+			
+		}
+	return render(request, 'stat.html', context)
+
 @login_required
 def izhod(request, id):
 	izhod = Izhod.objects.get(pk=id)
