@@ -145,7 +145,7 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 	list_display = ('stevilka', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'st_razstav', 'ima_vhod')
 	list_filter = ('lokacija', VhodiCountListFilter, 'eksponat__kategorija')
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
-	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime', 'zgodovina', 'stanje')
+	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime', 'eksponat__proizvajalec__ime', 'zgodovina', 'stanje')
 	inlines = [ RazstaveAdmin, PregledInline ]
 	#date_hierarchy = 'leto_proizvodnje'
 	autocomplete_fields = ['eksponat']	
