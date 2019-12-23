@@ -1,0 +1,40 @@
+navodila,,vrsta,proizvajalec,ime,širina,dolžina,višina,leto,serijska številka,polica,popisovalec,stanje,zgodovina
+,,,,,,,,,,,,,
+vrste eksponatov:,,Komponenta,Electronica Cerler s. a.,Matična plošča,22,37,3,,61023924,D4,mateja,"Lepo ohranjena plošča, z več čipi, etc. V rjavi škatli. ",
+Igralna konzola,,Računalnik,Commodore. ZDA,Commodore C64,41,21,8,1984,WG A375510,D4,mateja,Lepo ohranjen. Zadaj ima tipko za reset. Na spodnji strani nalepka proizvajalca. Narejen v Z Nemčiji. ,VH00038
+Mrežna oprema,,Podatkovni pogon,Commodore. ZDA,Commodore C2N Cassette,20,16,5,,2733244,D4,mateja,"Lepo ohranjen. V kasetniku ima kaseto ""Quest for tires"", etc.",VH00038
+Radio / Televizija,,Komponenta,Commodore. ZDA,Napajalnik ,14,8,8,1986/4,,D4,mateja,Rjavskaste barve. Na spodnji strani črn žig APRIL 1986,VH00038
+Dlančnik/Kalkulator,,Komponenta,Commodore. ZDA,Napajalnik ,14,8,8,1984/1,,D4,mateja,Rjavskaste barve. Na spodnji strani rumen žig JAN 1984,VH00038
+Ostalo,,Vnosna naprava,C&L,Joystick Gun shot,13,10,18,,,D4,,"Podnožje rumene barve, ročica ""commodorjeva"" zelena. V notranjosti se najbrž premika en vijak. ",VH00038
+Podatkovni pogon,,Vnosna naprava,,Joystick CrackShot,8,11,17,,,D4,,"Črn, z rdečima gumboma. Zgoraj napis CrackShot. Spodaj na vijaku napisano Made in Hong Kong.",VH00038
+Tiskalnik,,Telefon,"Iskra, Slovenija",Telefon ETA851/01,20,23,8,1992,106272,D4,,Rumene barve. Zgoraj polno nekih nalepk. Na spodnji strani nalepka proizvajalca. S flumastrom napisano MOJCA. Žig s slovenskim grbom.,
+Komponenta,,Telefon,"Iskra, Jugoslavija",Telefon ATA-31K,16,21,9,,,D4,,Zelene barve. Zgoraj manjka pokrov. Desno pod številčnico nalepka s 383. Zraven ima še vtičnico za v steno.,
+Terminal,,Telefon,"Iskra, Jugoslavija",Telefon ETA86,20,23,8,1987,88702,D4,,"Bež barve, s črno slušalko. Na spodnji strani nalepka proizvajalca. ",
+Nosilec podatkov,,Telefon,"Iskra, Jugoslavija",Telefon ATA-61,14,20,11,,,D4,,Oranžne barve. S priključkom za v steno. ,
+Vnosna naprava,,Telefon,"Iskra, Jugoslavija",Telefon ETA851/01,20,23,8,,125377,D4,,"Rdeče barve, s črno slušalko. Na zadnji strani nalepka proizvajalca. Slabo viden datum proizvodnje. S priključkom za v steno.",
+Monitor,,Telefon,"Iskra, Slovenija",Telefon Comet (ETA155S),17,24,8,1993,114660,D4,,"Temno modre barve, s črno slušalko. Na spodnji strani nalepka proizvajalca. S priključkom za v steno.",
+Računalnik,,Telefon,"Iskra, Jugoslavija",Telefon ETA86/10S,20,23,8,1988,51049,D4,,"Bež barve, s črno slušalko. Na spodnji strani nalepka proizvajalca. Kabel za vtičnoco v steni zelo kratek.",
+,,Telefon,"Iskra, Jugoslavija",Telefon ETA851/01,20,23,8,1988,138338,D4,,"Rjav, s črno slušalko. Pod slušalko napisano DEK. Na spodnji strani nalepka proizvajalca.  Poleg kabel za v steno.",
+"miši, joysticki, napajalniki ipd., se vpisejo posebej, ne kot del računalnika / konzole",,Vnosna naprava,"Silicon Graphics, ZDA",Miška (model: M-S43),7,12,3,,LZA90952808,D4,,Leva polovica porumenela. ,
+,,Vnosna naprava,"Silicon Graphics, ZDA",Miška S100,6,10,3,,K718074,D4,,"Malce porumenela. Značilne ""granitne"" barve.",
+"če za kak primerek nisi prepričan/a, kaj narest, ga raje pusti za kasneje",,Vnosna naprava,"Silicon Graphics, ZDA",SGI Indy kamera,16,5,6,,13479,D4,,"Zelo porumenela ta značilna ""granitna"" barva. S kablom.",
+,,Nosilec podatkov,Digital Device System,Podatkovna kaseta,8,6,2,,,D4,,"Kaseta, 4mm, 4-60m. Na njej Spaceware, ver. 5.1. SGI-IRIX Dec 1992.",
+"ja, dejansko rabiš meter, da zmeriš velikost",,Nosilec podatkov,Tektronix,"Magnetni trak 5.25"" Tektornix",15,10,1,,,D4,,V plastični škatlici. Spodaj desno nalepka s številko 10. ,
+,,Nosilec podatkov,Tektronix,"Magnetni trak 5.25"" Tektornix",15,10,1,,,D4,,V plastični škatlici. Spodaj desno nalepka s številko 6.,
+"pod stanje vnesi vizualno prepoznavne znake - barve, oblike, nalepke, praske, poškodbe",,Nosilec podatkov,Tektronix,"Magnetni trak 5.25"" Tektornix",15,10,1,,,D4,,V plastični škatlici z ostanki nalepke in rahlo počena.,
+,,Podatkovni pogon,"Pertec Computer Corporation, ZDA",8 palčni disketni pogon (model: FD514),22,36,10,,,D4,,Lepo ohranjen. Spredaj nalepka Monitorjevega muzeja 83. Na notranji desni strani nalepka proizvajalca.,
+,,Vnosna naprava,"Atari Corporation, ZDA",Miška STMI,6,10,3,,P28956625,D4,,Lepo ohranjena. Z dvema tipkama.,
+,,Vnosna naprava,"IBM, ZDA",Miška (model: 13K6690),6,11,3,,23-500755,D4,,Lepo ohranjena. Z dvema tipkama.,
+,,Vnosna naprava,"Apple, ZDA",Miška (G5431),6,10,3,,LI111184WYC22,D4,,Apple Desktop Bus Mouse. Z eno tipko. Bolj kvadratnega designa.,
+,,Vnosna naprava,"Apple, ZDA",Miška (M2706),7,11,3,,,D4,,Apple Desktop Bus Mouse. Z eno tipko. ,
+,,Vnosna naprava,"Apple, ZDA",Miška (M2706),7,11,3,,MI451084T 18,D4,,Apple Desktop Bus Mouse. Z eno tipko. Manjka pokrovček in kuglica.,
+,,Vnosna naprava,"NeXT Computer, Inc., ZDA",Miška ,6,10,3,,AAF 6140454,D4,,Lepo ohranjena. ,
+vnos 17. 12.,,Vnosna naprava,Active Card,Čitalec kartic (model: ACTR-01),7,9,2,,989,D4,,Lepo ohranjen. Na zadnji strani nalepka proizvajalca.,
+,,Vnosna naprava,,Čitalec DDS kaset,30,21,7,,,D4,,Lepo ohranjen. V njem še DDS kaseta. Zadaj SCSI vtičnica.,
+,,Ostalo,,Elektronka,1,11,1,,,Predal 1,,"Steklena površina malce počena. Zadaj dolgo vezje. Notri  na ""ohišju"" napisana številka 11022.",
+,,Ostalo,,Elektronka,2,7,2,,240550,Predal 1,,"Lepo ohranjena. Na njej napisi WF EABC 80 E7048, zadaj serijska in Gk 33. ",
+,,Ostalo,"Siemens AG, Nemčija",Elektronka Röhre,3,9,3,,PCL 805,Predal 1,,"V original škatli, ki je malce poškodovana in pračna. Elektronka je najbrž pregorela - steklo je sajasto.",
+,,Ostalo,"EI, Jugoslavija",Elektronka Noval,3,10,3,,PCF-802,Predal 1,,"V originalni škatlici, ki je poškodovana in elektronka gre kar težko ven - potrebno paziti, da se je ne strga. Na vrhu s kulijem napisano 48,49. Na elektronki napis Ei, Jugoslavija in serijska številka. Lepo ohranjena.",
+,,Ostalo,"EI, Jugoslavija",Elektronka,3,10,3,,PCF-802,Predal 1,,"V originalni škatlici, ki je lepo ohranjena, malce prašna. Zgoraj na pokrovčku žig PCF-802. Ob inventariziranju elektronke nisem mogla spraviti iz škatlice. Porovčka se zelo težko odpirata in obstaja možnost uničenja/odtrganja.",
+,,Ostalo,"Philips, Nizozemska",Elektronka,2,8,2,,PCL 82,Predal 1,,"V originalni škatlici, ne pokrovček poškodovan - manjka del, ki se zapira. Elektronka tudi lepa, na njen spodaj napis E9 6J.",
+,,Ostalo,,Elektronka,4,12,4,,,Predal 1,,Brez škatle. Na njej napisano Valvo Pl 519. Steklo sajasto.,
