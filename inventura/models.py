@@ -146,6 +146,9 @@ class Proizvajalec(models.Model):
 	def __str__(self):
 		return "%s, %s" % (self.ime, self.drzava)
 
+	def st_eksponatov(self):
+		return self.eksponat_set.count()
+
 	class Meta:
 		verbose_name_plural = "Proizvajalci"
 

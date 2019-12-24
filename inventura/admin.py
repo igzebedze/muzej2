@@ -135,6 +135,7 @@ class OsebaAdmin(admin.ModelAdmin):
 class ProizvajalecAdmin(admin.ModelAdmin):
 	list_filter = ('drzava',)
 	search_fields = ('ime',)
+	list_display = ("ime", "drzava", "st_eksponatov")
 
 class RazstaveAdmin(admin.TabularInline):
 	model = models.Primerek.razstava_set.through

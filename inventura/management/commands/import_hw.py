@@ -34,6 +34,12 @@ class Command(BaseCommand):
 				proizvajalec = row['proizvajalec'].capitalize()
 				self.stdout.write("looking at %s %s %s" % (proizvajalec, eksponat, letnik))
 				kategorija = row['vrsta'].capitalize()
+				drzava = "NN"
+				
+				pr = proizvajalec.split(", ")
+				if len(pr) > 1:
+					proizvajalec = pr[0]
+					drzava = pr[1]
 				
 				# for no-name just use category name, i.e. "Monitor" 
 				if not eksponat:
@@ -65,7 +71,7 @@ class Command(BaseCommand):
 				except:
 					m = Proizvajalec(
 						ime=proizvajalec,
-						drzava="NN",
+						drzava=drzava,
 					)
 					m.save()
 					self.stdout.write("\tcreated new proizvajalec %s" % (m.ime))
