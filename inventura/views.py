@@ -1,4 +1,7 @@
 import re
+#import wikipedia
+import wptools
+import wikitextparser as wtp
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -18,8 +21,36 @@ class PrimerekList(ListView):
 class KategorijaList(ListView):
 	model = Kategorija
 
+# todo: grab and render wikipedia infobox if link avaialable, else offer to add wiki
 class EksponatView(DetailView):
 	model = Eksponat
+
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		
+		e = self.get_object()
+		w = e.wikipedia
+		if w:
+			slug = w.rsplit('/', 1)[-1]		# we only accept well formed wiki urls
+			wiki = wptools.page(slug)
+			wiki.get_parse()
+			page = wiki.get_restbase('/page/html/').data['html']
+			infobox = re.search("<table class=\"infobox.*?<\/table>", page)
+			
+			context['infobox'] = infobox.group()
+		
+		return context
+
+#	def get_form(self, request, obj=None, **kwargs):
+#		form = super(EksponatAdmin, self).get_form(request, obj, **kwargs)
+#		if obj and obj.ime and not obj.wikipedia:
+#			wiki = wikipedia.page(wikipedia.search(obj.ime, results=1))
+#			if wiki:
+#				form.base_fields['onlinephoto'].initial = wiki.images[0]
+#				form.base_fields['wikipedia'].initial = wiki.url
+#				obj.wikipedia = wiki.url
+#				obj.onlinephoto = wiki.images[0]
+#		return form
 
 class RazstavaView(DetailView):
 	model = Razstava

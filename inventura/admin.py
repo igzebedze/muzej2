@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from simple_history.admin import SimpleHistoryAdmin
 #from import_export import resources
-import wikipedia
+#import wikipedia
 
 from inventura import models
 

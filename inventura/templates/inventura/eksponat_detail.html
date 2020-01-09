@@ -1,3 +1,12 @@
+<html><head><style>.infobox { float: right; }</style></head>
+<body>
+
+{% if infobox %}
+	{{ infobox|safe }}
+{% elif object.onlinephoto %}
+	<img class='infobox' src="{{ object.onlinephoto }}" height="300px" />
+{% endif %}
+
 <h3>{{ object.kategorija }}</h3>
 <h1>{{ object.ime }}</h1>
 <h2>{{ object.proizvajalec }}</h2>
@@ -6,9 +15,7 @@
 	<img src="{{ primerek.fotografija.url }}" height="300px" />
 	{% endif %}
 {% endfor %}
-	{% if object.onlinephoto %}
-	<img src="{{ object.onlinephoto }}" height="300px" />
-	{% endif %}
+
 <ul>
 	{% if object.tip %}<li>{{ object.tip }}</li>{% endif %}
 	{% if object.opis %}<li>{{ object.opis }}</li>{% endif %}
@@ -30,7 +37,6 @@
         <p><a target="_blank" href="/admin/inventura/eksponat/{{ object.id }}/change/">Uredi</a></p>       
 {% endif %}    
 
-
 <h3>Primerki</h3>
 <ul>
 	{% for p in object.primerek_set.all %}
@@ -41,3 +47,5 @@
 	</li>
 	{% endfor %}
 </ul>
+</body>
+</html>
