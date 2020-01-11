@@ -45,6 +45,10 @@ class PrimerekList(ListView):
 class KategorijaList(ListView):
 	model = Kategorija
 
+class GalerijaList(ListView):
+	model = Kategorija
+	template_name = "inventura/galerija.html"
+	
 class ProizvajalecList(ListView):
 	model = Proizvajalec
 

@@ -1,7 +1,7 @@
 <h1>Računalniški muzej</h1>
 <p>Seznam vseh eksponatov v zbirki Društva računalniški muzej</p>
 
-<h3>Kazalo po kategorijah</h3>
+<h3>Galerija po kategorijah</h3>
 <ul>
 {% for kategorija in object_list %}
 	<li><a href="#{{ kategorija.ime }}">{{ kategorija.ime }}</a> ({{ kategorija.eksponat_set.count }})</li>
@@ -9,15 +9,31 @@
 </ul>
 <hr />
 {% for kategorija in object_list %}
+<div style="clear: both;">&nbsp;</div>
 <h2><a name="{{ kategorija.ime }}">{{ kategorija.ime }}</a></h2>
 <p>{{ kategorija.opis }}</p>
+	{% for eksponat in kategorija.eksponat_set.all %}
+		{% if eksponat.fotografija %}
+			<div class='box' style="border: 1px solid black; width: 160px; height: 250px; float: left;">
+				<a href="/eksponat/{{ eksponat.id }}/">
+					<img height='150' src='/media/{{ eksponat.fotografija }}' /><br />
+					{{ eksponat }}
+				</a>, 
+				{% if eksponat.proizvajalec %} {{ eksponat.proizvajalec }}{% endif %}
+				({{ eksponat.st_primerkov }})
+			</div>
+		{% endif %}
+	{% endfor %}
+<div style="clear: both;">&nbsp;</div>
 <ul>
 	{% for eksponat in kategorija.eksponat_set.all %}
+		{% if not eksponat.fotografija %}
 	<li>
 		<a href="/eksponat/{{ eksponat.id }}/">{{ eksponat }}</a>, 
 		{% if eksponat.proizvajalec %} {{ eksponat.proizvajalec }}{% endif %}
 		({{ eksponat.st_primerkov }})
 	</li>
+		{% endif %}
 	{% endfor %}
 </ul>
 <hr />
