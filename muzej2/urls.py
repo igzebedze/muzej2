@@ -31,6 +31,7 @@ urlpatterns = [
 	path('stat/', stat),
     path('izvoz/', PrimerekList.as_view(), name='izvoz'),
 	path('eksponat/<int:pk>/', EksponatView.as_view(), name='eksponat-detail'),
+    path('eksponat/<int:pk>/uredi/', update_infobox, name='infobox-edit'),
 	path('razstava/<int:pk>/', RazstavaView.as_view(), name='razstava-detail'),
 #	path(r'^wiki/', include('wiki.urls')),
 #	path(r'^autocomplete/', include('autocomplete_light.urls')),

@@ -1,7 +1,8 @@
 import re
-#import wikipedia
+import wikipedia
 import wptools
 import wikitextparser as wtp
+import urllib.parse
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -9,8 +10,28 @@ from django.shortcuts import render, redirect
 from django.http import Http404
 from django import forms
 from django.views.generic import ListView, DetailView
+from django.http import JsonResponse
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+from django.shortcuts import redirect
 
 from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec
+
+@login_required
+def update_infobox(request, pk=None):
+	e = Eksponat.objects.get(id=pk)
+	
+	# if this is a POST request we need to process the form data
+	if request.method == 'POST':
+		wikiurl = urllib.parse.unquote(request.POST.get('wikiurl'))
+		wikiimage = urllib.parse.unquote(request.POST.get('wikiimage'))
+		infobox = urllib.parse.unquote(request.POST.get('infobox'))
+		e.wikipedia = wikiurl
+		e.onlinephoto = wikiimage
+		e.infobox = infobox
+		e.save()
+			
+	return redirect('/eksponat/%d/' % (pk))
 
 def root(request):
 	return redirect('/admin/')
@@ -27,30 +48,44 @@ class EksponatView(DetailView):
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
-		
 		e = self.get_object()
+
+		context['next'] = e.id + 1
+		context['prev'] = e.id - 1
+
+# if we stored infobox before, we assume there is nothing else to do
+		if e.infobox:
+			return context
+
 		w = e.wikipedia
-		if w:
+# if we don't have wiki page yet, search api for the object
+		if not e.wikipedia:
+			try:
+				wiki = wikipedia.page(wikipedia.search(e.ime, results=1))
+			except:
+				print ('blah: ' + e.ime)
+			else:
+				if wiki:
+					context['wikiurl'] = wiki.url
+					context['wikiname'] = wiki.title
+					w = wiki.url
+				if wiki.images:
+					context['wikiimage'] = wiki.images[0]
+
+# parse the data and store it
+		if w and not e.infobox:
 			slug = w.rsplit('/', 1)[-1]		# we only accept well formed wiki urls
 			wiki = wptools.page(slug)
-			wiki.get_parse()
-			page = wiki.get_restbase('/page/html/').data['html']
-			infobox = re.search("<table class=\"infobox.*?<\/table>", page)
-			
-			context['infobox'] = infobox.group()
+			try:
+				page = wiki.get_restbase('/page/html/').data['html']
+			except:
+				pass
+			else:
+				infobox = re.findall("<table class=\"infobox.*?<\/table>", page)
+				if infobox:
+					context['infobox'] = "\n<br>\n".join(infobox)
 		
 		return context
-
-#	def get_form(self, request, obj=None, **kwargs):
-#		form = super(EksponatAdmin, self).get_form(request, obj, **kwargs)
-#		if obj and obj.ime and not obj.wikipedia:
-#			wiki = wikipedia.page(wikipedia.search(obj.ime, results=1))
-#			if wiki:
-#				form.base_fields['onlinephoto'].initial = wiki.images[0]
-#				form.base_fields['wikipedia'].initial = wiki.url
-#				obj.wikipedia = wiki.url
-#				obj.onlinephoto = wiki.images[0]
-#		return form
 
 class RazstavaView(DetailView):
 	model = Razstava

@@ -1,11 +1,50 @@
-<html><head><style>.infobox { float: right; }</style></head>
+<html>
+	<head>
+		<style>
+			.infobox, #infobox { float: right; border: 1px solid black; }
+		</style>
+	</head>
 <body>
 
-{% if infobox %}
-	{{ infobox|safe }}
+
+<div id='nav'>
+		<p>
+			{% if prev %}
+				<a href='/eksponat/{{ prev }}/'><- prejšnji eksponat</a>
+			{% endif %}
+			{% if next %}
+				<a href='/eksponat/{{ next }}/' style="float: right;">naslednji eksponat -></a>
+			{% endif %}
+		</p>
+</div>
+
+<div id='infobox'>
+<!-- previously stored versions -->
+{% if object.infobox %}
+	{{ object.infobox|safe }}	
+
 {% elif object.onlinephoto %}
 	<img class='infobox' src="{{ object.onlinephoto }}" height="300px" />
+
+<!-- realtime fetched preview to be confirmed -->
+{% else %}
+	<h4>Samodejno smo nasli:</h4>
+	{% if wikiimage %}<p>Sliko: <img src='{{ wikiimage }}' height=200 /></p>{% endif %}
+	{% if wikiurl %}<p>Wiki vir: <a href='{{ wikiurl }}' target='_blank'>{{ wikiname }}</a></p>{% endif %}
+	{% if infobox %}<p>Wiki infobox: </p>{{ infobox|safe }}{% endif %}
+
+	{% if user.is_authenticated %}
+		<form action="/eksponat/{{ object.id }}/uredi/" method="post">
+		    {% csrf_token %}
+		    <!-- todo: check if field.label already exists under object.bio -->	
+		    <input type='hidden' name='wikiurl' value='{{ wikiurl|urlencode }}'>
+		    <input type='hidden' name='wikiimage' value='{{ wikiimage|urlencode }}'>
+		    <input type='hidden' name='infobox' value="{{ infobox|escape }}">
+		    <button type="submit" value="Shrani">Shrani</button>
+		</form>
+	{% endif %}
 {% endif %}
+</div>
 
 <h3>{{ object.kategorija }}</h3>
 <h1>{{ object.ime }}</h1>
@@ -47,5 +86,7 @@
 	</li>
 	{% endfor %}
 </ul>
+
+
 </body>
 </html>

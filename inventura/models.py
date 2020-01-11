@@ -185,6 +185,7 @@ class Eksponat(models.Model):
 	uradnastran = models.URLField(blank=True, null=True, help_text="Uradna stran če še obstaja, npr IBM")
 	vir = models.URLField(blank=True, null=True, help_text="kakršenkoli drug vir, npr Cobiss")
 	onlinephoto = models.URLField(blank=True, null=True, help_text="Reprezentativna slika iz enega od zgornjih virov")
+	infobox = models.TextField(blank=True, null=True, help_text="Infobox html iz Wikipedije")
 
 	dnevnik = HistoricalRecords()
 	
