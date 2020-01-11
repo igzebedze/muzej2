@@ -56,13 +56,13 @@
 {% endfor %}
 
 <ul>
-	{% if object.tip %}<li>{{ object.tip }}</li>{% endif %}
-	{% if object.opis %}<li>{{ object.opis }}</li>{% endif %}
-	{% if object.wikipedia %}<li><a href="{{ object.wikipedia }}" target="_blank">{{ object.wikipedia }}</a></li>{% endif %}
-	{% if object.oldcomputers %}<li><a href="{{ object.oldcomputers }}" target="_blank">{{ object.oldcomputers }}</a></li>{% endif %}
-	{% if object.uradnastran %}<li><a href="{{ object.uradnastran }}" target="_blank">{{ object.uradnastran }}</a></li>{% endif %}
-	{% if object.vir %}<li><a href="{{ object.vir }}" target="_blank">{{ object.vir }}</a></li>{% endif %}
-	{% if object.leto_proizvodnje %}<li>{{ object.leto_proizvodnje }}</li>{% endif %}
+	{% if object.tip %}<li>Tip: {{ object.tip }}</li>{% endif %}
+	{% if object.opis %}<li>Opis: {{ object.opis }}</li>{% endif %}
+	{% if object.wikipedia %}<li>Wikipedia: <a href="{{ object.wikipedia }}" target="_blank">{{ object.wikipedia }}</a></li>{% endif %}
+	{% if object.oldcomputers %}<li>Oldcomputers spletni vir: <a href="{{ object.oldcomputers }}" target="_blank">{{ object.oldcomputers }}</a></li>{% endif %}
+	{% if object.uradnastran %}<li>Uradna stran: <a href="{{ object.uradnastran }}" target="_blank">{{ object.uradnastran }}</a></li>{% endif %}
+	{% if object.vir %}<li>Drugi spletni viri: <a href="{{ object.vir }}" target="_blank">{{ object.vir }}</a></li>{% endif %}
+	{% if object.leto_proizvodnje %}<li>Leto proizvodnje: {{ object.leto_proizvodnje }}</li>{% endif %}
 	<li>stevilo primerkov: {{ object.st_primerkov }}</li>
 
 	{% if razstave %}
