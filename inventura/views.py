@@ -50,6 +50,15 @@ class EksponatView(DetailView):
 		context = super().get_context_data(**kwargs)
 		e = self.get_object()
 
+# list of exhibitions
+		razstave = []
+		for p in e.primerek_set.all():
+			for r in p.razstava_set.all():
+				if r not in razstave:
+					razstave.append(r) 
+		context['razstave'] = razstave
+
+# navigation
 		context['next'] = e.id + 1
 		context['prev'] = e.id - 1
 
