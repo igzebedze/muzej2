@@ -209,6 +209,8 @@ class Eksponat(models.Model):
 		p = self.primerek_set.filter(fotografija__isnull=False)
 		if p:
 			return p[0].fotografija
+		if self.onlinephoto:
+			return self.onlinephoto
 
 	def st_primerkov(self):
 		return "%d" % self.primerek_set.count()
