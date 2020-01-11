@@ -80,13 +80,13 @@ class EksponatView(DetailView):
 		context['prev'] = e.id - 1
 
 # if we stored infobox before, we assume there is nothing else to do
-		if e.infobox:
-			return context
+#		if e.infobox:
+#			return context
 
 		w = e.wikipedia
 # if we don't have wiki page yet, search api for the object
-		if not e.wikipedia:
-			search = e.proizvajalec.ime + " " + e.ime
+		if not e.wikipedia or not e.onlinephoto:
+			search = e.ime # e.proizvajalec.ime + " " + 
 			#if e.tip:
 			#	search = search + " " + e.tip
 			search = search.replace("tipkovnica", "keyboard")
@@ -119,12 +119,6 @@ class EksponatView(DetailView):
 							pass
 						
 						context['wiki'].append(wiki)
-				#if wiki:
-				#	context['wikiurl'] = wiki.url
-				#	context['wikiname'] = wiki.title
-				#	w = wiki.url
-				#if wiki.images:
-				#	context['wikiimage'] = wiki.images[0]
 
 # parse the data and store it
 		if w and not e.infobox:

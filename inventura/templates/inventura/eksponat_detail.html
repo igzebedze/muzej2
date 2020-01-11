@@ -23,13 +23,14 @@
 {% if object.infobox %}
 	<h4>Osnovni podatki (vir: Wikipedia)</h4>
 	{{ object.infobox|safe }}	
-
-{% elif object.onlinephoto %}
+{% endif %}
+{% if object.onlinephoto %}
 	<h4>Primer (vir: Wikipedia)</h4>
 	<img class='infobox' src="{{ object.onlinephoto }}" height="300px" />
-
+{% endif %}
 <!-- realtime fetched preview to be confirmed -->
-{% elif user.is_authenticated %}
+{% if user.is_authenticated %}
+	{% if wiki %}
 	<h4>Samodejno smo našli:</h4>
 
 	{% for w in wiki %}
@@ -43,8 +44,11 @@
 			    <button type="submit" value="Shrani">Shrani</button>
 			</form>
 	{% endfor %}
+	{% endif %}
 
-	{% if infobox %}<p>Wiki infobox: </p>{{ infobox|safe }}
+	{% if infobox %}
+		<p>Wiki infobox: </p>
+		{{ infobox|safe }}
 		<form action="/eksponat/{{ object.id }}/uredi/" method="post">
 		    {% csrf_token %}
 		    <!-- todo: check if field.label already exists under object.bio -->	
