@@ -87,12 +87,13 @@ class EksponatView(DetailView):
 # if we don't have wiki page yet, search api for the object
 		if not e.wikipedia:
 			search = e.proizvajalec.ime + " " + e.ime
-			if e.tip:
-				search = search + " " + e.tip
+			#if e.tip:
+			#	search = search + " " + e.tip
 			search = search.replace("tipkovnica", "keyboard")
 			search = search.replace("usmerjevalnik", "router")
 			search = search.replace("kasetar", "casette player")
 			search = search.replace("miška", "mouse")
+			search = search.replace("ZDA", "USA")
 			print ('checking: ' + search)
 			try:
 				pages = wikipedia.search(search, results=5)
