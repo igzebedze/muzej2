@@ -205,6 +205,11 @@ class Eksponat(models.Model):
 		else:
 			return "%d - %d" % (leto_min, leto_max) 
 
+	def fotografija(self):
+		p = self.primerek_set.filter(fotografija__isnull=False)
+		if p:
+			return p[0].fotografija
+
 	def st_primerkov(self):
 		return "%d" % self.primerek_set.count()
 	st_primerkov.short_description = u'Št primerkov'

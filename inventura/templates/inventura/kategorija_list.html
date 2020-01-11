@@ -13,7 +13,9 @@
 <p>{{ kategorija.opis }}</p>
 <ul>
 	{% for eksponat in kategorija.eksponat_set.all %}
-	<li><a href="/eksponat/{{ eksponat.id }}/">{{ eksponat }}</a>, 
+	<li>
+		{% if eksponat.fotografija %}<img height='50' src='{{ eksponat.fotografija }}' />{% endif %}
+		<a href="/eksponat/{{ eksponat.id }}/">{{ eksponat }}</a>, 
 		{% if eksponat.proizvajalec %} {{ eksponat.proizvajalec }}{% endif %}
 		({{ eksponat.st_primerkov }})
 	</li>
