@@ -31,18 +31,27 @@
 <!-- realtime fetched preview to be confirmed -->
 {% elif user.is_authenticated %}
 	<h4>Samodejno smo našli:</h4>
-	{% if wikiimage %}<p>Sliko: <img src='{{ wikiimage }}' height=200 /></p>{% endif %}
-	{% if wikiurl %}<p>Wiki vir: <a href='{{ wikiurl }}' target='_blank'>{{ wikiname }}</a></p>{% endif %}
-	{% if infobox %}<p>Wiki infobox: </p>{{ infobox|safe }}{% endif %}
 
+	{% for w in wiki %}
+		{% if w.wikiimage %}<p>Sliko: <img src='{{ w.wikiimage }}' height=200 /></p>{% endif %}
+		{% if w.wikiurl %}<p>Wiki vir: <a href='{{ w.wikiurl }}' target='_blank'>{{ w.wikiname }}</a></p>{% endif %}
+			<form action="/eksponat/{{ object.id }}/uredi/" method="post">
+			    {% csrf_token %}
+			    <!-- todo: check if field.label already exists under object.bio -->	
+			    <input type='hidden' name='wikiurl' value='{{ w.wikiurl|urlencode }}'>
+			    <input type='hidden' name='wikiimage' value='{{ w.wikiimage|urlencode }}'>
+			    <button type="submit" value="Shrani">Shrani</button>
+			</form>
+	{% endfor %}
+
+	{% if infobox %}<p>Wiki infobox: </p>{{ infobox|safe }}
 		<form action="/eksponat/{{ object.id }}/uredi/" method="post">
 		    {% csrf_token %}
 		    <!-- todo: check if field.label already exists under object.bio -->	
-		    <input type='hidden' name='wikiurl' value='{{ wikiurl|urlencode }}'>
-		    <input type='hidden' name='wikiimage' value='{{ wikiimage|urlencode }}'>
 		    <input type='hidden' name='infobox' value="{{ infobox|escape }}">
 		    <button type="submit" value="Shrani">Shrani</button>
 		</form>
+	{% endif %}
 {% endif %}
 </div>
 
@@ -64,6 +73,7 @@
 	{% if object.vir %}<li>Drugi spletni viri: <a href="{{ object.vir }}" target="_blank">{{ object.vir }}</a></li>{% endif %}
 	{% if object.leto_proizvodnje %}<li>Leto proizvodnje: {{ object.leto_proizvodnje }}</li>{% endif %}
 	<li>stevilo primerkov: {{ object.st_primerkov }}</li>
+	{% if donatorji %}<li>Donator(ji): {{ donatorji }}</li>{% endif %}
 
 	{% if razstave %}
 	{% for r in razstave %}

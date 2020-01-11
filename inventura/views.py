@@ -23,12 +23,15 @@ def update_infobox(request, pk=None):
 	
 	# if this is a POST request we need to process the form data
 	if request.method == 'POST':
-		wikiurl = urllib.parse.unquote(request.POST.get('wikiurl'))
-		wikiimage = urllib.parse.unquote(request.POST.get('wikiimage'))
-		infobox = urllib.parse.unquote(request.POST.get('infobox'))
-		e.wikipedia = wikiurl
-		e.onlinephoto = wikiimage
-		e.infobox = infobox
+		if 'wikiurl' in request.POST:
+			wikiurl = urllib.parse.unquote(request.POST.get('wikiurl'))
+			e.wikipedia = wikiurl
+		if 'wikiimage' in request.POST:
+			wikiimage = urllib.parse.unquote(request.POST.get('wikiimage'))
+			e.onlinephoto = wikiimage
+		if 'infobox' in request.POST:
+			infobox = urllib.parse.unquote(request.POST.get('infobox'))
+			e.infobox = infobox
 		e.save()
 			
 	return redirect('/eksponat/%d/' % (pk))
@@ -58,6 +61,13 @@ class EksponatView(DetailView):
 					razstave.append(r) 
 		context['razstave'] = razstave
 
+# list of donors
+		donatorji = []
+		for p in e.primerek_set.all():
+			if p.donator and p.donator not in donatorji:
+				donatorji.append(p.donator) 
+		context['donatorji'] = donatorji
+
 # navigation
 		context['next'] = e.id + 1
 		context['prev'] = e.id - 1
@@ -69,17 +79,44 @@ class EksponatView(DetailView):
 		w = e.wikipedia
 # if we don't have wiki page yet, search api for the object
 		if not e.wikipedia:
+			search = e.proizvajalec.ime + " " + e.ime
+			if e.tip:
+				search = search + " " + e.tip
+			search = search.replace("tipkovnica", "keyboard")
+			search = search.replace("usmerjevalnik", "router")
+			search = search.replace("kasetar", "casette player")
+			search = search.replace("miška", "mouse")
+			print ('checking: ' + search)
 			try:
-				wiki = wikipedia.page(wikipedia.search(e.ime, results=1))
+				pages = wikipedia.search(search, results=5)
+				print (pages)
+				#wiki = wikipedia.page(wikipedia.search(search, results=1))
 			except:
-				print ('blah: ' + e.ime)
+				print ('blah: ' + search)
 			else:
-				if wiki:
-					context['wikiurl'] = wiki.url
-					context['wikiname'] = wiki.title
-					w = wiki.url
-				if wiki.images:
-					context['wikiimage'] = wiki.images[0]
+				context['wiki'] = []
+				for p in pages:
+					try:
+						page = wikipedia.page(p)
+					except:
+						pass
+					else:
+						wiki = {
+							'wikiurl': 	page.url,
+							'wikiname': page.title,
+						}
+						try:
+							wiki['wikiimage'] = page.images[0]
+						except:
+							pass
+						
+						context['wiki'].append(wiki)
+				#if wiki:
+				#	context['wikiurl'] = wiki.url
+				#	context['wikiname'] = wiki.title
+				#	w = wiki.url
+				#if wiki.images:
+				#	context['wikiimage'] = wiki.images[0]
 
 # parse the data and store it
 		if w and not e.infobox:
