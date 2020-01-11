@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',HomeView, name='home'),
     path('eksponat/', KategorijaList.as_view(), name='kazalo'),
+    path('proizvajalec/', ProizvajalecList.as_view(), name='proizvajalci'),
 	path('vhod/<int:id>/', vhod),	#  r'^vhod/([0-9]+)/'
 	path('v/<int:id>/', vhod_short),	# r'^[vV]/([0-9]+)/?'
 	path('izhod/<int:id>/', izhod),

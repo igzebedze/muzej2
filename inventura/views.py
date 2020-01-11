@@ -45,6 +45,9 @@ class PrimerekList(ListView):
 class KategorijaList(ListView):
 	model = Kategorija
 
+class ProizvajalecList(ListView):
+	model = Proizvajalec
+
 # todo: grab and render wikipedia infobox if link avaialable, else offer to add wiki
 class EksponatView(DetailView):
 	model = Eksponat

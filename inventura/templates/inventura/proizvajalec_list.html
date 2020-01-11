@@ -1,0 +1,23 @@
+<h1>Računalniški muzej</h1>
+<p>Seznam vseh eksponatov v zbirki Društva računalniški muzej</p>
+
+<h3>Kazalo po proizvajalcih</h3>
+<ul>
+{% for proizvajalec in object_list %}
+	<li><a href="#{{ proizvajalec.ime }}">{{ proizvajalec.ime }}</a> ({{ proizvajalec.eksponat_set.count }})</li>
+{% endfor %}
+</ul>
+<hr />
+{% for proizvajalec in object_list %}
+<h2><a name="{{ proizvajalec.ime }}">{{ proizvajalec.ime }}</a></h2>
+<p>{{ proizvajalec.opis }}</p>
+<ul>
+	{% for eksponat in proizvajalec.eksponat_set.all %}
+	<li><a href="/eksponat/{{ eksponat.id }}/">{{ eksponat }}</a>, 
+		{% if eksponat.proizvajalec %} {{ eksponat.proizvajalec }}{% endif %}
+		({{ eksponat.st_primerkov }})
+	</li>
+	{% endfor %}
+</ul>
+<hr />
+{% endfor %}
