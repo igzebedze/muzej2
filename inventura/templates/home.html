@@ -31,3 +31,24 @@
 </p>
 
 <hr />
+<h3>Nakljucni predmet</h3>
+<a href="/eksponat/{{ eksponat.id }}/">
+{% if eksponat.fotografija %}
+<img src="{{ eksponat.fotografija }}" />
+{% endif %}
+<p>{{ eksponat.ime }}</p>
+</a>
+<ul>
+	{{ eksponat.proizvajalec }}
+	{{ eksponat.kategorija }}
+	{% if eksponat.tip %}<li>Tip: {{ eksponat.tip }}</li>{% endif %}
+	{% if eksponat.opis %}<li>Opis: {{ eksponat.opis }}</li>{% endif %}
+	{% if eksponat.wikipedia %}<li>Wikipedia: <a href="{{ object.wikipedia }}" target="_blank">{{ eksponat.wikipedia }}</a></li>{% endif %}
+	{% if eksponat.oldcomputers %}<li>Oldcomputers spletni vir: <a href="{{ eksponat.oldcomputers }}" target="_blank">{{ eksponat.oldcomputers }}</a></li>{% endif %}
+	{% if eksponat.uradnastran %}<li>Uradna stran: <a href="{{ eksponat.uradnastran }}" target="_blank">{{ eksponat.uradnastran }}</a></li>{% endif %}
+	{% if eksponat.vir %}<li>Drugi spletni viri: <a href="{{ eksponat.vir }}" target="_blank">{{ eksponat.vir }}</a></li>{% endif %}
+	{% if eksponat.leto_proizvodnje %}<li>Leto proizvodnje: {{ eksponat.leto_proizvodnje }}</li>{% endif %}
+	<li>stevilo primerkov: {{ eksponat.st_primerkov }}</li>
+</ul>
+
+<hr />

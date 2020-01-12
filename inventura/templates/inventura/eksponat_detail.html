@@ -84,7 +84,6 @@
 	<li>Razstavljen: {% if r %}<a href="{{ r.get_absolute_url }}">{{ r }}</a>{% endif %}</li>
 	{% endfor %}
 	{% endif %}
-
 </ul>
 {% if user.is_authenticated %}
         <p><a target="_blank" href="/admin/inventura/eksponat/{{ object.id }}/change/">Uredi</a></p>       

@@ -3,6 +3,7 @@ import wikipedia
 import wptools
 import wikitextparser as wtp
 import urllib.parse
+import random
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -139,9 +140,14 @@ class RazstavaView(DetailView):
 	model = Razstava
 
 def HomeView(request):
+	eksponati = Eksponat.objects.all()
+	max_id = Eksponat.objects.order_by('-id')[0].id
+	random_id = random.randint(1, max_id + 1)
+	random_object = Eksponat.objects.filter(id=random_id)[0]
 	context = {
 		'razstave': Razstava.objects.order_by('-otvoritev'),
-		'novosti': Primerek.objects.order_by('-datum_inventarizacije')[0:10]	
+		'novosti': Primerek.objects.order_by('-datum_inventarizacije')[0:10],
+		'eksponat': random_object,
 	}
 	return render(request, 'home.html', context)
 
