@@ -1,3 +1,5 @@
+# originalna verzija by @avian. natisne nalepke od-do iz ukazne vrstice
+
 # coding=utf8
 import os.path
 import subprocess

@@ -1,3 +1,5 @@
+# nova verzija by @igzebedze, natisne nalepke po stevilkah iz datoteke
+
 # coding=utf8
 import os.path
 import subprocess
@@ -6,11 +8,11 @@ from tempfile import NamedTemporaryFile
 
 def write_label(outf, invst):
 
-	url = "http://racunalniski-muzej.si/i/%d" % invst
+	url = "http://racunalniski-muzej.si/i/%s" % invst
 
 	ps = """9 8 moveto (%(url)s) (eclevel=L width=0.6 height=0.6) /qrcode /uk.co.terryburton.bwipp findresource exec
 newpath
-ISOArial 10 scalefont setfont
+ISOArial 8 scalefont setfont
 60.000000 44.000000 moveto
 (ra) show
 /ccaron glyphshow
@@ -20,11 +22,11 @@ ISOArial 10 scalefont setfont
 ISOArialBold 10 scalefont setfont
 60.000000 34.000000 moveto
 (muzej) show
-ISOArial 10 scalefont setfont
+ISOArial 8 scalefont setfont
 60.000000 9.000000 moveto
 (inv. ) show
 /scaron glyphshow
-(t. %(invst)04d) show
+(t. %(invst)s) show
 stroke
 BREAK
 """ % {'invst': invst, 'url': url}
@@ -33,16 +35,17 @@ BREAK
 
 def main():
 	if len(sys.argv) < 2:
-		print "UPORABA: python nalepke.py [od]-[do] [labelnation parametri]"
+		print "UPORABA: python nalepke.py seznam.txt [labelnation parametri]"
 		return
 
-	od, do = map(int, sys.argv[1].split("-"))
-
+	seznam = sys.argv[1]
 	lnargs = sys.argv[2:]
-
 	codefile = NamedTemporaryFile()
 
-	for invst in xrange(od, do):
+	file = open(seznam, 'r')
+	data = file.readlines()
+	for invst in data:
+		invst = invst.rstrip("\n")
 		write_label(codefile, invst)
 
 	codefile.flush()
