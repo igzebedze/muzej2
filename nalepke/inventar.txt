@@ -1,0 +1,18 @@
+# evidenca tiskanja nalepk
+0-1000	rocno popisano
+	0-589	batch 1
+	590-962	batch 2
+1000-9999	avtomatski uvoz hw
+	1000-1383	zootfly
+10000-19999	avtomatski uvoz revije
+	10000-11500	batch 1 (to print)
+20000-29999	avtomatski uvoz igre
+	20000-20228	batch 1
+	20229-21701	batch 2
+30000-31000	rocno www
+40000-41000	inventar
+	0-95	batch 1
+
+# supplemental prints
+	file: supplemental1.txt
+
