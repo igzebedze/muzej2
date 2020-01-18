@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.urls import path, include
 from django.contrib import admin
+from django.conf.urls.static import static
 
 from inventura.views import *
 
@@ -32,9 +33,12 @@ urlpatterns = [
 	path('premik/', premik),
 	path('stat/', stat),
     path('izvoz/', PrimerekList.as_view(), name='izvoz'),
+    path('listki/', listki, name='listki'),
 	path('eksponat/<int:pk>/', EksponatView.as_view(), name='eksponat-detail'),
     path('eksponat/<int:pk>/uredi/', update_infobox, name='infobox-edit'),
 	path('razstava/<int:pk>/', RazstavaView.as_view(), name='razstava-detail'),
 #	path(r'^wiki/', include('wiki.urls')),
 #	path(r'^autocomplete/', include('autocomplete_light.urls')),
 ]
+if settings.DEBUG is True:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
