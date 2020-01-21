@@ -3,6 +3,9 @@
 		<style>
 			.box { float: left; border: 1px solid black; width: 300px; height: 100px; _margin: 10px; }
 			.qr { float: left; }
+			i, p { font-size: 0.9em; }
+			b { font-size: 1em; }
+			p { margin-top: 0.5em; }
 		</style>
 	</head>
 <body>
@@ -11,7 +14,7 @@
 <div class='box'>
 	<img class='qr' src="https://chart.googleapis.com/chart?chs=100x100&cht=qr&chld=L|1&chl=HTTP://zbirka.muzej.si/eksponat/{{ p.eksponat.id}}/"/>
 	<i>{{ p.eksponat.kategorija }}</i><br />
-	<b>{{ p.eksponat.ime }}</b><br />
+	<b>{{ p.eksponat.ime }}</b>
 	<p>{{ p.eksponat.proizvajalec }}{% if p.leto_proizvodnje %}, {{ p.leto_proizvodnje }}{% endif %}</p>
 </div>
 {% endfor %}

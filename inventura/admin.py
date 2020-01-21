@@ -100,9 +100,9 @@ class PregledInline(admin.TabularInline):
 	
 class EksponatAdmin(SimpleHistoryAdmin):
 	list_select_related = True
-	list_editable = ('ime', 'kategorija',)
+	list_editable = ('ime', 'tip', 'kategorija',)
 	#inlines = [ PrimerekInline, ]
-	list_display = ('ime', 'kategorija', 'proizvajalec', 'leto_proizvodnje', 'st_primerkov')
+	list_display = ('proizvajalec', 'ime', 'tip', 'kategorija',  'leto_proizvodnje', 'st_primerkov')
 	list_filter = ('kategorija', 'proizvajalec')
 	search_fields = ('ime', 'tip')
 	date_hierarchy = 'created_at'
