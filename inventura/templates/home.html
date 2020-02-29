@@ -23,7 +23,9 @@
 <h3>Novi primerki</h3>
 <ul>
 	{% for primerek in novosti %}
+		{% if primerek.eksponat.id %}
 	<li><a href="/eksponat/{{ primerek.eksponat.id }}/">{{ primerek.eksponat }}</a></li>
+		{% endif %}
 	{% endfor %}
 </ul>
 <p>
