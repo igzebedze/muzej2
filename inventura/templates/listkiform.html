@@ -1,0 +1,22 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block title %}Premik primerkov | Računalniški muzej{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+     <a href="/admin/">{% trans "Home" %}</a> &rsaquo; Premik primerkov
+</div>
+{% endblock %}
+
+{% block content %}
+<h1>Izpis informativnih napisov</h1>
+<p>Odčitaj vse QR kode ali samo inventarne stevilke na primerkih, ki so se preselili, in jih vnesi v polje <i>Zapisnik</i> (pomembno je le, da so v zapisniku prepoznavni URLji iz QR kod, kakršnokoli dodatno besedilo se ignorira).</p>
+<div id="content-main">
+	<form id="listki_form" method="post" action="/listki/">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="Izpis"/>
+	</form>
+</div>
+{% endblock content %}

@@ -24,25 +24,35 @@
 	<h4>Osnovni podatki (vir: Wikipedia)</h4>
 	{{ object.infobox|safe }}	
 {% endif %}
+<!--
 {% if object.onlinephoto %}
 	<h4>Primer (vir: Wikipedia)</h4>
 	<img class='infobox' src="{{ object.onlinephoto }}" height="300px" />
 {% endif %}
+-->
 <!-- realtime fetched preview to be confirmed -->
 {% if user.is_authenticated %}
 	{% if wiki %}
 	<h4>Samodejno smo našli:</h4>
 
 	{% for w in wiki %}
-		{% if w.wikiimage %}<p>Sliko: <img src='{{ w.wikiimage }}' height=200 /></p>{% endif %}
 		{% if w.wikiurl %}<p>Wiki vir: <a href='{{ w.wikiurl }}' target='_blank'>{{ w.wikiname }}</a></p>{% endif %}
 			<form action="/eksponat/{{ object.id }}/uredi/" method="post">
 			    {% csrf_token %}
-			    <!-- todo: check if field.label already exists under object.bio -->	
 			    <input type='hidden' name='wikiurl' value='{{ w.wikiurl|urlencode }}'>
-			    <input type='hidden' name='wikiimage' value='{{ w.wikiimage|urlencode }}'>
 			    <button type="submit" value="Shrani">Shrani</button>
 			</form>
+	{% endfor %}
+
+	{% for w in wiki %}
+		{% for i in w.wikiimages %}
+			<p>Sliko: <img src='{{ i }}' height=200 /></p>
+			<form action="/eksponat/{{ object.id }}/uredi/" method="post">
+			    {% csrf_token %}
+			    <input type='hidden' name='wikiimage' value='{{ i|urlencode }}'>
+			    <button type="submit" value="Shrani">Shrani</button>
+			</form>
+		{% endfor %}
 	{% endfor %}
 	{% endif %}
 
@@ -62,11 +72,7 @@
 <h3>{{ object.kategorija }}</h3>
 <h1>{{ object.ime }}</h1>
 <h2>{{ object.proizvajalec }}</h2>
-{% for primerek in object.primerek_set.all %}
-	{% if primerek.fotografija %}
-	<img src="{{ primerek.fotografija.url }}" height="300px" />
-	{% endif %}
-{% endfor %}
+<img src="{{ object.fotografija }}" />
 
 <ul>
 	{% if object.tip %}<li>Tip: {{ object.tip }}</li>{% endif %}

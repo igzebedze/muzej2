@@ -4,7 +4,9 @@ import wptools
 import wikitextparser as wtp
 import urllib.parse
 import random
+import os.path
 
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
@@ -42,6 +44,36 @@ def root(request):
 
 class PrimerekList(ListView):
 	model = Primerek
+
+class ListkiForm(forms.Form):
+	stevilke = forms.CharField(widget=forms.Textarea)
+	
+@login_required
+def listki(request):
+	if request.method == 'POST':
+		form = ListkiForm(request.POST)
+		if form.is_valid():
+			stevilke = form.cleaned_data['stevilke']
+
+			id_set = stevilke.splitlines()
+			primerki = []
+			for id in id_set:
+				try:
+					primerek = Primerek.objects.get(pk=id)
+					primerki.append(primerek)
+				except Primerek.DoesNotExist:
+					messages.add_message(request, messages.ERROR,
+							"Ne najdem primerka %d!" % (id,))
+
+			print (primerki)
+			context = { 'object_list': primerki }
+			return render(request, 'listki.html', context)
+	
+	else:
+		form = ListkiForm() # An unbound form
+		
+	context = {'form': form}
+	return render(request, 'listkiform.html', context)	
 
 class KategorijaList(ListView):
 	model = Kategorija
@@ -110,16 +142,23 @@ class EksponatView(DetailView):
 					except:
 						pass
 					else:
-						wiki = {
-							'wikiurl': 	page.url,
-							'wikiname': page.title,
-						}
+						wiki = {'save': False}
+						save = False
+						if not e.wikipedia:
+							wiki['wikiurl'] = page.url,
+							wiki['wikiname'] = page.title
+							save = True
 						try:
-							wiki['wikiimage'] = page.images[0]
+							if not e.onlinephoto:
+								wiki['wikiimage'] = page.images[0]
+								wiki['wikiimages'] = page.images[0,5]
+								save = True
 						except:
 							pass
 						
-						context['wiki'].append(wiki)
+						if save:
+							context['wiki'].append(wiki)
+							print (wiki)
 
 # parse the data and store it
 		if w and not e.infobox:

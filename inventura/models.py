@@ -3,8 +3,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 from simple_history.models import HistoricalRecords
+import os.path
+import io
+from PIL import Image
 
-from muzej2.settings import SLACKWEBHOOK
+from muzej2.settings import SLACKWEBHOOK, MEDIA_ROOT, MEDIA_URL
 import requests
 headers = {
     'Content-type': 'application/json',
@@ -205,12 +208,32 @@ class Eksponat(models.Model):
 		else:
 			return "%d - %d" % (leto_min, leto_max) 
 
+# first check if we have thumbnail, 
+# create thumbnails in process
 	def fotografija(self):
-		p = self.primerek_set.filter(fotografija__isnull=False)
+		thumb_dir = MEDIA_ROOT + '/thumbs/'
+		thumb_name = str(self.id) + ".png"
+
+		if os.path.isfile(thumb_dir + thumb_name):
+			return MEDIA_URL + 'thumbs/' + thumb_name
+	
+# then for uploaded pictures,		
+		p = self.primerek_set.exclude(fotografija='')
 		if p:
-			return p[0].fotografija
+			with Image.open(p[0].fotografija.path) as im:
+				im.thumbnail([250,250])
+				im.save(thumb_dir + thumb_name)
+			return MEDIA_URL + 'thumbs/' + thumb_name
+
+# finally remote picture; 
 		if self.onlinephoto:
-			return self.onlinephoto
+			r = requests.get(self.onlinephoto, timeout=4.0)
+			with Image.open(io.BytesIO(r.content)) as im:
+				im.thumbnail([250, 250], Image.ANTIALIAS) # resizes 512x512 to 256x256
+				im.save(thumb_dir + thumb_name)
+			return MEDIA_URL + 'thumbs/' + thumb_name
+
+		return ""
 
 	def st_primerkov(self):
 		return "%d" % self.primerek_set.count()
