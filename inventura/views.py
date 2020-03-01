@@ -5,6 +5,7 @@ import wikitextparser as wtp
 import urllib.parse
 import random
 import os.path
+import pprint
 
 from django.conf import settings
 from django.contrib import messages
@@ -139,13 +140,16 @@ class EksponatView(DetailView):
 				for p in pages:
 					try:
 						page = wikipedia.page(p)
+						#pp = pprint.PrettyPrinter(indent=4)
+						#pp.pprint (page)
 					except:
 						pass
 					else:
 						wiki = {'save': False}
 						save = False
 						if not e.wikipedia:
-							wiki['wikiurl'] = page.url,
+							wiki['wikiurl'] = page.url
+							#pp.pprint (page.url)
 							wiki['wikiname'] = page.title
 							save = True
 						try:
@@ -158,7 +162,7 @@ class EksponatView(DetailView):
 						
 						if save:
 							context['wiki'].append(wiki)
-							print (wiki)
+							#print (wiki)
 
 # parse the data and store it
 		if w and not e.infobox:
@@ -185,7 +189,7 @@ def HomeView(request):
 	random_object = Eksponat.objects.filter(id=random_id)[0]
 	context = {
 		'razstave': Razstava.objects.order_by('-otvoritev'),
-		'novosti': Primerek.objects.order_by('-datum_inventarizacije')[0:10],
+		'novosti': Primerek.objects.filter(eksponat__isnull=False).order_by('-datum_inventarizacije')[0:10],
 		'eksponat': random_object,
 	}
 	return render(request, 'home.html', context)

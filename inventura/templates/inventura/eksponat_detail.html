@@ -53,6 +53,14 @@
 			    <button type="submit" value="Shrani">Shrani</button>
 			</form>
 		{% endfor %}
+		{% if w.wikiimage %}
+			<p>Sliko: <img src='{{ w.wikiimage }}' width=200 /></p>
+			<form action="/eksponat/{{ object.id }}/uredi/" method="post">
+			    {% csrf_token %}
+			    <input type='hidden' name='wikiimage' value='{{ w.wikiimage|urlencode }}'>
+			    <button type="submit" value="Shrani">Shrani</button>
+			</form>
+		{% endif %}
 	{% endfor %}
 	{% endif %}
 
