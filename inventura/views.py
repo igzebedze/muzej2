@@ -212,7 +212,7 @@ def stat(request):
 	
 	context = {
 			'primerki_vhod_ja': Primerek.objects.filter(eksponat__isnull=False, vhodni_dokument__isnull=False).count(),
-			'primerki_vhod_ne': Primerek.objects.exclude(eksponat__isnull=False,, vhodni_dokument__isnull=False).count(),
+			'primerki_vhod_ne': Primerek.objects.exclude(eksponat__isnull=False, vhodni_dokument__isnull=False).count(),
 			'eksponati_kategorije': Kategorija.objects.all(),
 			'eksponati_drzave': drzave,
 		}
