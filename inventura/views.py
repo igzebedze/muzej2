@@ -211,8 +211,8 @@ def stat(request):
 			drzave[e.proizvajalec.drzava] = drzave[e.proizvajalec.drzava] + 1
 	
 	context = {
-			'primerki_vhod_ja': Primerek.objects.filter(vhodni_dokument__isnull=False).count(),
-			'primerki_vhod_ne': Primerek.objects.exclude(vhodni_dokument__isnull=False).count(),
+			'primerki_vhod_ja': Primerek.objects.filter(eksponat__isnull=False, vhodni_dokument__isnull=False).count(),
+			'primerki_vhod_ne': Primerek.objects.exclude(eksponat__isnull=False,, vhodni_dokument__isnull=False).count(),
 			'eksponati_kategorije': Kategorija.objects.all(),
 			'eksponati_drzave': drzave,
 		}
