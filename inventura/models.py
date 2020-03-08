@@ -168,6 +168,7 @@ class Proizvajalec(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Proizvajalci"
+		ordering = ["ime"]
 
 class Eksponat(models.Model):
 	ime = models.CharField(
