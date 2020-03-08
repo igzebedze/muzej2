@@ -12,13 +12,15 @@
 <h2><a name="{{ kategorija.ime }}">{{ kategorija.ime }}</a></h2>
 <p>{{ kategorija.opis }}</p>
 <ul>
-	{% for eksponat in kategorija.eksponat_set.all %}
-	<li>
-		<a href="/eksponat/{{ eksponat.id }}/">{{ eksponat }}</a>, 
-		{% if eksponat.proizvajalec %} {{ eksponat.proizvajalec }}{% endif %}
-		({{ eksponat.st_primerkov }})
-	</li>
-	{% endfor %}
+  {% for proizvajalec, eksponati in kategorija.proizvajalci.items %}
+  <li>
+  	{{ proizvajalec }}
+  <ul>
+  	{% for e in eksponati %}
+  		<li><a href="/eksponat/{{ eksponat.id }}/">{{ e }}</a> ({{ e.st_primerkov }})</li>
+  	{% endfor %}
+  </ul></li>
+  {% endfor %}
 </ul>
 <hr />
 {% endfor %}
