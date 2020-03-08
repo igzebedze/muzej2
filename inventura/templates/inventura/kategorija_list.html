@@ -14,7 +14,7 @@
 <ul>
   {% for proizvajalec, eksponati in kategorija.proizvajalci.items %}
   <li>
-  	{{ proizvajalec }}
+  	<a href="/proizvajalec/#{{ proizvajalec.ime }}">{{ proizvajalec }}</a>
   <ul>
   	{% for e in eksponati %}
   		<li><a href="/eksponat/{{ eksponat.id }}/">{{ e }}</a> ({{ e.st_primerkov }})</li>
