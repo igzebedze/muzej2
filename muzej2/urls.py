@@ -22,7 +22,7 @@ from inventura.views import *
 
 router = routers.DefaultRouter()
 router.register(r'eksponati', HeroViewSet)
-router.register(r'iskanje', iskalnik, basename='iskalnik')
+router.register(r'eksponati/<int:pk>/', HeroViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -25,22 +25,23 @@ from rest_framework import viewsets, generics
 from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec
 
 class HeroViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Primerek.objects.all()
-    serializer_class = HeroSerializer
-    
-class iskalnik(viewsets.ModelViewSet):
-    serializer_class = HeroSerializer
+	queryset = Primerek.objects.all()
+	serializer_class = HeroSerializer
 
-    def get_queryset(self):
-        """
-        Optionally restricts the returned purchases to a given user,
-        by filtering against a `username` query parameter in the URL.
-        """
-        queryset = Primerek.objects.all()
-        kveri = self.request.query_params.get('kveri', None)
-        if kveri is not None:
-            queryset = queryset.filter(eksponat__ime__icontains=kveri)
-        return queryset
+	def get_queryset(self):
+		"""
+		Optionally restricts the returned purchases to a given user,
+		by filtering against a `username` query parameter in the URL.
+		"""
+		queryset = Primerek.objects.all()
+		id = self.kwargs.get('pk', None)
+		if id is not None:
+			queryset = queryset.filter(inventarna_st=id)
+
+		kveri = self.request.query_params.get('kveri', None)
+		if kveri is not None:
+			queryset = queryset.filter(eksponat__ime__icontains=kveri)
+		return queryset
 
 @login_required
 def update_infobox(request, pk=None):
