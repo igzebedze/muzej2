@@ -19,14 +19,14 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.shortcuts import redirect
 
-from .serializers import HeroSerializer
+from .serializers import PrimerekSerializer
 from rest_framework import viewsets, generics
 
 from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec
 
 class HeroViewSet(viewsets.ReadOnlyModelViewSet):
 	queryset = Primerek.objects.all()
-	serializer_class = HeroSerializer
+	serializer_class = PrimerekSerializer
 
 	def get_queryset(self):
 		"""
