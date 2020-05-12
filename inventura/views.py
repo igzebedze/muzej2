@@ -18,6 +18,7 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.shortcuts import redirect
+from django.db.models import Q
 
 from .serializers import PrimerekSerializer
 from rest_framework import viewsets, generics
@@ -40,7 +41,8 @@ class HeroViewSet(viewsets.ReadOnlyModelViewSet):
 
 		kveri = self.request.query_params.get('kveri', None)
 		if kveri is not None:
-			queryset = queryset.filter(eksponat__ime__icontains=kveri)
+			#queryset = queryset.filter(eksponat__ime__icontains=kveri)
+			queryset = queryset.filter(Q(eksponat__ime__icontains=kveri) | Q(eksponat__tip__icontains=kveri) | Q(serijska_st__icontains=kveri) | Q(eksponat__opis__icontains=kveri) | Q(stanje__icontains=kveri) | Q(zgodovina__icontains=kveri))
 		return queryset
 
 @login_required
