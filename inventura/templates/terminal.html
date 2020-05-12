@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
   <head lang="en">
@@ -30,7 +32,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <title>Dostop do zbirk Društva računalniški muzej</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link href="/media/main.css" rel="stylesheet"></head>
+  <link href="{% get_media_prefix %}main.css" rel="stylesheet"></head>
   <body>
 
     <!-- Application markup -->
@@ -55,5 +57,5 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <script type="text/javascript">
     </script>
-  <script src="/media/main.js"></script></body>
+  <script src="{% get_media_prefix %}main.js"></script></body>
 </html>
