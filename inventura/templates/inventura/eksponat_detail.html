@@ -53,6 +53,14 @@
 			    <button type="submit" value="Shrani">Shrani</button>
 			</form>
 		{% endfor %}
+		{% if w.wikiimage %}
+			<p>Sliko: <img src='{{ w.wikiimage }}' width=200 /></p>
+			<form action="/eksponat/{{ object.id }}/uredi/" method="post">
+			    {% csrf_token %}
+			    <input type='hidden' name='wikiimage' value='{{ w.wikiimage|urlencode }}'>
+			    <button type="submit" value="Shrani">Shrani</button>
+			</form>
+		{% endif %}
 	{% endfor %}
 	{% endif %}
 
@@ -83,7 +91,6 @@
 	{% if object.vir %}<li>Drugi spletni viri: <a href="{{ object.vir }}" target="_blank">{{ object.vir }}</a></li>{% endif %}
 	{% if object.leto_proizvodnje %}<li>Leto proizvodnje: {{ object.leto_proizvodnje }}</li>{% endif %}
 	<li>stevilo primerkov: {{ object.st_primerkov }}</li>
-	{% if donatorji %}<li>Donator(ji): {{ donatorji }}</li>{% endif %}
 
 	{% if razstave %}
 	{% for r in razstave %}

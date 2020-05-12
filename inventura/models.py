@@ -126,6 +126,20 @@ class Kategorija(models.Model):
 
 	def __str__(self):
 		return self.ime
+		
+	def proizvajalci(self):
+		eksponati = self.eksponat_set.all()
+		proizvajalci = {}
+		for e in eksponati:
+			p = e.proizvajalec
+			if p not in proizvajalci.keys():
+				es = []
+				es.append(e)
+				proizvajalci[p] = es
+			else:
+				proizvajalci[p].append(e)
+				
+		return proizvajalci #.sort()
 
 	class Meta:
 		verbose_name_plural = "Kategorije"
@@ -154,6 +168,7 @@ class Proizvajalec(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Proizvajalci"
+		ordering = ["ime"]
 
 class Eksponat(models.Model):
 	ime = models.CharField(
