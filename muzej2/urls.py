@@ -21,7 +21,7 @@ from rest_framework import routers
 from inventura.views import *
 
 router = routers.DefaultRouter()
-router.register(r'api', HeroViewSet)
+router.register(r'eksponati', HeroViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -43,7 +43,7 @@ urlpatterns = [
 	path('razstava/<int:pk>/', RazstavaView.as_view(), name='razstava-detail'),
 #	path(r'^wiki/', include('wiki.urls')),
 #	path(r'^autocomplete/', include('autocomplete_light.urls')),
-	path('eksponati/', include(router.urls)),
+	path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
 if settings.DEBUG is True:
