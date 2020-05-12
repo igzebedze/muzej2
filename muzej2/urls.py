@@ -25,8 +25,9 @@ router.register(r'eksponati', HeroViewSet)
 router.register(r'eksponati/<int:pk>/', HeroViewSet)
 
 urlpatterns = [
+	path('', terminalView, name='terminal'),
     path('admin/', admin.site.urls),
-    path('',HomeView, name='home'),
+    path('home/', HomeView, name='home'),
     path('eksponat/', KategorijaList.as_view(), name='kazalo'),
     path('galerija/', GalerijaList.as_view(), name='galerija'),
     path('proizvajalec/', ProizvajalecList.as_view(), name='proizvajalci'),
@@ -46,6 +47,6 @@ urlpatterns = [
 #	path(r'^autocomplete/', include('autocomplete_light.urls')),
 	path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-]
+] 
 if settings.DEBUG is True:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

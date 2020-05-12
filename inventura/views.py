@@ -205,6 +205,10 @@ class EksponatView(DetailView):
 
 class RazstavaView(DetailView):
 	model = Razstava
+	
+def terminalView(request):
+	context = {}
+	return render(request, 'terminal.html', context)
 
 def HomeView(request):
 	eksponati = Eksponat.objects.all()
