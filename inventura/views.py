@@ -18,7 +18,14 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.shortcuts import redirect
 
+from .serializers import HeroSerializer
+from rest_framework import viewsets
+
 from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec
+
+class HeroViewSet(viewsets.ModelViewSet):
+    queryset = Primerek.objects.all().order_by('eksponat')
+    serializer_class = HeroSerializer
 
 @login_required
 def update_infobox(request, pk=None):
