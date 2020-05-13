@@ -23,6 +23,7 @@ from inventura.views import *
 router = routers.DefaultRouter()
 router.register(r'eksponati', HeroViewSet)
 router.register(r'eksponati/<int:pk>/', HeroViewSet)
+router.register(r'razstave', RazstaveViewSet)
 
 urlpatterns = [
 	path('', terminalView, name='terminal'),

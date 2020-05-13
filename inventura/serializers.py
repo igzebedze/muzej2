@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Eksponat, Primerek
+from .models import Eksponat, Primerek, Razstava
 
 class EksponatSerializer(serializers.ModelSerializer):
 	proizvajalec = serializers.StringRelatedField()
@@ -14,4 +14,11 @@ class PrimerekSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Primerek
 		fields = ('inventarna_st', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'stanje', 'zgodovina', 'fotografija', 'povezani')
-        
+
+class RazstavaSerializer(serializers.ModelSerializer):
+	primerki = PrimerekSerializer(many=True)
+	avtorji = serializers.StringRelatedField(many=True)
+	class Meta:
+		model = Razstava
+		fields = ['primerki','naslov','lokacija','otvoritev','zakljucek','avtorji','opis']
+

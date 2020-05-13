@@ -20,10 +20,14 @@ from django.utils.decorators import method_decorator
 from django.shortcuts import redirect
 from django.db.models import Q
 
-from .serializers import PrimerekSerializer
+from .serializers import PrimerekSerializer, RazstavaSerializer
 from rest_framework import viewsets, generics
 
 from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec
+
+class RazstaveViewSet(viewsets.ReadOnlyModelViewSet):
+	queryset = Razstava.objects.all()
+	serializer_class = RazstavaSerializer
 
 class HeroViewSet(viewsets.ReadOnlyModelViewSet):
 	queryset = Primerek.objects.all()
