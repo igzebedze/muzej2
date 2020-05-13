@@ -34,7 +34,7 @@ class HeroViewSet(viewsets.ReadOnlyModelViewSet):
 		Optionally restricts the returned purchases to a given user,
 		by filtering against a `username` query parameter in the URL.
 		"""
-		queryset = Primerek.objects.all()
+		queryset = Primerek.objects.filter(eksponat__isnull=False)
 		id = self.kwargs.get('pk', None)
 		if id is not None:
 			queryset = queryset.filter(inventarna_st=id)
