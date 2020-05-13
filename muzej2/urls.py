@@ -24,6 +24,8 @@ router = routers.DefaultRouter()
 router.register(r'eksponati', HeroViewSet)
 router.register(r'eksponati/<int:pk>/', HeroViewSet)
 router.register(r'razstave', RazstaveViewSet)
+router.register(r'razstave/<int:pk>/', RazstaveViewSet)
+router.register(r'statistika', KategorijeViewSet)
 
 urlpatterns = [
 	path('', terminalView, name='terminal'),

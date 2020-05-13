@@ -20,24 +20,30 @@ from django.utils.decorators import method_decorator
 from django.shortcuts import redirect
 from django.db.models import Q
 
-from .serializers import PrimerekSerializer, RazstavaSerializer
+from .serializers import PrimerekSerializer, RazstavaSerializer, KategorijaSerializer
 from rest_framework import viewsets, generics
 
 from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec
 
+class KategorijeViewSet(viewsets.ReadOnlyModelViewSet):
+	queryset = Kategorija.objects.all()
+	serializer_class = KategorijaSerializer
+		
 class RazstaveViewSet(viewsets.ReadOnlyModelViewSet):
 	queryset = Razstava.objects.all()
 	serializer_class = RazstavaSerializer
+	def get_queryset(self):
+		queryset = Razstava.objects.all()
+		id = self.kwargs.get('pk', None)
+		if id is not None:
+			queryset = queryset.filter(pk=id)
+		return queryset
 
 class HeroViewSet(viewsets.ReadOnlyModelViewSet):
 	queryset = Primerek.objects.all()
 	serializer_class = PrimerekSerializer
 
 	def get_queryset(self):
-		"""
-		Optionally restricts the returned purchases to a given user,
-		by filtering against a `username` query parameter in the URL.
-		"""
 		queryset = Primerek.objects.filter(eksponat__isnull=False)
 		id = self.kwargs.get('pk', None)
 		if id is not None:

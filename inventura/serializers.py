@@ -1,5 +1,13 @@
 from rest_framework import serializers
-from .models import Eksponat, Primerek, Razstava
+from .models import Eksponat, Primerek, Razstava, Kategorija
+
+class KategorijaSerializer(serializers.ModelSerializer):
+	eksponatov = serializers.SerializerMethodField()
+	class Meta:
+		model = Kategorija
+		fields = ['ime','opis','eksponatov']
+	def get_eksponatov(self, obj):
+		return obj.eksponat_set.count()
 
 class EksponatSerializer(serializers.ModelSerializer):
 	proizvajalec = serializers.StringRelatedField()
