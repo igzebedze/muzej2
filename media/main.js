@@ -103,6 +103,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * Copyright (c) 2011-2018, Anders Evenrud <andersevenrud@gmail.com>
  * All rights reserved.
+ * Source for this fork: https://github.com/markostamcar/retro-css-shell-demo
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -127,9 +128,47 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var banner = " \n          ohNh+               +hNh+          \n         'MMMMM              'MMMMN          \n          -omMMdo/sddo/sddo/sdMMd+-          \n       '    sMMMMNMMMMMMMMMNMMMMo    '       \n     /ydy//yNMMy/-+yMMMMMy/-+yMMms:/sds:     \n     MMMMMMMMMN     MMMMM     MMMMMMMMMN     \n  .+hMMms::smMMh+-+hMMMMMh+-+hMMms:/smMMh+.  \n  oMMMM+    oMMMMMMMMMMMMMMMMMMMo    oMMMMo  \n:omMMho.  :omMMho:ohho:ohho:ohMMmo:  .ohMMmo:\nMMMMM     NMMMM              'MMMMN    'MMMMM\n+ymy/     +yNMMs/'         '/sMMNy/     /ymy+\n  '         sMMMM+         oMMMMo         '  \n            -smms.         -smms-            \n                                             \n------------------------------------------\nDostop do zbirk Dru\u0161tva ra\u010Dunalni\u0161ki muzej\n------------------------------------------\n";
-var helpText = "\nUkazi:\nnajdi <geslo> - Izpi\u0161e IDje eksponatov, ki vsebujejo iskano geslo.\neksponat <id> - Izpi\u0161e podatke o eksponatu.\npocisti - Po\u010Disti zaslon."; ///////////////////////////////////////////////////////////////////////////////
+var helpText = "\nUkazi:\n* najdi <geslo> - Izpi\u0161e IDje eksponatov, ki vsebujejo iskano geslo.\n* eksponat <id> - Izpi\u0161e podatke o eksponatu.\n* pocisti - Po\u010Disti zaslon.";
+var _vec = '';
+
+var najdi2 = function najdi2(t, url) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url);
+
+  xhr.onload = function () {
+    try {
+      var json = JSON.parse(xhr.responseText);
+      var arr = json.results;
+      var out = '';
+
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i].eksponat) {
+          out += arr[i].inventarna_st + ": " + arr[i].eksponat.ime;
+          if (arr[i].serijska_st) out += ", " + arr[i].serijska_st;
+          out += "\n";
+        }
+      }
+
+      if (json.next) {
+        _vec = json.next;
+        out += "(Delni prikaz od " + json.count + " zadetkov - za več napišite 'vec')\n";
+      } else {
+        _vec = '';
+      }
+
+      if (json.count == 0) out += "Ni zadetkov.";
+      t.print(out, false);
+    } catch (e) {
+      t.print("Ni zadetkov.", false);
+    }
+  };
+
+  xhr.send();
+  return 'NOPROMPT';
+}; ///////////////////////////////////////////////////////////////////////////////
 // MAIN
 ///////////////////////////////////////////////////////////////////////////////
+
 
 var load = function load() {
   var t = Object(_src_terminal_js__WEBPACK_IMPORTED_MODULE_1__["terminal"])({
@@ -146,29 +185,9 @@ var load = function load() {
         return t.clear();
       },
       najdi: function najdi(geslo1, geslo2) {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/api/eksponati/?kveri=' + geslo1 + (typeof geslo2 !== 'undefined' ? '+' + geslo2 : '')); //xhr.open('GET', 'api.php?najdi=' + geslo1 + (typeof geslo2 !== 'undefined' ? '+' + geslo2 : ''));
+        var url = '/api/eksponati/?kveri=' + geslo1 + (typeof geslo2 !== 'undefined' ? '+' + geslo2 : ''); //var url = 'api.php?najdi=' + geslo1 + (typeof geslo2 !== 'undefined' ? '+' + geslo2 : '');
 
-        xhr.onload = function () {
-          try {
-            var json = JSON.parse(xhr.responseText);
-            var arr = json.results;
-            var out = '';
-
-            for (var i = 0; i < arr.length; i++) {
-              if (arr[i].eksponat) out += arr[i].inventarna_st + ": " + arr[i].eksponat.ime + ", " + arr[i].serijska_st + "\n";
-            }
-
-            if (json.count > arr.length) out += "(Prikazanih je samo prvih " + arr.length + " zadetkov od " + json.count + ")\n";
-            if (json.count == 0) out += "Ni zadetkov.";
-            t.print(out, false);
-          } catch (e) {
-            t.print("Ni zadetkov.", false);
-          }
-        };
-
-        xhr.send();
-        return 'NOPROMPT';
+        return najdi2(t, url);
       },
       eksponat: function eksponat(id) {
         var xhr = new XMLHttpRequest();
@@ -194,6 +213,9 @@ var load = function load() {
 
         xhr.send();
         return 'NOPROMPT';
+      },
+      vec: function vec() {
+        return najdi2(t, _vec); //return najdi2(t, 'api.php?najdi=' + vec.split("kveri=")[1]);
       },
       format: function format() {
         window.open('https://archive.org/details/GorillasQbasic');
