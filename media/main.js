@@ -147,7 +147,7 @@ var load = function load() {
       },
       najdi: function najdi(geslo1, geslo2) {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/api/eksponati/?kveri=' + geslo1 + (typeof geslo2 !== 'undefined' ? '+' + geslo2 : ''));
+        xhr.open('GET', '/api/eksponati/?kveri=' + geslo1 + (typeof geslo2 !== 'undefined' ? '+' + geslo2 : '')); //xhr.open('GET', 'api.php?najdi=' + geslo1 + (typeof geslo2 !== 'undefined' ? '+' + geslo2 : ''));
 
         xhr.onload = function () {
           try {
@@ -159,7 +159,7 @@ var load = function load() {
               if (arr[i].eksponat) out += arr[i].inventarna_st + ": " + arr[i].eksponat.ime + ", " + arr[i].serijska_st + "\n";
             }
 
-            if (json.count > 10) out += "(Prikazanih je samo prvih 10 zadetkov.)";
+            if (json.count > arr.length) out += "(Prikazanih je samo prvih " + arr.length + " zadetkov od " + json.count + ")\n";
             if (json.count == 0) out += "Ni zadetkov.";
             t.print(out, false);
           } catch (e) {
@@ -172,12 +172,21 @@ var load = function load() {
       },
       eksponat: function eksponat(id) {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/api/eksponati/' + id + '/');
+        xhr.open('GET', '/api/eksponati/' + id + '/'); //xhr.open('GET', 'api.php?eksponat=' + id);
 
         xhr.onload = function () {
           try {
             var obj = JSON.parse(xhr.responseText);
-            t.print(obj.eksponat.ime + ", " + obj.serijska_st + "\n--------------------------\nProizvajalec: " + obj.eksponat.proizvajalec + "\nLeto: " + obj.leto_proizvodnje + "\nOpis: " + obj.eksponat.opis + "\nStanje: " + obj.stanje + "\nZgodovina: " + obj.zgodovina + "\n", false);
+            var out = obj.eksponat.ime;
+            if (obj.serijska_st) out += ", " + obj.serijska_st;
+            out += "\n--------------------------";
+            if (obj.eksponat.proizvajalec) out += "\nProizvajalec: " + obj.eksponat.proizvajalec;
+            if (obj.leto_proizvodnje) out += "\nLeto: " + obj.leto_proizvodnje;
+            if (obj.eksponat.opis) out += "\nOpis: " + obj.eksponat.opis;
+            if (obj.stanje) out += "\nStanje: " + obj.stanje;
+            if (obj.zgodovina) out += "\nZgodovina: " + obj.zgodovina;
+            out += "\n";
+            t.print(out, false);
           } catch (e) {
             t.print("Eksponat s tem ID ne obstaja.", false);
           }
@@ -185,6 +194,14 @@ var load = function load() {
 
         xhr.send();
         return 'NOPROMPT';
+      },
+      format: function format() {
+        window.open('https://archive.org/details/GorillasQbasic');
+        return 'NOLINE';
+      },
+      rm: function rm() {
+        window.open('https://archive.org/details/GorillasQbasic');
+        return 'NOLINE';
       }
     }
   });
