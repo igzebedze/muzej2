@@ -28,6 +28,7 @@ from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategori
 class KategorijeViewSet(viewsets.ReadOnlyModelViewSet):
 	queryset = Kategorija.objects.all()
 	serializer_class = KategorijaSerializer
+	pagination_class = None
 		
 class RazstaveViewSet(viewsets.ReadOnlyModelViewSet):
 	queryset = Razstava.objects.all()

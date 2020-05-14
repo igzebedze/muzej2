@@ -28,5 +28,5 @@ class RazstavaSerializer(serializers.ModelSerializer):
 	avtorji = serializers.StringRelatedField(many=True)
 	class Meta:
 		model = Razstava
-		fields = ['primerki','naslov','lokacija','otvoritev','zakljucek','avtorji','opis']
+		fields = ['pk', 'primerki','naslov','lokacija','otvoritev','zakljucek','avtorji','opis']
 
