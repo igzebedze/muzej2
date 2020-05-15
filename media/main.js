@@ -207,7 +207,7 @@ var razstave2 = function razstave2(t, url) {
         if (json.opis) out += "\nOpis: " + json.opis;
 
         if (json.primerki) {
-          out += "\nPrimerki:\n";
+          out += "\nEksponati:\n";
 
           for (var i = 0; i < json.primerki.length; i++) {
             if (json.primerki[i].eksponat) {
@@ -516,6 +516,11 @@ var createElement = function createElement(root) {
   el.spellcheck = false;
   el.value = '';
   root.appendChild(el);
+
+  document.body.ontouchend = function () {
+    el.focus();
+  };
+
   return el;
 }; // Keys that must be ignored
 // Sets text selection range
