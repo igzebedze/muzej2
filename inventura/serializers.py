@@ -7,7 +7,10 @@ class KategorijaSerializer(serializers.ModelSerializer):
 		model = Kategorija
 		fields = ['ime','opis','eksponatov']
 	def get_eksponatov(self, obj):
-		return obj.eksponat_set.count()
+		counter = 0
+		for eksponat in obj.eksponat_set.all():
+			counter = counter + eksponat.primerek_set.count()
+		return counter
 
 class EksponatSerializer(serializers.ModelSerializer):
 	proizvajalec = serializers.StringRelatedField()
