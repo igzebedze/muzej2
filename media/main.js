@@ -128,7 +128,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var banner = " \n          ohNh+               +hNh+          \n         'MMMMM              'MMMMN          \n          -omMMdo/sddo/sddo/sdMMd+-          \n       '    sMMMMNMMMMMMMMMNMMMMo    '       \n     /ydy//yNMMy/-+yMMMMMy/-+yMMms:/sds:     \n     MMMMMMMMMN     MMMMM     MMMMMMMMMN     \n  .+hMMms::smMMh+-+hMMMMMh+-+hMMms:/smMMh+.  \n  oMMMM+    oMMMMMMMMMMMMMMMMMMMo    oMMMMo  \n:omMMho.  :omMMho:ohho:ohho:ohMMmo:  .ohMMmo:\nMMMMM     NMMMM              'MMMMN    'MMMMM\n+ymy/     +yNMMs/'         '/sMMNy/     /ymy+\n  '         sMMMM+         oMMMMo         '  \n            -smms.         -smms-            \n                                             \n------------------------------------------\nDostop do zbirk Dru\u0161tva ra\u010Dunalni\u0161ki muzej\n------------------------------------------\n";
-var helpText = "\nUkazi:\n* najdi <geslo> - Izpi\u0161e IDje eksponatov, ki vsebujejo iskano geslo.\n* eksponat <id> - Izpi\u0161e podatke o eksponatu.\n* pocisti - Po\u010Disti zaslon.";
+var helpText = "\nUkazi:\n* najdi <geslo> - Izpi\u0161e IDje eksponatov, ki vsebujejo iskano geslo.\n* eksponat <id> - Izpi\u0161e podatke o eksponatu.\n* razstave [id] - Izpi\u0161e seznam razstav oz. podrobnosti o razstavi, \u010De je naveden ID.\n* statistika - Izpi\u0161e statistiko celotne zbirke.\n* pocisti - Po\u010Disti zaslon.";
 var _vec = '';
 
 var najdi2 = function najdi2(t, url) {
@@ -165,6 +165,74 @@ var najdi2 = function najdi2(t, url) {
 
   xhr.send();
   return 'NOPROMPT';
+};
+
+var razstave2 = function razstave2(t, url) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url);
+
+  xhr.onload = function () {
+    try {
+      var json = JSON.parse(xhr.responseText);
+      var out = '';
+
+      if (json.results) {
+        var arr = json.results;
+
+        for (var i = 0; i < arr.length; i++) {
+          out += arr[i].pk + ": " + arr[i].naslov;
+          if (arr[i].otvoritev && arr[i].zakljucek) out += " (" + arr[i].otvoritev + " - " + arr[i].zakljucek + ")";
+          out += "\n";
+        }
+
+        if (json.next) {
+          _vec = json.next;
+          out += "(Delni prikaz od " + json.count + " zadetkov - za več napišite 'vec')\n";
+        } else {
+          _vec = '';
+        }
+      } else {
+        out = json.naslov;
+        if (json.otvoritev && json.zakljucek) out += " (" + json.otvoritev + " - " + json.zakljucek + ")";
+        out += "\n--------------------------";
+
+        if (json.avtorji) {
+          out += "\nAvtorji: ";
+
+          for (var i = 0; i < json.avtorji.length; i++) {
+            out += json.avtorji[i].replace(',', '') + ", ";
+          }
+        }
+
+        if (json.opis) out += "\nOpis: " + json.opis;
+
+        if (json.primerki) {
+          out += "\nEksponati:\n";
+
+          for (var i = 0; i < json.primerki.length; i++) {
+            if (json.primerki[i].eksponat) {
+              out += json.primerki[i].inventarna_st + ": " + json.primerki[i].eksponat.ime;
+              if (json.primerki[i].serijska_st) out += ", " + json.primerki[i].serijska_st;
+              out += "\n";
+            }
+          }
+        }
+
+        out += "\n";
+      }
+
+      t.print(out, false);
+    } catch (e) {
+      t.print("Prišlo je do napake / Razstava s tem ID ne obstaja.", false);
+    }
+  };
+
+  xhr.send();
+  return 'NOPROMPT';
+};
+
+var proxy = function proxy(url) {
+  return !window.location.href.includes('stamcar') ? url : 'proxy.php?url=' + encodeURIComponent(url);
 }; ///////////////////////////////////////////////////////////////////////////////
 // MAIN
 ///////////////////////////////////////////////////////////////////////////////
@@ -185,13 +253,16 @@ var load = function load() {
         return t.clear();
       },
       najdi: function najdi(geslo1, geslo2) {
-        var url = '/api/eksponati/?kveri=' + geslo1 + (typeof geslo2 !== 'undefined' ? '+' + geslo2 : ''); //var url = 'api.php?najdi=' + geslo1 + (typeof geslo2 !== 'undefined' ? '+' + geslo2 : '');
-
+        var url = proxy('/api/eksponati/?kveri=' + geslo1 + (typeof geslo2 !== 'undefined' ? '+' + geslo2 : ''));
         return najdi2(t, url);
+      },
+      razstave: function razstave(id) {
+        var url = proxy('/api/razstave/' + (id ? id + '/' : ''));
+        return razstave2(t, url);
       },
       eksponat: function eksponat(id) {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/api/eksponati/' + id + '/'); //xhr.open('GET', 'api.php?eksponat=' + id);
+        xhr.open('GET', proxy('/api/eksponati/' + id + '/'));
 
         xhr.onload = function () {
           try {
@@ -214,8 +285,35 @@ var load = function load() {
         xhr.send();
         return 'NOPROMPT';
       },
+      statistika: function statistika() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', proxy('/api/statistika/'));
+
+        xhr.onload = function () {
+          try {
+            var arr = JSON.parse(xhr.responseText);
+            var out = '';
+
+            for (var i = 0; i < arr.length; i++) {
+              out += arr[i].eksponatov + " x " + arr[i].ime;
+              out += "\n";
+            }
+
+            t.print(out, false);
+          } catch (e) {
+            t.print("Prišlo je do napake.", false);
+          }
+        };
+
+        xhr.send();
+        return 'NOPROMPT';
+      },
       vec: function vec() {
-        return najdi2(t, _vec); //return najdi2(t, 'api.php?najdi=' + vec.split("kveri=")[1]);
+        if (_vec) {
+          return _vec.includes('/api/eksponati/') ? najdi2(t, proxy(_vec)) : razstave2(t, proxy(_vec));
+        } else {
+          return 'Ni zadetkov.';
+        }
       },
       format: function format() {
         window.open('https://archive.org/details/GorillasQbasic');
@@ -418,6 +516,11 @@ var createElement = function createElement(root) {
   el.spellcheck = false;
   el.value = '';
   root.appendChild(el);
+
+  document.body.ontouchend = function () {
+    el.focus();
+  };
+
   return el;
 }; // Keys that must be ignored
 // Sets text selection range
