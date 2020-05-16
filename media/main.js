@@ -256,8 +256,8 @@ var load = function load() {
       pocisti: function pocisti() {
         return t.clear();
       },
-      najdi: function najdi(geslo1, geslo2) {
-        var url = proxy('/api/eksponati/?kveri=' + geslo1 + (typeof geslo2 !== 'undefined' ? '+' + geslo2 : ''));
+      najdi: function najdi(geslo1, geslo2, geslo3) {
+        var url = proxy('/api/eksponati/?kveri=' + geslo1 + (typeof geslo2 !== 'undefined' ? '+' + geslo2 : '') + (typeof geslo3 !== 'undefined' ? '+' + geslo3 : ''));
         return najdi2(t, url);
       },
       razstave: function razstave(id) {
