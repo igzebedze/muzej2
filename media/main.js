@@ -143,7 +143,7 @@ var najdi2 = function najdi2(t, url) {
 
       for (var i = 0; i < arr.length; i++) {
         if (arr[i].eksponat) {
-          out += arr[i].inventarna_st + ": " + arr[i].eksponat.ime;
+          out += "#" + arr[i].inventarna_st + ": " + arr[i].eksponat.ime;
           if (arr[i].serijska_st) out += ", " + arr[i].serijska_st;
           out += "\n";
         }
@@ -180,7 +180,7 @@ var razstave2 = function razstave2(t, url) {
         var arr = json.results;
 
         for (var i = 0; i < arr.length; i++) {
-          out += arr[i].pk + ": " + arr[i].naslov;
+          out += "#" + arr[i].pk + ": " + arr[i].naslov;
           if (arr[i].otvoritev && arr[i].zakljucek) out += " (" + arr[i].otvoritev + " - " + arr[i].zakljucek + ")";
           out += "\n";
         }
@@ -202,6 +202,8 @@ var razstave2 = function razstave2(t, url) {
           for (var i = 0; i < json.avtorji.length; i++) {
             out += json.avtorji[i].replace(',', '') + ", ";
           }
+
+          out = out.substring(0, out.length - 2);
         }
 
         if (json.opis) out += "\nOpis: " + json.opis;
@@ -211,11 +213,13 @@ var razstave2 = function razstave2(t, url) {
 
           for (var i = 0; i < json.primerki.length; i++) {
             if (json.primerki[i].eksponat) {
-              out += json.primerki[i].inventarna_st + ": " + json.primerki[i].eksponat.ime;
+              out += "#" + json.primerki[i].inventarna_st + ": " + json.primerki[i].eksponat.ime;
               if (json.primerki[i].serijska_st) out += ", " + json.primerki[i].serijska_st;
-              out += "\n";
+              out += "; ";
             }
           }
+
+          out = out.substring(0, out.length - 2);
         }
 
         out += "\n";
@@ -257,12 +261,12 @@ var load = function load() {
         return najdi2(t, url);
       },
       razstave: function razstave(id) {
-        var url = proxy('/api/razstave/' + (id ? id + '/' : ''));
+        var url = proxy('/api/razstave/' + (id ? id.replace('#', '') + '/' : ''));
         return razstave2(t, url);
       },
       eksponat: function eksponat(id) {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', proxy('/api/eksponati/' + id + '/'));
+        xhr.open('GET', proxy('/api/eksponati/' + id.replace('#', '') + '/'));
 
         xhr.onload = function () {
           try {
@@ -270,6 +274,7 @@ var load = function load() {
             var out = obj.eksponat.ime;
             if (obj.serijska_st) out += ", " + obj.serijska_st;
             out += "\n--------------------------";
+            if (obj.eksponat.tip) out += "\nTip: " + obj.eksponat.tip;
             if (obj.eksponat.proizvajalec) out += "\nProizvajalec: " + obj.eksponat.proizvajalec;
             if (obj.leto_proizvodnje) out += "\nLeto: " + obj.leto_proizvodnje;
             if (obj.eksponat.opis) out += "\nOpis: " + obj.eksponat.opis;
