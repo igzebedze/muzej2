@@ -295,8 +295,10 @@ var load = function load() {
             var out = '';
 
             for (var i = 0; i < arr.length; i++) {
-              out += arr[i].eksponatov + " x " + arr[i].ime;
-              out += "\n";
+              if (arr[i].eksponatov > 0) {
+                out += arr[i].eksponatov + " x " + arr[i].ime;
+                out += "\n";
+              }
             }
 
             t.print(out, false);
