@@ -256,8 +256,12 @@ var load = function load() {
       pocisti: function pocisti() {
         return t.clear();
       },
-      najdi: function najdi(geslo1, geslo2, geslo3) {
-        var url = proxy('/api/eksponati/?kveri=' + geslo1 + (typeof geslo2 !== 'undefined' ? '+' + geslo2 : '') + (typeof geslo3 !== 'undefined' ? '+' + geslo3 : ''));
+      najdi: function najdi() {
+        for (var _len = arguments.length, geslo = new Array(_len), _key = 0; _key < _len; _key++) {
+          geslo[_key] = arguments[_key];
+        }
+
+        var url = proxy('/api/eksponati/?kveri=' + (geslo.length > 0 ? geslo.join('+') : 'undefined'));
         return najdi2(t, url);
       },
       razstave: function razstave(id) {
@@ -266,7 +270,7 @@ var load = function load() {
       },
       eksponat: function eksponat(id) {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', proxy('/api/eksponati/' + id.replace('#', '') + '/'));
+        xhr.open('GET', proxy('/api/eksponati/' + (id ? id.replace('#', '') + '/' : 'undefined')));
 
         xhr.onload = function () {
           try {
