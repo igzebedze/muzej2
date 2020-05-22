@@ -241,7 +241,7 @@ var proxy = function proxy(url) {
 };
 
 var hashchange = function hashchange(t) {
-  var cmd = window.location.hash.replace("#", "").replace("=", " ").replace("+", " ");
+  var cmd = window.location.hash.replace("#", "").replace("=", " ").replace(/\+/g, " ");
   t.print("NOPROMPT\n" + cmd, false);
   t.parse(cmd);
 }; ///////////////////////////////////////////////////////////////////////////////
