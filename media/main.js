@@ -192,6 +192,7 @@ var razstave2 = function razstave2(t, url) {
           _vec = '';
         }
       } else {
+        if (!json.naslov) throw "napaka";
         out = json.naslov;
         if (json.otvoritev && json.zakljucek) out += " (" + json.otvoritev + " - " + json.zakljucek + ")";
         out += "\n--------------------------";
@@ -215,7 +216,7 @@ var razstave2 = function razstave2(t, url) {
             if (json.primerki[i].eksponat) {
               out += "#" + json.primerki[i].inventarna_st + ": " + json.primerki[i].eksponat.ime;
               if (json.primerki[i].serijska_st) out += ", " + json.primerki[i].serijska_st;
-              out += "; ";
+              out += "\n";
             }
           }
 
@@ -237,6 +238,12 @@ var razstave2 = function razstave2(t, url) {
 
 var proxy = function proxy(url) {
   return !window.location.href.includes('stamcar') ? url : 'proxy.php?url=' + encodeURIComponent(url);
+};
+
+var hashchange = function hashchange(t) {
+  var cmd = window.location.hash.replace("#", "").replace("=", " ").replace("+", " ");
+  t.print("NOPROMPT\n" + cmd, false);
+  t.parse(cmd);
 }; ///////////////////////////////////////////////////////////////////////////////
 // MAIN
 ///////////////////////////////////////////////////////////////////////////////
@@ -337,6 +344,11 @@ var load = function load() {
     }
   });
   t.print(helpText + '\n', false);
+  if (window.location.hash) hashchange(t);
+
+  window.onhashchange = function () {
+    hashchange(t);
+  };
 };
 
 document.addEventListener('DOMContentLoaded', load);
@@ -599,6 +611,7 @@ var parser = function parser(onparsed) {
       return s.toLowerCase().trim();
     });
     var cmd = args.splice(0, 1)[0];
+    history.replaceState(null, null, '#' + cmd + (args.length > 0 ? "=" + args.join("+") : ""));
     console.debug(cmd, args);
     onparsed.apply(void 0, [cmd].concat(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(args)));
   };
