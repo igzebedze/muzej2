@@ -3,7 +3,7 @@ import csv
 import os
 import sys
 from django.utils import timezone
-from inventura.models import Eksponat, Primerek, User, Kategorija
+from inventura.models import Eksponat, Primerek, User, Kategorija, Vhod
 import pprint
 
 class Command(BaseCommand):
@@ -28,20 +28,28 @@ class Command(BaseCommand):
 			reader = csv.DictReader(csvfile)
 			#headers = next(reader, None)
 			for row in reader:
-				eksponat = row['eksponat']
+				if 'eksponat' not in row:
+					continue
+
 				letnik = row['leto']
+				eksponat = row['eksponat']
 				self.stdout.write("looking at %s %s" % (eksponat, letnik))
+				vhod = row['Zgodovina']
 
 				if not eksponat:
-					continue;
+					continue
 
 				try:
-					popisovalec = row['popisovalec']
+					popisovalec = 'mateja' #row['popisovalec']
 					u = User.objects.get(username=popisovalec)
 				except:
 					pass
 				else:
 					user = u
+
+				if 'Zgodovina' in row:
+					v = row['Zgodovina']
+					vhod = Vhod.objects.get(id=(int(v)))
 
 				try:
 					e = Eksponat.objects.get(ime=eksponat)
@@ -82,6 +90,8 @@ class Command(BaseCommand):
 								created_at = timezone.now(),
 								updated_at = timezone.now()
 							)
+							if vhod:
+								p.vhodni_dokument = vhod
 							p.save()
 							start_no = start_no + 1
 							self.stdout.write ("created new primerek for %s %s" % (e, serijska))
