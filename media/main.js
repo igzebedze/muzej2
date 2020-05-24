@@ -220,7 +220,7 @@ var razstave2 = function razstave2(t, url) {
             }
           }
 
-          out = out.substring(0, out.length - 2);
+          out = out.substring(0, out.length - 1);
         }
 
         out += "\n";
