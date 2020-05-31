@@ -219,10 +219,7 @@ body {
   right: 0;
   bottom: 0;
   z-index: 30;
-  transform-origin: 50% 50%;
-  transform: skewX(0.5deg);
-  -webkit-animation: pulse 5s linear infinite;
-          animation: pulse 5s linear infinite; }
+  transform-origin: 50% 50%; }
   #wrapper::before {
     position: absolute;
     left: 0;
@@ -243,9 +240,7 @@ body {
     z-index: 32;
     opacity: 0.5;
     background: radial-gradient(ellipse at center, #ffcc00 0%, rgba(255, 204, 0, 0) 100%);
-    pointer-events: none;
-    -webkit-animation: glow 2s linear infinite;
-            animation: glow 2s linear infinite; }
+    pointer-events: none; }
 
 #interlace {
   position: absolute;
@@ -267,9 +262,7 @@ body {
   bottom: 2em;
   z-index: 40;
   border-radius: 0.5em;
-  background: rgba(0, 0, 0, 0.25);
-  -webkit-animation: skew 5s linear infinite;
-          animation: skew 5s linear infinite; }
+  background: rgba(0, 0, 0, 0.25); }
 
 #scanline {
   position: absolute;
@@ -278,9 +271,7 @@ body {
   right: 0;
   height: 1em;
   opacity: 0.1;
-  background: linear-gradient(to bottom, transparent 0%, snow 50%, #ffd366 50%, transparent 100%);
-  -webkit-animation: scanline 1.25s linear infinite;
-          animation: scanline 1.25s linear infinite; }
+  background: linear-gradient(to bottom, transparent 0%, snow 50%, #ffd366 50%, transparent 100%); }
 
 #terminal {
   position: relative;
@@ -305,8 +296,6 @@ body {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     font-weight: bold;
     font-size: inherit;
-    -webkit-animation: blur 5s linear infinite;
-            animation: blur 5s linear infinite;
     line-height: 1.25;
     white-space: pre-wrap; }
 
@@ -336,75 +325,6 @@ body {
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-@-webkit-keyframes scanline {
-  0% {
-    top: 0; }
-  100% {
-    top: 100%; } }
-@keyframes scanline {
-  0% {
-    top: 0; }
-  100% {
-    top: 100%; } }
-
-@-webkit-keyframes skew {
-  0% {
-    transform: skewX(0.5deg); }
-  8% {
-    transform: skewX(1deg) scale(1.0001); }
-  15% {
-    transform: skewX(0.6deg) skewY(-0.05deg); }
-  30% {
-    transform: skewX(0.6deg); }
-  100% {
-    transform: skewX(0.1deg); } }
-
-@keyframes skew {
-  0% {
-    transform: skewX(0.5deg); }
-  8% {
-    transform: skewX(1deg) scale(1.0001); }
-  15% {
-    transform: skewX(0.6deg) skewY(-0.05deg); }
-  30% {
-    transform: skewX(0.6deg); }
-  100% {
-    transform: skewX(0.1deg); } }
-
-@-webkit-keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(1.005); }
-  100% {
-    transform: scale(1); } }
-
-@keyframes pulse {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(1.005); }
-  100% {
-    transform: scale(1); } }
-
-@-webkit-keyframes blur {
-  50% {
-    color: #cc9900;
-    text-shadow: 2px 0 2px rgba(255, 255, 255, 0.8); } }
-
-@keyframes blur {
-  50% {
-    color: #cc9900;
-    text-shadow: 2px 0 2px rgba(255, 255, 255, 0.8); } }
-
-@-webkit-keyframes glow {
-  50% {
-    transform: scale(1.2); } }
-
-@keyframes glow {
-  50% {
-    transform: scale(1.2); } }
-
 /**
  * AnderShell - Just a small CSS demo
  *
