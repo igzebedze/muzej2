@@ -77,6 +77,8 @@ class Vhod(models.Model):
 	razlog = models.CharField(choices=RAZLOG_CHOICES, max_length=255,
 			help_text="razlog za sprejem eksponata")
 
+	dovoli_objavo = models.BooleanField(default=False, help_text="Darovalec dovoli objavo svojega imena na razstavah in javnih objavah.")
+
 	zacasna_lokacija = models.ForeignKey(Lokacija, on_delete=models.PROTECT,
 			verbose_name="začasna lokacija",
 			default=get_default_lokacija,
