@@ -22,9 +22,14 @@ class EksponatSerializer(serializers.ModelSerializer):
 class PrimerekSerializer(serializers.ModelSerializer):
 	eksponat = EksponatSerializer(read_only=True)
 	povezani = serializers.StringRelatedField(many=True)
+	donator = serializers.SerializerMethodField()
 	class Meta:
 		model = Primerek
-		fields = ('inventarna_st', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'stanje', 'zgodovina', 'fotografija', 'povezani')
+		fields = ('inventarna_st', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'stanje', 'zgodovina', 'fotografija', 'povezani', 'donator')
+	def get_donator(self, obj):
+		if obj.vhodni_dokument and obj.vhodni_dokument.dovoli_objavo:
+			return "%s (%s)" % (obj.vhodni_dokument.lastnik.ime, obj.vhodni_dokument.cas_prevzema.date())
+		return ""
 
 class RazstavaSerializer(serializers.ModelSerializer):
 	primerki = PrimerekSerializer(many=True)
