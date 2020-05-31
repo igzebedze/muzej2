@@ -90,8 +90,8 @@ class PregledAdmin(SimpleHistoryAdmin):
 	
 class PrimerekInline(admin.TabularInline):
 	model = models.Primerek
-	fields = ('eksponat', 'serijska_st', 'leto_proizvodnje', 'inventariziral')
-	readonly_fields = ('eksponat', 'serijska_st', 'leto_proizvodnje', 'inventariziral')	
+	fields = ('inventarna_st', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'inventariziral')
+	readonly_fields = ('inventarna_st', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'inventariziral')	
 	extra = 0
 
 class PregledInline(admin.TabularInline):
@@ -188,9 +188,7 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 		
 class VhodAdmin(SimpleHistoryAdmin):
 	list_display = ('stevilka', 'lastnik', 'razlog',  'prevzel', 'cas_prevzema', 'inventorizirano')
-	inlines = [
-			PrimerekInline,
-	]
+#	inlines = [ PrimerekInline,]
 	search_fields = ('opis',)
 	fieldsets = (
 			(None, {
