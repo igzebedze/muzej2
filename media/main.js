@@ -127,9 +127,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var banner = " \n          ohNh+               +hNh+          \n         'MMMMM              'MMMMN          \n          -omMMdo/sddo/sddo/sdMMd+-          \n       '    sMMMMNMMMMMMMMMNMMMMo    '       \n     /ydy//yNMMy/-+yMMMMMy/-+yMMms:/sds:     \n     MMMMMMMMMN     MMMMM     MMMMMMMMMN     \n  .+hMMms::smMMh+-+hMMMMMh+-+hMMms:/smMMh+.  \n  oMMMM+    oMMMMMMMMMMMMMMMMMMMo    oMMMMo  \n:omMMho.  :omMMho:ohho:ohho:ohMMmo:  .ohMMmo:\nMMMMM     NMMMM              'MMMMN    'MMMMM\n+ymy/     +yNMMs/'         '/sMMNy/     /ymy+\n  '         sMMMM+         oMMMMo         '  \n            -smms.         -smms-            \n                                             \n-------[ http://zbirka.muzej.si/ ] -------\nDostop do zbirk Dru\u0161tva ra\u010Dunalni\u0161ki muzej\n------------------------------------------";
+var banner = " \n          ohNh+               +hNh+          \n         'MMMMM              'MMMMN          \n          -omMMdo/sddo/sddo/sdMMd+-          \n       '    sMMMMNMMMMMMMMMNMMMMo    '       \n     /ydy//yNMMy/-+yMMMMMy/-+yMMms:/sds:     \n     MMMMMMMMMN     MMMMM     MMMMMMMMMN     \n  .+hMMms::smMMh+-+hMMMMMh+-+hMMms:/smMMh+.  \n  oMMMM+    oMMMMMMMMMMMMMMMMMMMo    oMMMMo  \n:omMMho.  :omMMho:ohho:ohho:ohMMmo:  .ohMMmo:\nMMMMM     NMMMM              'MMMMN    'MMMMM\n+ymy/     +yNMMs/'         '/sMMNy/     /ymy+\n  '         sMMMM+         oMMMMo         '  \n            -smms.         -smms-            \n                                             \n-------[ https://zbirka.muzej.si/ ]-------\nDostop do zbirk Dru\u0161tva ra\u010Dunalni\u0161ki muzej\n------------------------------------------";
 var helpText = "\nUkazi:\n* najdi <geslo> - Izpi\u0161e IDje eksponatov, ki vsebujejo iskano geslo.\n* eksponat <id> - Izpi\u0161e podatke o eksponatu.\n* razstave [id] - Izpi\u0161e seznam razstav; \u010De je naveden ID, pa info o razstavi.\n* statistika - Izpi\u0161e statistiko celotne zbirke.\n* pocisti - Po\u010Disti zaslon.";
-var _vec = '';
+var vec = '';
 
 var najdi2 = function najdi2(t, url) {
   var xhr = new XMLHttpRequest();
@@ -150,10 +150,10 @@ var najdi2 = function najdi2(t, url) {
       }
 
       if (json.next) {
-        _vec = json.next;
+        vec = json.next;
         out += "(Delni prikaz od " + json.count + " zadetkov - za več napišite 'vec')\n";
       } else {
-        _vec = '';
+        vec = '';
       }
 
       if (json.count == 0) out += "Ni zadetkov.";
@@ -186,10 +186,10 @@ var razstave2 = function razstave2(t, url) {
         }
 
         if (json.next) {
-          _vec = json.next;
+          vec = json.next;
           out += "(Delni prikaz od " + json.count + " zadetkov - za več napišite 'vec')\n";
         } else {
-          _vec = '';
+          vec = '';
         }
       } else {
         if (!json.naslov) throw "napaka";
@@ -236,12 +236,20 @@ var razstave2 = function razstave2(t, url) {
   return 'NOPROMPT';
 };
 
+var vec2 = function vec2() {
+  if (vec) {
+    return vec.includes('/api/eksponati/') ? najdi2(t, proxy(vec)) : razstave2(t, proxy(vec));
+  } else {
+    return 'Ni zadetkov.';
+  }
+};
+
 var proxy = function proxy(url) {
   return !window.location.href.includes('stamcar') ? url : 'proxy.php?url=' + encodeURIComponent(url);
 };
 
 var hashchange = function hashchange(t) {
-  var cmd = window.location.hash.replace("#", "").replace("=", " ").replace(/\+/g, " ");
+  var cmd = decodeURIComponent(window.location.hash.replace("#", "").replace("=", " ").replace(/\+/g, " "));
   t.print("NOPROMPT\n" + cmd, false);
   t.parse(cmd);
 }; ///////////////////////////////////////////////////////////////////////////////
@@ -260,7 +268,13 @@ var load = function load() {
       pomoc: function pomoc() {
         return helpText;
       },
+      pomoč: function pomo() {
+        return helpText;
+      },
       pocisti: function pocisti() {
+        return t.clear();
+      },
+      počisti: function poIsti() {
         return t.clear();
       },
       najdi: function najdi() {
@@ -328,11 +342,10 @@ var load = function load() {
         return 'NOPROMPT';
       },
       vec: function vec() {
-        if (_vec) {
-          return _vec.includes('/api/eksponati/') ? najdi2(t, proxy(_vec)) : razstave2(t, proxy(_vec));
-        } else {
-          return 'Ni zadetkov.';
-        }
+        return vec2();
+      },
+      več: function ve() {
+        return vec2();
       },
       format: function format() {
         window.open('https://archive.org/details/GorillasQbasic');
@@ -606,6 +619,8 @@ var printer = function printer($element, buflen) {
 }; // Parses input
 
 
+var lastInput = '';
+
 var parser = function parser(onparsed) {
   return function (str) {
     var args = str.split(' ').map(function (s) {
@@ -613,6 +628,7 @@ var parser = function parser(onparsed) {
     });
     var cmd = args.splice(0, 1)[0];
     history.replaceState(null, null, '#' + cmd + (args.length > 0 ? "=" + args.join("+") : ""));
+    lastInput = str;
     console.debug(cmd, args);
     onparsed.apply(void 0, [cmd].concat(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(args)));
   };
@@ -670,6 +686,13 @@ var keyboard = function keyboard($element, prompt, parse) {
           ev.preventDefault();
         }
       } else if (ignoreKey(ev.keyCode)) {
+        if (ev.which == 38 || ev.keyCode == 38) {
+          var arr = $element.value.split(/\n/);
+          arr[arr.length - 1] = prompt() + lastInput;
+          input = lastInput.split('');
+          $element.value = arr.join("\n");
+        }
+
         ev.preventDefault();
       }
     }
