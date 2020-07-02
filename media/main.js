@@ -236,7 +236,7 @@ var razstave2 = function razstave2(t, url) {
   return 'NOPROMPT';
 };
 
-var vec2 = function vec2() {
+var vec2 = function vec2(t) {
   if (vec) {
     return vec.includes('/api/eksponati/') ? najdi2(t, proxy(vec)) : razstave2(t, proxy(vec));
   } else {
@@ -342,10 +342,10 @@ var load = function load() {
         return 'NOPROMPT';
       },
       vec: function vec() {
-        return vec2();
+        return vec2(t);
       },
       več: function ve() {
-        return vec2();
+        return vec2(t);
       },
       format: function format() {
         window.open('https://archive.org/details/GorillasQbasic');
