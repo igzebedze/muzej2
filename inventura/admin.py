@@ -143,10 +143,10 @@ class RazstaveAdmin(admin.TabularInline):
 
 class PrimerekAdmin(SimpleHistoryAdmin):
 	list_select_related = True
-	filter_horizontal = ('povezani',)
+	#filter_horizontal = ('povezani',)
 	list_display = ('stevilka', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'st_razstav', 'ima_vhod')
 	list_filter = ('lokacija', VhodiCountListFilter, 'eksponat__kategorija')
-	readonly_fields = ('inventariziral', 'datum_inventarizacije')
+	readonly_fields = ('inventariziral', 'datum_inventarizacije','povezani')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime', 'eksponat__proizvajalec__ime', 'zgodovina', 'stanje')
 	inlines = [ RazstaveAdmin, PregledInline ]
 	#date_hierarchy = 'leto_proizvodnje'
