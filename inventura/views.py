@@ -52,8 +52,10 @@ class HeroViewSet(viewsets.ReadOnlyModelViewSet):
 
 		kveri = self.request.query_params.get('kveri', None)
 		if kveri is not None:
-			#queryset = queryset.filter(eksponat__ime__icontains=kveri)
-			queryset = queryset.filter(Q(eksponat__ime__icontains=kveri) | Q(eksponat__tip__icontains=kveri) | Q(serijska_st__icontains=kveri) | Q(eksponat__opis__icontains=kveri) | Q(stanje__icontains=kveri) | Q(zgodovina__icontains=kveri))
+			kw = kveri.split()
+			queryset = queryset.filter(Q(eksponat__ime__search=kveri) | Q(eksponat__tip__search=kveri) | Q(eksponat__opis__search=kveri) | Q(serijska_st__search=kveri)  | Q(stanje__search=kveri) | Q(zgodovina__search=kveri))
+
+#			queryset = queryset.filter(Q(eksponat__ime__icontains=kveri) | Q(eksponat__tip__icontains=kveri) | Q(serijska_st__icontains=kveri) | Q(eksponat__opis__icontains=kveri) | Q(stanje__icontains=kveri) | Q(zgodovina__icontains=kveri))
 		return queryset
 
 @login_required
