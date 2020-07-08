@@ -1,0 +1,25 @@
+MariaDB [muzejadmin]> create fulltext index search_ime on inventura_eksponat(ime);
+Query OK, 0 rows affected (13.583 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [muzejadmin]> create fulltext index search_tip on inventura_eksponat(tip);
+Query OK, 0 rows affected (5.268 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [muzejadmin]> create fulltext index search_opis on inventura_eksponat(opis);
+Query OK, 0 rows affected (5.483 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [muzejadmin]> create fulltext index search_zgodovina on inventura_primerek (zgodovina);
+Query OK, 0 rows affected (15.388 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [muzejadmin]> create fulltext index search_stanje on inventura_primerek (stanje);
+Query OK, 0 rows affected (21.279 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+MariaDB [muzejadmin]> create fulltext index search_serijska on inventura_primerek (serijska);
+ERROR 1072 (42000): Key column 'serijska' doesn't exist in table
+MariaDB [muzejadmin]> create fulltext index search_serijska on inventura_primerek (serijska_st);
+Query OK, 0 rows affected (5.839 sec)
+Records: 0  Duplicates: 0  Warnings: 0
