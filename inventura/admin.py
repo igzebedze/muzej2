@@ -217,6 +217,7 @@ class LokacijaAdmin(admin.ModelAdmin):
 	list_display = ('ime', 'naslov', 'st_primerkov')
 	
 admin.site.register(models.Kategorija)
+admin.site.register(models.Iskalnik)
 admin.site.register(models.Proizvajalec, ProizvajalecAdmin)
 admin.site.register(models.Eksponat, EksponatAdmin)
 admin.site.register(models.Oseba, OsebaAdmin)

@@ -27,6 +27,11 @@ models.TextField.register_lookup(Search)
 
 # curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"}' https://hooks.slack.com/services/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
 
+class Iskalnik(models.Model):
+	vsebina = models.TextField()
+	def __str__(self):
+		return "%d" % (self.pk)
+
 class Lokacija(models.Model):
 	ime = models.CharField(
 			max_length=255)
@@ -335,6 +340,8 @@ class Primerek(models.Model):
 
 	vhodni_dokument = models.ForeignKey(Vhod, blank=True, null=True, on_delete=models.PROTECT)
 	dnevnik = HistoricalRecords()
+	
+	iskalnik = models.ForeignKey(Iskalnik, blank=True, null=True, on_delete=models.SET_NULL)
 	
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
