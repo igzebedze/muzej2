@@ -351,7 +351,7 @@ class Primerek(models.Model):
 	stevilka.short_description = u'Številka'
 
 	def __str__(self):
-		return "#%d : %s" % (self.inventarna_st, self.eksponat)
+		return "#%d : %s" % (self.inventarna_st or 0, self.eksponat or '')
 
 	def ima_vhod(self):
 		if self.vhodni_dokument:
