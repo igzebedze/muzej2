@@ -23,7 +23,7 @@ from django.db.models import Q
 from .serializers import PrimerekSerializer, RazstavaSerializer, KategorijaSerializer
 from rest_framework import viewsets, generics
 
-from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec
+from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec, Kveri
 
 class KategorijeViewSet(viewsets.ReadOnlyModelViewSet):
 	queryset = Kategorija.objects.all()
@@ -52,13 +52,13 @@ class HeroViewSet(viewsets.ReadOnlyModelViewSet):
 
 		kveri = self.request.query_params.get('kveri', None)
 		if kveri is not None:
-			kv =''
+			kv = ''
 			for k in kveri.split():
 				kv = kv + " +" + k
-			
-			queryset = queryset.filter(Q(iskalnik__vsebina__search=kv))
+			queryset = queryset.filter(Q(iskalnik__vsebina__search=kv))			
+			k = Kveri(kveri=kveri)
+			k.save()
 
-#			queryset = queryset.filter(Q(eksponat__ime__icontains=kveri) | Q(eksponat__tip__icontains=kveri) | Q(serijska_st__icontains=kveri) | Q(eksponat__opis__icontains=kveri) | Q(stanje__icontains=kveri) | Q(zgodovina__icontains=kveri))
 		return queryset
 
 @login_required

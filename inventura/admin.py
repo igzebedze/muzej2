@@ -144,9 +144,10 @@ class RazstaveAdmin(admin.TabularInline):
 class PrimerekAdmin(SimpleHistoryAdmin):
 	list_select_related = True
 	#filter_horizontal = ('povezani',)
+	raw_id_fields = ("povezani",)
 	list_display = ('stevilka', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'st_razstav', 'ima_vhod')
 	list_filter = ('lokacija', VhodiCountListFilter, 'eksponat__kategorija')
-	readonly_fields = ('inventariziral', 'datum_inventarizacije','povezani')
+	readonly_fields = ('inventariziral', 'datum_inventarizacije')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime', 'eksponat__proizvajalec__ime', 'zgodovina', 'stanje')
 	inlines = [ RazstaveAdmin, PregledInline ]
 	#date_hierarchy = 'leto_proizvodnje'
@@ -215,6 +216,10 @@ class IzhodAdmin(SimpleHistoryAdmin):
 
 class LokacijaAdmin(admin.ModelAdmin):
 	list_display = ('ime', 'naslov', 'st_primerkov')
+
+class KveriAdmin(admin.ModelAdmin):
+	list_display = ('kveri', 'created_at')
+	date_hiearchy = 'created_at'
 	
 admin.site.register(models.Kategorija)
 admin.site.register(models.Iskalnik)
@@ -227,3 +232,4 @@ admin.site.register(models.Primerek, PrimerekAdmin)
 admin.site.register(models.Razstava, RazstavaAdmin)
 admin.site.register(models.Izhod, IzhodAdmin)
 admin.site.register(models.Pregled, PregledAdmin)
+admin.site.register(models.Kveri, KveriAdmin)

@@ -32,6 +32,16 @@ class Iskalnik(models.Model):
 	def __str__(self):
 		return "%d" % (self.pk)
 
+class Kveri(models.Model):
+	kveri = models.CharField(max_length=255)
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
+
+	def __str__(self):
+		return self.kveri
+	class Meta:
+		verbose_name_plural = "Kveriji"
+		
 class Lokacija(models.Model):
 	ime = models.CharField(
 			max_length=255)
