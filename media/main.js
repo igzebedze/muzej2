@@ -228,7 +228,7 @@ var razstave2 = function razstave2(t, url) {
 
       t.print(out, false);
     } catch (e) {
-      t.print("Prišlo je do napake / Razstava s tem ID ne obstaja.", false);
+      t.print("Razstava s tem ID ne obstaja.", false);
     }
   };
 
@@ -240,7 +240,7 @@ var vec2 = function vec2(t) {
   if (vec) {
     return vec.includes('/api/eksponati/') ? najdi2(t, proxy(vec)) : razstave2(t, proxy(vec));
   } else {
-    return 'Ni zadetkov.';
+    return 'Ni več zadetkov.';
   }
 };
 
