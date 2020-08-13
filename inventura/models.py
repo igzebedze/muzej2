@@ -383,10 +383,20 @@ class Primerek(models.Model):
 		verbose_name_plural = "Primerki"
 
 	def save (self, *args, **kw ):
+
+# send slack notification for new objects 
 		if not self.pk:	# if it's a new primerek
 			data = "{'text':'nov primerek %s pod stevilko %s'}" % (self.eksponat, self.pk)
 			data = data.encode('utf-8')
 			response = requests.post(SLACKWEBHOOK, headers=headers, data=data)
+
+# update search index
+		fields = (self.serijska_st, self.stanje, self.zgodovina, self.eksponat.ime, self.eksponat.tip, self.eksponat.opis)
+		vsebina = ' '.join(filter(None, fields))
+		i = self.iskalnik
+		i.vsebina = vsebina
+		i.save()
+
 		super( Primerek, self ).save( *args, **kw )
 
 
