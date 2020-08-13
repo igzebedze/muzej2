@@ -54,10 +54,12 @@ class HeroViewSet(viewsets.ReadOnlyModelViewSet):
 		if kveri is not None:
 			kv = ''
 			for k in kveri.split():
-				kv = kv + " +" + k
-			queryset = queryset.filter(Q(iskalnik__vsebina__search=kv))			
+				kv = kv + "+" + k + " "
+				queryset = queryset.filter(iskalnik__vsebina__icontains=k)
+			#queryset = queryset.filter(iskalnik__vsebina__search=kveri)			
 			k = Kveri(kveri=kveri)
 			k.save()
+			print (kveri)
 
 		return queryset
 
