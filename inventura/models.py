@@ -393,9 +393,13 @@ class Primerek(models.Model):
 # update search index
 		fields = (self.serijska_st, self.stanje, self.zgodovina, self.eksponat.ime, self.eksponat.tip, self.eksponat.opis)
 		vsebina = ' '.join(filter(None, fields))
-		i = self.iskalnik
-		i.vsebina = vsebina
-		i.save()
+		try:
+			i = self.iskalnik
+		else:
+			pass	# fails on new entities
+		except:
+			i.vsebina = vsebina
+			i.save()
 
 		super( Primerek, self ).save( *args, **kw )
 
