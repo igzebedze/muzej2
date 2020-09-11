@@ -59,8 +59,8 @@
 	</p>
 	<table>
 		<tr>
-			<th class="razdelek" rowspan="8">Lastništvo</td>
-			<th colspan=2">Izročitelj</th>
+			<th class="razdelek" rowspan="8">Skrbništvo</td>
+			<th colspan=2">Prevzemnik</th>
 			<th>Telefon</th>
 		</tr>
 		<tr>
@@ -115,9 +115,9 @@
 			<th>Dogovorjeni datum vrnitve</th>
 		</tr>
 		<tr>
-			<td>{{ izhod.razlog }}</td>
-			<td>{% if izhod.razlog == "izposoja" %}da{% else %}ne{% endif %}</td>
-			<td>{% if izhod.razlog == "izposoja" %}{{ vhod.dogovorjeni_datum_vrnitve }}{% else %}-{% endif %}</td>
+			<td>{{ izhod.namen }}</td>
+			<td>{% if izhod.namen == "izposoja" %}da{% else %}ne{% endif %}</td>
+			<td>{% if izhod.namen == "izposoja" %}{{ vhod.dogovorjeni_datum_vrnitve }}{% else %}-{% endif %}</td>
 		</tr>
 
 		<tr>
