@@ -395,9 +395,9 @@ class Primerek(models.Model):
 		vsebina = ' '.join(filter(None, fields))
 		try:
 			i = self.iskalnik
-		else:
-			pass	# fails on new entities
 		except:
+			pass	# fails on new entities
+		else:
 			i.vsebina = vsebina
 			i.save()
 
