@@ -4,8 +4,9 @@
 	590-962	batch 2
 1000-9999	avtomatski uvoz hw
 	1000-1383	zootfly
+	1384-1719	batch 2
 10000-19999	avtomatski uvoz revije
-	10000-11500	batch 1 (to print)
+	10000-11391	batch 1
 20000-29999	avtomatski uvoz igre
 	20000-20228	batch 1
 	20229-21701	batch 2
