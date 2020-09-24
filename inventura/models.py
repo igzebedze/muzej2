@@ -394,9 +394,12 @@ class Primerek(models.Model):
 		fields = (self.serijska_st, self.stanje, self.zgodovina, self.eksponat.ime, self.eksponat.tip, self.eksponat.opis)
 		vsebina = ' '.join(filter(None, fields))
 		i = self.iskalnik
-		i.vsebina = vsebina
-		i.save()
-
+		try:
+			i.vsebina = vsebina
+			i.save()		
+		except: 
+			pass
+			
 		super( Primerek, self ).save( *args, **kw )
 
 
