@@ -130,6 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 var banner = " \n          ohNh+               +hNh+          \n         'MMMMM              'MMMMN          \n          -omMMdo/sddo/sddo/sdMMd+-          \n       '    sMMMMNMMMMMMMMMNMMMMo    '       \n     /ydy//yNMMy/-+yMMMMMy/-+yMMms:/sds:     \n     MMMMMMMMMN     MMMMM     MMMMMMMMMN     \n  .+hMMms::smMMh+-+hMMMMMh+-+hMMms:/smMMh+.  \n  oMMMM+    oMMMMMMMMMMMMMMMMMMMo    oMMMMo  \n:omMMho.  :omMMho:ohho:ohho:ohMMmo:  .ohMMmo:\nMMMMM     NMMMM              'MMMMN    'MMMMM\n+ymy/     +yNMMs/'         '/sMMNy/     /ymy+\n  '         sMMMM+         oMMMMo         '  \n            -smms.         -smms-            \n                                             \n-------[ https://zbirka.muzej.si/ ]-------\nDostop do zbirk Dru\u0161tva ra\u010Dunalni\u0161ki muzej\n------------------------------------------";
 var helpText = "\nUkazi:\n* najdi <geslo> - Izpi\u0161e IDje eksponatov, ki vsebujejo iskano geslo.\n* eksponat <id> - Izpi\u0161e podatke o eksponatu.\n* razstave [id] - Izpi\u0161e seznam razstav; \u010De je naveden ID, pa info o razstavi.\n* statistika - Izpi\u0161e statistiko celotne zbirke.\n* pocisti - Po\u010Disti zaslon.";
 var vec = '';
+var _fotka = '';
 
 var najdi2 = function najdi2(t, url) {
   var xhr = new XMLHttpRequest();
@@ -290,6 +291,7 @@ var load = function load() {
         return razstave2(t, url);
       },
       eksponat: function eksponat(id) {
+        _fotka = '';
         var xhr = new XMLHttpRequest();
         xhr.open('GET', proxy('/api/eksponati/' + (id ? id.replace('#', '') + '/' : 'undefined')));
 
@@ -306,6 +308,12 @@ var load = function load() {
             if (obj.stanje) out += "\nStanje: " + obj.stanje;
             if (obj.zgodovina) out += "\nZgodovina: " + obj.zgodovina;
             if (obj.donator) out += "\nEksponat je prijazno doniral/-a " + obj.donator.replace(',', '');
+
+            if (obj.fotografija) {
+              _fotka = obj.fotografija;
+              out += "\n(Na voljo je fotografija eksponata - za prikaz napišite 'fotka')";
+            }
+
             out += "\n";
             t.print(out, false);
           } catch (e) {
@@ -346,6 +354,14 @@ var load = function load() {
       },
       več: function ve() {
         return vec2(t);
+      },
+      fotka: function fotka() {
+        if (_fotka) {
+          window.open(_fotka);
+          return 'NOLINE';
+        } else {
+          return 'Fotografija ni na voljo.';
+        }
       },
       format: function format() {
         window.open('https://archive.org/details/GorillasQbasic');
