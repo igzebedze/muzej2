@@ -10,6 +10,7 @@
 20000-29999	avtomatski uvoz igre
 	20000-20228	batch 1
 	20229-21701	batch 2
+	21702-21978	nov sw
 30000-31000	rocno www
 40000-41000	inventar
 	0-95	batch 1
