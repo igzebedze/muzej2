@@ -129,7 +129,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var slo = true;
 
-var jezik = function jezik(sl, t) {
+var jezik = function jezik(sl) {
   slo = sl;
   return slo ? helpTextSlo : helpTextEn;
 };
@@ -379,10 +379,10 @@ var load = function load() {
         return self.format();
       },
       english: function english() {
-        return jezik(false, t);
+        return jezik(false);
       },
       slovenski: function slovenski() {
-        return jezik(true, t);
+        return jezik(true);
       },
       find: function find() {
         var _self;
