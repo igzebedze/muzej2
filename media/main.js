@@ -727,7 +727,7 @@ var keyboard = function keyboard($element, prompt, parse) {
     keypress: function keypress(ev) {
       if (key(ev) === 'enter') {
         var str = input.join('').trim();
-        parse(str || $element.value.split(/\n/)[$element.value.split(/\n/).length - 1].replace(prompt(), ''));
+        parse(str || $element.value.split(/\n/)[$element.value.split(/\n/).length - 1].replace(prompt(), '') || $element.value.split(/\n/)[$element.value.split(/\n/).length - 2].replace(prompt(), ''));
         input = [];
       } else if (key(ev) !== 'backspace') {
         input.push(String.fromCharCode(ev.which || ev.keyCode));
