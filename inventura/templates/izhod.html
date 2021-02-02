@@ -118,7 +118,7 @@
 		<tr>
 			<td>{{ izhod.namen }}</td>
 			<td>{% if izhod.namen == "izposoja" %}da{% else %}ne{% endif %}</td>
-			<td>{% if izhod.namen == "izposoja" %}{{ vhod.dogovorjeni_datum_vrnitve }}{% else %}-{% endif %}</td>
+			<td>{% if izhod.namen == "izposoja" %}{{ izhod.dogovorjeni_datum_vrnitve }}{% else %}-{% endif %}</td>
 		</tr>
 
 		<tr>
