@@ -22,7 +22,7 @@ my %texts;
 my @todo = sort readpipe("find $homedir -iname '*.jpg'");
 foreach my $file (@todo) {
 	chop $file;
-	warn "$count/".$#todo.': '.$file;
+#	warn "$count/".$#todo.': '.$file;
 
 	my @path = split/\//,$file;
 	my $edition = join("-",$path[1],$path[2],$path[3]);
@@ -34,7 +34,10 @@ foreach my $file (@todo) {
 #	next if -f "./$target.hocr";
 
 # google api limits us to 20M images and 10M requests
-	if (-s "./$file" > 20000000) { warn "\timage to large, skipping"; next; }
+	if (-s "./$file" > 20000000) { 
+		warn "\timage to large, skipping"; 
+		next; 
+	}
 		
 # fetch google api 
 	if (!-f "./$file.json.gz") {
@@ -44,7 +47,10 @@ foreach my $file (@todo) {
 		print OUT $json;
 		close OUT;
 		system("gzip './$file.json'");
-	} else { warn "\tjson exists, skipping"; $existing++; }
+	} else { 
+		#warn "\tjson exists, skipping"; 
+		$existing++;
+	}
 
 # check if json contains description
 #	my $json = readpipe("head './$file.json'");
@@ -60,14 +66,40 @@ foreach my $file (@todo) {
 	
 # generate hocr by calling external script
 	if (-f "./$file.json.gz") { 
-		#if (!-f "./$target.hocr" or (-s "./$target.hocr" < 1000)) {
-		warn ("\tgenerating hocr");
-		system ("gunzip -c './$file.json.gz' | python3 gcv2hocr2.py - > './$target.hocr'");
-	
-		#} else { warn "\thocr exists, skipping"; $existing++; }
-	} else { warn "\tno json, skipping"; }
-	
-	if (-f "./$target.hocr" and -s "./$target.hocr" < 1000) { system("rm ./$target.hocr"); warn "\tremoved empty hocr"; }
+		if (!-f "./$target.hocr") {
+			warn "$count/".$#todo.': '.$file;
+			warn ("\tgenerating hocr");
+			system ("gunzip -c './$file.json.gz' | python3 gcv2hocr2.py - > './$target.hocr'");
+		} else { 
+			#warn "\thocr exists, skipping"; $existing++; 
+		}
+	} else { 
+		warn "\tno json, skipping"; 
+	}
+
+	# fix blank hocr	
+	if (-f "./$target.hocr" and -s "./$target.hocr" < 100) { 
+		#system("rm ./$target.hocr"); warn "\tremoved empty hocr"; 
+		
+		# get width and height of the image
+		my $info = readpipe("identify $file");
+		if ($info =~ /(\d+)x(\d+)/) {
+			my $height = $2;
+			my $width = $1;
+
+		# open empty.hocr
+			my $empty = readpipe("cat empty.hocr");
+
+		# replace macro
+			$empty =~ s/<WIDTH>/$width/g;			
+			$empty =~ s/<HEIGHT>/$height/g;			
+
+		# save in place of original
+			open (HOCR, ">./$target.hocr");
+			print HOCR $empty;
+			close HOCR;
+		}
+	}
 	
 	$count++;
 }
