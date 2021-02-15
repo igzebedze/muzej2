@@ -155,6 +155,16 @@ class Kategorija(models.Model):
 
 	def __str__(self):
 		return self.ime
+		
+	def proizvajalci(self):
+		list = {}
+		for p in Proizvajalec.objects.all():
+			eksponati = self.eksponat_set.filter(proizvajalec=p)
+			if eksponati.count() > 0:
+				list[p] = eksponati
+		others = self.eksponat_set.filter(proizvajalec__isnull=True)
+		list['neznani'] = others
+		return list
 
 	class Meta:
 		verbose_name_plural = "Kategorije"
@@ -381,6 +391,7 @@ class Primerek(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Primerki"
+		ordering = ['-leto_proizvodnje']
 
 	def save (self, *args, **kw ):
 
