@@ -8,9 +8,35 @@
 {% endfor %}
 </ul>
 <hr />
+
 {% for kategorija in object_list %}
 <h2><a name="{{ kategorija.ime }}">{{ kategorija.ime }}</a></h2>
 <p>{{ kategorija.opis }}</p>
+
+{% ifequal kategorija.ime "Revija" %}
+<ul>
+  {% for proizvajalec, eksponati in kategorija.proizvajalci.items %}
+  <li>
+  	<a href="/proizvajalec/#{{ proizvajalec.ime }}">{{ proizvajalec }}</a>
+  <ul>
+  	{% for e in eksponati %}
+  		<li><a href="/eksponat/{{ e.pk }}/">{{ e }}</a> ({{ e.st_primerkov }})</li>
+  		{% regroup e.primerek_set.all by leto_proizvodnje as primerki %}
+  		<table>
+  		{% for l in primerki|dictsort:"grouper" %}
+  		<tr><td><b>{{ l.grouper }}</b></td>
+  			{% for p in l.list|dictsort:"serijska_st" %}
+  			<td>{% if p.fotografije is not None %}<a href='{{ p.fotografije }}' target='_blank'>{% endif %}{{ p.serijska_st }}</a></td>
+  			{% endfor %}
+  		</tr>
+  		{% endfor %}
+		</table>  		
+  	{% endfor %}
+  </ul></li>
+  {% endfor %}
+</ul>
+
+{% else %}
 <ul>
   {% for proizvajalec, eksponati in kategorija.proizvajalci.items %}
   <li>
@@ -22,5 +48,7 @@
   </ul></li>
   {% endfor %}
 </ul>
+{% endifequal %}
+
 <hr />
 {% endfor %}
