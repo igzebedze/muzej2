@@ -1,3 +1,5 @@
+{% load extras %}
+
 <h1>Računalniški muzej</h1>
 <p>Seznam vseh eksponatov v zbirki Društva računalniški muzej</p>
 
@@ -24,9 +26,13 @@
   		{% regroup e.primerek_set.all by leto_proizvodnje as primerki %}
   		<table>
   		{% for l in primerki|dictsort:"grouper" %}
-  		<tr><td><b>{{ l.grouper }}</b></td>
+  		<tr><td style='width: 3em'><b>{{ l.grouper }}</b></td>
   			{% for p in l.list|dictsort:"serijska_st" %}
-  			<td>{% if p.fotografije is not None %}<a href='{{ p.fotografije }}' target='_blank'>{% endif %}{{ p.serijska_st }}</a></td>
+  			<td style='width: 1.5em'>{% if p.fotografije is not None %}<a href='{{ p.fotografije }}' target='_blank'>{% endif %}
+  				{% with prefix=l.grouper|to_unicode|add:'-' %}
+  				{{ p.serijska_st|cut:prefix|add_zeros }}
+  				{% endwith %}
+  			</a></td>
   			{% endfor %}
   		</tr>
   		{% endfor %}

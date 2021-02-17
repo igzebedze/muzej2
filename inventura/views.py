@@ -25,6 +25,7 @@ from rest_framework import viewsets, generics
 
 from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec, Kveri
 
+
 class KategorijeViewSet(viewsets.ReadOnlyModelViewSet):
 	queryset = Kategorija.objects.all()
 	serializer_class = KategorijaSerializer
