@@ -1,3 +1,4 @@
+{% load extras %}
 <html>
 	<head>
 		<style>
@@ -103,6 +104,22 @@
 {% endif %}    
 
 <h3>Primerki</h3>
+{% ifequal object.kategorija.ime "Revija" %}
+  		{% regroup object.primerek_set.all by leto_proizvodnje as primerki %}
+  		<table>
+  		{% for l in primerki|dictsort:"grouper" %}
+  		<tr><td style='width: 3em'><b>{{ l.grouper }}</b></td>
+  			{% for p in l.list|dictsort:"serijska_st" %}
+  			<td style='width: 1.5em'>{% if p.fotografije is not None %}<a href='{{ p.fotografije }}' target='_blank'>{% endif %}
+  				{% with prefix=l.grouper|to_unicode|add:'-' %}
+  				{{ p.serijska_st|cut:prefix|add_zeros }}
+  				{% endwith %}
+  			</a></td>
+  			{% endfor %}
+  		</tr>
+  		{% endfor %}
+		</table>  		
+{% else %}
 <ul>
 	{% for p in object.primerek_set.all %}
 	<li>{{ p }}, {{ p.serijska_st }}
@@ -115,7 +132,7 @@
 	</li>
 	{% endfor %}
 </ul>
-
+{% endifequal %}
 
 </body>
 </html>
