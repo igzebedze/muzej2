@@ -562,6 +562,7 @@ class Projekt(models.Model):
 	opis = models.TextField(blank=True, help_text="nekaj ozadja in motivacije")
 	rezultat = models.TextField(blank=True, 
 			help_text="zelo konkretno, kaj se bo videlo")
+#	stanje = models.TextField(blank=True, help_text="kaj je trenutno stanje projekta, naslednji koraki")
 	datum = models.DateField(default=datetime.date.today)
 	dokumentacija = models.URLField(blank=True, null=True)
 
@@ -598,7 +599,7 @@ class Projekt(models.Model):
 	updated_at = models.DateTimeField(auto_now=True)
 
 	def __str__(self):
-		return self.naslov()
+		return self.naslov
 
 	class Meta:
 		verbose_name_plural = "Projekti"
