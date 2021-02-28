@@ -557,7 +557,7 @@ class Izhod(models.Model):
 		
 class Projekt(models.Model):
 	nosilec = models.ForeignKey(User, on_delete=models.PROTECT,
-			help_text="sodelavec muzeja, ki je glavni vir energije in znanja")
+			help_text="sodelavec muzeja, ki je glavni vir energije in/ali znanja")
 	naslov = models.CharField(max_length=255)
 	opis = models.TextField(blank=True, help_text="nekaj ozadja in motivacije")
 	rezultat = models.TextField(blank=True, 
@@ -569,7 +569,8 @@ class Projekt(models.Model):
 		('cas', 'cas'),
 		('prostovoljci', 'prostovoljci'),
 		('vodja', 'vodja'),
-		('oprema', 'oprema')
+		('oprema', 'oprema'),
+		('projekt', 'caka drug projekt')
 	)
 	VRSTA_CHOICES = (
 		('javnost', 'dajanje na voljo javnosti'),
