@@ -577,7 +577,7 @@ class Projekt(models.Model):
 		('ohranjanje', 'ohranjanje predmetov'),
 		('zbiranje', 'zbiranje'),
 		('podpora', 'podpora organizaciji'),
-		('izobrazevanje', 'izobrazevanje, delavnice')
+		('izobrazevanje', 'izobrazevanje, delavnice'),
 		('produkcija', 'produkcija, razvoj izdelkov, art')
 	)
 	STATUS_CHOICES = (
