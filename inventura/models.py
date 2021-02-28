@@ -6,6 +6,7 @@ from simple_history.models import HistoricalRecords
 import os.path
 import io
 from PIL import Image
+import datetime
 
 from muzej2.settings import SLACKWEBHOOK, MEDIA_ROOT, MEDIA_URL
 import requests
@@ -413,7 +414,36 @@ class Primerek(models.Model):
 			
 		super( Primerek, self ).save( *args, **kw )
 
+# note: it is possible to have an entry without actually having an object
+class Tiskovina(models.Model):
+	stevilka = models.IntegerField(blank=True, null=True)
+	leto = models.IntegerField(blank=True, null=True)
+	mesec = models.IntegerField(blank=True, null=True)
+	datum = models.DateField(blank=True, null=True)
+	besedilo = models.TextField(blank=True, null=True)
+	kazalo = models.TextField(blank=True, null=True)
+	naslovnica = models.ImageField(blank=True, null=True)
+	pdf = models.URLField(blank=True, null=True)
+	primerek = models.ForeignKey(Primerek, blank=True, null=True, on_delete=models.PROTECT)
+	eksponat = models.ForeignKey(Eksponat, on_delete=models.PROTECT)
 
+	dnevnik = HistoricalRecords()
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)	
+	
+	def __str__(self):
+		stevilka = ""
+		if self.stevilka:
+			stevilka = self.stevilka
+		elif self.leto and self.mesec:
+			stevilka = "%s-%s" % (self.leto, self.mesec)
+		elif self.datum:
+			stevilka = "%s" % (self.datum)
+
+		return "%s %s" % (self.eksponat, stevilka)
+	class Meta:
+		verbose_name_plural = "Tiskovine"
+		
 class Razstava(models.Model):
 	primerki = models.ManyToManyField(Primerek)
 	naslov = models.CharField(max_length=255)
@@ -459,7 +489,6 @@ class Pregled(models.Model):
 		super( Pregled, self ).save( *args, **kw )
     
 class Izhod(models.Model):
-
 	prevzemnik = models.ForeignKey(Oseba, blank=True, null=True, on_delete=models.PROTECT,
 			related_name="prevzemnik",
 			verbose_name="prevzemnik",
@@ -525,3 +554,50 @@ class Izhod(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Izhodi"
+		
+class Projekt(models.Model):
+	nosilec = models.ForeignKey(User, on_delete=models.PROTECT,
+			help_text="sodelavec muzeja, ki je glavni vir energije in znanja")
+	naslov = models.CharField(max_length=255)
+	opis = models.TextField(blank=True, help_text="nekaj ozadja in motivacije")
+	rezultat = models.TextField(blank=True, 
+			help_text="zelo konkretno, kaj se bo videlo")
+	datum = models.DateField(default=datetime.date.today)
+	dokumentacija = models.URLField(blank=True, null=True)
+
+	POTREBE_CHOICES = (
+		('cas', 'cas'),
+		('prostovoljci', 'prostovoljci'),
+		('vodja', 'vodja'),
+		('oprema', 'oprema')
+	)
+	VRSTA_CHOICES = (
+		('javnost', 'dajanje na voljo javnosti'),
+		('raziskovanje', 'raziskovanje'),
+		('ohranjanje', 'ohranjanje predmetov'),
+		('zbiranje', 'zbiranje'),
+		('podpora', 'podpora organizaciji'),
+		('izobrazevanje', 'izobrazevanje, delavnice')
+		('produkcija', 'produkcija, razvoj izdelkov, art')
+	)
+	STATUS_CHOICES = (
+		('ideja', 'ideja'),
+		('cakanje', 'cakanje'),
+		('aktiven', 'aktiven'),
+		('koncan', 'koncan'),
+		('vzdrzevanje', 'vzdrzevanje')
+	)
+	status = models.CharField(choices=STATUS_CHOICES, max_length=255)
+	potrebe = models.CharField(choices=POTREBE_CHOICES, max_length=255)
+	vrsta = models.CharField(choices=VRSTA_CHOICES, max_length=255)
+
+	dnevnik = HistoricalRecords()
+	
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
+
+	def __str__(self):
+		return self.naslov()
+
+	class Meta:
+		verbose_name_plural = "Projekti"

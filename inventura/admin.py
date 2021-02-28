@@ -221,6 +221,15 @@ class KveriAdmin(admin.ModelAdmin):
 	list_display = ('kveri', 'created_at')
 	date_hiearchy = 'created_at'
 	
+class ProjektAdmin(admin.ModelAdmin):
+	list_filter = ('vrsta', 'status', 'potrebe', 'nosilec')
+	date_hiearchy = 'datum'
+	search_fields = ('opis', 'rezultat')
+	
+class TiskovinaAdmin(admin.ModelAdmin):
+	search_fields = ('besedilo', 'kazalo')	
+	date_hiearchy = 'datum'
+	
 admin.site.register(models.Kategorija)
 admin.site.register(models.Iskalnik)
 admin.site.register(models.Proizvajalec, ProizvajalecAdmin)
@@ -233,3 +242,5 @@ admin.site.register(models.Razstava, RazstavaAdmin)
 admin.site.register(models.Izhod, IzhodAdmin)
 admin.site.register(models.Pregled, PregledAdmin)
 admin.site.register(models.Kveri, KveriAdmin)
+admin.site.register(models.Tiskovina)
+admin.site.register(models.Projekt, ProjektAdmin)
