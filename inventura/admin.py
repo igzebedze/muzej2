@@ -225,6 +225,7 @@ class ProjektAdmin(admin.ModelAdmin):
 	list_filter = ('vrsta', 'status', 'potrebe', 'nosilec')
 	date_hiearchy = 'datum'
 	search_fields = ('opis', 'rezultat')
+	list_display = ('naslov', 'nosilec', 'status', 'potrebe', 'vrsta', 'datum')
 	
 class TiskovinaAdmin(admin.ModelAdmin):
 	search_fields = ('besedilo', 'kazalo')	
