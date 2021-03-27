@@ -150,7 +150,7 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime', 'eksponat__proizvajalec__ime', 'zgodovina', 'stanje')
 	inlines = [ RazstaveAdmin, PregledInline ]
-	date_hiearchy = 'datum_inventarizacije'
+	date_hierarchy = 'datum_inventarizacije'
 	#date_hierarchy = 'leto_proizvodnje'
 	autocomplete_fields = ['eksponat']	
 	actions = ['spremeni_eksponat', 'premakni_polico', 'naredi_vhod']
