@@ -61,7 +61,7 @@
     <div id="chart_drzave" style="width: 900px; height: 500px;"></div>
 
     <h3>Rast zbirke</h3>
-    {% regroup primerki_leta by kategorija as leto_list %}
+    {% regroup primerki_leta by leto as leto_list %}
 	<table>
 	<tr><td></td>{% for l in leta %}<td>{{ l }}</td>{% endfor %}</tr>
 	</tr>
