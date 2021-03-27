@@ -92,7 +92,6 @@ class PrimerekInline(admin.TabularInline):
 	model = models.Primerek
 	fields = ('inventarna_st', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'inventariziral')
 	readonly_fields = ('inventarna_st', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'inventariziral')	
-	date_hiearchy = 'datum_inventarizacije'
 	extra = 0
 
 class PregledInline(admin.TabularInline):
@@ -151,6 +150,7 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime', 'eksponat__proizvajalec__ime', 'zgodovina', 'stanje')
 	inlines = [ RazstaveAdmin, PregledInline ]
+	date_hiearchy = 'datum_inventarizacije'
 	#date_hierarchy = 'leto_proizvodnje'
 	autocomplete_fields = ['eksponat']	
 	actions = ['spremeni_eksponat', 'premakni_polico', 'naredi_vhod']
