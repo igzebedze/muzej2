@@ -262,7 +262,7 @@ def stat(request):
 	for leto in leta:
 		for k in Kategorija.objects.all():
 			p = Primerek.objects.filter(eksponat__kategorija=k, datum_inventarizacije__year=leto).count()
-			k = {'leto': leto, 'kategorija': kategorija, 'primerkov': p}
+			k = {'leto': leto, 'kategorija': k.ime, 'primerkov': p}
 			kategorije.append(k)		
 	
 	context = {
