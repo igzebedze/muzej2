@@ -248,7 +248,9 @@ def HomeView(request):
 	# ?
 def stat(request):
 	drzave = {}
-	kategorije = {}
+	kategorije = []
+	leta = ['2020', '2019', '2021', '2012', '2011']
+	primerki_leta = []
 	
 	for p in Proizvajalec.objects.all():
 		drzave[p.drzava] = 1
@@ -256,12 +258,19 @@ def stat(request):
 	for e in Eksponat.objects.all():
 		if e.proizvajalec:
 			drzave[e.proizvajalec.drzava] = drzave[e.proizvajalec.drzava] + 1
+
+	for leto in leta:
+		for k in Kategorija.objects.all():
+			p = Primerek.objects.filter(eksponat__kategorija=k, datum_inventarizacije__year=leto).count()
+			k = {'leto': leto, 'kategorija': kategorija, 'primerkov': p}
+			kategorije.append(k)		
 	
 	context = {
-			'primerki_vhod_ja': Primerek.objects.filter(eksponat__isnull=False, vhodni_dokument__isnull=False).count(),
-			'primerki_vhod_ne': Primerek.objects.exclude(eksponat__isnull=False, vhodni_dokument__isnull=False).count(),
+			'primerki_vhod_ja': Primerek.objects.exclude(eksponat__isnull=True).filter(vhodni_dokument__isnull=False).count(),
+			'primerki_vhod_ne': Primerek.objects.exclude(eksponat__isnull=True).filter(vhodni_dokument__isnull=True).count(),
 			'eksponati_kategorije': Kategorija.objects.all(),
 			'eksponati_drzave': drzave,
+			'primerki_leta': kategorije
 		}
 	return render(request, 'stat.html', context)
 

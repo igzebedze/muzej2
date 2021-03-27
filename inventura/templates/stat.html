@@ -59,5 +59,16 @@
     <div id="chart_provinence" style="width: 900px; height: 500px;"></div>
     <div id="chart_kategorije" style="width: 900px; height: 500px;"></div>
     <div id="chart_drzave" style="width: 900px; height: 500px;"></div>
+    
+    <h3>Rast zbirke</h3>
+    {% regroup primerki_leta by leto as leto_list %}
+    {% for y in leto_list %}
+    <h4>{{ y.grouper }}</h4>
+    	<ul>
+    		{% for k in y.list %}
+    		<li>{{ k.kategorija }}: {{ k.primerkov }}</li>
+    		{% endfor %}
+    	</ul>
+    {% endfor %}
   </body>
 </html>
