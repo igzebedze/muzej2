@@ -270,7 +270,8 @@ def stat(request):
 			'primerki_vhod_ne': Primerek.objects.exclude(eksponat__isnull=True).filter(vhodni_dokument__isnull=True).count(),
 			'eksponati_kategorije': Kategorija.objects.all(),
 			'eksponati_drzave': drzave,
-			'primerki_leta': kategorije
+			'primerki_leta': kategorije,
+			'leta': leta
 		}
 	return render(request, 'stat.html', context)
 
