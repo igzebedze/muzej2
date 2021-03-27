@@ -92,6 +92,7 @@ class PrimerekInline(admin.TabularInline):
 	model = models.Primerek
 	fields = ('inventarna_st', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'inventariziral')
 	readonly_fields = ('inventarna_st', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'inventariziral')	
+	date_hiearchy = 'datum_inventarizacije'
 	extra = 0
 
 class PregledInline(admin.TabularInline):
