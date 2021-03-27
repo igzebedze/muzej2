@@ -61,15 +61,14 @@
     <div id="chart_drzave" style="width: 900px; height: 500px;"></div>
     
     <h3>Rast zbirke</h3>
-    {% regroup primerki_leta by kategorija as leto_list %}
-    <table><tr><td><td>
+    {% regroup primerki_leta by leto as leto_list %}
     {% for y in leto_list %}
-    <td>{{ y.grouper }}</td>
+    <h4>{{ y.grouper }}</h4>
+    	<ul>
+    		{% for k in y.list %}
+    		<li>{{ k.kategorija }}: {{ k.primerkov }}</li>
+    		{% endfor %}
+    	</ul>
     {% endfor %}
-    </tr>
-    {% for k in y.list %}
-    <tr><td>{{ k.kategorija }}</td><td>{{ k.primerkov }}</td></tr>
-    {% endfor %}
-    </table>
   </body>
 </html>
