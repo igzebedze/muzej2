@@ -63,7 +63,7 @@
     <h3>Rast zbirke</h3>
     {% regroup primerki_leta by leto as leto_list %}
 	<table>
-	<tr><td></td>{% for l in leta %}<td>{{ l }}</td>{% endfor %}</tr>
+	<tr><td></td>{% for l in eksponati_kategorije %}<td>{{ l.ime }}</td>{% endfor %}</tr>
 	</tr>
     {% for y in leto_list %}<tr>
 		<td>{{ y.grouper }}</td>{% for k in y.list %}<td>{{ k.primerkov }}</td>{% endfor %}
