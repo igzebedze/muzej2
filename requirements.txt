@@ -8,7 +8,7 @@ django-simple-history==3.0.0
 djangorestframework==3.12.4
 html2text==2020.1.16
 idna==3.2
-lxml==4.6.3
+lxml==4.6.5
 Pillow==8.3.2
 protobuf==3.17.3
 pycurl==7.44.1
