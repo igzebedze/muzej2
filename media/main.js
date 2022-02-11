@@ -103,7 +103,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * Copyright (c) 2011-2018, Anders Evenrud <andersevenrud@gmail.com>
  * All rights reserved.
- * Source for this fork: https://github.com/markostamcar/retro-css-shell-demo
+ * Source for this fork: https://github.com/markostamcar/muzej.si/tree/master/zbirka-crt
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
@@ -135,7 +135,7 @@ var jezik = function jezik(sl) {
 };
 
 var banner = " \n          ohNh+               +hNh+          \n         'MMMMM              'MMMMN          \n          -omMMdo/sddo/sddo/sdMMd+-          \n       '    sMMMMNMMMMMMMMMNMMMMo    '       \n     /ydy//yNMMy/-+yMMMMMy/-+yMMms:/sds:     \n     MMMMMMMMMN     MMMMM     MMMMMMMMMN     \n  .+hMMms::smMMh+-+hMMMMMh+-+hMMms:/smMMh+.  \n  oMMMM+    oMMMMMMMMMMMMMMMMMMMo    oMMMMo  \n:omMMho.  :omMMho:ohho:ohho:ohMMmo:  .ohMMmo:\nMMMMM     NMMMM              'MMMMN    'MMMMM\n+ymy/     +yNMMs/'         '/sMMNy/     /ymy+\n  '         sMMMM+         oMMMMo         '  \n            -smms.         -smms-            \n";
-var helpTextSlo = "\nUkazi:\n* najdi <geslo> - Izpi\u0161e IDje eksponatov, ki vsebujejo iskano geslo.\n* eksponat <id> - Izpi\u0161e podatke o eksponatu.\n* razstave [id] - Izpi\u0161e seznam razstav; \u010De je naveden ID, pa info o razstavi.\n* statistika - Izpi\u0161e statistiko celotne zbirke.\n* pocisti - Po\u010Disti zaslon.\n* ENGLISH - Switch to English language. (NOTE: We're working on translating item details.)";
+var helpTextSlo = "\nUkazi:\n* najdi <geslo> - Izpi\u0161e IDje eksponatov, ki vsebujejo iskano geslo.\n* eksponat <id> - Izpi\u0161e podatke o eksponatu.\n* razstave [id] - Izpi\u0161e seznam razstav; \u010De je naveden ID, pa info o razstavi.\n* statistika - Izpi\u0161e statistiko celotne zbirke.\n* pocisti - Po\u010Disti zaslon.\n* ENGLISH - Switch to English language. (NOTE: Entries not yet translated.)";
 var helpTextEn = "\nCommands:\n* find <keyword> - Lists item IDs matching the keywords.\n* item <id> - Displays details about an item.\n* exhibitions [id] - List all exibitions or details of one specified by ID.\n* stats - Displays collection statistics.\n* clear - Clears the screen.\n* SLOVENSKI - Preklopi na sloven\u0161\u010Dino.";
 var vec = '';
 var _fotka = '';
