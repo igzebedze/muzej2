@@ -175,7 +175,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  font-size: 22px;
+  font-size: 20px;
   transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
@@ -354,7 +354,7 @@ body {
   #crt {
     width: 90vw;
     height: 90vh;
-    font-size: 11px; } }
+    font-size: 10px; } }
 
 
 /*# sourceMappingURL=main.css.map*/
