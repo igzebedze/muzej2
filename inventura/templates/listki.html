@@ -1,8 +1,15 @@
+{% load static %}
+
 <html>
 	<head>
 		<style>
-			.box { float: left; border: 1px solid black; width: 300px; height: 100px; _margin: 10px; }
+			@page { size: A4 portrait; }
+			@font-face {
+    			font-family: "reso";
+    			src: url("{% get_media_prefix %}ResoThin.ttf"); }
+			.box { float: left; border: 1px solid white; width: 300px; height: 100px; _margin: 10px; }
 			.qr { float: left; }
+			body { font-family: "reso"; }
 			i, p { font-size: 0.9em; }
 			b { font-size: 1em; }
 			p { margin-top: 0.5em; }
