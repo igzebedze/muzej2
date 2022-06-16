@@ -20,7 +20,7 @@
 {% for p in object_list %}
 <div class='box'>
 	<img class='qr' src="https://chart.googleapis.com/chart?chs=100x100&cht=qr&chld=L|1&chl=HTTP://zbirka.muzej.si/eksponat/{{ p.eksponat.id}}/"/>
-	<p>{{ p.eksponat.kategorija }}</p><br />
+	<p>{{ p.eksponat.kategorija }}</i><br />
 	<b>{{ p.eksponat.ime }}</b>
 	<p>{% if p.eksponat.proizvajalec %}{{ p.eksponat.proizvajalec }}{% endif %} {% if p.leto_proizvodnje %}{{ p.leto_proizvodnje }}{% endif %}</p>
 </div>
