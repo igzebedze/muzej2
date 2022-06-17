@@ -103,13 +103,13 @@ def listki(request):
 			primerki = []
 			for id in id_set:
 				try:
-					primerek = Primerek.objects.get(pk=id)
+					primerek = Primerek.objects.get(pk=int(id))
 					primerki.append(primerek)
 				except Primerek.DoesNotExist:
 					messages.add_message(request, messages.ERROR,
-							"Ne najdem primerka %d!" % (id,))
+							"Ne najdem primerka %d!" % (int(id),))
 
-			print (primerki)
+			#print (primerki)
 			context = { 'object_list': primerki }
 			return render(request, 'listki.html', context)
 	
