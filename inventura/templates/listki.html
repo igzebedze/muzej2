@@ -8,14 +8,14 @@
     			font-family: "reso";
     			src: url("{% get_media_prefix %}ResoThin.ttf"); }
 			.box { 
-				float: left; 
+				_float: left; 
 				_border: 1px solid white; 
 				width: 9cm; height: 5.5cm; 
 				_margin: 0.5cm; 
 				_padding: 1em; 
 				page-break-after: always; 
 			}
-			.qr { float: right; padding-top: 1em; }
+			.qr { float: left; padding-top: 1em; }
 			body { font-family: "reso"; }
 			i, p { font-size: 1.1em; }
 			b { font-size: 1.3em; }
@@ -28,11 +28,13 @@
 
 {% for p in object_list %}
 <div class='box'>
+
+	<img class='qr' src="https://chart.googleapis.com/chart?chs=100x100&cht=qr&chld=L|1&chl=HTTP://zbirka.muzej.si/eksponat/{{ p.eksponat.id}}/"/>
+
 	<p> {{ p.eksponat.kategorija }}</i><br />
 		<b>{{ p.eksponat.ime }}</b>
 	</p>
 	<p>{% if p.eksponat.proizvajalec %}{{ p.eksponat.proizvajalec }}{% endif %} {% if p.leto_proizvodnje %}{{ p.leto_proizvodnje }}{% endif %}</p>
-	<img class='qr' src="https://chart.googleapis.com/chart?chs=100x100&cht=qr&chld=L|1&chl=HTTP://zbirka.muzej.si/eksponat/{{ p.eksponat.id}}/"/>
 	
 </div>
 {% endfor %}
