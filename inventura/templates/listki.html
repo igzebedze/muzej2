@@ -31,11 +31,9 @@
 	<p> {{ p.eksponat.kategorija }}</i><br />
 		<b>{{ p.eksponat.ime }}</b>
 	</p>
-	<table class='table'><tr><td class='cell'>
 	<p>{% if p.eksponat.proizvajalec %}{{ p.eksponat.proizvajalec }}{% endif %} {% if p.leto_proizvodnje %}{{ p.leto_proizvodnje }}{% endif %}</p>
-	</td><td>
 	<img class='qr' src="https://chart.googleapis.com/chart?chs=100x100&cht=qr&chld=L|1&chl=HTTP://zbirka.muzej.si/eksponat/{{ p.eksponat.id}}/"/>
-	</td></tr></table>
+	
 </div>
 {% endfor %}
 
