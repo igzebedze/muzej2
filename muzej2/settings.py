@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'simple_history',
     'inventura',
     'rest_framework',
+    'evidenca'
 ]
 
 MIDDLEWARE = [

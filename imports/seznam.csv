@@ -1,0 +1,233 @@
+LETO,KRAJ,PROIZVAJALEC,MODEL,OPOMBE,KOLICINA,TIP,LASTNIŠTVO,PODJETJE,VIRI
+1946,Kranj,POWERS-SAMAS,POWERS-SAMAS London,,1,mg,lasten,Iskra Kranj,"57/01, 60/02, 65/01, 66/04"
+1952,Ljubljana,IBM,IBM neznan,400/600?,1,mg,lasten,Zavod za statistiko Ljubljana + RS Notranje zadeve Ljubljana,STAT/01
+1955,Ljubljana,IBM,IBM neznan,,1,mg,lasten,Narodna banka FLRJ Republiški center Ljubljana,"61/07, FLRJ/01"
+1955,Ljubljana,neznan,neznan,,1,mg,lasten,Komunalna banka Ljubljana,FLRJ/01
+1955,Maribor,IBM,IBM 602-A,vojaška tajnost,1,mg,najet,TAM Maribor,"PKZ/02, 57/01, 67/10, 70/01, 84/39"
+1955,Ljubljana,IBM,IBM neznan,,1,mg,lasten,Litostroj Ljubljana,"57/01, 65/06, 67/10, 70/01"
+1956,Kranj,POWERS-SAMAS,POWERS-SAMAS London,novejši model,1,mg,lasten,Iskra Kranj,66/04
+1957,Jesenice,IBM,IBM 602-A,po sliki,1,mg,lasten,Železarna Jesenice,"57/01, 60/02"
+1958,Škofja Loka,POWERS-SAMAS,POWERS-SAMAS London,,1,mg,lasten,LTH Škofja Loka,LTH/01
+1958,Ljubljana,ADC,ADC M-1,ruski analogni elektronski,1,ae,lasten,Nuklearni inštitut Jožef Stefan,"58/01, 59/02, 59/03"
+1959,Ljubljana,IBM,IBM neznan,,1,mg,skupen,Rog Ljubljana + Titan Kamnik + Dom Ljubljana,"61/05, 72/04, 75/03"
+1958,Ljubljana,neznan,neznan,,1,mg,PREVERI,Metalka Ljubljana,"69/11, 69/29"
+1960,Beograd,IBM,IBM 705,,1,e,lasten,Zvezni zavod za statistiko Beograd,"60/04, 60/05, 60/06, 61/04, 61/07, 66/08"
+1960,Beograd,CER,CER 10,,1,e,lasten,IBK Vinča + Inštitut Mihajlo Pupin Beograd,"61/04, 67/08, IDPR/01"
+1960,Kranj,SPERRY Rand,SPERRY Rand UNIVAC 60/120,,1,mg,lasten,Iskra Kranj,"57/01, 60/02, 65/01, 66/03, 66/04, 70/03, FRI/01"
+1960,Jesenice,IBM,IBM neznan,dodaten nakup,1,mg,lasten,Železarna Jesenice,"67/10, 66/08*"
+1960,Ljubljana,Aritma,Aritma MEDA 41-C,,1,ae,lasten,FE Fakulteta za elektrotehniko Oddelek za šibki tok,"UNI/01, FRI/01"
+1961,Ljubljana,neznan,neznan,,1,mg,PREVERI,RTV Ljubljana,"61/02, 65/07, 69/29"
+1961,Ljubljana,neznan,neznan,"dodaten nakup UNIVAC, BULL?",1,mg,lasten,Zavod za statistiko Ljubljana,"SRS/01, 69/29"
+1961,Ljubljana,neznan,neznan,odkup 63 IBM?,1,mg,najet,RS Notranje Zadeve Ljubljana,"PKZ/01, MNZ/01, 69/29"
+1962,Maribor,IBM,IBM neznan,novi modeli 56-62,1,mg,odkup,TAM Maribor,PKZ/02
+1962,Maribor,IBM,IBM neznan,novi modeli 56-62,1,mg,odkup,TAM Maribor,PKZ/02
+1962,Ljubljana,ZUSE,ZUSE Z-23,,1,e,skupen,Računski center IMFM Ljubljana + Inštitut Jožef Stefan + Iskra Kranj + Železarna Ravne,"62/01, 62/02, 62/03, 62/04, 62/05, 62/06, 63/01, 63/02, 65/05a, IDPR/01, UNI/01, 69/29"
+1962,Ljubljana,ZUSE,ZUSE Z-23,sprva razstavljen v Iskri,1,e,PREVERI,Metalurški inštitut Ljubljana,"62/06, IDPR/01"
+1962,Ljubljana,IBM,IBM 1401,,1,e,PREVERI,Narodna banka Republiški center Ljubljana,FLRJ/01
+1963,Kamnik,IBM,IBM neznan,,1,mg,skupen,Titan Kamnik + Stol Kamnik + Induplati Radomlje,"63/03, 71/35, 75/03"
+1963,Trbovlje,IBM,IBM neznan,,1,mg,lasten,Rudis-STT Strojna tovarna Trbovlje,"61/01, 63/04"
+1964,Škofja Loka,IBM,IBM neznan,rabljen,1,mg,skupen,LTH Škofja Loka + Gorenjska predilnica + Jelovica + Sava Kranj,"LTH/01, 70/11, 73/03, 77/02"
+1964,Ljubljana,SPERRY Rand,SPERRY Rand UNIVAC,1004?,1,mg,lasten,SDK Služba družbenega knjigovodstva Ljubljana,"SDK/01, 66/03, 69/29"
+1964,Kranj,ISKRA,ISKRA Z-23,samo testni prototip,1,e,lasten,Iskra Kranj - Zavod za avtomatizacijo,65/01
+1964,Ljubljana,FRIEDEN,FRIDEN 6010,,1,e,lasten,SDV Služba državne varnosti Ljubljana,ni virov
+1965,Maribor,IBM,IBM 1401,,1,e,lasten,TAM Maribor + Primat Maribor + Elektromontaža + Tovarna stikalnih naprav + ZZSZ Maribor,"PKZ/02, 65/06, 66/08, RII/01, 69/09, 84/39"
+1965,Maribor,GE,GE BULL Gama 10,,1,e,skupen,ECM Ekonomski center Maribor + Metalna + Tovarna dušika Ruše + Marles Maribor,"PKZ/03, 66/14"
+1966,Celje,IBM,IBM 602,rabljen star že ob nabavi,1,mg,skupen,EMO Celje + Železarna Štore + Cinkarna Celje + KK Žalec,"62/07, 66/10, 66/16, 67/11, 67/12, 67/13, 67/20, 76/01, 76/02, 76/09, 81/01"
+1966,Koper,IBM,IBM neznan,,1,mg,najet,Tomos Koper,"72/11, 75/17"
+1967,Kranj,CER,CER 200,,1,e,lasten,Planika Kranj,67/05
+1967,Ljubljana,IBM,IBM 1130,,1,e,PREVERI,FNT Fakulteta za Naravoslovje in tehnologijo Ljubljana,PMR/01
+1968,Maribor,GE,GE BULL Gama 10,dodaten nakup,1,e,skupen,ECM Ekonomski center Maribor,68/21
+1968,Ljubljana,CDC,CDC 2100,,1,e,skupen,Iskra Lj-Stegne + Izvršni svet SRS + Inštitut Jožef Stefan + Univerza v Ljubljani + Delo + IMP Ljubljana,"67/03, 67/04, 67/16, 67/17, 68/01, 68/02, 68/02a, 69/17"
+1968,Ljubljana,IBM,IBM 360/30,,1,e,lasten,"DES Distribucija energije Slovenija, Ljubljana + Inštitut Jožef Stefan + Kemični inštitut Boris Kidrič + Univerza v Ljubljani + RS Notranje zadeve Ljubljana","66/08, 67/08, 68/07, 68/11, 69/29, 71/08"
+1968,Ljubljana,IBM,IBM 360/20,,1,e,lasten,"Mehanografski center Streliška, Ljubljana + Rog Ljubljana + Dom Ljubljana + Lesnina + Slovenijales + Tops + Saturnus Ljubljana + Kartonažna tovarna + Zavod SRS za zdravstveno varstvo, Ljubljana","66/08, 66/09, 69/28, 69/29, 68/09, 71/08, RII/01"
+1968,Ljubljana,IBM,IBM 360/20,,1,e,lasten,Litostroj Ljubljana,"66/08, 76/02, RII/01, 69/29, 71/08"
+1968,Ljubljana,IBM,IBM 360/30,,1,e,lasten,Emona Ljubljana + Prehrana + Sadje Zelenjava Ljubljana,"67/06, 69/27, 69/29, 71/08"
+1968,Velenje,IBM,IBM 360/25,,1,e,lasten,Gorenje Velenje,"67/06, 68/08, 71/08, 71/19, 72/13"
+1968,Ljubljana,IBM,IBM 360/30,,1,e,lasten,Metalka Ljubljana,"69/29, 71/08"
+1968,Jesenice,IBM,IBM 360/30,,1,e,lasten,Železarna Jesenice + Železarna Ravne + Železarna Štore + Veriga Lesce,"66/02, 66/07, 68/08, 71/08, 73/09, RII/01"
+1968,Celje,IBM,IBM 360/20,,1,e,lasten,Zavod za napredek gospodarstva Celje +Toper + Polzela,"70/01, 68/08, 68/20, 71/08, 71/19, 72/13"
+1968,Ljubljana,IBM,IBM 360/30,,1,e,lasten,KBH Kreditna banka in hranilnica Ljubljana + MNZ,"69/10, 71/08, MNZ/01"
+1968,Ljubljana,IBM,IBM 360/25,,1,e,lasten,Slovenija Vino Ljubljana + MNZ,"71/08, MNZ/01"
+1968,Piran,neznan,neznan,FACOM 230/15??,1,e,lasten,Splošna plovba Piran,"67/13, 68/19"
+1969,Ljubljana,CDC,CDC 3300,,1,e,skupen,RRC Republiški računski center Ljubljana + Iskra Kranj + Izvršni svet SRS + Inštitut Jožef Stefan + Univerza v Ljubljani,"67/08, 68/02, 68/05, SRS/02, 69/17, 71/20, 71/22"
+1969,Ljubljana,IBM,IBM 360/20,,1,e,lasten,Saturnus Ljubljana + KK Žalec,"76/02, 69/29, 71/08, 81/01"
+1969,Ljubljana,IBM,IBM 360/30,,1,e,lasten,ŽTP Železniško transportno podjetje Ljubljana + RZS Regionalna zdravstvena skupnost Ljubljana,"69/29, 70/26, 71/08"
+1969,Murska Sobota,IBM,IBM 360/20,,1,e,lasten,Mura Murska Sobota,"69/25, 70/13, 71/08, 72/23, PKZ/03, RII/01"
+1969,Trzic,IBM,IBM 360/20,,1,e,lasten,Peko Tržič,"69/06, 71/08, 71/24, 73/13, RII/01"
+1969,Celje,IBM,IBM 360/20,,1,e,lasten,AERO Celje,"68/08, 70/01, 70/27, 70/42,71/08, 71/19, 72/13, 77/53"
+1969,Nova Gorica,IBM,IBM 360/25,,1,e,lasten,Meblo Nova Gorica + Skupščina občine Nova Gorica + Salonit Anhovo + Vozila Gorica + Primorje Ajdovščina,"69/26, 69/27, 70/12, 70/14, 71/08, 71/17, 71/49"
+1969,Trbovlje,IBM,IBM 1130,,1,e,skupen,IBT Investicijski biro Trbovlje + Rudis,"69/10, 69/13, 69/21, 71/34"
+1969,Ljubljana,IBM,IBM 1130,,1,e,lasten,IMFM Ljubljana,"IDPR/01, INF/03"
+1969,Maribor,IBM,IBM 1130,,1,e,lasten,VTŠ Višja tehniška šola Maribor,"69/02, 76/08, IDPR/01"
+1969,Novo Mesto,PHILIPS,PHILIPS Data 8000,,1,e,lasten,"Novoteks, Novo Mesto","69/16, 69/39, RII/01, 70/04, 70/22"
+1969,Nova Gorica,neznan,neznan,manjši,1,e,lasten,SGP Splošno gradbeno podjetje Gorica,"70/14, 71/31, 69/30"
+1970,Škofja Loka,IBM,IBM 360/20,,1,e,skupen,LTH Škofja Loka + Gorenjska predilnica + Jelovica + Sava Kranj + Loka + Kmetijsko gospodarstvo Škofja Loka + Alpina Žiri,"RII/01, 68/04, 70/11, 71/08, 72/09, 72/39, 73/03, 77/02"
+1970,Celje,IBM,IBM 360/25,,1,e,skupen,EMO Celje + Železarna Štore + Kovinotehna Celje + TKO Zreče,"69/15, 70/01, 70/16, 68/08, 70/17, 71/08, 71/19, 72/13, 77/51, 77/53"
+1970,Cerknica,IBM,IBM 360/25,,1,e,lasten,Brest Cerknica,"69/23, 71/08, 71/17"
+1970,Ajdovscina,IBM,IBM 360/25,,1,e,lasten,Fructal Ajdovščina + LIP Bled,"70/10, 70/14, 70/29, 71/08"
+1970,Zalec,IBM,IBM 360/20,,1,e,lasten,KK Žalec,"68/08, 69/20, 70/09, 71/08, 71/55, 72/04, 72/13, 76/02, 81/01"
+1970,Kranj,IBM,IBM 360/25,,1,e,lasten,Iskra Elektromehanika Kranj,"70/03, 70/19, 70/37, 71/08"
+1970,Ljubljana,IBM,IBM 360/30,,1,e,lasten,Iskra Commerce Ljubljana,70/37
+1970,Sevnica,IBM,IBM 360/25,,1,e,lasten,Lisca Sevnica + Jutranjka Sevnica,"70/04, 71/08, 72/13, 74/36, RII/01"
+1970,Ravne,KIENZLE,KIENZLE 6000,,1,e,lasten,Železarna Ravne,"71/04, 69/37, 71/25, 72/18, 73/09"
+1970,Novo Mesto,PHILIPS,PHILIPS Data 8000,,1,e,lasten,Pionir Novo mesto,"69/18, PIO/01, 70/21, 70/22, 70/40"
+1970,Nazarje,PHILIPS,PHILIPS Data 8000,,1,e,lasten,GLIN Gozdarstvo in lesna industrija Nazarje,73/06
+1971,Celje,PHILIPS,PHILIPS Data 8000,,1,e,lasten,Ingrad Celje,71/40
+1971,Novo mesto,PHILIPS,PHILIPS Data 8000,,1,e,lasten,Pionir Novo mesto,"PIO/01, 70/22"
+1971,Koper,IBM,IBM 360/25,,1,e,najet,Tomos Koper + Interevropa + Luka Koper + stanovanjska podjetja + Delamaris + Občina Koper + Stavbenik Koper + Palace Hotel + Mehanotenika + Agraria,"71/08, 71/49, 72/11, 74/22, 77/19, RII/01, IEU/01"
+1971,Ljubljana,IBM,IBM 360/25,,1,e,lasten,Mladinska knjiga Ljubljana + Delo,"71/08, 71/28"
+1971,Novo mesto,IBM,IBM 360/25,,1,e,lasten,Krka Novo Mesto + Novoles Novo Mesto,"69/33, 69/34, 70/20, 71/08, 71/17, 72/07, 73/11"
+1971,Ljubljana,IBM,IBM 360/25,,1,e,lasten,Lek Ljubljana,71/08
+1971,Ljubljana,IBM,IBM 360/25,,1,e,lasten,Jugotekstil impex Ljubljana,"71/08, RII/01"
+1971,Ljubljana,IBM,IBM 360/25,,1,e,lasten,PTT Ljubljana,"71/08, 74/43"
+1971,Maribor,IBM,IBM 360/25,,1,e,lasten,EGM Elektrogospodarstvo Maribor,PKZ/01
+1971,Ljubljana,IBM,IBM 360/40,,1,e,lasten,Intertrade računski center Ljubljana + Železarna Ravne + RZS Regionalna zdravstvena skupnost Ljubljana,"71/08, 71/29, 73/09, SDMI/03, 75/32"
+1971,Kidricevo,IBM,IBM 1130,,1,e,lasten,TGA Tovarna glinice in aluminija Kidričevo,"70/41, 71/16, 72/19, 74/17"
+1971,Ljubljana,IBM,IBM 1130,,1,e,lasten,RCU Računalniški center Univerze v Ljubljani,"UNI/01, FRI/01, INF/03"
+1971,Ljubljana,CDC,CDC 1700,,2,e,lasten,RCU Računalniški center Univerze v Ljubljani,INF/03
+1971,Ljubljana,CDC,CDC 6400,,1,e,lasten,RRC Republiški računski center Ljubljana + ZGP + GP Obnova + Ljubljanske mlekarne + Republiška izobraževalna skupnost,"70/36, 71/03, 71/43, 71/51"
+1971,,neznan,6+x neznan,,,t,terminal,>> vsaj 6 deležnikov,
+1971,Ljubljana,IBM,IBM 370/145,,2,e,lasten,Ljubljanska banka,"71/14, 78/11, 79/19"
+1971,,neznan,nx neznan,,,t,terminal,>> v vseh ljubljanskih poslovalnicah,71/14
+1971,Celje,IBM,IBM 370/135,,1,e,lasten,Zavod za socialno zavarovanje Celje + Zdravstveni dom Celje,"72/13, 77/53, SDMI/02"
+1971,Ljubljana,CCL,CCL Key-Edit neznan,,1,e,lasten,Zavod za statistiko Ljubljana,"71/13, 71/30"
+1971,Maribor,NIXDORF,NIXDORF neznan,,1,e,lasten,Skupščina občine Maribor,"PKZ/01, 71/36"
+1971,Maribor,NIXDORF,NIXDORF,820/35?,1,e,lasten,Špedtrans Maribor,"71/11, 73/19, PKZ/01"
+1971,Celje,NIXDORF,NIXDORF 820/25,,2,e,lasten,MERX Celje (poslovalnica Agropromet),"70/01, 71/06, 71/07, 72/13"
+1971,Celje,IBM,IBM 3/10,,1,e,najet,MERX Celje + Socialno zavarovanje kmetov Celje + Rudarski šolski center Velenje,"72/13, 72/16"
+1971,Jarse,IBM,IBM 3/10,,1,e,lasten,Induplati Jarše,"72/04, 75/03, RII/01"
+1971,Ljubljana,BURROUGHS,BURROUGHS L2000,,1,e,lasten,Ilirija Ljubljana,76/46
+1971,Maribor,PHILIPS,PHILIPS P359,,1,e,lasten,Svila Maribor,RII/01
+1972,Ljubljana,CDC,CDC Cyber 72/24,,1,e,lasten,RRC Republiški računski center Ljubljana + Iskra Kranj + Inštitut Jožef Stefan + Univerza v Ljubljani + Ljubljanske mlekarne + GP Obnova + Združenje gozdnogospodarskih organizacij + Izobraževalna skupnost SRS + sklad Borisa Kidriča pri Raziskovalni skupnosti SRS + Klinična bolnica v Ljubljani + Republiška skupnost za cest,"71/48, 72/01, 72/14, 72/27, 72/30, 73/02, 73/04, RRC/01, 73/07"
+1972,,neznan,25x neznan,,,t,terminal,>> 12 deležnikov,"75/22, 75/23"
+1972,Ljubljana,IBM,IBM 360/25,,1,e,najet,RS Notranje zadeve Ljubljana + Ljubljanske občine,MNZ/01
+1972,Ljubljana,IBM,IBM 370/135,,1,e,lasten,SDK Ljubljana,SDK/01
+1972,Maribor,SINGER,SINGER System 10,,2,e,lasten,SDK Maribor,"PKZ/01, SDK/01"
+1972,Kranj,SINGER,SINGER System 10,,1,e,lasten,SDK Kranj,SDK/01
+1972,Celje,SINGER,SINGER System 10,,1,e,lasten,SDK Celje,"72/13, SDK/01"
+1972,Celje,neznan,neznan,,1,e,lasten,Skupščina občine Celje,72/13
+1972,Begunje,IBM,IBM 360/20,,1,e,lasten,Elan Begunje,"68/10, 69/03, 72/20, RII/01"
+1972,Idrija,IBM,IBM 360/25,,1,e,lasten,Simplex Idrija + Slovenijales obrat spodnja Idrija + ETA Cerkno,"70/15, 71/08"
+1972,Maribor,IBM,IBM 360/40,,1,e,skupen,ECM Ekonomski center Maribor + TAM Maribor + MTT Mariborska tekstilna tovarna Maribor + Mariborska livarna + Zlatorog + Splošna bolnišnica Maribor,"70/06, 71/08, 73/21, PKZ/01, 84/39"
+1972,Ljubljana,IBM,IBM 370/135,,1,e,najet,Astra Ljubljana + Staninvest,"71/08*, 73/30"
+1972,Radovljica,IBM,IBM neznan,,1,e,lasten,Intertrade IBM šolski center Radovljica + Železarna Ravne,"72/38, 73/09"
+1972,Kamnik,IBM,IBM 3/10,,1,e,lasten,Titan Kamnik,"71/35, 72/04, 75/03"
+1972,Kamnik,IBM,IBM 3/10,,1,e,lasten,Stol Kamnik,"71/35, 72/04, 75/03"
+1972,Ruse,IBM,IBM 3/10,,1,e,najet,Tovarna dušika Ruše,72/25
+1972,Metlika,HONEYWELL,HONEYWELL G118,,1,e,lasten,Beti Metlika,"72/03, 72/17, 72/40, 74/16, 74/47, RII/01"
+1972,Kranj,PHILIPS,PHILIPS P359,,1,e,lasten,IBI Kranj,RII/01
+1972,Trzic,PHILIPS,PHILIPS P359,,1,e,lasten,Predilnica in tkalnica Tržič,72/21
+1973,Kranj,IBM,IBM 370/135,,1,e,lasten,Sava Kranj + Jelovica + Tekstilindus + KŽK Kranj + Kranjska občina,"72/05, 72/06, 72/35, 72/39, 73/28, RII/01"
+1973,Ravne,IBM,IBM 370/135,,1,e,najet,Železarna Ravne,"72/18, 73/08*"
+1973,Nova Gorica,IBM,IBM 370/,135??,1,e,najet,Meblo Nova Gorica,"73/24, 73/32"
+1973,Črnomelj,IBM,IBM 370/,135??,1,e,lasten,Ljubljanska banka Črnomelj,73/33
+1973,Maribor,IBM,IBM 370/135,,1,e,lasten,ECM Ekonomski center Maribor + Skupščina občine Maribor + VEKŠ Visoka ekonomska komercialna šola Maribor + IMPOL + Mariborske livarna + MTT Mariborska tekstilna tovarna Maribor + Stavbar + Zlatorog,PKZ/01
+1973,Žiri,IBM,IBM 3,,1,e,najet,Alpina Žiri,"72/09, 73/12, 73/27, RII/01"
+1973,Ljubljana,IBM,IBM 3,,1,e,lasten,Ilirija Ljubljana,73/10
+1973,Ravne,IBM,IBM 3,,1,e,lasten,Dekorativa Ravne,RII/01
+1973,Škofja Loka,SPERRY Rand,SPERRY Rand UNIVAC 9700,,1,e,najet,LTH Škofja Loka + Gorenjska predilnica + Jelovica + Kmetijsko gosp + skupščina občine Škofja Loka,"77/02, 73/03"
+1973,Radenci,FUJITSU,FUJITSU Facom 230/15,,1,e,lasten,Zdravilišče Radenci,73/01
+1973,Ljubljana,IBM,IBM 1130,dobili od RCU,1,e,lasten,FS Fakulteta za strojništvo Ljubljana,73/35
+1973,Ljubljana,IBM,IBM System 7,procesni,1,pe,lasten,FS Fakulteta za strojništvo Ljubljana,73/35
+1973,Ljubljana,ARITMA,ARITMA Meda T-41,analogni,1,a,lasten,FS Fakulteta za strojništvo Ljubljana,73/35
+1973,Novo Mesto,SINGER,SINGER System 10,,1,e,lasten,SDK Novo Mesto,72/08
+1973,Krško,SINGER,SINGER System 10,,1,e,lasten,SDK Krško,74/05
+1974,Domžale,neznan,neznan,,1,e,PREVERI,Skupščina občine Domžale,74/19
+1974,Metlika,neznan,neznan,,1,e,PREVERI,Komet Metlika,74/07
+1974,Novo Mesto,neznan,neznan,,1,e,PREVERI,DBH Dolenjska banka in hranilnica Novo Mesto,74/06
+1974,Maribor,neznan,neznan,,1,e,lasten,DEM Dravske elektrarne Maribor + TAM Maribor + KBM Kreditna banka Maribor + Splošna bolnišnica Maribor,"PKZ/01, 77/20, 84/39"
+1974,Izola,IBM,IBM 3,,1,e,lasten,Delamaris Izola,"74/22, 77/19, RII/01"
+1974,Koper,neznan,neznan,,1,e,lasten,Stavbenik Koper,77/19
+1974,Novo Mesto,NCR,NCR 446,,2,e,lasten,Labod Novo Mesto,"73/05, 74/07"
+1974,Ljubljana,DEC,DEC PDP 8,,1,e,lasten,Kemijski inštitut Ljubljana,MON/01
+1974,Ljubljana,IBM,IBM 370/115,,1,e,lasten,Intertrade računski center Ljubljana,77/29
+1974,Celje,IBM,IBM 370/115,,1,e,najet,Kovinotehna Celje,"74/37, 74/39, 77/53"
+1974,Velenje,IBM,IBM 3/10,,1,e,najet,REK Velenje,74/05
+1974,Hrastnik,HONEYWELL,HONEYWELL neznan,50/58?,1,e,lasten,TKI Hrastnik,74/04
+1974,Ljubljana,IBM,IBM 370/135,,1,e,lasten,Iskra Commerce Ljubljana,
+1974,Ljubljana,IBM,IBM 370/138,,1,e,lasten,RZS Regionalna zdravstvena skupnost Ljubljana + SPIZ Ljubljana,SDMI/03
+1974,Ljubljana,neznan,neznan,manjši,1,e,lasten,Ginekološka klinika Ljubljana,74/30
+1975,Ljubljana,BURROUGHS,BURROUGHS L5112,,1,e,lasten,Energoinvest Ljubljana,75/37
+1975,Koper,IBM,IBM 370/115,,1,e,najet,Luka Koper,75/17
+1975,Celje,SPERRY Rand,SPERRY Rand UNIVAC 90/30,,1,e,lasten,Zavod za napredek gospodarstva - Razvojni center Celje,"77/53, RII/01"
+1975,Ljubljana,neznan,neznan,,1,e,lasten,Zavod za avtomatsko obdelavo podatkov Trnovo + Ljubljanske občine,"76/16, 76/24"
+1975,Maribor,INISCOPE,INISCOPE 100,,3,t,lastni,VEKŠ Visoka ekonomska komercialna šola Maribor,PKZ/01
+1975,Velenje,neznan,neznan,,1,e,lasten,Gorenje Velenje,75/27
+1975,Velenje,neznan,neznan,,1,e,lasten,Gorenje Velenje,75/27
+1975,Bled,neznan,neznan,,1,t,skupen,LIP Bled + GG Bled + Pletenine Bled,"78/06, 82/03"
+1975,Ljubljana,neznan,neznan,,1,e,lasten,Dom Ljubljana,74/42
+1975,Novo Mesto,neznan,neznan,,1,e,najet,Novoles Novo Mesto,74/18
+1975,Maribor,neznan,neznan,,1,e,lasten,Marles Maribor,75/29
+1975,Naklo,neznan,neznan,,1,e,lasten,Merkur Naklo,77/52
+1975,Ljubljana,neznan,neznan,,1,e,skupen,Mehanografski center Tobačna Ljubljana + 13 podjetij,74/46
+1975,Sevnica,neznan,neznan manjši,,1,e,lasten,Jutranjka Sevnica,75/33
+1976,Ljubljana,DEC,DEC PDP 11/10,,1,e,lasten,IJS Inštitut Jožef Stefan - Oddelek za računalništvo in informatiko,IDPR/01
+1976,Ljubljana,DEC,DEC PDP 11/40,,1,e,lasten,RCU Računalniški center Univerze v Ljubljani,"76/28, 76/43"
+1976,Ljubljana,IBM,IBM 370/138,,1,e,lasten,SDK Ljubljana,SDK/01
+1976,Ljubljana,SPERRY Rand,SPERRY Rand UNIVAC 9480,,1,e,lasten,Rašica Ljubljana,"78/02, RII/01"
+1976,Maribor,IBM,IBM 370/115,,1,e,lasten,SDK Maribor,SDK/01
+1976,Ljubljana,PHILIPS,PHILIPS P352,,1,e,lasten,Gospodarska zbornica Ljubljana,77/40
+1976,Maribor,neznan,neznan,,1,e,lasten,Gradis Maribor,76/19
+1976,Celje,FUJITSU,FUJITSU Facom 230/15,,1,e,najet,Cinkarna Celje,"76/03, 77/53"
+1976,Kidričevo,IBM,IBM 370/115,,1,e,lasten,UNIAL + TGA Tovarna glinice in aluminija Kidričevo + IMPOL,77/04
+1976,Žalec,IBM,IBM 360/20,rabljen od Mure,1,e,lasten,KK Žalec-Hmezad,"77/53, 81/01"
+1976,,IBM,IBM 370/115,,1,e,lasten,Računalniški center Dobrina,"76/02, 77/53, 81/01"
+1976,Novo Mesto,IBM,IBM 370/115,,1,e,lasten,Pionir Novo mesto,"74/15, 76/06, 77/50, 77/10, PIO/01, RII/01"
+1976,Ljubljana,IBM,IBM 370/145 + terminali,,1,e,lasten,RS Notranje zadeve Ljubljana,"76/27, MNZ/01"
+1976,Novo Mesto,ROBOTRON,ROBOTRON Daro 1840,,4,e,lasten,Labod Novo Mesto + Gorjanci NM? + Gozdno gospodarstvo NM? + Agis Ptuj,"76/04, 77/04"
+1977,Ljubljana,DEC,DEC PDP 11/34,,1,e,lasten,IJS Inštitut Jožef Stefan - Oddelek za računalništvo in informatiko,IDPR/01
+1977,Radovljica,neznan,neznan,,1,e,lasten,Almira Radovljica,77/21
+1977,Litija,neznan,neznan,,1,e,lasten,Predilnica Litija,RII/01
+1977,Tržič,neznan,neznan,,1,e,lasten,Peko Tržič + BPT,77/24
+1977,Maribor,IBM,IBM 370/115,,1,e,lasten,KBM Kreditna banka Maribor,"77/20, PKZ/01"
+1977,Maribor,SPERRY Rand,SPERRY Rand UNIVAC 90/30 + terminali,,1,e,lasten,VEKŠ Visoka ekonomska komercialna šola Maribor,77/01
+1977,Ljubljana,CDC,CDC Cyber 172,,1,e,lasten,RRC Republiški računski center Ljubljana + RZS Regionalna zdravstvena skupnost Ljubljana,"80/44, RRC/01"
+1977,Sevnica,IBM,IBM 370/138,,1,e,lasten,Lisca Sevnica,"77/37, RII/01"
+1978,Novo Mesto,IBM,IBM 370/138,,1,e,lasten,IMV Novo mesto,85/94
+1978,Ljubljana,neznan,neznan,,1,e,lasten,Litostroj Ljubljana,77/30
+1978,Maribor,SPERRY Rand,SPERRY Rand UNIVAC 90/30 + terminali,,1,e,najet,Staninvest,"76/22, 77/28, 78/05"
+1979,Ljubljana,IBM,IBM 3031,,1,e,lasten,RS Notranje zadeve Ljubljana,MNZ/01
+1979,Maribor,IBM,IBM 370/115,,1,e,lasten,MTT Mariborska tekstilna tovarna Maribor,PKZ/01
+1979,Ljubljana,DELTA,DELTA 700,,1,e,lasten,"Tekstil, Ljubljana",79/15
+1979,Ljubljana,DELTA,DELTA 700/80,,1,e,lasten,Skupščina mestne občine Ljubljana + RS Notranje zadeve Ljubljana + JLA,79/20
+1979,Maribor,DELTA,DELTA 340/40,,1,e,lasten,VTŠ Višja tehniška šola Maribor,"79/13, 80/04, 85/01, PKZ/01"
+1979,Maribor,ISKRADATA,ISKRADATA C 18-20,,1,e,lasten,VTŠ Višja tehniška šola Maribor + TAM Maribor + Konstruktor + Gradis Maribor + Tehniška šola Celje + Vodno gospodarstvo + Elkom Maribor,"79/13, 80/04, 85/01"
+1979,Bled,ISKRADATA,ISKRADATA C 18-20,,1,e,lasten,LIP Bled,82/03
+1979,Žalec,ISKRADATA,ISKRADATA C 18-20,,1,e,lasten,KK Žalec-Hmezad,81/01
+1980,Ptuj,DELTA,DELTA 340/80,,1,e,lasten,Agis Ptuj,"79/10, 80/06"
+1980,Ilirska Bistrica,DELTA,DELTA 700/80,,1,e,lasten,Lesonit Ilirska Bistrica,82/04
+1980,Maribor,DELTA,DELTA 340/80,,1,e,lasten,TAM Maribor,84/39
+1980,Ljubljana,DELTA,DELTA 700,,1,e,lasten,UE Mestna občina Ljubljana,82/49
+1980,Ljubljana,IBM,IBM 3031,,1,e,lasten,RZS Regionalna zdravstvena skupnost Ljubljana,SDMI/03
+1980,,neznan,100x neznan,,,t,terminal,,
+1980,Jesenice,IBM,IBM 3031,,1,e,lasten,Železarna Jesenice + Skupščina občine Jesenice + Iskra Telekomunikacije Kranj + Slovenske železarne,80/43
+1980,Ljubljana,CDC,CDC Cyber 170,,1,e,lasten,Metalka Ljubljana,"80/40, 80/41"
+1980,Maribor,IBM,IBM 4341,,1,e,lasten,EGM Elektrogospodarstvo Maribor,PKZ/01
+1980,Ljubljana,FUJITSU,FUJITSU Facom M-180 II AD,,1,e,lasten,Zavod za statistiko Ljubljana,"79/27, 80/26"
+1981,Ljubljana,DEC,DEC PDP 10/System 10,,1,e,lasten,RCU Računalniški center Univerze v Ljubljani,79/14
+1981,Maribor,CDC,CDC Cyber 170/720,,1,e,lasten,Računalniški center Univerze v Mariboru,"79/14, 80/38"
+1981,Radenci,IBM,IBM 4341,,1,e,lasten,Radenska Radenci,PKZ/01
+1981,Logatec,DELTA,DELTA 800/80,,1,e,lasten,KLI Logatec,83/06
+1981,Ptuj,DELTA,DELTA 4780,,1,e,lasten,Perutnina Ptuj,80/08
+1982,Slovenj Gradec,DELTA,DELTA 4850,,1,e,lasten,Lesna Slovenj Gradec,"79/11, 82/10, 83/10"
+1982,Novo Mesto,DELTA,DELTA 644/160,,1,e,lasten,Novoteks Novo Mesto,"81/10, 82/08"
+1982,Metlika,DELTA,DELTA 644/160,,1,e,lasten,Beti Metlika,"80/08, 82/11"
+1982,Murska Sobota,IBM,IBM 4341,,1,e,lasten,Mura Murska Sobota,PKZ/01
+1982,Maribor,IBM,IBM 4341,,1,e,lasten,ECM Ekonomski center Maribor + TVT Borisa Kidriča Maribor + Hidromontaža + Mariborska livarna + Metalna + Surovina Maribor,"82/16, PKZ/01"
+1983,Ljubljana,DELTA,DELTA 4850,,1,e,lasten,IJS Inštitut Jožef Stefan - Oddelek za računalništvo in informatiko,83/52
+1983,Ljubljana,DELTA,DELTA 340/5,,1,e,lasten,UE Občina Moste-Polje,"83/08, 83/09"
+1984,Maribor,DELTA,DELTA 340/5,,1,e,lasten,TAM Maribor,84/39
+1984,Maribor,DELTA,DELTA 4780/500,,1,e,lasten,TAM Maribor,84/39
+1984,Ravne,DELTA,DELTA 4850,,1,e,lasten,Železarna Ravne,84/127
+1984,Maribor,DELTA,DELTA 4850,,1,e,lasten,RCU Računalniški center Univerze v Mariboru,84/128
+1985,Šempeter,DELTA,DELTA 4850,,1,e,lasten,Bolnišnica Franca Derganca Šempeter,85/90
+1985,Ljubljana,DELTA,DELTA 4850,,1,e,lasten,Ljubljanska banka,85/91
+1985,Velenje,DELTA,DELTA 4850,,1,e,lasten,EKO + UE Velenje,85/92
+1985,Metlika,DELTA,DELTA 4850,,1,e,lasten,Beti Metlika,"85/93, 85/98"
+1985,Novo Mesto,DELTA,DELTA 4850,,1,e,lasten,IMV Novo mesto,85/94
+1985,Ljubljana,DELTA,DELTA 4850,,1,e,lasten,Zavod za Družbeno planiranje Ljubljana,85/99
+1965,Kragujevac,ISKRA,Iskra Z-23,,1,e,prodan,Vojnotehnični inštitut Kragujevac,65/02
+1965,Vinča,ISKRA,Iskra Z-23,,1,e,prodan,Atomski center Vinča,65/02
+1965,Zagreb,ISKRA,Iskra Z-23,,1,e,oddan,Računski center Zagreb,"65/02, 65/03, 65/04"
+1965,Split,ISKRA,Iskra Z-23,,1,e,prodan,Elektrotehniška fakulteta Split,65/03
+1965,Smederovo,ISKRA,Iskra Z-23,,1,e,zanimanje,Železarna Smederovo,65/03
