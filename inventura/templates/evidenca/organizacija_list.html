@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Prvi racunalniki v Sloveniji</h2>
+
+        {% for org in object_list %}
+            <h3>{{ org.ime }}</h3>
+                <ul>
+                    {% for comp in org.racunalnik_set.all %}
+                    <li>{{comp.nakup}} - {{ comp.ime }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+
+{% endblock %}

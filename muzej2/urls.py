@@ -19,6 +19,7 @@ from django.conf.urls.static import static
 from rest_framework import routers
 
 from inventura.views import *
+from evidenca.views import *
 
 router = routers.DefaultRouter()
 router.register(r'eksponati', HeroViewSet)
@@ -46,6 +47,8 @@ urlpatterns = [
 	path('eksponat/<int:pk>/', EksponatView.as_view(), name='eksponat-detail'),
     path('eksponat/<int:pk>/uredi/', update_infobox, name='infobox-edit'),
 	path('razstava/<int:pk>/', RazstavaView.as_view(), name='razstava-detail'),
+    path('evidenca/racunalniki/', RacunalnikListView.as_view()),
+    path('evidenca/', OrganizacijeListView.as_view()),
 #	path(r'^wiki/', include('wiki.urls')),
 #	path(r'^autocomplete/', include('autocomplete_light.urls')),
 	path('api/', include(router.urls)),

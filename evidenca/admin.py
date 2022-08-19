@@ -14,7 +14,9 @@ class RacunalnikAdmin(admin.ModelAdmin):
     search_fields = ('opombe', 'tip', 'opis', 'opombe', 'proizvajalec')
 
 class OrganizacijaAdmin(admin.ModelAdmin):
-    list_display = ('ime', 'naslov', 'url')
+    list_display = ('pk', 'ime', 'naslov', 'url')
+    list_editable = ('ime', 'naslov',)
+    list_display_links = ('pk',)
 
 admin.site.register(models.dosezek)
 admin.site.register(models.organizacija, OrganizacijaAdmin)

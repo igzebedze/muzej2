@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Prvi racunalniki v Sloveniji</h2>
+    <ol>
+        {% for publisher in object_list %}
+            <li>{{ publisher.nakup.year }} - {{ publisher.ime }}</li>
+        {% endfor %}
+    </ol>
+{% endblock %}
