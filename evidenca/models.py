@@ -19,7 +19,7 @@ class vir(models.Model):
 			('Splošno','Splošno'),
 	)
 	sifra = models.CharField(max_length=15, blank=True)
-	url = models.URLField(blank=True, null=True,max_length=500)
+	url = models.URLField(blank=True, null=True,max_length=1000)
 	vrsta = models.CharField(choices=VRSTA_CHOICES, max_length=255)
 	podrocje = models.CharField(choices=VSEBINA_CHOICES, max_length=255, blank=True, null=True)
 	naslov = models.TextField(blank=True)
