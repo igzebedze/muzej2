@@ -1,13 +1,24 @@
 {% extends "base.html" %}
-
+{% load smart_if %} 
 {% block content %}
     <h2>Prvi racunalniki v Sloveniji</h2>
 
         {% for org in object_list %}
             <h3>{{ org.ime }}</h3>
+                {% if org.nosilec.count > 0 %}
+                <h4>kupili / gostili:</h4>
                 <ul>
+                    {% for comp in org.nosilec.all %}
+                    <li>{{comp.nakup.year}} - {{ comp.ime }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                <h4>imeli dostop do:</h4>
+                <ul class="comp_list">
                     {% for comp in org.racunalnik_set.all %}
-                    <li>{{comp.nakup}} - {{ comp.ime }}</li>
+                    {% ifnotequal comp.nosilec org %}
+                    <li>{{comp.nakup.year}} - {{ comp.ime }} pri {{ comp.nosilec }}</li>
+                    {% endifnotequal %}
                     {% endfor %}
                 </ul>
             </li>

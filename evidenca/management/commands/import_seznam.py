@@ -52,8 +52,9 @@ class Command(BaseCommand):
 				p, created = Proizvajalec.objects.get_or_create(ime=proizvajalec)
 
 				for i in range(kolicina):
-					try:				
-						n, created = organizacija.objects.get_or_create(ime=podjetja[0])
+					try:
+						nosilec = podjetja[0].strip()
+						n, created = organizacija.objects.get_or_create(ime=nosilec)
 						if created:
 							self.stdout.write("created new organization: %s" % (n))
 						r, created = racunalnik.objects.get_or_create(
@@ -85,6 +86,7 @@ class Command(BaseCommand):
 							else:
 								r.viri.add(v)
 						for org in podjetja:
+							org = org.strip()
 							o, created = organizacija.objects.get_or_create(ime=org)
 							if created:
 								self.stdout.write("created new org: %s" % (o))

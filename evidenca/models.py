@@ -44,7 +44,7 @@ class organizacija(models.Model):
 	povzetek = models.TextField(blank=True)
 	opis = models.TextField(blank=True)
 	partner = models.ManyToManyField("self", blank=True, null=True)
-	predhodnik = models.ForeignKey("self", blank=True, null=True, on_delete=models.PROTECT)
+	predhodnik = models.ForeignKey("self", blank=True, null=True, on_delete=models.CASCADE)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
@@ -75,7 +75,7 @@ class racunalnik(models.Model):
 		('pe','procesni elektronski')
 	)
 	kos = models.SmallIntegerField(default=1)
-	nosilec = models.ForeignKey(organizacija, on_delete=models.PROTECT,related_name='nosilec', null=True)
+	nosilec = models.ForeignKey(organizacija, on_delete=models.CASCADE,related_name='nosilec', null=True)
 	organizacija = models.ManyToManyField(organizacija)
 	ime = models.CharField(max_length=255, blank=True)
 	tip = models.CharField(max_length=255, blank=True, choices=TIP_CHOICES)
