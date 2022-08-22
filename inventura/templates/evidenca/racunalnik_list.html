@@ -21,7 +21,7 @@
                 <div id="C{{ racunalnik.pk }}" class="collapse">
                     <div class="card card-body w-50 p-3">
                         {% if racunalnik.ime %}<h1>{{ racunalnik.ime }}</h1>{% endif %}
-                    <p>Nosilec: {{ racunalnik.nosilec }}</p>
+                    <p>Nosilec: <a href="/evidenca/organizacije/#{{ racunalnik.nosilec.pk }}"></a>{{ racunalnik.nosilec }}</a></p>
                     {% if racunalnik.organizacija.count > 1 %}
                         <p>Uporabniki: {% for o in racunalnik.organizacija.all %}
                             <a href="/evidenca/organizacije/#{{ o.pk }}">{{ o }}</a>
