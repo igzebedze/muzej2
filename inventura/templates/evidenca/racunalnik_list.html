@@ -33,7 +33,7 @@
                     {% if racunalnik.lastnistvo %}<p>Status: {{ racunalnik.lastnistvo }}</p>{% endif %}
                     {% if racunalnik.generacija %}<p>Generacija: {{ racunalnik.generacija }}</p>{% endif %}
                     
-                    {% if racunalnik.tip %}<p>Tip: {{ racunalnik.tip }}</p>{% endif %}
+                    {% if racunalnik.tip %}<p>Tip: {{ racunalnik.get_tip_display }}</p>{% endif %}
                     {% if racunalnik.opombe %}<p>Opombe: {{ racunalnik.opombe }}</p>{% endif %}
                     {% if racunalnik.opis %}<p>Opis: {{ racunalnik.opis }}</p>{% endif %}
                     </div>
