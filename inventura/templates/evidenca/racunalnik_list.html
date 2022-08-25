@@ -24,8 +24,8 @@
                     <p>Nosilec: <a href="/evidenca/organizacije/#{{ racunalnik.nosilec.pk }}">{{ racunalnik.nosilec }}</a></p>
                     {% if racunalnik.organizacija.count > 1 %}
                         <p>Uporabniki: {% for o in racunalnik.organizacija.all %}
-                            <a href="/evidenca/organizacije/#{{ o.pk }}">{{ o }}</a>
-                        , {% endfor %}</p>
+                            <a href="/evidenca/organizacije/#{{ o.pk }}">{{ o }}</a>, 
+                        {% endfor %}</p>
                     {% endif %}
                     <p>Lokacija: {{ racunalnik.kraj }}</p>
                     <p>Proizvajalec: {{ racunalnik.proizvajalec }}</p>

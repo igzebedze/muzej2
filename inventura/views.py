@@ -162,7 +162,7 @@ class EksponatView(DetailView):
 
 		w = e.wikipedia
 # if we don't have wiki page yet, search api for the object
-		if not e.wikipedia or not e.onlinephoto:
+		if self.request.user.is_authenticated and (not e.wikipedia or not e.onlinephoto):
 			search = e.ime # e.proizvajalec.ime + " " + 
 			#if e.tip:
 			#	search = search + " " + e.tip
