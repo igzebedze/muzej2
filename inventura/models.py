@@ -395,13 +395,11 @@ class Primerek(models.Model):
 		ordering = ['-leto_proizvodnje']
 
 	def save (self, *args, **kw ):
-
 # send slack notification for new objects 
 		if not self.pk:	# if it's a new primerek
 			data = "{'text':'nov primerek %s pod stevilko %s'}" % (self.eksponat, self.pk)
 			data = data.encode('utf-8')
 			response = requests.post(SLACKWEBHOOK, headers=headers, data=data)
-
 # update search index
 		fields = (self.serijska_st, self.stanje, self.zgodovina, self.eksponat.ime, self.eksponat.tip, self.eksponat.opis)
 		vsebina = ' '.join(filter(None, fields))
@@ -411,7 +409,6 @@ class Primerek(models.Model):
 			i.save()		
 		except: 
 			pass
-			
 		super( Primerek, self ).save( *args, **kw )
 
 # note: it is possible to have an entry without actually having an object
