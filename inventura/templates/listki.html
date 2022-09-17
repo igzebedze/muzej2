@@ -3,25 +3,23 @@
 <html>
 	<head>
 		<style>
-			@page { size: A4 portrait; }
 			@font-face {
     			font-family: "reso";
     			src: url("{% get_media_prefix %}ResoThin.ttf"); }
-			.box { 
-				_float: left; 
-				_border: 1px solid white; 
-				width: 9cm; height: 5.5cm; 
-				_margin: 0.5cm; 
-				_padding: 1em; 
-				page-break-after: always; 
+			.box {
+				float: left;
+				border-right: 1px solid #EEEEEE; border-bottom: 1px solid #EEEEEE;
+				width: 9.35cm; height: 4.25cm;
+				padding: 1em;
 			}
-			.qr { float: left; _padding-top: 1em; margin-top:-3px; }
-			body { font-family: "reso"; }
+			.qr { float: left; _padding-top: 1em; margin-top: 0.5em; margin-right: 0.5em; margin-bottom: 2em; }
+			body { font-family: "reso";  margin: 0px; padding: 0px;}
 			i, p { font-size: 1.1em; }
 			b { font-size: 1.3em; }
-			p { margin-top: 0.5em;  }
+			p { margin-top: 1em;  }
 			.table { border: 0px; width:100%; }
 			.cell { vertical-align:top; }
+			.pb { page-break-after: always; }
 		</style>
 	</head>
 <body>
