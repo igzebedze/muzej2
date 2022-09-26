@@ -43,6 +43,8 @@ class organizacija(models.Model):
 	url = models.URLField(blank=True, null=True)
 	povzetek = models.TextField(blank=True)
 	opis = models.TextField(blank=True)
+	podrocje = models.CharField(blank=True, max_length=255)
+	latlong=models.CharField(blank=True, max_length=255)
 	partner = models.ManyToManyField("self", blank=True, null=True)
 	predhodnik = models.ForeignKey("self", blank=True, null=True, on_delete=models.CASCADE)
 	created_at = models.DateTimeField(auto_now_add=True)
