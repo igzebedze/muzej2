@@ -20,11 +20,12 @@ class Command(BaseCommand):
 
 		# go through all primerek and copy fields to iskalnik
 		for p in Primerek.objects.all():
-			fields = (p.serijska_st, p.stanje, p.zgodovina, p.eksponat.ime, p.eksponat.tip, p.eksponat.opis)
-			vsebina = ' '.join(filter(None, fields))
-			i = Iskalnik(vsebina=vsebina)
-			i.save()
-			p.iskalnik = i
-			p.save()
+			if p.eksponat:
+				fields = (p.serijska_st, p.stanje, p.zgodovina, p.eksponat.ime, p.eksponat.tip, p.eksponat.opis)
+				vsebina = ' '.join(filter(None, fields))
+				i = Iskalnik(vsebina=vsebina)
+				i.save()
+				p.iskalnik = i
+				p.save()
 
 # 			queryset = queryset.filter(Q(eksponat__ime__search=kveri) | Q(eksponat__tip__search=kveri) | Q(eksponat__opis__search=kveri) | Q(serijska_st__search=kveri)  | Q(stanje__search=kveri) | Q(zgodovina__search=kveri))
