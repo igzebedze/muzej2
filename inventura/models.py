@@ -267,15 +267,15 @@ class Eksponat(models.Model):
 			return MEDIA_URL + 'thumbs/' + thumb_name
 
 # finally remote picture; 
-		if self.onlinephoto:
-			try:
-				r = requests.get(self.onlinephoto, timeout=4.0)
-				with Image.open(io.BytesIO(r.content)) as im:
-					im.thumbnail([250, 250], Image.ANTIALIAS) # resizes 512x512 to 256x256
-					im.save(thumb_dir + thumb_name)
-				return MEDIA_URL + 'thumbs/' + thumb_name
-			except:
-				pass
+#		if self.onlinephoto:
+#			try:
+#				r = requests.get(self.onlinephoto, timeout=4.0)
+#				with Image.open(io.BytesIO(r.content)) as im:
+#					im.thumbnail([250, 250], Image.ANTIALIAS) # resizes 512x512 to 256x256
+#					im.save(thumb_dir + thumb_name)
+#				return MEDIA_URL + 'thumbs/' + thumb_name
+#			except:
+#				pass
 
 		return ""
 
