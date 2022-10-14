@@ -16,7 +16,7 @@
 		{% if eksponat.fotografija %}
 			<div class='box' style="border: 1px solid black; width: 160px; height: 250px; float: left;">
 				<a href="/eksponat/{{ eksponat.id }}/">
-					<img height='150' src='/media/{{ eksponat.fotografija }}' /><br />
+					<img height='150' src='{{ eksponat.fotografija }}' /><br />
 					{{ eksponat }}
 				</a>, 
 				{% if eksponat.proizvajalec %} {{ eksponat.proizvajalec }}{% endif %}
