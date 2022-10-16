@@ -18,10 +18,15 @@ class OrganizacijaAdmin(admin.ModelAdmin):
     list_editable = ('ime', 'naslov', 'podrocje', 'latlong')
     list_display_links = ('pk',)
 
+class PogovorAdmin(admin.ModelAdmin):
+    list_display = ('oseba', 'datum', 'za_objavo')
+    date_hierarchy = 'datum'
+    list_filter = ('za_objavo')
+
 admin.site.register(models.dosezek)
 admin.site.register(models.organizacija, OrganizacijaAdmin)
 admin.site.register(models.oseba)
 admin.site.register(models.racunalnik, RacunalnikAdmin)
 admin.site.register(models.sluzba)
-admin.site.register(models.pogovor)
+admin.site.register(models.pogovor, PogovorAdmin)
 admin.site.register(models.vir, VirAdmin)
