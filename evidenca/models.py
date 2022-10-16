@@ -83,6 +83,7 @@ class racunalnik(models.Model):
 	tip = models.CharField(max_length=255, blank=True, choices=TIP_CHOICES)
 	opombe = models.TextField(blank=True, null=True)
 	proizvajalec = models.ForeignKey('inventura.proizvajalec', on_delete=models.PROTECT)
+	eksponat = models.ForeignKey('inventura.eksponat', blank=True, null=True, on_delete=models.PROTECT)
 	nakup = models.DateField(blank=True, null=True)
 	odpis = models.DateField(blank=True, null=True)
 	opis = models.TextField(blank=True)
@@ -149,3 +150,21 @@ class oseba(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Osebe"
+
+class pogovor(models.Model):
+	oseba = models.ForeignKey(oseba, on_delete=models.PROTECT)
+	datum = models.DateField()
+	video = models.FileField(upload_to='pogovori', blank=True, null=True)
+	audio = models.FileField(upload_to='pogovori', blank=True, null=True)
+	prepis = models.TextField(blank=True)
+	zapiski = models.TextField(blank=True)
+	url = models.URLField(blank=True, null=True)
+	za_objavo = models.BooleanField(default=False)
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
+
+	def __str__(self):
+		return self.oseba
+
+	class Meta:
+		verbose_name_plural = "Pogovori"
