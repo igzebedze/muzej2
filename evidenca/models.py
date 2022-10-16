@@ -166,7 +166,7 @@ class pogovor(models.Model):
 	updated_at = models.DateTimeField(auto_now=True)
 
 	def __str__(self):
-		return self.oseba
+		return self.oseba.ime
 
 	class Meta:
 		verbose_name_plural = "Pogovori"
