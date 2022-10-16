@@ -43,6 +43,8 @@ class organizacija(models.Model):
 	url = models.URLField(blank=True, null=True)
 	povzetek = models.TextField(blank=True)
 	opis = models.TextField(blank=True)
+	podrocje = models.CharField(blank=True, max_length=255)
+	latlong=models.CharField(blank=True, max_length=255)
 	partner = models.ManyToManyField("self", blank=True, null=True)
 	predhodnik = models.ForeignKey("self", blank=True, null=True, on_delete=models.CASCADE)
 	created_at = models.DateTimeField(auto_now_add=True)
@@ -81,6 +83,7 @@ class racunalnik(models.Model):
 	tip = models.CharField(max_length=255, blank=True, choices=TIP_CHOICES)
 	opombe = models.TextField(blank=True, null=True)
 	proizvajalec = models.ForeignKey('inventura.proizvajalec', on_delete=models.PROTECT)
+	eksponat = models.ForeignKey('inventura.eksponat', blank=True, null=True, on_delete=models.PROTECT)
 	nakup = models.DateField(blank=True, null=True)
 	odpis = models.DateField(blank=True, null=True)
 	opis = models.TextField(blank=True)
@@ -92,7 +95,7 @@ class racunalnik(models.Model):
 	updated_at = models.DateTimeField(auto_now=True)
 
 	def __str__(self):
-		return self.ime
+		return "%s, %s (%s)" % (self.ime, self.nosilec, self.nakup.year)
 
 	class Meta:
 		verbose_name_plural = "Racunalniki"
@@ -119,7 +122,7 @@ class dosezek(models.Model):
 	povzetek = models.TextField(blank=True)
 	opis = models.TextField(blank=True)
 	url = models.URLField(blank=True, null=True)
-	racunalnik = models.ManyToManyField(racunalnik)
+	racunalnik = models.ManyToManyField(racunalnik, blank=True, null=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
@@ -137,8 +140,8 @@ class oseba(models.Model):
 	opis = models.TextField(blank=True)
 	rojstvo = models.DateField(blank=True, null=True)
 	smrt = models.DateField(blank=True, null=True)
-	sluzba = models.ForeignKey(sluzba, on_delete=models.PROTECT)
-	dosezek = models.ManyToManyField(dosezek)
+	sluzba = models.ForeignKey(sluzba, blank=True, null=True, on_delete=models.PROTECT)
+	dosezek = models.ManyToManyField(dosezek, blank=True, null=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
@@ -147,3 +150,23 @@ class oseba(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Osebe"
+
+class pogovor(models.Model):
+	oseba = models.ForeignKey(oseba, on_delete=models.PROTECT)
+	datum = models.DateField()
+	video = models.URLField(blank=True, null=True)
+	audio = models.URLField(blank=True, null=True)
+#	video = models.FileField(upload_to='pogovori', blank=True, null=True)
+#	audio = models.FileField(upload_to='pogovori', blank=True, null=True)
+	prepis = models.TextField(blank=True)
+	zapiski = models.TextField(blank=True)
+	url = models.URLField(blank=True, null=True)
+	za_objavo = models.BooleanField(default=False)
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
+
+	def __str__(self):
+		return self.oseba.ime
+
+	class Meta:
+		verbose_name_plural = "Pogovori"

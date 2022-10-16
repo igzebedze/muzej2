@@ -190,10 +190,10 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 		
 class VhodAdmin(SimpleHistoryAdmin):
 	list_display = ('stevilka', 'lastnik', 'razlog',  'prevzel', 'cas_prevzema', 'inventorizirano')
-#	inlines = [ PrimerekInline,]
+	inlines = [ PrimerekInline,]
 	search_fields = ('opis',)
 	fieldsets = (
-			(None, {
+			('Sprejem', {
 				'fields': (	'izrocitelj', 'lastnik', 'opis', 'razlog','dovoli_objavo',
 						'zacasna_lokacija', 'prevzel', 'cas_prevzema'),
 			}),
