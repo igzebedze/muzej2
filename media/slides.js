@@ -151,7 +151,14 @@ var load = function load() {
     banner: '',
     commands: self = {}
   });
-  t.print(document.getElementById('content').innerText, false);
+  var title = document.getElementById('title').innerText;
+  console.log("'" + title + "'");
+  if (title == 'center') { 
+    t.print(document.getElementById('content').innerText, true);
+    t.print("\n", false);
+  } else {
+    t.print(document.getElementById('content').innerText, false);
+  }
   if (window.location.hash) hashchange(t);
 
   window.onhashchange = function () {
