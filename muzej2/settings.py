@@ -22,7 +22,9 @@ INSTALLED_APPS = [
     'simple_history',
     'inventura',
     'rest_framework',
-    'evidenca'
+    'evidenca',
+    'django.contrib.sites',
+    'django.contrib.flatpages'
 ]
 
 MIDDLEWARE = [
@@ -84,6 +86,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
+SITE_ID = 1
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',

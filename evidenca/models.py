@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.html import format_html
+from django.conf import settings
 
 # Create your models here.
 class vir(models.Model):
@@ -153,6 +154,7 @@ class oseba(models.Model):
 
 class pogovor(models.Model):
 	oseba = models.ForeignKey(oseba, on_delete=models.PROTECT)
+	avtor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT, default=17)
 	datum = models.DateField()
 	video = models.URLField(blank=True, null=True)
 	audio = models.URLField(blank=True, null=True)
