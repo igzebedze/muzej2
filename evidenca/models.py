@@ -1,3 +1,4 @@
+from random import choices
 from django.db import models
 from django.utils.html import format_html
 from django.conf import settings
@@ -135,12 +136,21 @@ class dosezek(models.Model):
 
 
 class oseba(models.Model):
+	GENDER_MALE = 0
+	GENDER_FEMALE = 1
+	GENDER_CHOICES = [(GENDER_MALE, 'Moški'), (GENDER_FEMALE, 'Ženska')]
+
 	ime = models.CharField(max_length=255, blank=True)
-	url = models.URLField(blank=True, null=True)
+	url = models.URLField(blank=True, null=True, help_text="domača stran")
+	wiki_sl = models.URLField(blank=True, null=True, help_text="<a target='_blank' href='https://sl.wikipedia.org/wiki/Glavna_stran'>slovenska wikipedia</a>")
+	wiki_en = models.URLField(blank=True, null=True, help_text="<a target='_blank' href='https://en.wikipedia.org/wiki/Main_Page'>angleška wikipedia</a>")
+	linkedin = models.URLField(blank=True, null=True, help_text="<a target='_blank' href='https://www.linkedin.com'>linkedin</a>")
+	slobio = models.URLField(blank=True, null=True, help_text="<a target='_blank' href='https://www.slovenska-biografija.si'>slovenska biografija</a>")
 	povzetek = models.TextField(blank=True)
 	opis = models.TextField(blank=True)
 	rojstvo = models.DateField(blank=True, null=True)
 	smrt = models.DateField(blank=True, null=True)
+	spol = models.IntegerField(choices=GENDER_CHOICES, default=0)
 	sluzba = models.ForeignKey(sluzba, blank=True, null=True, on_delete=models.PROTECT)
 	dosezek = models.ManyToManyField(dosezek, blank=True, null=True)
 	created_at = models.DateTimeField(auto_now_add=True)
@@ -148,6 +158,12 @@ class oseba(models.Model):
 
 	def __str__(self):
 		return self.ime
+
+	def have_interview(self):
+		return self.pogovor_set.count
+
+	def have_wiki_sl(self):
+		return bool(self.wiki_sl)
 
 	class Meta:
 		verbose_name_plural = "Osebe"
@@ -160,6 +176,8 @@ class pogovor(models.Model):
 	audio = models.URLField(blank=True, null=True)
 #	video = models.FileField(upload_to='pogovori', blank=True, null=True)
 #	audio = models.FileField(upload_to='pogovori', blank=True, null=True)
+	finalaudio = models.URLField(blank=True, null=True)
+	finalvideo = models.URLField(blank=True, null=True)
 	prepis = models.TextField(blank=True)
 	zapiski = models.TextField(blank=True)
 	url = models.URLField(blank=True, null=True)

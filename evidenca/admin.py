@@ -21,7 +21,12 @@ class OrganizacijaAdmin(admin.ModelAdmin):
 class PogovorAdmin(admin.ModelAdmin):
     list_display = ('oseba', 'datum', 'za_objavo')
     date_hierarchy = 'datum'
-    list_filter = ('za_objavo',)
+    list_filter = ('za_objavo','avtor')
+
+class OsebaAdmin(admin.ModelAdmin):
+    list_display = ('ime',)
+    date_hierarchy = 'rojstvo'
+    list_filter = ('have_interview','have_wiki_sl')
 
 admin.site.register(models.dosezek)
 admin.site.register(models.organizacija, OrganizacijaAdmin)
