@@ -26,11 +26,11 @@ class PogovorAdmin(admin.ModelAdmin):
 class OsebaAdmin(admin.ModelAdmin):
     list_display = ('ime',)
     date_hierarchy = 'rojstvo'
-    list_filter = ('have_interview','have_wiki_sl')
+    #list_filter = ('have_interview','have_wiki_sl')
 
 admin.site.register(models.dosezek)
 admin.site.register(models.organizacija, OrganizacijaAdmin)
-admin.site.register(models.oseba)
+admin.site.register(models.oseba, OsebaAdmin)
 admin.site.register(models.racunalnik, RacunalnikAdmin)
 admin.site.register(models.sluzba)
 admin.site.register(models.pogovor, PogovorAdmin)
