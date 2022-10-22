@@ -26,7 +26,9 @@ class PogovorAdmin(admin.ModelAdmin):
 class OsebaAdmin(admin.ModelAdmin):
     list_display = ('ime',)
     date_hierarchy = 'rojstvo'
+    search_fields = ('ime', 'povzetek', 'opis')
     #list_filter = ('have_interview','have_wiki_sl')
+    list_filter = ('spol', 'sluzba')
 
 admin.site.register(models.dosezek)
 admin.site.register(models.organizacija, OrganizacijaAdmin)

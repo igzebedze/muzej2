@@ -164,6 +164,9 @@ class oseba(models.Model):
 
 	def have_wiki_sl(self):
 		return bool(self.wiki_sl)
+	
+	def still_alive(self):
+		return bool(self.smrt)
 
 	class Meta:
 		verbose_name_plural = "Osebe"
