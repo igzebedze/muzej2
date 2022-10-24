@@ -159,15 +159,6 @@ class oseba(models.Model):
 	def __str__(self):
 		return self.ime
 
-	def have_interview(self):
-		return self.pogovor_set.count
-
-	def have_wiki_sl(self):
-		return bool(self.wiki_sl)
-	
-	def still_alive(self):
-		return bool(self.smrt)
-
 	class Meta:
 		verbose_name_plural = "Osebe"
 
@@ -193,10 +184,3 @@ class pogovor(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Pogovori"
-
-	def zvok(self):
-		return bool(self.audio)
-	def slika(self):
-		return bool(self.video)
-	def text(self):
-		return bool(self.prepis)

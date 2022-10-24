@@ -19,15 +19,24 @@ class OrganizacijaAdmin(admin.ModelAdmin):
     list_display_links = ('pk',)
 
 class PogovorAdmin(admin.ModelAdmin):
-    list_display = ('oseba', 'datum', 'za_objavo', 'zvok', 'slika', 'text')
+    list_display = ('oseba', 'datum', 'avtor', 'za_objavo', 'zvok', 'slika', 'text')
     date_hierarchy = 'datum'
     list_filter = ('za_objavo','avtor')
+
+    def zvok(self,obj):
+        return bool(obj.audio)
+    def slika(self,obj):
+        return bool(obj.video)
+    def text(self,obj):
+        return bool(obj.prepis)
+    zvok.boolean=True
+    slika.boolean=True
+    text.boolean=True
 
 class OsebaAdmin(admin.ModelAdmin):
     list_display = ('ime',)
     date_hierarchy = 'rojstvo'
     search_fields = ('ime', 'povzetek', 'opis')
-    #list_filter = ('have_interview','have_wiki_sl')
     list_filter = ('spol', 'sluzba', )
 
 admin.site.register(models.dosezek)
