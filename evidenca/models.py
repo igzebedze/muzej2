@@ -193,3 +193,10 @@ class pogovor(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Pogovori"
+
+	def zvok(self):
+		return bool(self.audio)
+	def slika(self):
+		return bool(self.video)
+	def text(self):
+		return bool(self.prepis)

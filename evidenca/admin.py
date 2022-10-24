@@ -19,7 +19,7 @@ class OrganizacijaAdmin(admin.ModelAdmin):
     list_display_links = ('pk',)
 
 class PogovorAdmin(admin.ModelAdmin):
-    list_display = ('oseba', 'datum', 'za_objavo')
+    list_display = ('oseba', 'datum', 'za_objavo', 'zvok', 'slika', 'text')
     date_hierarchy = 'datum'
     list_filter = ('za_objavo','avtor')
 
@@ -28,7 +28,7 @@ class OsebaAdmin(admin.ModelAdmin):
     date_hierarchy = 'rojstvo'
     search_fields = ('ime', 'povzetek', 'opis')
     #list_filter = ('have_interview','have_wiki_sl')
-    list_filter = ('spol', 'sluzba')
+    list_filter = ('spol', 'sluzba', )
 
 admin.site.register(models.dosezek)
 admin.site.register(models.organizacija, OrganizacijaAdmin)
