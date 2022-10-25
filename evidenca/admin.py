@@ -45,7 +45,7 @@ class DosezekAdmin(admin.ModelAdmin):
     search_fields = ('ime', 'opis', 'povzetek')
     list_filter = ('vrsta',)
 
-admin.site.register(models.dosezek)
+admin.site.register(models.dosezek, DosezekAdmin)
 admin.site.register(models.organizacija, OrganizacijaAdmin)
 admin.site.register(models.oseba, OsebaAdmin)
 admin.site.register(models.racunalnik, RacunalnikAdmin)
