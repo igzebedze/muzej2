@@ -128,6 +128,11 @@ class dosezek(models.Model):
 		('podjetje','podjetje'),
 		('drugo', 'drugo')
 	)
+	POMEN_CHOICES = (
+		(1,'prelomno'),
+		(2,'visoko'),
+		(3,'posebno'),
+	)
 	ime = models.CharField(max_length=255, blank=True)
 	povzetek = models.TextField(blank=True)
 	opis = models.TextField(blank=True)
@@ -136,6 +141,8 @@ class dosezek(models.Model):
 	od = models.DateField(blank=True, null=True)
 	do = models.DateField(blank=True, null=True)
 	vrsta = models.CharField(max_length=255, blank=True, choices=VRSTA_CHOICES)
+	pomen = models.IntegerField(blank=True, default=3, choices=POMEN_CHOICES)
+	eksponat = models.ManyToManyField('inventura.eksponat', blank=True, null=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
