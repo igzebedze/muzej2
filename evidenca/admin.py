@@ -39,6 +39,11 @@ class OsebaAdmin(admin.ModelAdmin):
     search_fields = ('ime', 'povzetek', 'opis')
     list_filter = ('spol', 'sluzba', )
 
+class DosezekAdmin(admin.ModelAdmin):
+    list_display = ('ime', 'od', 'do')
+    date_hiearchy = 'od'
+    search_fields = ('ime', 'opis', 'povzetek')
+
 admin.site.register(models.dosezek)
 admin.site.register(models.organizacija, OrganizacijaAdmin)
 admin.site.register(models.oseba, OsebaAdmin)

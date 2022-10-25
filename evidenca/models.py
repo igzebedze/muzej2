@@ -125,6 +125,8 @@ class dosezek(models.Model):
 	opis = models.TextField(blank=True)
 	url = models.URLField(blank=True, null=True)
 	racunalnik = models.ManyToManyField(racunalnik, blank=True, null=True)
+	od = models.DateField(blank=True, null=True)
+	do = models.DateField(blank=True, null=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
