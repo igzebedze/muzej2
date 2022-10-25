@@ -41,7 +41,7 @@ class OsebaAdmin(admin.ModelAdmin):
 
 class DosezekAdmin(admin.ModelAdmin):
     list_display = ('ime', 'vrsta', 'od', 'do')
-    date_hiearchy = 'od'
+    date_hierarchy = 'od'
     search_fields = ('ime', 'opis', 'povzetek')
     list_filter = ('vrsta',)
 
