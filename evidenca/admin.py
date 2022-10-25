@@ -40,9 +40,10 @@ class OsebaAdmin(admin.ModelAdmin):
     list_filter = ('spol', 'sluzba', )
 
 class DosezekAdmin(admin.ModelAdmin):
-    list_display = ('ime', 'od', 'do')
+    list_display = ('ime', 'vrsta', 'od', 'do')
     date_hiearchy = 'od'
     search_fields = ('ime', 'opis', 'povzetek')
+    list_filter = ('vrsta',)
 
 admin.site.register(models.dosezek)
 admin.site.register(models.organizacija, OrganizacijaAdmin)

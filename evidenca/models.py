@@ -120,6 +120,14 @@ class sluzba(models.Model):
 
 
 class dosezek(models.Model):
+	VRSTA_CHOICES = (
+		('konferenca','konferenca'),
+		('hardware','hardware'),
+		('software','software'),
+		('publikacija','publikacija'),
+		('podjetje','podjetje'),
+		('drugo', 'drugo')
+	)
 	ime = models.CharField(max_length=255, blank=True)
 	povzetek = models.TextField(blank=True)
 	opis = models.TextField(blank=True)
@@ -127,6 +135,7 @@ class dosezek(models.Model):
 	racunalnik = models.ManyToManyField(racunalnik, blank=True, null=True)
 	od = models.DateField(blank=True, null=True)
 	do = models.DateField(blank=True, null=True)
+	vrsta = models.CharField(max_length=255, blank=True, choices=VRSTA_CHOICES)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
