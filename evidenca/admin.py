@@ -1,5 +1,6 @@
 from django.contrib import admin
 from evidenca import models
+from django.utils.html import format_html
 
 class VirAdmin(admin.ModelAdmin):
     list_display = ('sifra', 'podrocje', 'naslov', 'show_link')
@@ -15,7 +16,7 @@ class RacunalnikAdmin(admin.ModelAdmin):
 
 class OrganizacijaAdmin(admin.ModelAdmin):
     list_display = ('pk', 'ime', 'naslov', 'podrocje', 'latlong', 'url')
-    list_editable = ('ime', 'naslov', 'podrocje', 'latlong')
+    #list_editable = ('ime', 'naslov', 'podrocje', 'latlong')
     list_display_links = ('pk',)
 
 class PogovorAdmin(admin.ModelAdmin):
@@ -34,11 +35,17 @@ class PogovorAdmin(admin.ModelAdmin):
     text.boolean=True
 
 class OsebaAdmin(admin.ModelAdmin):
-    list_display = ('ime','rojstvo', 'pogovor')
+    list_display = ('ime','rojstvo', 'pogovor', 'link')
     date_hierarchy = 'rojstvo'
     search_fields = ('ime', 'povzetek', 'opis')
     list_filter = ('spol', 'sluzba', )
 
+    def link(self,obj):
+        url = next((s for s in (obj.url, obj.wiki_sl, obj.wiki_en, obj.linkedin, obj.slobio) if s), '')
+        if url:
+            return format_html("<a href='{url}' target='_blank'>Vir</a>", url=url)
+        else:
+            return ''
     def pogovor(self,obj):
         return bool(obj.pogovor_set.count())
     pogovor.boolean=True
@@ -50,10 +57,14 @@ class DosezekAdmin(admin.ModelAdmin):
     list_filter = ('vrsta', 'pomen', )
     filter_horizontal = ('eksponat',)
 
+class SluzbaAdmin(admin.ModelAdmin):
+    list_display = ('naziv',)
+    filter_horizontal = ('organizacija',)
+
 admin.site.register(models.dosezek, DosezekAdmin)
 admin.site.register(models.organizacija, OrganizacijaAdmin)
 admin.site.register(models.oseba, OsebaAdmin)
 admin.site.register(models.racunalnik, RacunalnikAdmin)
-admin.site.register(models.sluzba)
+admin.site.register(models.sluzba, SluzbaAdmin)
 admin.site.register(models.pogovor, PogovorAdmin)
 admin.site.register(models.vir, VirAdmin)
