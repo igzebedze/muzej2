@@ -34,16 +34,21 @@ class PogovorAdmin(admin.ModelAdmin):
     text.boolean=True
 
 class OsebaAdmin(admin.ModelAdmin):
-    list_display = ('ime',)
+    list_display = ('ime','rojstvo', 'pogovor')
     date_hierarchy = 'rojstvo'
     search_fields = ('ime', 'povzetek', 'opis')
     list_filter = ('spol', 'sluzba', )
+
+    def pogovor(self,obj):
+        return bool(obj.pogovor_set.count())
+    pogovor.boolean=True
 
 class DosezekAdmin(admin.ModelAdmin):
     list_display = ('ime', 'vrsta', 'pomen', 'od', 'do')
     date_hierarchy = 'od'
     search_fields = ('ime', 'opis', 'povzetek')
     list_filter = ('vrsta', 'pomen', )
+    filter_horizontal = ('eksponat',)
 
 admin.site.register(models.dosezek, DosezekAdmin)
 admin.site.register(models.organizacija, OrganizacijaAdmin)

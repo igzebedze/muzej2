@@ -179,6 +179,7 @@ class oseba(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Osebe"
+		ordering = ['ime']
 
 class pogovor(models.Model):
 	oseba = models.ForeignKey(oseba, on_delete=models.PROTECT)
