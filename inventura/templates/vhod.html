@@ -54,13 +54,15 @@
 <body>
 	<img src="https://chart.googleapis.com/chart?chs=100x100&cht=qr&chld=L|1&chl=HTTP://RACUNALNISKI-MUZEJ.SI/V/{{ vhod.id }}"/>
 	<h1>{{ vhod.stevilka }}</h1>
-	<p>Računalniški muzej<br/>
+	<p>Društvo računalniški muzej<br />
+	Celovška 111, Ljubljana<br />
+	Davčna številka: 75643626<br />
 	<a href="http://www.racunalniski-muzej.si">http://www.racunalniski-muzej.si</a>
 	</p>
 	<table>
 		<tr>
 			<th class="razdelek" rowspan="8">Lastništvo</td>
-			<th colspan=2">Izročitelj</th>
+			<th colspan=2">Izročitelj (če različen od lastnika)</th>
 			<th>Telefon</th>
 		</tr>
 		<tr>
@@ -163,5 +165,7 @@
 			<td>{{ vhod.datum_vrnitve|default:"" }}</td>
 		</tr>
 	</table>
+	<p>Osebne podatke bo Muzej varoval v skladu s politiko varstva zasebnosti ter uporabljal izključno za kontaktiranje Izročitelja glede predmeta, ki ga je izročil, oz. v kolikor je v to privolil, da se ga označi kot lastnika oz. donatorja eksponata.
+	</p>
 </body>
 </html>

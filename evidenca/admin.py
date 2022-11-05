@@ -35,7 +35,7 @@ class PogovorAdmin(admin.ModelAdmin):
     text.boolean=True
 
 class OsebaAdmin(admin.ModelAdmin):
-    list_display = ('ime','rojstvo', 'pogovor', 'link')
+    list_display = ('ime','rojen', 'pogovor', 'link')
     date_hierarchy = 'rojstvo'
     search_fields = ('ime', 'povzetek', 'opis')
     list_filter = ('spol', 'sluzba', )
@@ -44,6 +44,11 @@ class OsebaAdmin(admin.ModelAdmin):
         url = next((s for s in (obj.url, obj.wiki_sl, obj.wiki_en, obj.linkedin, obj.slobio) if s), '')
         if url:
             return format_html("<a href='{url}' target='_blank'>Vir</a>", url=url)
+        else:
+            return ''
+    def rojen(self,obj):
+        if obj.rojstvo:
+            return obj.rojstvo.year
         else:
             return ''
     def pogovor(self,obj):
