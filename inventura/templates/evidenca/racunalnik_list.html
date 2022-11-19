@@ -36,6 +36,11 @@
                     {% if racunalnik.tip %}<p>Tip: {{ racunalnik.get_tip_display }}</p>{% endif %}
                     {% if racunalnik.opombe %}<p>Opombe: {{ racunalnik.opombe }}</p>{% endif %}
                     {% if racunalnik.opis %}<p>Opis: {{ racunalnik.opis }}</p>{% endif %}
+                    <ul class="viri">Viri: 
+                        {% for vir in racunalnik.viri.all %}
+                            <li>{{ vir.vsebina }}<br /><a target="_blank" href="{{ vir.url }}">{{ vir.sifra }}</a> ({{ vir.vrsta }})</li>
+                        {% endfor %}
+                    </ul>
                     </div>
                 </div>
             {% endfor %}

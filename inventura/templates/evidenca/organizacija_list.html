@@ -16,7 +16,7 @@
                 {% if org.racunalnik_set.count != org.nosilec.count %}
                 <h4>imeli dostop do:</h4>
                 <ul class="comp_list">
-                    {% for comp in org.racunalnik_set.all %}
+                    {% for comp in org.clan.all %}
                     {% ifnotequal comp.nosilec org %}
                     <li>{{comp.nakup.year}} - {{ comp.ime }} pri {{ comp.nosilec }}</li>
                     {% endifnotequal %}
