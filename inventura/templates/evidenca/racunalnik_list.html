@@ -1,44 +1,74 @@
-{% extends "base.html" %}
-{% load smart_if %} 
+{% extends "app.html" %}
+{% load smart_if %}
 {% block content %}
-<div class="container-fluid vh-100 min-vh-100">
-    <div class="row">
-        <div class="col h-100" id="seznam">
-            <h2>Prvi racunalniki v Sloveniji</h2>
-            <ol>
-                {% for racunalnik in object_list %}
-                    <li class="racunalnik">{{ racunalnik.nakup.year }} - {{ racunalnik.ime }} ({{ racunalnik.nosilec }}
-                            {% if racunalnik.organizacija.count > 1 %} + {{ racunalnik.organizacija.count }}{% endif %})
-                        <a style="float:right" data-bs-toggle="collapse" href="#C{{ racunalnik.pk }}" 
-                            role="button" aria-expanded="false" aria-controls="C{{ racunalnik.pk }}">
-                        > </a>
-                    </li>
-                {% endfor %}
-            </ol>
-        </div>
-        <div class="col h-100" id="podrobnosti">
+<div class="app">
+    <div class="list">
+        <h1>Prvi računalniki v Sloveniji</h1>
+        <ul>
             {% for racunalnik in object_list %}
-                <div id="C{{ racunalnik.pk }}" class="collapse">
-                    <div class="card card-body w-50 p-3">
-                        {% if racunalnik.ime %}<h1>{{ racunalnik.ime }}</h1>{% endif %}
-                    <p>Nosilec: <a href="/evidenca/organizacije/#{{ racunalnik.nosilec.pk }}">{{ racunalnik.nosilec }}</a></p>
-                    {% if racunalnik.organizacija.count > 1 %}
-                        <p>Uporabniki: {% for o in racunalnik.organizacija.all %}
-                            <a href="/evidenca/organizacije/#{{ o.pk }}">{{ o }}</a>, 
-                        {% endfor %}</p>
-                    {% endif %}
-                    <p>Lokacija: {{ racunalnik.kraj }}</p>
-                    <p>Proizvajalec: {{ racunalnik.proizvajalec }}</p>
-                    <p>Leto: {{ racunalnik.nakup.year }}</p>
-                    {% if racunalnik.lastnistvo %}<p>Status: {{ racunalnik.lastnistvo }}</p>{% endif %}
-                    {% if racunalnik.generacija %}<p>Generacija: {{ racunalnik.generacija }}</p>{% endif %}
-                    
-                    {% if racunalnik.tip %}<p>Tip: {{ racunalnik.get_tip_display }}</p>{% endif %}
-                    {% if racunalnik.opombe %}<p>Opombe: {{ racunalnik.opombe }}</p>{% endif %}
-                    {% if racunalnik.opis %}<p>Opis: {{ racunalnik.opis }}</p>{% endif %}
-                    </div>
-                </div>
+            <li>
+                <a class="list-item" href="#C{{ racunalnik.pk }}" data-pk="C{{ racunalnik.pk }}">
+                    <span class="index">{{ forloop.counter|stringformat:"03d" }}</span>
+                    <span class="year">{{ racunalnik.nakup.year }}</span>
+                    <span class="name">
+                        {{ racunalnik.ime }}
+                        <br />
+                        <span class="owner">{{ racunalnik.nosilec }}
+                            {% if racunalnik.organizacija.count > 1 %} + {{ racunalnik.organizacija.count }}{% endif %}
+                        </span>
+                    </span>
+
+                </a>
+            </li>
             {% endfor %}
+        </ul>
+    </div>
+    <div class="details hide">
+        {% for racunalnik in object_list %}
+        <div id="C{{ racunalnik.pk }}" class="computer">
+            <button class="back">« Nazaj na seznam</button>
+            {% if racunalnik.ime %}<h2>{{ racunalnik.ime }}</h2>{% endif %}
+            <dl>
+                <dt>Nosilec:</dt>
+                <dd><a href="/evidenca/organizacije/#{{ racunalnik.nosilec.pk }}">{{ racunalnik.nosilec }}</a></dd>
+
+                {% if racunalnik.organizacija.count > 1 %}
+                <dt>Uporabniki:</dt>
+                <dd>
+                    {% for o in racunalnik.organizacija.all %}
+                    <a href="/evidenca/organizacije/#{{ o.pk }}">{{ o }}</a>,
+                    {% endfor %}
+                </dd>
+                {% endif %}
+                <dt>Lokacija:</dt>
+                <dd>{{ racunalnik.kraj }}</dd>
+                <dt>Proizvajalec:</dt>
+                <dd>{{ racunalnik.proizvajalec }}</dd>
+                <dt>Leto:</dt>
+                <dd>{{ racunalnik.nakup.year }}</dd>
+                {% if racunalnik.lastnistvo %}
+                <dt>Status:</dt>
+                <dd>{{ racunalnik.lastnistvo }}</dd>
+                {% endif %}
+                {% if racunalnik.generacija %}
+                <dt>Generacija:</dt>
+                <dd>{{ racunalnik.generacija }}</dd>
+                {% endif %}
+                {% if racunalnik.tip %}
+                <dt>Tip:</dt>
+                <dd>{{ racunalnik.get_tip_display }}</dd>
+                {% endif %}
+                {% if racunalnik.opombe %}
+                <dt>Opombe:</dt>
+                <dd>{{ racunalnik.opombe }}</dd>
+                {% endif %}
+                {% if racunalnik.opis %}
+                <dt>Opis:</dt>
+                <dd>{{ racunalnik.opis }}</dd>
+                {% endif %}
+            </dl>
         </div>
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
