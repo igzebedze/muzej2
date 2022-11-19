@@ -9,7 +9,8 @@ class vir(models.Model):
 			('clanek', 'clanek'),
 			('knjiga', 'knjiga'),
             ('pogovor', 'pogovor'),
-			('film', 'film')
+			('film', 'film'),
+			('splet', 'splet')
 	)
 	VSEBINA_CHOICES = (
 			('Seznam','Seznam'),
@@ -47,7 +48,7 @@ class organizacija(models.Model):
 	opis = models.TextField(blank=True)
 	podrocje = models.CharField(blank=True, max_length=255)
 	latlong=models.CharField(blank=True, max_length=255)
-	partner = models.ManyToManyField("self", blank=True, null=True)
+	partner = models.ManyToManyField("self", blank=True)
 	predhodnik = models.ForeignKey("self", blank=True, null=True, on_delete=models.CASCADE)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
@@ -61,36 +62,59 @@ class organizacija(models.Model):
 
 class racunalnik(models.Model):
 	LASTNISTVO_CHOICES = (
-		('lasten', 'lasten'),
-		('najet', 'najet'),
-		('skupen', 'skupen'),
-		('PREVERI', 'PREVERI'),
-		('odkup', 'odkup'),
-		('terminal', 'terminal'),
-		('prodan', 'prodan'),
-		('oddan', 'oddan'),
-		('zanimanje', 'zanimanje')
+		('L', 'lasten'),
+		('N', 'najet'),
+		('S', 'skupen'),
+		('T', 'terminal'),
+		('I', 'Izdelan doma')
 	)
 	TIP_CHOICES = (
-		('ae','analogen elektronski'),
-		('e','elektronski'),
-		('t','terminal'),
-		('mg','mehanografski'),
-		('pe','procesni elektronski')
+		('ae','Analogni elektronski računalnik'),
+		('e','Elektronski računalnik'),
+		('t','Terminal'),
+		('mg','Računski stroj (mehanografski)'),
+		('emg', 'Elektronski računski stroj (mehanografski)'),
+		('E', 'Največji računalnik v Jugoslaviji ob namestitvi'),
+		('me', 'Mini računalnik, birojski/poslovni računalnik'),
+		('pe', 'Procesni računalnik'),
+		('mic', 'Mikro računalnik (domači/osebni/ostali)'),
+		('cal', 'Programabilni kalkulator')
 	)
+	GENERACIJA_CHOICES = (
+		('A','Predgeneracija računskih strojev (releji + vakuumske diode)'),
+		('B','Prva generacija elektronskih računalnikov (vakuumske diode)'),
+		('C','Druga generacija elektronskih računalnikov (tranzistorji)'),
+		('D','Druga generacija elektronskih računalnikov (hibridna vezja in tranzistorji)'),
+		('E','Tretja generacija elektronskih računalnikov (integrirana vezja in MOSFET)'),
+		('F','Četrta generacija mikro računalnikov (mikroprocesorji)'),
+		('G','Analogni in hibridni računalniki ()'),
+		('X','Zelo šibki in pomanjkljivi viri ()')
+	)
+	UPORABA_CHOICES = (
+		('J','Javna uprava'),
+		('R','Znanstveno-raziskovalna dejavnost'),
+		('Z','Zdravstvo'),
+		('P','Poslovna dejavnost'),
+		('Y','Jugoslavija'),
+		('T','Bolj tuj kot domač'),
+		('D','Bolj domač kot tuj'),
+		('o', 'neznano')
+	)
+
 	kos = models.SmallIntegerField(default=1)
 	nosilec = models.ForeignKey(organizacija, on_delete=models.CASCADE,related_name='nosilec', null=True)
-	organizacija = models.ManyToManyField(organizacija)
+	organizacija = models.ManyToManyField(organizacija, related_name='clan')
 	ime = models.CharField(max_length=255, blank=True)
 	tip = models.CharField(max_length=255, blank=True, choices=TIP_CHOICES)
+	uporaba = models.CharField(max_length=255, blank=True, null=True, choices=UPORABA_CHOICES)
 	opombe = models.TextField(blank=True, null=True)
 	proizvajalec = models.ForeignKey('inventura.proizvajalec', on_delete=models.PROTECT)
 	eksponat = models.ForeignKey('inventura.eksponat', blank=True, null=True, on_delete=models.PROTECT)
 	nakup = models.DateField(blank=True, null=True)
 	odpis = models.DateField(blank=True, null=True)
 	opis = models.TextField(blank=True)
-	generacija = models.IntegerField(blank=True, null=True)
-	viri = models.ManyToManyField(vir, blank=True, null=True)
+	generacija = models.CharField(choices=GENERACIJA_CHOICES, max_length=255, blank=True, null=True)
+	viri = models.ManyToManyField(vir, blank=True)
 	kraj = models.CharField(max_length=255, blank=True, null=True)
 	lastnistvo = models.CharField(choices=LASTNISTVO_CHOICES, max_length=255, blank=True, null=True)
 	created_at = models.DateTimeField(auto_now_add=True)
@@ -137,12 +161,12 @@ class dosezek(models.Model):
 	povzetek = models.TextField(blank=True)
 	opis = models.TextField(blank=True)
 	url = models.URLField(blank=True, null=True)
-	racunalnik = models.ManyToManyField(racunalnik, blank=True, null=True)
+	racunalnik = models.ManyToManyField(racunalnik, blank=True)
 	od = models.DateField(blank=True, null=True)
 	do = models.DateField(blank=True, null=True)
 	vrsta = models.CharField(max_length=255, blank=True, choices=VRSTA_CHOICES)
 	pomen = models.IntegerField(blank=True, default=3, choices=POMEN_CHOICES)
-	eksponat = models.ManyToManyField('inventura.eksponat', blank=True, null=True)
+	eksponat = models.ManyToManyField('inventura.eksponat', blank=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
@@ -170,7 +194,7 @@ class oseba(models.Model):
 	smrt = models.DateField(blank=True, null=True)
 	spol = models.IntegerField(choices=GENDER_CHOICES, default=0)
 	sluzba = models.ForeignKey(sluzba, blank=True, null=True, on_delete=models.PROTECT)
-	dosezek = models.ManyToManyField(dosezek, blank=True, null=True)
+	dosezek = models.ManyToManyField(dosezek, blank=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 

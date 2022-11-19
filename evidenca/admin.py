@@ -10,14 +10,16 @@ class VirAdmin(admin.ModelAdmin):
 
 class RacunalnikAdmin(admin.ModelAdmin):
     list_display = ('nakup', 'kraj', 'ime', 'nosilec', 'lastnistvo')
-    list_filter = ('lastnistvo', 'kraj', 'proizvajalec')
+    list_filter = ('generacija', 'lastnistvo', 'tip', 'uporaba', 'kraj')
     date_hierarchy = 'nakup'
-    search_fields = ('opombe', 'tip', 'opis', 'opombe', 'proizvajalec')
+    search_fields = ('opombe', 'tip', 'opis', 'opombe', 'proizvajalec', 'nosilec')
+    filter_horizontal = ('organizacija','viri')
 
 class OrganizacijaAdmin(admin.ModelAdmin):
     list_display = ('pk', 'ime', 'naslov', 'podrocje', 'latlong', 'url')
     #list_editable = ('ime', 'naslov', 'podrocje', 'latlong')
     list_display_links = ('pk',)
+    filter_horizontal = ('partner',)
 
 class PogovorAdmin(admin.ModelAdmin):
     list_display = ('oseba', 'datum', 'avtor', 'za_objavo', 'zvok', 'slika', 'text')
