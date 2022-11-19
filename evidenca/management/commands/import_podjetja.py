@@ -29,9 +29,13 @@ class Command(BaseCommand):
 				lat = row['Latitude']
 				lon = row['Longitude']
 
-				org = organizacija.objects.get(ime=ime)
-				org.naslov=naslov
-				org.latlong="(%s,%s)" % (lat,lon)
-				org.save()
+				try:
+					org = organizacija.objects.get(ime=ime)
+				except:
+					pass
+				else:
+					org.naslov=naslov
+					org.latlong="(%s,%s)" % (lat,lon)
+					org.save()
 
 
