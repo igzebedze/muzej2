@@ -34,13 +34,13 @@ class Command(BaseCommand):
 				letnik = row['leto']
 				eksponat = row['eksponat']
 				self.stdout.write("looking at %s %s" % (eksponat, letnik))
-				vhod = row['Zgodovina']
+				vhod = ""#row['Zgodovina']
 
 				if not eksponat:
 					continue
 
 				try:
-					popisovalec = 'mateja' #row['popisovalec']
+					popisovalec = 'bostjan' #row['popisovalec']
 					u = User.objects.get(username=popisovalec)
 				except:
 					pass

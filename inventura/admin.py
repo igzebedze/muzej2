@@ -192,6 +192,7 @@ class VhodAdmin(SimpleHistoryAdmin):
 	list_display = ('stevilka', 'lastnik', 'razlog',  'prevzel', 'cas_prevzema', 'inventorizirano')
 	inlines = [ PrimerekInline,]
 	search_fields = ('opis',)
+	date_hierarchy = 'cas_prevzema'
 	fieldsets = (
 			('Sprejem', {
 				'fields': (	'izrocitelj', 'lastnik', 'opis', 'razlog','dovoli_objavo',
