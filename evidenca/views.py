@@ -31,3 +31,4 @@ def stat(request):
         'racunalniki_po_generacijah': generacije
 	}
 	return render(request, 'stat.html', context)
+
