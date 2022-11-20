@@ -49,6 +49,7 @@ urlpatterns = [
     path('eksponat/<int:pk>/uredi/', update_infobox, name='infobox-edit'),
 	path('razstava/<int:pk>/', RazstavaView.as_view(), name='razstava-detail'),
     path('evidenca/', RacunalnikListView.as_view()),
+    path('evidenca/geojson/', RacunalnikiGeoJsonView.as_view()),
     path('evidenca/<int:pk>/', RacunalnikDetailView.as_view()),
     path('evidenca/zemljevid/', TemplateView.as_view(template_name='evidenca/zemljevid.html')), 
     path('evidenca/organizacije/', OrganizacijeListView.as_view()),

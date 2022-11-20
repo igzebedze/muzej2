@@ -29,11 +29,13 @@
             function filterBy(year) {
                 var filters = ['<=', "leto", parseInt(year)];
                 map.setFilter('blobs', filters);
+                map.setFilter('racunalniki', filters);
                 document.getElementById('year').textContent = year;
             }
 
             map.on('load', function () {
                 //console.log(map.getStyle().layers);
+                filterBy(1972);
             });
 
             document.getElementById('slider').addEventListener('input', function (e) {
