@@ -1,30 +1,32 @@
-{% extends "base.html" %}
-{% load smart_if %} 
+{% extends "app.html" %}
+{% load smart_if %}
 {% block content %}
-    <h2>Prvi racunalniki v Sloveniji</h2>
-
+<div class="app">
+    <div class="organizations">
+        <h1>Prvi računalniki v Sloveniji</h1>
         {% for org in object_list %}
+        <div class="organization">
             <h3><a name="{{ org.pk }}">{{ org.ime }}</a></h3>
-                {% if org.nosilec.count > 0 %}
-                <h4>kupili / gostili:</h4>
-                <ul>
-                    {% for comp in org.nosilec.all %}
-                    <li>{{comp.nakup.year}} - {{ comp.ime }}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-                {% if org.racunalnik_set.count != org.nosilec.count %}
-                <h4>imeli dostop do:</h4>
-                <ul class="comp_list">
-                    {% for comp in org.clan.all %}
-                    {% ifnotequal comp.nosilec org %}
-                    <li>{{comp.nakup.year}} - {{ comp.ime }} pri {{ comp.nosilec }}</li>
-                    {% endifnotequal %}
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            </li>
-        <hr />
+            {% if org.nosilec.count > 0 %}
+            <h4>kupili / gostili:</h4>
+            <ul>
+                {% for comp in org.nosilec.all %}
+                <li>{{ comp.nakup.year }} - {{ comp.ime }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% if org.clan.count > 0 %}
+            <h4>imeli dostop do:</h4>
+            <ul class="comp_list">
+                {% for comp in org.clan.all %}
+                {% ifnotequal comp.nosilec org %}
+                <li>{{comp.nakup.year}} - {{ comp.ime }} pri {{ comp.nosilec }}</li>
+                {% endifnotequal %}
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
         {% endfor %}
-    
+    </div>
+</div>
 {% endblock %}
