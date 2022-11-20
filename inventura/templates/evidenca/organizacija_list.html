@@ -11,7 +11,7 @@
             <h4>kupili / gostili:</h4>
             <ul>
                 {% for comp in org.nosilec.all %}
-                <li>{{comp.nakup.year}} - {{ comp.ime }}</li>
+                <li>{{ comp.nakup.year }} - {{ comp.ime }}</li>
                 {% endfor %}
             </ul>
             {% endif %}

@@ -6,20 +6,20 @@
         <h1>Prvi računalniki v Sloveniji</h1>
         <ul>
             {% for racunalnik in object_list %}
+            {% ifnotequal racunalnik.tip 't' %}
             <li>
                 <a class="list-item" href="#C{{ racunalnik.pk }}" data-pk="C{{ racunalnik.pk }}">
                     <span class="index">{{ forloop.counter|stringformat:"03d" }}</span>
                     <span class="year">{{ racunalnik.nakup.year }}</span>
                     <span class="name">
-                        {{ racunalnik.ime }}
+                        {{ racunalnik.nosilec }}
+                        {% if racunalnik.organizacija.count > 1 %} + {{ racunalnik.organizacija.count }}{% endif %}
                         <br />
-                        <span class="owner">{{ racunalnik.nosilec }}
-                            {% if racunalnik.organizacija.count > 1 %} + {{ racunalnik.organizacija.count }}{% endif %}
-                        </span>
+                        <span class="owner">{{ racunalnik.ime }}</span>
                     </span>
-
                 </a>
             </li>
+            {% endifnotequal %}
             {% endfor %}
         </ul>
     </div>
@@ -32,11 +32,12 @@
                 <dt>Nosilec:</dt>
                 <dd><a href="/evidenca/organizacije/#{{ racunalnik.nosilec.pk }}">{{ racunalnik.nosilec }}</a></dd>
 
-                {% if racunalnik.organizacija.count > 1 %}
+                {% if racunalnik.organizacija.count > 0 %}
                 <dt>Uporabniki:</dt>
                 <dd>
                     {% for o in racunalnik.organizacija.all %}
-                    <a href="/evidenca/organizacije/#{{ o.pk }}">{{ o }}</a>,
+                    <a href="/evidenca/organizacije/#{{ o.pk }}">{{ o }}</a>
+                    {% if forloop.last %}{% else %}, {% endif %}
                     {% endfor %}
                 </dd>
                 {% endif %}
@@ -44,15 +45,19 @@
                 <dd>{{ racunalnik.kraj }}</dd>
                 <dt>Proizvajalec:</dt>
                 <dd>{{ racunalnik.proizvajalec }}</dd>
-                <dt>Leto:</dt>
+                <dt>Pričetek:</dt>
                 <dd>{{ racunalnik.nakup.year }}</dd>
                 {% if racunalnik.lastnistvo %}
-                <dt>Status:</dt>
-                <dd>{{ racunalnik.lastnistvo }}</dd>
+                    <dt>Status:</dt>
+                    <dd>{{ racunalnik.get_lastnistvo_display }}</dd>
                 {% endif %}
+                {% ifnotequal racunalnik.uporaba 'o' %}
+                <dt>Uporaba:</dt>
+                <dd>{{ racunalnik.get_uporaba_display }}</dd>
+                {% endifnotequal %}
                 {% if racunalnik.generacija %}
                 <dt>Generacija:</dt>
-                <dd>{{ racunalnik.generacija }}</dd>
+                <dd>{{ racunalnik.get_generacija_display }}</dd>
                 {% endif %}
                 {% if racunalnik.tip %}
                 <dt>Tip:</dt>
@@ -66,6 +71,14 @@
                 <dt>Opis:</dt>
                 <dd>{{ racunalnik.opis }}</dd>
                 {% endif %}
+                <dt>Viri:</dt>
+                <ul>
+                    {% for v in racunalnik.viri.all %}
+                    <li><a target='_blank' href='{{ v.url }}'>{{ v }}</a>
+                        <p>{{ v.vsebina }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
             </dl>
         </div>
         {% endfor %}
