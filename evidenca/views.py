@@ -12,3 +12,8 @@ class RacunalnikDetailView(DetailView):
 class OrganizacijeListView(ListView):
     model=organizacija
     queryset=organizacija.objects.order_by('ime')
+
+class RacunalnikiGeoJsonView(ListView):
+    model=racunalnik
+    queryset=racunalnik.objects.order_by('nakup')
+    template_name='evidenca/racunalniki.geojson'
