@@ -1,0 +1,4828 @@
+{ 
+    "type": "FeatureCollection",
+    "features": [
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3513915,46.2352048]},
+                    "properties":{
+                        "firma": "Iskra Elektromehanika",
+                        "racunalnik": "POWERS-SAMAS neznan",
+                        "leto": 1946
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "IBM neznan ",
+                        "leto": 1952
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Narodna banka centrala Ljubljana",
+                        "racunalnik": "IBM neznan ",
+                        "leto": 1955
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5022776,46.0533623]},
+                    "properties":{
+                        "firma": "Komunalna banka",
+                        "racunalnik": "IBM neznan ",
+                        "leto": 1955
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6609093,46.5355288]},
+                    "properties":{
+                        "firma": "TAM - Tovarna avtomobilov Maribor",
+                        "racunalnik": "IBM 602-A + IBM 421",
+                        "leto": 1955
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Litostroj",
+                        "racunalnik": "IBM 421",
+                        "leto": 1955
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3513915,46.2352048]},
+                    "properties":{
+                        "firma": "Iskra Elektromehanika",
+                        "racunalnik": "POWERS-SAMAS neznan ",
+                        "leto": 1956
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.0648538,46.4309775]},
+                    "properties":{
+                        "firma": "Železarna Jesenice",
+                        "racunalnik": "IBM 602-A + IBM 421",
+                        "leto": 1957
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3008389,46.1678786]},
+                    "properties":{
+                        "firma": "LTH - Loška tovarna hladilnikov",
+                        "racunalnik": "POWERS-SAMAS neznan ",
+                        "leto": 1958
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4876334,46.0428394]},
+                    "properties":{
+                        "firma": "NIJS - Nuklearni inštitut Jožef Stefan",
+                        "racunalnik": "M-1 ",
+                        "leto": 1958
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5153521,46.0515644]},
+                    "properties":{
+                        "firma": "Rog",
+                        "racunalnik": "IBM 602-A + IBM 421",
+                        "leto": 1959
+                }
+        },
+        
+        
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [20.4558998,44.8164583]},
+                    "properties":{
+                        "firma": "Tanjug",
+                        "racunalnik": "CER 10",
+                        "leto": 1960
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6428414,46.5609862]},
+                    "properties":{
+                        "firma": "Zavod za organizacijo in revizijo",
+                        "racunalnik": "IBM neznan",
+                        "leto": 1960
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3513915,46.2352048]},
+                    "properties":{
+                        "firma": "Iskra Elektromehanika",
+                        "racunalnik": "SPERRY Rand UNIVAC 60/120",
+                        "leto": 1960
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4892614,46.0446754]},
+                    "properties":{
+                        "firma": "FE - Fakulteta za elektrotehniko",
+                        "racunalnik": "Aritma ",
+                        "leto": 1960
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "neznan ",
+                        "leto": 1961
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4610995,46.1187132]},
+                    "properties":{
+                        "firma": "RSNZ - Republiški sekretariat za notranje zadeve",
+                        "racunalnik": "IBM neznan ",
+                        "leto": 1961
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4895163,46.0425537]},
+                    "properties":{
+                        "firma": "IMFM - Inštitut za matematiko, fiziko in mehaniko",
+                        "racunalnik": "ZUSE Z-23",
+                        "leto": 1962
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.6041903,46.2124604]},
+                    "properties":{
+                        "firma": "Titan",
+                        "racunalnik": "IBM neznan",
+                        "leto": 1963
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.0375627,46.1434983]},
+                    "properties":{
+                        "firma": "STT - Strojna tovarna Trbovlje",
+                        "racunalnik": "IBM neznan",
+                        "leto": 1963
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3008389,46.1678786]},
+                    "properties":{
+                        "firma": "LTH - Loška tovarna hladilnikov",
+                        "racunalnik": "IBM neznan ",
+                        "leto": 1964
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5004619,46.0531936]},
+                    "properties":{
+                        "firma": "SDK centrala Ljubljana - Služba družbenega knjigovodstva",
+                        "racunalnik": "SPERRY Rand UNIVAC 1004",
+                        "leto": 1964
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4940503,46.0472469]},
+                    "properties":{
+                        "firma": "Iskra ZZA - Zavod za avtomatizacijo",
+                        "racunalnik": "ISKRA Z-23 ",
+                        "leto": 1964
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6609093,46.5355288]},
+                    "properties":{
+                        "firma": "TAM - Tovarna avtomobilov Maribor",
+                        "racunalnik": "IBM 1401",
+                        "leto": 1965
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.64628,46.5618161]},
+                    "properties":{
+                        "firma": "ECM - Ekonomski center Maribor",
+                        "racunalnik": "GE BULL Gamma 10",
+                        "leto": 1965
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4844422,46.0837773]},
+                    "properties":{
+                        "firma": "Iskra TEN - Tovarna elektronskih naprav",
+                        "racunalnik": "Iskra Z-23",
+                        "leto": 1965
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4844422,46.0837773]},
+                    "properties":{
+                        "firma": "Iskra TEN - Tovarna elektronskih naprav",
+                        "racunalnik": "Iskra Z-23",
+                        "leto": 1965
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4844422,46.0837773]},
+                    "properties":{
+                        "firma": "Iskra TEN - Tovarna elektronskih naprav",
+                        "racunalnik": "Iskra Z-23",
+                        "leto": 1965
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4844422,46.0837773]},
+                    "properties":{
+                        "firma": "Iskra TEN - Tovarna elektronskih naprav",
+                        "racunalnik": "Iskra Z-23",
+                        "leto": 1965
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4844422,46.0837773]},
+                    "properties":{
+                        "firma": "Iskra TEN - Tovarna elektronskih naprav",
+                        "racunalnik": "Iskra Z-23",
+                        "leto": 1965
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2755455,46.239583]},
+                    "properties":{
+                        "firma": "EMO - Tovarna emajlirane posode",
+                        "racunalnik": "IBM 602-A + IBM 421 ",
+                        "leto": 1966
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.7290338,45.5337517]},
+                    "properties":{
+                        "firma": "Tomos - Tovarna motorjev Sežana",
+                        "racunalnik": "IBM neznan",
+                        "leto": 1966
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.0554094,46.1588637]},
+                    "properties":{
+                        "firma": "IBT - Investicijski biro Trbovlje",
+                        "racunalnik": "OLIVETTI Programma 101",
+                        "leto": 1966
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3627208,46.2272914]},
+                    "properties":{
+                        "firma": "Planika",
+                        "racunalnik": "CER 200",
+                        "leto": 1967
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.64628,46.5618161]},
+                    "properties":{
+                        "firma": "ECM - Ekonomski center Maribor",
+                        "racunalnik": "GE BULL Gamma 10 ",
+                        "leto": 1968
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4844422,46.0837773]},
+                    "properties":{
+                        "firma": "Iskra CAOP - Center za avtomatsko obdelavo podatkov",
+                        "racunalnik": "CDC 2100 ",
+                        "leto": 1968
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4907669,46.0451256]},
+                    "properties":{
+                        "firma": "DES - Distribucija energije Slovenija",
+                        "racunalnik": "IBM 360/30",
+                        "leto": 1968
+                }
+        },
+        
+        
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Litostroj",
+                        "racunalnik": "IBM 360/20",
+                        "leto": 1968
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5359727,46.0674301]},
+                    "properties":{
+                        "firma": "Emona",
+                        "racunalnik": "IBM 360/30",
+                        "leto": 1968
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.093367,46.3634233]},
+                    "properties":{
+                        "firma": "Gorenje",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1968
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5050698,46.0538826]},
+                    "properties":{
+                        "firma": "Metalka",
+                        "racunalnik": "IBM 360/30",
+                        "leto": 1968
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.0648538,46.4309775]},
+                    "properties":{
+                        "firma": "Železarna Jesenice",
+                        "racunalnik": "IBM 360/30",
+                        "leto": 1968
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2639706,46.2301832]},
+                    "properties":{
+                        "firma": "Zavod za napredek gospodarstva Celje",
+                        "racunalnik": "IBM 360/20",
+                        "leto": 1968
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5023079,46.051122]},
+                    "properties":{
+                        "firma": "KBH Ljubljana - Kreditna banka in hranilnica",
+                        "racunalnik": "IBM 360/30",
+                        "leto": 1968
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4977572,46.0616785]},
+                    "properties":{
+                        "firma": "Slovenija vino",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1968
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.568656,45.5261034]},
+                    "properties":{
+                        "firma": "Splošna plovba",
+                        "racunalnik": "neznan ",
+                        "leto": 1968
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4844422,46.0837773]},
+                    "properties":{
+                        "firma": "RRC Stegne - Republiški računski center",
+                        "racunalnik": "CDC 3300",
+                        "leto": 1969
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5370515,46.0590691]},
+                    "properties":{
+                        "firma": "Saturnus",
+                        "racunalnik": "IBM 360/20",
+                        "leto": 1969
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4114364,46.1836477]},
+                    "properties":{
+                        "firma": "ŽTP - Železniško transportno podjetje",
+                        "racunalnik": "IBM 360/30",
+                        "leto": 1969
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [16.1610293,46.6581381]},
+                    "properties":{
+                        "firma": "Mura",
+                        "racunalnik": "IBM 360/20",
+                        "leto": 1969
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3001157,46.3589913]},
+                    "properties":{
+                        "firma": "Peko",
+                        "racunalnik": "IBM 360/20",
+                        "leto": 1969
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2661338,46.2276701]},
+                    "properties":{
+                        "firma": "AERO",
+                        "racunalnik": "IBM 360/20",
+                        "leto": 1969
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.6639366,45.953835]},
+                    "properties":{
+                        "firma": "Meblo",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1969
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [20.4613588,44.8074093]},
+                    "properties":{
+                        "firma": "Zvezni zavod za statistiko",
+                        "racunalnik": "IBM 360/50",
+                        "leto": 1969
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.0554094,46.1588637]},
+                    "properties":{
+                        "firma": "IBT - Investicijski biro Trbovlje",
+                        "racunalnik": "IBM 1130",
+                        "leto": 1969
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4895163,46.0425537]},
+                    "properties":{
+                        "firma": "IMFM - Inštitut za matematiko, fiziko in mehaniko",
+                        "racunalnik": "IBM 1130",
+                        "leto": 1969
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6392718,46.5594876]},
+                    "properties":{
+                        "firma": "VTŠ - Višja tehniška šola",
+                        "racunalnik": "IBM 1130",
+                        "leto": 1969
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1516614,45.8112211]},
+                    "properties":{
+                        "firma": "Novoteks",
+                        "racunalnik": "PHILIPS Data 8000",
+                        "leto": 1969
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.6412275,45.9542068]},
+                    "properties":{
+                        "firma": "SGP Gorica - Splošno gradbeno podjetje",
+                        "racunalnik": "neznan ",
+                        "leto": 1969
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3008389,46.1678786]},
+                    "properties":{
+                        "firma": "LTH - Loška tovarna hladilnikov",
+                        "racunalnik": "IBM 360/20",
+                        "leto": 1970
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2755455,46.239583]},
+                    "properties":{
+                        "firma": "EMO - Tovarna emajlirane posode",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1970
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.366161,45.7942132]},
+                    "properties":{
+                        "firma": "Brest",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1970
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.9053256,45.8842083]},
+                    "properties":{
+                        "firma": "Fructal",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1970
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2640051,46.2314714]},
+                    "properties":{
+                        "firma": "KK Žalec - Kmetijski kombinat",
+                        "racunalnik": "IBM 360/20",
+                        "leto": 1970
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.3037861,46.0084166]},
+                    "properties":{
+                        "firma": "Lisca",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1970
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3513915,46.2352048]},
+                    "properties":{
+                        "firma": "Iskra Elektromehanika",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1970
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5133402,46.0544101]},
+                    "properties":{
+                        "firma": "Iskra Commerce",
+                        "racunalnik": "PHILIPS Data 8000",
+                        "leto": 1970
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5065628,46.0534624]},
+                    "properties":{
+                        "firma": "Kontekstobus",
+                        "racunalnik": "PHILIPS Data 8000",
+                        "leto": 1970
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1582541,45.8103221]},
+                    "properties":{
+                        "firma": "Pionir",
+                        "racunalnik": "PHILIPS Data 8000",
+                        "leto": 1970
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.9426585,46.317453]},
+                    "properties":{
+                        "firma": "GLIN - Gozdarstvo in lesna industrija Nazarje",
+                        "racunalnik": "PHILIPS Data 8000",
+                        "leto": 1970
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5056468,46.0556843]},
+                    "properties":{
+                        "firma": "Autocommerce",
+                        "racunalnik": "PHILIPS Data 8000",
+                        "leto": 1970
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.949648,46.5442574]},
+                    "properties":{
+                        "firma": "Železarna Ravne",
+                        "racunalnik": "KIENZLE 6000",
+                        "leto": 1970
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4844422,46.0837773]},
+                    "properties":{
+                        "firma": "RRC Stegne - Republiški računski center",
+                        "racunalnik": "CDC 6400",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "DEC PDP 8",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "CCL Key-Edit ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "CCL Key-Edit ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "CCL Key-Edit ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "CCL Key-Edit ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "CCL Key-Edit ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "CCL Key-Edit ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "CCL Key-Edit ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "CCL Key-Edit ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "CCL Key-Edit ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "CCL Key-Edit ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "CCL Key-Edit ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "CCL Key-Edit ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.257107,46.2334997]},
+                    "properties":{
+                        "firma": "Ingrad",
+                        "racunalnik": "PHILIPS Data 8000",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1582541,45.8103221]},
+                    "properties":{
+                        "firma": "Pionir",
+                        "racunalnik": "PHILIPS Data 8000",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.7290338,45.5337517]},
+                    "properties":{
+                        "firma": "Tomos - Tovarna motorjev Sežana",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Mladinska knjiga",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1789937,45.8155714]},
+                    "properties":{
+                        "firma": "Krka",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4882779,46.0707226]},
+                    "properties":{
+                        "firma": "Lek",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Jugotekstil impex",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.507117,46.0569755]},
+                    "properties":{
+                        "firma": "PTT Računski center - Pošta, telegraf in telefon",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.647846,46.5578772]},
+                    "properties":{
+                        "firma": "EGM - Elektrogospodarstvo Maribor",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.64628,46.5618161]},
+                    "properties":{
+                        "firma": "ECM - Ekonomski center Maribor",
+                        "racunalnik": "IBM 360/40",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Intertrade Računski center",
+                        "racunalnik": "IBM 360/40",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Agrotehnika",
+                        "racunalnik": "IBM 1130",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.7977529,46.3957894]},
+                    "properties":{
+                        "firma": "TGA - Tovarna glinice in aluminija",
+                        "racunalnik": "IBM 1130",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4927077,46.0419366]},
+                    "properties":{
+                        "firma": "RCU - Računalniški center Univerze v Ljubljani",
+                        "racunalnik": "IBM 1130 ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4927077,46.0419366]},
+                    "properties":{
+                        "firma": "RCU - Računalniški center Univerze v Ljubljani",
+                        "racunalnik": "CDC 1700",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4927077,46.0419366]},
+                    "properties":{
+                        "firma": "RCU - Računalniški center Univerze v Ljubljani",
+                        "racunalnik": "CDC 1700",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6487652,46.5624131]},
+                    "properties":{
+                        "firma": "Skupščina občine Maribor",
+                        "racunalnik": "NIXDORF neznan",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6587047,46.560415]},
+                    "properties":{
+                        "firma": "Špedtrans",
+                        "racunalnik": "NIXDORF neznan",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2661773,46.2283782]},
+                    "properties":{
+                        "firma": "MERX",
+                        "racunalnik": "NIXDORF 820/25",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2661773,46.2283782]},
+                    "properties":{
+                        "firma": "MERX",
+                        "racunalnik": "NIXDORF 820/25",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2661773,46.2283782]},
+                    "properties":{
+                        "firma": "MERX",
+                        "racunalnik": "IBM 3/10",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5957107,46.1643674]},
+                    "properties":{
+                        "firma": "Induplati",
+                        "racunalnik": "IBM 3/10",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4866495,46.0456177]},
+                    "properties":{
+                        "firma": "Ilirija",
+                        "racunalnik": "BURROUGHS L2000",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1516614,45.8112211]},
+                    "properties":{
+                        "firma": "Novoteks",
+                        "racunalnik": "BURROUGHS neznan",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1516614,45.8112211]},
+                    "properties":{
+                        "firma": "Novoteks",
+                        "racunalnik": "BURROUGHS neznan",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6761637,46.5569905]},
+                    "properties":{
+                        "firma": "Svila",
+                        "racunalnik": "PHILIPS P359",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4892614,46.0446754]},
+                    "properties":{
+                        "firma": "FE - Fakulteta za elektrotehniko",
+                        "racunalnik": "EAI 580 ",
+                        "leto": 1971
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4114364,46.1836477]},
+                    "properties":{
+                        "firma": "ŽTP - Železniško transportno podjetje",
+                        "racunalnik": "IBM 370/145",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5002769,46.0496737]},
+                    "properties":{
+                        "firma": "Ljubljanska banka",
+                        "racunalnik": "IBM 370/145",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4904028,46.042056]},
+                    "properties":{
+                        "firma": "RRC - Republiški računski center",
+                        "racunalnik": "CDC Cyber 72/24",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [16.3763088,45.4542172]},
+                    "properties":{
+                        "firma": "Železarna Sisak",
+                        "racunalnik": "SPERRY Rand UNIVAC 1106",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.195303,46.3716577]},
+                    "properties":{
+                        "firma": "Elan",
+                        "racunalnik": "IBM 360/20",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.028296,46.0047115]},
+                    "properties":{
+                        "firma": "Simplex",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4610995,46.1187132]},
+                    "properties":{
+                        "firma": "RSNZ - Republiški sekretariat za notranje zadeve",
+                        "racunalnik": "IBM 360/25",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5004619,46.0531936]},
+                    "properties":{
+                        "firma": "SDK centrala Ljubljana - Služba družbenega knjigovodstva",
+                        "racunalnik": "IBM 370/135",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5150708,46.0653571]},
+                    "properties":{
+                        "firma": "SDK Maribor - Služba družbenega knjigovodstva",
+                        "racunalnik": "SINGER System 10",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5150708,46.0653571]},
+                    "properties":{
+                        "firma": "SDK Maribor - Služba družbenega knjigovodstva",
+                        "racunalnik": "SINGER System 10",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3555417,46.2428344]},
+                    "properties":{
+                        "firma": "SDK Kranj - Služba družbenega knjigovodstva",
+                        "racunalnik": "SINGER System 10",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2677063,46.2397495]},
+                    "properties":{
+                        "firma": "SDK Celje - Služba družbenega knjigovodstva",
+                        "racunalnik": "SINGER System 10",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Astra",
+                        "racunalnik": "IBM 370/135",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.6041903,46.2124604]},
+                    "properties":{
+                        "firma": "Titan",
+                        "racunalnik": "IBM 3/10",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.6001242,46.1992764]},
+                    "properties":{
+                        "firma": "Stol",
+                        "racunalnik": "IBM 3/10",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.5148537,46.545385]},
+                    "properties":{
+                        "firma": "Tovarna dušika Ruše",
+                        "racunalnik": "IBM 3/10",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5175233,46.0561503]},
+                    "properties":{
+                        "firma": "Chemo",
+                        "racunalnik": "IBM 3/10",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3638195,46.2467873]},
+                    "properties":{
+                        "firma": "IBI - Industrija bombažnih izdelkov",
+                        "racunalnik": "PHILIPS P359",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3070003,46.3613892]},
+                    "properties":{
+                        "firma": "Predilnica in tkalnica Tržič",
+                        "racunalnik": "PHILIPS P359",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.3214616,45.6446616]},
+                    "properties":{
+                        "firma": "Beti",
+                        "racunalnik": "HONEYWELL G118",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4991959,46.0466004]},
+                    "properties":{
+                        "firma": "Mercator",
+                        "racunalnik": "NCR Century 200",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Intertrade Računski center",
+                        "racunalnik": "IBM 3/6",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.1728519,46.3427673]},
+                    "properties":{
+                        "firma": "Intertrade IBM šolski center",
+                        "racunalnik": "IBM neznan",
+                        "leto": 1972
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6392718,46.5594876]},
+                    "properties":{
+                        "firma": "VTŠ - Višja tehniška šola",
+                        "racunalnik": "CDC 731",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.1188023,46.3682849]},
+                    "properties":{
+                        "firma": "LIP - Lesna industrija Bled",
+                        "racunalnik": "neznan",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.969578,45.7923835]},
+                    "properties":{
+                        "firma": "Računalniški center Univerze v Zagrebu",
+                        "racunalnik": "SPERRY Rand UNIVAC 1110",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3532517,46.228159]},
+                    "properties":{
+                        "firma": "Sava",
+                        "racunalnik": "IBM 370/135",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.949648,46.5442574]},
+                    "properties":{
+                        "firma": "Železarna Ravne",
+                        "racunalnik": "IBM 370/135",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.6639366,45.953835]},
+                    "properties":{
+                        "firma": "Meblo",
+                        "racunalnik": "IBM 370/125",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.6639366,45.953835]},
+                    "properties":{
+                        "firma": "Meblo",
+                        "racunalnik": "IBM 3270",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1929153,45.5705328]},
+                    "properties":{
+                        "firma": "Ljubljanska banka Črnomelj",
+                        "racunalnik": "IBM 370/ ",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.111887,46.0513094]},
+                    "properties":{
+                        "firma": "Alpina",
+                        "racunalnik": "IBM 3",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4866495,46.0456177]},
+                    "properties":{
+                        "firma": "Ilirija",
+                        "racunalnik": "IBM 3",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4744857,46.0874726]},
+                    "properties":{
+                        "firma": "Dekorativna",
+                        "racunalnik": "IBM 3",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Agrotehnika",
+                        "racunalnik": "IBM 3",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5054415,46.0600965]},
+                    "properties":{
+                        "firma": "IMP - Industrijsko montažno podjetje",
+                        "racunalnik": "IBM 3",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.6601761,45.5402259]},
+                    "properties":{
+                        "firma": "Delamaris",
+                        "racunalnik": "IBM 3",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.4921312,45.9589978]},
+                    "properties":{
+                        "firma": "SDK Krško - Služba družbenega knjigovodstva",
+                        "racunalnik": "SINGER System 10",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1710089,45.8010824]},
+                    "properties":{
+                        "firma": "SDK Novo mesto - Služba družbenega knjigovodstva",
+                        "racunalnik": "SINGER System 10",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3008389,46.1678786]},
+                    "properties":{
+                        "firma": "LTH - Loška tovarna hladilnikov",
+                        "racunalnik": "SPERRY Rand UNIVAC 9700",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [16.0508774,46.6417548]},
+                    "properties":{
+                        "firma": "Zdravilišče Radenci",
+                        "racunalnik": "FUJITSU Facom 230/15",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4983126,46.0455018]},
+                    "properties":{
+                        "firma": "FS - Fakulteta za strojništvo",
+                        "racunalnik": "IBM 1130 ",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4983126,46.0455018]},
+                    "properties":{
+                        "firma": "FS - Fakulteta za strojništvo",
+                        "racunalnik": "IBM System 7 ",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4983126,46.0455018]},
+                    "properties":{
+                        "firma": "FS - Fakulteta za strojništvo",
+                        "racunalnik": "ARITMA Meda T-41 ",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1749525,45.8140548]},
+                    "properties":{
+                        "firma": "Labod",
+                        "racunalnik": "NCR 446",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1749525,45.8140548]},
+                    "properties":{
+                        "firma": "Labod",
+                        "racunalnik": "NCR 446",
+                        "leto": 1973
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.9426585,46.317453]},
+                    "properties":{
+                        "firma": "GLIN - Gozdarstvo in lesna industrija Nazarje",
+                        "racunalnik": "neznan",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Intertrade Računski center",
+                        "racunalnik": "IBM 370/115",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2679049,46.2340168]},
+                    "properties":{
+                        "firma": "Kovinotehna",
+                        "racunalnik": "IBM 370/115",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4846162,46.0753864]},
+                    "properties":{
+                        "firma": "Viator",
+                        "racunalnik": "IBM 370/135",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.647846,46.5578772]},
+                    "properties":{
+                        "firma": "DEM - Dravske elektrarne Maribor",
+                        "racunalnik": "IBM 370/135",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5081806,46.0550393]},
+                    "properties":{
+                        "firma": "RZS Ljubljana - Regionalna zdravstvena skupnost",
+                        "racunalnik": "IBM 370/138",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1170885,46.3608417]},
+                    "properties":{
+                        "firma": "REK - Rudarsko elektroenergetski kombinat",
+                        "racunalnik": "IBM 3/10",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4935306,46.1273295]},
+                    "properties":{
+                        "firma": "Rašica",
+                        "racunalnik": "SPERRY Rand UNIVAC 9480",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6553301,46.5605439]},
+                    "properties":{
+                        "firma": "Jeklotehna",
+                        "racunalnik": "FUJITSU Facom 230/15",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5140192,46.0603966]},
+                    "properties":{
+                        "firma": "Kemijski inštitut",
+                        "racunalnik": "DEC PDP 8",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5053122,46.0774099]},
+                    "properties":{
+                        "firma": "Ljubljanske mlekarne",
+                        "racunalnik": "DEC PDP 11/40",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.0935434,46.1293132]},
+                    "properties":{
+                        "firma": "TKI - Tovarna kemičnih izdelkov",
+                        "racunalnik": "HONEYWELL neznan ",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4128839,46.1384545]},
+                    "properties":{
+                        "firma": "Color",
+                        "racunalnik": "NCR 399",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.6212279,46.0576448]},
+                    "properties":{
+                        "firma": "Salonit",
+                        "racunalnik": "IBM neznan",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.521788,46.0526775]},
+                    "properties":{
+                        "firma": "Ginekološka klinika",
+                        "racunalnik": "neznan ",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3498569,46.2509319]},
+                    "properties":{
+                        "firma": "VŠOD - Visoka šola za organizacijo dela",
+                        "racunalnik": "neznan",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.568656,45.5261034]},
+                    "properties":{
+                        "firma": "Splošna plovba",
+                        "racunalnik": "NCR ",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.6069557,46.2178467]},
+                    "properties":{
+                        "firma": "Svilanit",
+                        "racunalnik": "neznan",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.3189135,45.6440284]},
+                    "properties":{
+                        "firma": "Komet",
+                        "racunalnik": "neznan",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1707755,45.8005606]},
+                    "properties":{
+                        "firma": "DBH - Dolenjska banka in hranilnica",
+                        "racunalnik": "neznan",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.6494355,45.5324504]},
+                    "properties":{
+                        "firma": "SGP Stavbenik - Splošno gradbeno podjetje",
+                        "racunalnik": "neznan",
+                        "leto": 1974
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.7301877,45.548059]},
+                    "properties":{
+                        "firma": "Luka Koper",
+                        "racunalnik": "IBM 370/115",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2677063,46.2397495]},
+                    "properties":{
+                        "firma": "Razvojni center Celje",
+                        "racunalnik": "SPERRY Rand UNIVAC 90/30",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5023955,46.0524794]},
+                    "properties":{
+                        "firma": "Geodetski zavod SRS",
+                        "racunalnik": "DEC PDP 11/45",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6642362,46.5569138]},
+                    "properties":{
+                        "firma": "MTT - Mariborska tekstilna tovarna",
+                        "racunalnik": "NCR 399",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6642362,46.5569138]},
+                    "properties":{
+                        "firma": "MTT - Mariborska tekstilna tovarna",
+                        "racunalnik": "NCR 399",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.093367,46.3634233]},
+                    "properties":{
+                        "firma": "Gorenje",
+                        "racunalnik": "neznan",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.093367,46.3634233]},
+                    "properties":{
+                        "firma": "Gorenje",
+                        "racunalnik": "neznan",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.5983111,46.5616099]},
+                    "properties":{
+                        "firma": "Marles",
+                        "racunalnik": "neznan",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.3045679,46.0070317]},
+                    "properties":{
+                        "firma": "Jutranjka",
+                        "racunalnik": "neznan",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5238984,46.1000237]},
+                    "properties":{
+                        "firma": "Energoinvest",
+                        "racunalnik": "BURROUGHS L5112",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5064236,46.0498604]},
+                    "properties":{
+                        "firma": "Dom",
+                        "racunalnik": "neznan",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1669175,45.8044881]},
+                    "properties":{
+                        "firma": "Novoles",
+                        "racunalnik": "neznan",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6522753,46.5619028]},
+                    "properties":{
+                        "firma": "VEKŠ - Visoka ekonomska komercialna šola",
+                        "racunalnik": "UNIVAC Uniscope 100",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6522753,46.5619028]},
+                    "properties":{
+                        "firma": "VEKŠ - Visoka ekonomska komercialna šola",
+                        "racunalnik": "UNIVAC Uniscope 100",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6522753,46.5619028]},
+                    "properties":{
+                        "firma": "VEKŠ - Visoka ekonomska komercialna šola",
+                        "racunalnik": "UNIVAC Uniscope 100",
+                        "leto": 1975
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.494196,46.043579]},
+                    "properties":{
+                        "firma": "Zavod za avtomatsko obdelavo podatkov Trnovo",
+                        "racunalnik": "IBM neznan",
+                        "leto": 1976
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4610995,46.1187132]},
+                    "properties":{
+                        "firma": "RSNZ - Republiški sekretariat za notranje zadeve",
+                        "racunalnik": "IBM 370/145",
+                        "leto": 1976
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5133402,46.0544101]},
+                    "properties":{
+                        "firma": "Iskra Commerce",
+                        "racunalnik": "IBM 370/135",
+                        "leto": 1976
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.1750681,46.2261866]},
+                    "properties":{
+                        "firma": "Alples",
+                        "racunalnik": "IBM 370/115",
+                        "leto": 1976
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1582541,45.8103221]},
+                    "properties":{
+                        "firma": "Pionir",
+                        "racunalnik": "IBM 370/115",
+                        "leto": 1976
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2657228,46.2301862]},
+                    "properties":{
+                        "firma": "Računalniški center Dobrina",
+                        "racunalnik": "IBM 370/115",
+                        "leto": 1976
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.7977529,46.3957894]},
+                    "properties":{
+                        "firma": "UNIAL",
+                        "racunalnik": "IBM 370/115",
+                        "leto": 1976
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2640051,46.2314714]},
+                    "properties":{
+                        "firma": "Hmezad",
+                        "racunalnik": "IBM 360/20 ",
+                        "leto": 1976
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4927077,46.0419366]},
+                    "properties":{
+                        "firma": "RCU - Računalniški center Univerze v Ljubljani",
+                        "racunalnik": "DEC PDP 11/40",
+                        "leto": 1976
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Gospodarska zbornica SRS",
+                        "racunalnik": "PHILIPS P352",
+                        "leto": 1976
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5229455,46.0543105]},
+                    "properties":{
+                        "firma": "Gradis",
+                        "racunalnik": "FUJITSU Facom 230/38",
+                        "leto": 1976
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2759398,46.2354973]},
+                    "properties":{
+                        "firma": "Cinkarna Celje",
+                        "racunalnik": "FUJITSU Facom 230/15",
+                        "leto": 1976
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4904028,46.042056]},
+                    "properties":{
+                        "firma": "RRC - Republiški računski center",
+                        "racunalnik": "CDC Cyber 172",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.3037861,46.0084166]},
+                    "properties":{
+                        "firma": "Lisca",
+                        "racunalnik": "IBM 370/138",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5096974,46.0570493]},
+                    "properties":{
+                        "firma": "SPIZ - Skupnost za pokojninsko in invalidsko zavarovanje",
+                        "racunalnik": "IBM 370/138",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.6542913,45.9547106]},
+                    "properties":{
+                        "firma": "SGP Grosuplje - Splošno gradbeno podjetje",
+                        "racunalnik": "PHILIPS neznan",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.6542913,45.9547106]},
+                    "properties":{
+                        "firma": "SGP Grosuplje - Splošno gradbeno podjetje",
+                        "racunalnik": "IBM 370/115",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6498987,46.5594496]},
+                    "properties":{
+                        "firma": "KBM - Kreditna banka Maribor",
+                        "racunalnik": "IBM 370/115",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.949648,46.5442574]},
+                    "properties":{
+                        "firma": "Železarna Ravne",
+                        "racunalnik": "IBM System 7 ",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6522753,46.5619028]},
+                    "properties":{
+                        "firma": "VEKŠ - Visoka ekonomska komercialna šola",
+                        "racunalnik": "SPERRY Rand UNIVAC 90/30",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4876334,46.0428394]},
+                    "properties":{
+                        "firma": "IJS - Inštitut Jožef Stefan",
+                        "racunalnik": "DEC PDP 11/10",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4876334,46.0428394]},
+                    "properties":{
+                        "firma": "IJS - Inštitut Jožef Stefan",
+                        "racunalnik": "DEC PDP 11/34",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4991959,46.0466004]},
+                    "properties":{
+                        "firma": "Mercator",
+                        "racunalnik": "DEC PDP 11/70",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.0794419,45.781858]},
+                    "properties":{
+                        "firma": "Gorjanci",
+                        "racunalnik": "Robotron Daro 1840",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.174975,45.7980765]},
+                    "properties":{
+                        "firma": "GG Novo mesto - Gozdno gospodarstvo",
+                        "racunalnik": "Robotron Daro 1840",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1749525,45.8140548]},
+                    "properties":{
+                        "firma": "Labod",
+                        "racunalnik": "Robotron Daro 1840",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4876334,46.0428394]},
+                    "properties":{
+                        "firma": "IJS - Inštitut Jožef Stefan",
+                        "racunalnik": "Vita",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3520714,46.2242202]},
+                    "properties":{
+                        "firma": "Iskra Računalniki",
+                        "racunalnik": "Iskradata 1680 ",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5212613,46.0649452]},
+                    "properties":{
+                        "firma": "Elektrotehna Delta",
+                        "racunalnik": "Delta 340 ",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3001157,46.3589913]},
+                    "properties":{
+                        "firma": "Peko",
+                        "racunalnik": "neznan",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.1760009,46.3435752]},
+                    "properties":{
+                        "firma": "Almira",
+                        "racunalnik": "neznan",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.8212591,46.0590094]},
+                    "properties":{
+                        "firma": "Predilnica Litija",
+                        "racunalnik": "neznan",
+                        "leto": 1977
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.411347,46.1413926]},
+                    "properties":{
+                        "firma": "Donit",
+                        "racunalnik": "IBM 370/135",
+                        "leto": 1978
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5004619,46.0531936]},
+                    "properties":{
+                        "firma": "SDK centrala Ljubljana - Služba družbenega knjigovodstva",
+                        "racunalnik": "IBM 370/138",
+                        "leto": 1978
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1710089,45.8010824]},
+                    "properties":{
+                        "firma": "IMV - Industrija motornih vozil",
+                        "racunalnik": "IBM 370/138",
+                        "leto": 1978
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3058337,46.1671294]},
+                    "properties":{
+                        "firma": "Alpetour",
+                        "racunalnik": "IBM 370/?",
+                        "leto": 1978
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.3211166,46.2202438]},
+                    "properties":{
+                        "firma": "Železarna Štore",
+                        "racunalnik": "IBM 360/25 ",
+                        "leto": 1978
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5041666,46.0559004]},
+                    "properties":{
+                        "firma": "Staninvest",
+                        "racunalnik": "SPERRY Rand UNIVAC 90/30",
+                        "leto": 1978
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1669175,45.8044881]},
+                    "properties":{
+                        "firma": "Novoles",
+                        "racunalnik": "FUJITSU Facom 230/38",
+                        "leto": 1978
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5043856,46.052228]},
+                    "properties":{
+                        "firma": "Elektrotehna",
+                        "racunalnik": "Delta 340",
+                        "leto": 1978
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3520714,46.2242202]},
+                    "properties":{
+                        "firma": "Iskra Računalniki",
+                        "racunalnik": "Iskradata C-18 ",
+                        "leto": 1978
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5212613,46.0649452]},
+                    "properties":{
+                        "firma": "Elektrotehna Delta",
+                        "racunalnik": "Delta 700 ",
+                        "leto": 1978
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.0747865,46.5298865]},
+                    "properties":{
+                        "firma": "Kopa",
+                        "racunalnik": "Kopa 700 ",
+                        "leto": 1978
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Litostroj",
+                        "racunalnik": "neznan",
+                        "leto": 1978
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5112638,46.0557395]},
+                    "properties":{
+                        "firma": "Hidrometeorološki zavod SRS",
+                        "racunalnik": "neznan",
+                        "leto": 1978
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4610995,46.1187132]},
+                    "properties":{
+                        "firma": "RSNZ - Republiški sekretariat za notranje zadeve",
+                        "racunalnik": "IBM 3031",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2677063,46.2397495]},
+                    "properties":{
+                        "firma": "Razvojni center Celje",
+                        "racunalnik": "IBM 370/135",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5080648,46.0560189]},
+                    "properties":{
+                        "firma": "Prometni inštitut",
+                        "racunalnik": "IBM 370/138",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5150708,46.0653571]},
+                    "properties":{
+                        "firma": "SDK Maribor - Služba družbenega knjigovodstva",
+                        "racunalnik": "IBM 370/115",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6642362,46.5569138]},
+                    "properties":{
+                        "firma": "MTT - Mariborska tekstilna tovarna",
+                        "racunalnik": "IBM 370/115",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5212613,46.0649452]},
+                    "properties":{
+                        "firma": "Elektrotehna Delta",
+                        "racunalnik": "Delta 644 ",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5212613,46.0649452]},
+                    "properties":{
+                        "firma": "Elektrotehna Delta",
+                        "racunalnik": "Delta 4780 ",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.0747865,46.5298865]},
+                    "properties":{
+                        "firma": "Kopa",
+                        "racunalnik": "Kopa 1000 ",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5080648,46.0560189]},
+                    "properties":{
+                        "firma": "Tekstil",
+                        "racunalnik": "Delta 700",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5067469,46.0509529]},
+                    "properties":{
+                        "firma": "Skupščina mestne občine Ljubljana",
+                        "racunalnik": "Delta 700/80",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6392718,46.5594876]},
+                    "properties":{
+                        "firma": "VTŠ - Višja tehniška šola",
+                        "racunalnik": "Delta 340/40",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6392718,46.5594876]},
+                    "properties":{
+                        "firma": "VTŠ - Višja tehniška šola",
+                        "racunalnik": "Iskradata C 18-20",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.1188023,46.3682849]},
+                    "properties":{
+                        "firma": "LIP - Lesna industrija Bled",
+                        "racunalnik": "Iskradata C 18-20",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.2640051,46.2314714]},
+                    "properties":{
+                        "firma": "Hmezad",
+                        "racunalnik": "Iskradata C 18-20",
+                        "leto": 1979
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5050698,46.0538826]},
+                    "properties":{
+                        "firma": "Metalka",
+                        "racunalnik": "CDC Cyber 170",
+                        "leto": 1980
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5078706,46.0446059]},
+                    "properties":{
+                        "firma": "Zavod za statistiko SRS",
+                        "racunalnik": "FUJITSU Facom M-180 II AD",
+                        "leto": 1980
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5081806,46.0550393]},
+                    "properties":{
+                        "firma": "RZS Ljubljana - Regionalna zdravstvena skupnost",
+                        "racunalnik": "IBM 3031",
+                        "leto": 1980
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.0648538,46.4309775]},
+                    "properties":{
+                        "firma": "Železarna Jesenice",
+                        "racunalnik": "IBM 3031",
+                        "leto": 1980
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.647846,46.5578772]},
+                    "properties":{
+                        "firma": "EGM - Elektrogospodarstvo Maribor",
+                        "racunalnik": "IBM 4341",
+                        "leto": 1980
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3520714,46.2242202]},
+                    "properties":{
+                        "firma": "Iskra Računalniki",
+                        "racunalnik": "Iskradata 80 ",
+                        "leto": 1980
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.0747865,46.5298865]},
+                    "properties":{
+                        "firma": "Kopa",
+                        "racunalnik": "Kopa 1500 ",
+                        "leto": 1980
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.2418616,45.570099]},
+                    "properties":{
+                        "firma": "Lesonit",
+                        "racunalnik": "Delta 700/80",
+                        "leto": 1980
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6609093,46.5355288]},
+                    "properties":{
+                        "firma": "TAM - Tovarna avtomobilov Maribor",
+                        "racunalnik": "Delta 340/80",
+                        "leto": 1980
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.8813149,46.4184791]},
+                    "properties":{
+                        "firma": "Agis",
+                        "racunalnik": "Delta 340/80",
+                        "leto": 1980
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4927077,46.0419366]},
+                    "properties":{
+                        "firma": "RCU - Računalniški center Univerze v Ljubljani",
+                        "racunalnik": "DEC System 10",
+                        "leto": 1981
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6433073,46.5591885]},
+                    "properties":{
+                        "firma": "RCUM - Računalniški center Univerze v Mariboru",
+                        "racunalnik": "CDC Cyber 170/720",
+                        "leto": 1981
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [16.1610293,46.6581381]},
+                    "properties":{
+                        "firma": "Radenska",
+                        "racunalnik": "IBM 4341",
+                        "leto": 1981
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.3211166,46.2202438]},
+                    "properties":{
+                        "firma": "Železarna Štore",
+                        "racunalnik": "IBM 370/135 ",
+                        "leto": 1981
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.3211166,46.2202438]},
+                    "properties":{
+                        "firma": "Železarna Štore",
+                        "racunalnik": "Apple II",
+                        "leto": 1981
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3520714,46.2242202]},
+                    "properties":{
+                        "firma": "Iskra Računalniki",
+                        "racunalnik": "Iskradata C 19",
+                        "leto": 1981
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5212613,46.0649452]},
+                    "properties":{
+                        "firma": "Elektrotehna Delta",
+                        "racunalnik": "Delta 323/M ",
+                        "leto": 1981
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5212613,46.0649452]},
+                    "properties":{
+                        "firma": "Elektrotehna Delta",
+                        "racunalnik": "Delta 800 ",
+                        "leto": 1981
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.2,45.9]},
+                    "properties":{
+                        "firma": "KLI Logatec - Kombinat lesno predelovalne industrije",
+                        "racunalnik": "Delta 800/80",
+                        "leto": 1981
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.8696884,46.4199535]},
+                    "properties":{
+                        "firma": "Perutnina",
+                        "racunalnik": "Delta 4780",
+                        "leto": 1981
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5161034,46.0603184]},
+                    "properties":{
+                        "firma": "IB - Industrijski biro",
+                        "racunalnik": "Apple II",
+                        "leto": 1982
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5212613,46.0649452]},
+                    "properties":{
+                        "firma": "Elektrotehna Delta",
+                        "racunalnik": "Delta 4850 ",
+                        "leto": 1982
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.3520714,46.2242202]},
+                    "properties":{
+                        "firma": "Iskra Računalniki",
+                        "racunalnik": "Iskradata 100 ",
+                        "leto": 1982
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.093367,46.3634233]},
+                    "properties":{
+                        "firma": "Gorenje",
+                        "racunalnik": "Paka 2000 ",
+                        "leto": 1982
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.0747865,46.5298865]},
+                    "properties":{
+                        "firma": "Kopa",
+                        "racunalnik": "Kopa 2500 ",
+                        "leto": 1982
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [16.1610293,46.6581381]},
+                    "properties":{
+                        "firma": "Mura",
+                        "racunalnik": "IBM 4341",
+                        "leto": 1982
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1516614,45.8112211]},
+                    "properties":{
+                        "firma": "Novoteks",
+                        "racunalnik": "Delta 644/160",
+                        "leto": 1982
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.3214616,45.6446616]},
+                    "properties":{
+                        "firma": "Beti",
+                        "racunalnik": "Delta 644/160",
+                        "leto": 1982
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.079525,46.5074485]},
+                    "properties":{
+                        "firma": "Lesna",
+                        "racunalnik": "Delta 4850",
+                        "leto": 1982
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5040802,46.0558232]},
+                    "properties":{
+                        "firma": "Mikroračunalniški klub Abacus",
+                        "racunalnik": "Abacus",
+                        "leto": 1983
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5034441,46.0629713]},
+                    "properties":{
+                        "firma": "Iskra Delta",
+                        "racunalnik": "Partner ",
+                        "leto": 1983
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.093367,46.3634233]},
+                    "properties":{
+                        "firma": "Gorenje",
+                        "racunalnik": "RGB",
+                        "leto": 1983
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4876334,46.0428394]},
+                    "properties":{
+                        "firma": "IJS - Inštitut Jožef Stefan",
+                        "racunalnik": "Delta 4850",
+                        "leto": 1983
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5334322,46.0559298]},
+                    "properties":{
+                        "firma": "Upravna enota občine Moste-Polje",
+                        "racunalnik": "Delta 340/5",
+                        "leto": 1983
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5067469,46.0509529]},
+                    "properties":{
+                        "firma": "Upravna enota mestne občine Ljubljana",
+                        "racunalnik": "Delta 700",
+                        "leto": 1983
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6609093,46.5355288]},
+                    "properties":{
+                        "firma": "TAM - Tovarna avtomobilov Maribor",
+                        "racunalnik": "Delta 340/5",
+                        "leto": 1984
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6609093,46.5355288]},
+                    "properties":{
+                        "firma": "TAM - Tovarna avtomobilov Maribor",
+                        "racunalnik": "Delta 4780/500",
+                        "leto": 1984
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.949648,46.5442574]},
+                    "properties":{
+                        "firma": "Železarna Ravne",
+                        "racunalnik": "Delta 4850",
+                        "leto": 1984
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.6433073,46.5591885]},
+                    "properties":{
+                        "firma": "RCUM - Računalniški center Univerze v Mariboru",
+                        "racunalnik": "Delta 4850",
+                        "leto": 1984
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5034441,46.0629713]},
+                    "properties":{
+                        "firma": "Iskra Delta",
+                        "racunalnik": "Petra",
+                        "leto": 1984
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4876334,46.0428394]},
+                    "properties":{
+                        "firma": "IJS - Inštitut Jožef Stefan",
+                        "racunalnik": "PMP-11 ",
+                        "leto": 1984
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.093367,46.3634233]},
+                    "properties":{
+                        "firma": "Gorenje",
+                        "racunalnik": "Dialog ",
+                        "leto": 1984
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.093367,46.3634233]},
+                    "properties":{
+                        "firma": "Gorenje",
+                        "racunalnik": "Paka 3000 ",
+                        "leto": 1984
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.1636345,46.2227565]},
+                    "properties":{
+                        "firma": "Iskra Široka potrošnja",
+                        "racunalnik": "HR-84 ",
+                        "leto": 1984
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5023578,46.0533967]},
+                    "properties":{
+                        "firma": "Slovenijales",
+                        "racunalnik": "ColorGraf ",
+                        "leto": 1984
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5034441,46.0629713]},
+                    "properties":{
+                        "firma": "Iskra Delta",
+                        "racunalnik": "Partner 2000",
+                        "leto": 1984
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5034441,46.0629713]},
+                    "properties":{
+                        "firma": "Iskra Delta",
+                        "racunalnik": "Delta 400/B/M",
+                        "leto": 1984
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5034441,46.0629713]},
+                    "properties":{
+                        "firma": "Iskra Delta",
+                        "racunalnik": "Triglav ",
+                        "leto": 1985
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [13.6410822,45.9301079]},
+                    "properties":{
+                        "firma": "Bolnišnica Franca Derganca",
+                        "racunalnik": "Delta 4850",
+                        "leto": 1985
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5002769,46.0496737]},
+                    "properties":{
+                        "firma": "Ljubljanska banka",
+                        "racunalnik": "Delta 4850",
+                        "leto": 1985
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.3214616,45.6446616]},
+                    "properties":{
+                        "firma": "Beti",
+                        "racunalnik": "Delta 4850",
+                        "leto": 1985
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.1710089,45.8010824]},
+                    "properties":{
+                        "firma": "IMV - Industrija motornih vozil",
+                        "racunalnik": "Delta 4850",
+                        "leto": 1985
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4983272,46.0486814]},
+                    "properties":{
+                        "firma": "Zavod SRS za družbeno planiranje",
+                        "racunalnik": "Delta 4850",
+                        "leto": 1985
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5034441,46.0629713]},
+                    "properties":{
+                        "firma": "Iskra Delta",
+                        "racunalnik": "Triglav 386",
+                        "leto": 1985
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4876334,46.0428394]},
+                    "properties":{
+                        "firma": "IJS - Inštitut Jožef Stefan",
+                        "racunalnik": "PMT-100 ",
+                        "leto": 1986
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [15.093367,46.3634233]},
+                    "properties":{
+                        "firma": "Gorenje",
+                        "racunalnik": "Paka 5000",
+                        "leto": 1986
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5034441,46.0629713]},
+                    "properties":{
+                        "firma": "Iskra Delta",
+                        "racunalnik": "Adria 1, 2, 3",
+                        "leto": 1986
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4941406,46.0456387]},
+                    "properties":{
+                        "firma": "ZOTKS - Zveza organizacij za tehnično kulturo Slovenije",
+                        "racunalnik": "Sokol 1, 2",
+                        "leto": 1986
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4941406,46.0456387]},
+                    "properties":{
+                        "firma": "ZOTKS - Zveza organizacij za tehnično kulturo Slovenije",
+                        "racunalnik": "Sokol T",
+                        "leto": 1986
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Mikrohit",
+                        "racunalnik": "Mikrohit PC",
+                        "leto": 1986
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5057515,46.0569465]},
+                    "properties":{
+                        "firma": "Konim",
+                        "racunalnik": "PC YU",
+                        "leto": 1986
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5034441,46.0629713]},
+                    "properties":{
+                        "firma": "Iskra Delta",
+                        "racunalnik": "Parsys",
+                        "leto": 1987
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5034441,46.0629713]},
+                    "properties":{
+                        "firma": "Iskra Delta",
+                        "racunalnik": "Delta 8000",
+                        "leto": 1987
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5034441,46.0629713]},
+                    "properties":{
+                        "firma": "Iskra Delta",
+                        "racunalnik": "Gemini",
+                        "leto": 1987
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.4941406,46.0456387]},
+                    "properties":{
+                        "firma": "ZOTKS - Zveza organizacij za tehnično kulturo Slovenije",
+                        "racunalnik": "Gepard",
+                        "leto": 1987
+                }
+        },
+        
+        
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5034441,46.0629713]},
+                    "properties":{
+                        "firma": "Iskra Delta",
+                        "racunalnik": "Partner AT",
+                        "leto": 1988
+                }
+        },
+        
+        
+        
+        {
+            "type": "Feature",
+            "geometry": 
+                {
+                    "type": "Point", 
+                    "coordinates": [14.5034441,46.0629713]},
+                    "properties":{
+                        "firma": "Iskra Delta",
+                        "racunalnik": "Triglav Piccolo",
+                        "leto": 1988
+                }
+        }
+        
+        
+]}
