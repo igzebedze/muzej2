@@ -3,7 +3,7 @@
 
 {% block menu %}
 <ul>
-    <li><a href="/evidenca/">Seznam</a></li>
+    <li class="selected"><a href="/evidenca/">Seznam</a></li>
     <li><a href="/evidenca/zemljevid/">Zemljevid</a></li>
     <li><a href="/evidenca/oprojektu/">O projektu</a></li>
 </ul>
@@ -17,7 +17,7 @@
             {% for racunalnik in object_list %}
             {% ifnotequal racunalnik.tip 't' %}
             <li>
-                <a class="list-item" href="#C{{ racunalnik.pk }}" data-pk="C{{ racunalnik.pk }}">
+                <a class="list-item F{{ racunalnik.organizacija.pk }}" href="#C{{ racunalnik.pk }}" data-pk="C{{ racunalnik.pk }}">
                     <span class="index">{{ forloop.counter|stringformat:"03d" }}</span>
                     <span class="year">{{ racunalnik.nakup.year }}</span>
                     <span class="name">
