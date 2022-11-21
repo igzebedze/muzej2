@@ -13,6 +13,13 @@
 </head>
 
 <body>
+    <div id="menu">
+        <a id="logo" href="https://www.racunalniski-muzej.si" target="_blank">
+            <img height="33" width="33" src="https://www.racunalniski-muzej.si/wp-content/uploads/2019/02/2RM_logo_white_vertical.png" alt="muzej logo hexinvader"/>
+        </a>
+        {% block menu %}
+        {% endblock%}
+    </div>
     {% block content %}
     {% endblock %}
 </body>
