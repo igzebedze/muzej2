@@ -52,6 +52,7 @@ urlpatterns = [
     path('evidenca/geojson/', RacunalnikiGeoJsonView.as_view()),
     path('evidenca/<int:pk>/', RacunalnikDetailView.as_view()),
     path('evidenca/zemljevid/', TemplateView.as_view(template_name='evidenca/zemljevid.html')), 
+    path('evidenca/oprojektu/', TemplateView.as_view(template_name='evidenca/oprojektu.html')), 
     path('evidenca/organizacije/', OrganizacijeListView.as_view()),
 #	path(r'^wiki/', include('wiki.urls')),
 #	path(r'^autocomplete/', include('autocomplete_light.urls')),
