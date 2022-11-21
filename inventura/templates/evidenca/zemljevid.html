@@ -32,6 +32,12 @@
               style: 'https://api.maptiler.com/maps/56ec32c0-2e07-4dc9-93f6-159032e89cc6/style.json?key=ct9mAzrnD0WFczmLJ24B', // style URL
               center: [14.93719, 46.22656], // starting position [lng, lat]
               zoom: 8, // starting zoom/
+              minZoom: 5,
+                maxZoom: 18,
+                maxBounds: [
+                    [12, 44], // Southwest LngLat
+                    [18, 48]  // Northeast LngLat
+                ],
             });
 
             function filterBy(year) {
