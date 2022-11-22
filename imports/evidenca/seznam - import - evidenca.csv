@@ -33,7 +33,7 @@ C,,1,1967,CER,CER 200,,e,o,L,Planika,Kranj,,,67/05
 C,3,1,1968,GE,GE BULL Gamma 10 ,(dodaten nakup),e,P,S,ECM - Ekonomski center Maribor,Maribor,"Metalna, Tovarna dušika Ruše, Marles",,68/21
 C,,1,1968,CDC,CDC 2100 ,"(3100 z omejitvijo, začasen)",E,o,S,Iskra CAOP - Center za avtomatsko obdelavo podatkov,Ljubljana,"Izvršni svet SRS, IJS - Inštitut Jožef Stefan, Univerza v Ljubljani","Delo, IMP - Industrijsko montažno podjetje","67/03, 67/04, 67/16, 67/17, 68/01, 68/02, 68/02a, 69/17"
 D,,1,1968,IBM,IBM 360/30,,E,o,L,DES - Distribucija energije Slovenija,Ljubljana,,"IJS - Inštitut Jožef Stefan, Kemijski inštitut, Univerza v Ljubljani, RSNZ - Republiški sekretariat za notranje zadeve","66/08, 67/08, 68/07, 68/11, 69/29, 71/08"
-D,,1,1968,IBM,IBM 360/20,lokacija Streliška,e,P,S,Mehanografski center,Ljubljana,"Rog, Dom, Lesnina, Slovenijales, Tops, Saturnus, Kartonažna tovarna, ZZV Ljubljana - Zavod za zdravstveno varstvo",,"66/08, 66/09, 69/28, 69/29, 68/09, 71/08, RII/01"
+D,,1,1968,IBM,IBM 360/20,lokacija Streliška,e,P,S,Mehanografski center Streliška,Ljubljana,"Rog, Dom, Lesnina, Slovenijales, Tops, Saturnus, Kartonažna tovarna, ZZV Ljubljana - Zavod za zdravstveno varstvo",,"66/08, 66/09, 69/28, 69/29, 68/09, 71/08, RII/01"
 D,2,1,1968,IBM,IBM 360/20,,e,o,L,Litostroj,Ljubljana,,,"66/08. 76/02. RII/01, 69/29, 71/08"
 D,,1,1968,IBM,IBM 360/30,,e,o,L,Emona,Ljubljana,,"Prehrana, Sadje Zelenjava","67/06, 69/27, 69/29, 71/08"
 D,,1,1968,IBM,IBM 360/25,,e,o,L,Gorenje,Velenje,,,"67/06, 68/08, 71/08, 71/19, 72/13"
@@ -149,7 +149,7 @@ G,3,1,1973,ARITMA,ARITMA Meda T-41 ,(analogni),ae,R,L,FS - Fakulteta za strojni�
 E,,2,1973,NCR,NCR 446,,me,o,L,Labod,Novo Mesto,,,"76/04, 77/04"
 E,3,1,1974,IBM,IBM 370/115,,e,o,L,Intertrade Računski center,Ljubljana,,,77/29
 E,2,1,1974,IBM,IBM 370/115,,e,o,N,Kovinotehna,Celje,,,"74/37, 74/39, 77/53"
-E,2,1,1974,IBM,IBM 370/135,"sodeluje že 13 ljubljanskih podjetij, Tobačna",e,o,S,Mehanografski center,Ljubljana,"Kompas, Termika, Tobačna tovarna, Rog, Pletenina, Petrol, Lesnina, Intereuropa, Kartonažna tovarna, ZZV Ljubljana - Zavod za zdravstveno varstvo",,"74/46, 74/53"
+E,2,1,1974,IBM,IBM 370/135,"sodeluje že 13 ljubljanskih podjetij, Tobačna",e,o,S,Mehanografski center Tobačna,Ljubljana,"Kompas, Termika, Tobačna tovarna, Rog, Pletenina, Petrol, Lesnina, Intereuropa, Kartonažna tovarna, ZZV Ljubljana - Zavod za zdravstveno varstvo",,"74/46, 74/53"
 E,,1,1974,IBM,IBM 370/135,,e,o,L,Viator,Ljubljana,,,74/57
 E,,1,1974,IBM,IBM 370/135,,e,o,L,DEM - Dravske elektrarne Maribor,Maribor,,"TAM - Tovarna avtomobilov Maribor, KBM - Kreditna banka Maribor, Splošna bolnišnica Maribor, Jeklotehna","PKZ/01, 77/20, 84/39, 84/130"
 E,,1,1974,IBM,IBM 370/138,,e,Z,S,RZS Ljubljana - Regionalna zdravstvena skupnost,Ljubljana,SPIZ - Skupnost za pokojninsko in invalidsko zavarovanje,,"77/07, SDMI/03"
