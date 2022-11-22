@@ -38,6 +38,10 @@ body,
   overflow: hidden;
 }
 
+.app {
+  height: calc(100% - 64px);
+}
+
 body {
   font-family: monospace;
   background-color: var(--racmuz-gray-1);
@@ -79,7 +83,7 @@ a {
   margin: 0;
 }
 
-.list ul li a {
+.list ul li > span {
   position: relative;
   display: flex;
   align-items: center;
@@ -87,17 +91,18 @@ a {
   text-decoration: none;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   color: var(--racmuz-white);
+  cursor: pointer;
 }
 
-.list ul li a:hover {
+.list ul li > span:hover {
   background-color: var(--racmuz-gray-2);
 }
 
-.list ul li a.selected {
+.list ul li > span.selected {
   background-color: var(--racmuz-gray-3);
 }
 
-.list ul li a::after {
+.list ul li > span::after {
   position: absolute;
   top: -15px;
   right: 30px;
@@ -111,11 +116,11 @@ a {
   border-left: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-.list ul li a:hover::after {
+.list ul li > span:hover::after {
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-.list ul li a.selected::after {
+.list ul li > span.selected::after {
   border-color: var(--racmuz-white);
 }
 
@@ -174,6 +179,7 @@ a {
   font-size: 16px;
   overflow-x: hidden;
   overflow-y: auto;
+  line-height: 1.5;
 }
 
 .computer.show {
@@ -249,7 +255,7 @@ button.back {
     font-size: 24px;
   }
 
-  .list ul li a {
+  .list ul li > span {
     padding-left: 60px;
   }
 
@@ -280,7 +286,7 @@ button.back {
     max-width: calc(100vw - 115px);
   }
 
-  .list ul li a::after {
+  .list ul li > span::after {
     right: 15px;
     top: -18px;
   }
@@ -322,6 +328,9 @@ button.back {
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
+  border: 0;
+  margin: 0;
+  z-index: 10000;
 }
 
 .slider:hover {
@@ -344,40 +353,60 @@ button.back {
   cursor: pointer;
 }
 
-#map { 
-  position: absolute; 
-  top: 100px; 
-  bottom: 50px; 
-  width: 100%; 
-} 
+#map {
+  position: absolute;
+  top: 129px;
+  bottom: 0;
+  width: 100%;
+}
 
-#menu #logo { 
-  float: left; 
-  margin-left: 1em;
-  margin-top: 5px;
-  padding-right: 1em;
+#menu {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  line-height: 64px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  justify-content: stretch;
+}
+
+#menu #logo {
+  display: flex;
+  width: 64px;
+  align-items: center;
+  justify-content: center;
 }
 
 #menu ul {
+  display: flex;
+  height: 64px;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 #menu ul li {
-  display: inline;
-  float: left;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 0 10px;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  font-size: 16px;
 }
 
 #menu ul li.selected {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-#menu ul li a:hover {
+#menu ul li > span:hover {
   background-color: rgb(106, 106, 106);
 }
 
+.about {
+  padding: 20px;
+  max-width: 800px;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.5;
+}
