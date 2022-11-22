@@ -31,6 +31,7 @@ class Command(BaseCommand):
 
 				try:
 					org = organizacija.objects.get(ime=ime)
+					#org.naslov=naslov
 					#org.latlong="(%s,%s)" % (lon,lat)
 					#org.save()
 				except:
