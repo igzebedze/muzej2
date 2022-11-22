@@ -23,3 +23,7 @@ class RacunalnikiGeoJsonView(ListView):
     queryset=racunalnik.objects.order_by('nakup')
     template_name='evidenca/racunalniki.geojson'
 
+class RacunalnikiZemljevid(ListView):
+    model=racunalnik
+    queryset=racunalnik.objects.order_by('nakup')
+    template_name='evidenca/zemljevid.html'
