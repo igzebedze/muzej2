@@ -7,7 +7,7 @@ function getSelectedComputerId() {
 }
 
 window.onload = () => {
-  if (window.innerWidth <= 1024) {
+  if (window.innerWidth > 1024) {
     document.querySelector(".details").classList.remove(HIDDEN_CLASSNAME);
   }
 

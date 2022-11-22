@@ -6,6 +6,11 @@ class RacunalnikListView(ListView):
     model=racunalnik
     queryset=racunalnik.objects.order_by('nakup')
 
+class RacunalnikiGeoJsonView(ListView):
+    model=racunalnik
+    queryset=racunalnik.objects.order_by('nakup')
+    template_name='evidenca/racunalniki.geojson'
+
 class RacunalnikDetailView(DetailView):
     model=racunalnik
 
@@ -17,3 +22,4 @@ class RacunalnikiGeoJsonView(ListView):
     model=racunalnik
     queryset=racunalnik.objects.order_by('nakup')
     template_name='evidenca/racunalniki.geojson'
+
