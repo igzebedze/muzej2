@@ -15,11 +15,22 @@ class RacunalnikAdmin(admin.ModelAdmin):
     search_fields = ('opombe', 'tip', 'opis', 'opombe', 'proizvajalec', 'nosilec')
     filter_horizontal = ('organizacija','viri')
 
+class RacunalnikInline(admin.StackedInline):
+    model = models.racunalnik
+    filter_horizontal = ('organizacija','viri')
+
 class OrganizacijaAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'ime', 'naslov', 'podrocje', 'latlong', 'url')
+    list_display = ('pk', 'ime', 'naslov', 'racunalnikov', 'podrocje', 'latlong', 'url')
     #list_editable = ('ime', 'naslov', 'podrocje', 'latlong')
     list_display_links = ('pk',)
     filter_horizontal = ('partner',)
+    search_fields = ('ime', 'naslov', 'povzetek', 'opis', 'podrocje')
+    inlines = [
+        RacunalnikInline,
+    ]
+
+    def racunalnikov(self, obj):
+        return obj.nosilec.count() + obj.clan.count()
 
 class PogovorAdmin(admin.ModelAdmin):
     list_display = ('oseba', 'datum', 'avtor', 'za_objavo', 'zvok', 'slika', 'text')

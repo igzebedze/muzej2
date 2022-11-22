@@ -344,9 +344,40 @@ button.back {
   cursor: pointer;
 }
 
-#map {
-  position: absolute;
-  top: 50px;
-  bottom: 50px;
-  width: 100%;
+#map { 
+  position: absolute; 
+  top: 100px; 
+  bottom: 50px; 
+  width: 100%; 
+} 
+
+#menu #logo { 
+  float: left; 
+  margin-left: 1em;
+  margin-top: 5px;
+  padding-right: 1em;
 }
+
+#menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul li {
+  display: inline;
+  float: left;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+#menu ul li.selected {
+  background-color: black;
+}
+
+#menu ul li a:hover {
+  background-color: rgb(106, 106, 106);
+}
+

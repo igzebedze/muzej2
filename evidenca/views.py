@@ -18,17 +18,8 @@ class OrganizacijeListView(ListView):
     model=organizacija
     queryset=organizacija.objects.order_by('ime')
 
-def stat(request):
-	generacije = []	
-	
-	context = {
-        'objekti': {
-            'viri': vir.objects.count,
-            'racunalniki': racunalnik.objects.count,
-            'organizacije': organizacija.objects.count
-        },
-        'racunalniki': racunalnik.objects,
-        'racunalniki_po_generacijah': generacije
-	}
-	return render(request, 'stat.html', context)
+class RacunalnikiGeoJsonView(ListView):
+    model=racunalnik
+    queryset=racunalnik.objects.order_by('nakup')
+    template_name='evidenca/racunalniki.geojson'
 
