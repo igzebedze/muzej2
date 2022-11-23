@@ -17,7 +17,8 @@
             {% for racunalnik in object_list %}
             {% ifnotequal racunalnik.tip 't' %}
             <li>
-                <a class="list-item F{{ racunalnik.organizacija.pk }}" href="#C{{ racunalnik.pk }}" data-pk="C{{ racunalnik.pk }}">
+                <a class="list-item list-item-{{ racunalnik.pk }}" href="#C{{ racunalnik.pk }}"
+                    data-pk="C{{ racunalnik.pk }}">
                     <span class="index">{{ forloop.counter|stringformat:"03d" }}</span>
                     <span class="year">{{ racunalnik.nakup.year }}</span>
                     <span class="name">
@@ -32,65 +33,7 @@
             {% endfor %}
         </ul>
     </div>
-    <div class="details hide">
-        {% for racunalnik in object_list %}
-        <div id="C{{ racunalnik.pk }}" class="computer">
-            <button class="back">« Nazaj na seznam</button>
-            {% if racunalnik.ime %}<h2>{{ racunalnik.ime }}</h2>{% endif %}
-            <dl>
-                <dt>Nosilec:</dt>
-                <dd><a href="/evidenca/organizacije/#{{ racunalnik.nosilec.pk }}">{{ racunalnik.nosilec }}</a></dd>
-
-                {% if racunalnik.organizacija.count > 0 %}
-                <dt>Uporabniki:</dt>
-                <dd>
-                    {% for o in racunalnik.organizacija.all %}
-                    <a href="/evidenca/organizacije/#{{ o.pk }}">{{ o }}</a>
-                    {% if forloop.last %}{% else %}, {% endif %}
-                    {% endfor %}
-                </dd>
-                {% endif %}
-                <dt>Lokacija:</dt>
-                <dd>{{ racunalnik.kraj }}</dd>
-                <dt>Proizvajalec:</dt>
-                <dd>{{ racunalnik.proizvajalec }}</dd>
-                <dt>Pričetek:</dt>
-                <dd>{{ racunalnik.nakup.year }}</dd>
-                {% if racunalnik.lastnistvo %}
-                    <dt>Status:</dt>
-                    <dd>{{ racunalnik.get_lastnistvo_display }}</dd>
-                {% endif %}
-                {% ifnotequal racunalnik.uporaba 'o' %}
-                <dt>Uporaba:</dt>
-                <dd>{{ racunalnik.get_uporaba_display }}</dd>
-                {% endifnotequal %}
-                {% if racunalnik.generacija %}
-                <dt>Generacija:</dt>
-                <dd>{{ racunalnik.get_generacija_display }}</dd>
-                {% endif %}
-                {% if racunalnik.tip %}
-                <dt>Tip:</dt>
-                <dd>{{ racunalnik.get_tip_display }}</dd>
-                {% endif %}
-                {% if racunalnik.opombe %}
-                <dt>Opombe:</dt>
-                <dd>{{ racunalnik.opombe }}</dd>
-                {% endif %}
-                {% if racunalnik.opis %}
-                <dt>Opis:</dt>
-                <dd>{{ racunalnik.opis }}</dd>
-                {% endif %}
-                <dt>Viri:</dt>
-                <ul>
-                    {% for v in racunalnik.viri.all %}
-                    <li><a target='_blank' href='{{ v.url }}'>{{ v }}</a>
-                        <p>{{ v.vsebina }}</p>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </dl>
-        </div>
-        {% endfor %}
+    <div id="details" class="details hide">
     </div>
 </div>
 {% endblock %}

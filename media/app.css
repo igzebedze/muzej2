@@ -83,7 +83,7 @@ a {
   margin: 0;
 }
 
-.list ul li > span {
+.list ul li a {
   position: relative;
   display: flex;
   align-items: center;
@@ -94,15 +94,15 @@ a {
   cursor: pointer;
 }
 
-.list ul li > span:hover {
+.list ul li a:hover {
   background-color: var(--racmuz-gray-2);
 }
 
-.list ul li > span.selected {
+.list ul li a.selected {
   background-color: var(--racmuz-gray-3);
 }
 
-.list ul li > span::after {
+.list ul li a::after {
   position: absolute;
   top: -15px;
   right: 30px;
@@ -116,15 +116,15 @@ a {
   border-left: 2px solid rgba(0, 0, 0, 0.3);
 }
 
-.list ul li > span:hover::after {
+.list ul li a:hover::after {
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-.list ul li > span.selected::after {
+.list ul li a.selected::after {
   border-color: var(--racmuz-white);
 }
 
-.list-item > span {
+.list-item > * {
   pointer-events: none;
 }
 
@@ -165,6 +165,12 @@ a {
   background: var(--racmuz-gray-3);
 }
 
+.loading {
+  height: 64px;
+  line-height: 64px;
+  padding-left: 10px;
+}
+
 .computer {
   position: absolute;
   top: 0;
@@ -174,7 +180,6 @@ a {
   overflow-x: hidden;
   overflow-y: auto;
   padding: 52px 20px 20px 20px;
-  opacity: 0;
   transition: all 150ms ease-in-out;
   font-size: 16px;
   overflow-x: hidden;
@@ -255,7 +260,7 @@ button.back {
     font-size: 24px;
   }
 
-  .list ul li > span {
+  .list ul li a {
     padding-left: 60px;
   }
 
@@ -286,7 +291,7 @@ button.back {
     max-width: calc(100vw - 115px);
   }
 
-  .list ul li > span::after {
+  .list ul li a::after {
     right: 15px;
     top: -18px;
   }
@@ -385,20 +390,22 @@ button.back {
 }
 
 #menu ul li {
-  padding: 0 10px;
 }
 
 #menu ul li a {
+  display: flex;
   text-decoration: none;
   font-size: 16px;
+  padding: 0 10px;
+  height: 64px;
 }
 
 #menu ul li.selected {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-#menu ul li > span:hover {
-  background-color: rgb(106, 106, 106);
+#menu ul li a:hover {
+  background-color: rgba(106, 106, 106, 0.3);
 }
 
 .about {
