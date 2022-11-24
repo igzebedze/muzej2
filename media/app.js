@@ -50,30 +50,33 @@ window.onload = () => {
 
 function fetchAndRender(id) {
   const target = document.getElementById("details");
-  target.innerHTML = "<div class='loading'>Nalagam podatke...</div>";
+  //target.innerHTML = "<div class='loading'>Nalagam podatke...</div>";
   fetch(`/evidenca/${id}/`)
     .then((response) => {
-      return response.json();
+      return response.text();
     })
     .then((data) => {
-      const { fields } = JSON.parse(data)[0];
-
-      renderDetail(fields);
+//      renderDetail(data);
+      const target = document.getElementById("details");
+      target.innerHTML=data;
     });
+    if (window.innerWidth > 1024) {
+      document.querySelector(".details").classList.remove(HIDDEN_CLASSNAME);
+    }
 }
 
 function renderDetail(fields) {
-  const { ime, year, nosilec } = fields;
+  const { ime, nakup, nosilec } = fields;
   const target = document.getElementById("details");
 
   target.innerHTML = `
     <div class="computer">
       <button class="back">« Nazaj na seznam</button>
       <h2>${ime}</h2>
-      <p>${year}</p>
+      <p>${nakup}</p>
       <dl>
         <dt>Nosilec:</dt>
-        <dd><a href="/evidenca/organizacije/#${nosilec.pk}">{{ racunalnik.nosilec }}</a></dd>
+        <dd><a href="/evidenca/organizacije/#${nosilec.pk}">${nosilec}</a></dd>
         {% if racunalnik.organizacija.count > 0 %}
         <dt>Uporabniki:</dt>
         <dd>
@@ -86,9 +89,9 @@ function renderDetail(fields) {
         <dt>Lokacija:</dt>
         <dd>{{ racunalnik.kraj }}</dd>
         <dt>Proizvajalec:</dt>
-        <dd>{{ racunalnik.proizvajalec }}</dd>
+        <dd>${proizvajalec}</dd>
         <dt>Pričetek:</dt>
-        <dd>{{ racunalnik.nakup.year }}</dd>
+        <dd>${nakup}</dd>
         {% if racunalnik.lastnistvo %}
         <dt>Status:</dt>
         <dd>{{ racunalnik.get_lastnistvo_display }}</dd>
@@ -130,57 +133,3 @@ function renderDetail(fields) {
   }
 }
 
-{
-  /* <dl>
-        <dt>Nosilec:</dt>
-        <dd><a href="/evidenca/organizacije/#${nosilec.pk}">{{ racunalnik.nosilec }}</a></dd>
-
-        {% if racunalnik.organizacija.count > 0 %}
-        <dt>Uporabniki:</dt>
-        <dd>
-            {% for o in racunalnik.organizacija.all %}
-            <a href="/evidenca/organizacije/#{{ o.pk }}">{{ o }}</a>
-            {% if forloop.last %}{% else %}, {% endif %}
-            {% endfor %}
-        </dd>
-        {% endif %}
-        <dt>Lokacija:</dt>
-        <dd>{{ racunalnik.kraj }}</dd>
-        <dt>Proizvajalec:</dt>
-        <dd>{{ racunalnik.proizvajalec }}</dd>
-        <dt>Pričetek:</dt>
-        <dd>{{ racunalnik.nakup.year }}</dd>
-        {% if racunalnik.lastnistvo %}
-        <dt>Status:</dt>
-        <dd>{{ racunalnik.get_lastnistvo_display }}</dd>
-        {% endif %}
-        {% ifnotequal racunalnik.uporaba 'o' %}
-        <dt>Uporaba:</dt>
-        <dd>{{ racunalnik.get_uporaba_display }}</dd>
-        {% endifnotequal %}
-        {% if racunalnik.generacija %}
-        <dt>Generacija:</dt>
-        <dd>{{ racunalnik.get_generacija_display }}</dd>
-        {% endif %}
-        {% if racunalnik.tip %}
-        <dt>Tip:</dt>
-        <dd>{{ racunalnik.get_tip_display }}</dd>
-        {% endif %}
-        {% if racunalnik.opombe %}
-        <dt>Opombe:</dt>
-        <dd>{{ racunalnik.opombe }}</dd>
-        {% endif %}
-        {% if racunalnik.opis %}
-        <dt>Opis:</dt>
-        <dd>{{ racunalnik.opis }}</dd>
-        {% endif %}
-        <dt>Viri:</dt>
-        <ul>
-            {% for v in racunalnik.viri.all %}
-            <li><a target='_blank' href='{{ v.url }}'>{{ v }}</a>
-                <p>{{ v.vsebina }}</p>
-            </li>
-            {% endfor %}
-        </ul>
-    </dl> */
-}
