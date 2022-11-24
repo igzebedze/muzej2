@@ -408,6 +408,7 @@ button.back {
   background-color: rgba(106, 106, 106, 0.3);
 }
 
+
 .about {
   padding: 20px;
   max-width: 800px;
@@ -417,3 +418,8 @@ button.back {
   font-size: 16px;
   line-height: 1.5;
 }
+
+.maplibregl-popup-content {
+  color: black;
+}
+

@@ -25,12 +25,6 @@ class RacunalnikiGeoJsonView(ListView):
     queryset=racunalnik.objects.order_by('nakup')
     template_name='evidenca/racunalniki.geojson'
 
-# class RacunalnikSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = racunalnik
-#         fields = ['pk', 'nosilec','organizacija','ime','tip','opombe','proizvajalec','nakup', 'opis', 'generacija', 'viri', 'kraj', 'lastnistvo']
-
-
 @api_view(['GET', 'POST'])
 def racunalnik_detail(request, pk):
     if request.method == 'GET':
@@ -54,3 +48,4 @@ class RacunalnikViewSet(viewsets.ReadOnlyModelViewSet):
 		if id is not None:
 			queryset = queryset.filter(pk=id)
 		return queryset
+
