@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Eksponat, Primerek, Razstava, Kategorija
+from evidenca.models import racunalnik, organizacija
 
 class KategorijaSerializer(serializers.ModelSerializer):
 	eksponatov = serializers.SerializerMethodField()
@@ -38,3 +39,19 @@ class RazstavaSerializer(serializers.ModelSerializer):
 		model = Razstava
 		fields = ['pk', 'primerki','naslov','lokacija','otvoritev','zakljucek','avtorji','opis']
 
+class OrganizacijaSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = organizacija
+		fields = ['ime', 'naslov', 'url', 'povzetek', 'opis', 'podrocje', 'latlong']
+
+class RacunalnikSerializer(serializers.ModelSerializer):
+	nosilec = serializers.StringRelatedField()
+	organizacija = OrganizacijaSerializer
+	proizvajalec = serializers.StringRelatedField()
+	eksponat = EksponatSerializer
+	
+	class Meta:
+		model = racunalnik
+		fields = ['nosilec', 'organizacija', 'tip', 'ime', 'uporaba', 'opombe', 'proizvajalec', 'eksponat', 'nakup', 'odpis', 'opis', 'generacija', 'viri', 'kraj', 'lastnistvo']
+	def get_nosilec(self, obj):
+		return({'ime': obj.organizacija.ime, 'pk': obj.organizacija.pk})

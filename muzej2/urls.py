@@ -28,6 +28,8 @@ router.register(r'eksponati/<int:pk>/', HeroViewSet)
 router.register(r'razstave', RazstaveViewSet)
 router.register(r'razstave/<int:pk>/', RazstaveViewSet)
 router.register(r'statistika', KategorijeViewSet)
+router.register(r'evidenca', RacunalnikViewSet)
+router.register(r'evidenca/<int:pk>/', RacunalnikViewSet)
 
 urlpatterns = [
 	path('', terminalView, name='terminal'),
@@ -50,9 +52,8 @@ urlpatterns = [
 	path('razstava/<int:pk>/', RazstavaView.as_view(), name='razstava-detail'),
     path('evidenca/', RacunalnikListView.as_view()),
     path('evidenca/geojson/', RacunalnikiGeoJsonView.as_view()),
-    path('evidenca/<int:pk>/', RacunalnikDetailView.as_view()),
-    path('evidenca/zemljevid/', RacunalnikiZemljevid.as_view()),
-#    path('evidenca/zemljevid/', TemplateView.as_view(template_name='evidenca/zemljevid.html')), 
+    path('evidenca/<int:pk>/', racunalnik_detail_rendered),
+    path('evidenca/zemljevid/', TemplateView.as_view(template_name='evidenca/zemljevid.html')), 
     path('evidenca/oprojektu/', TemplateView.as_view(template_name='evidenca/oprojektu.html')), 
     path('evidenca/organizacije/', OrganizacijeListView.as_view()),
 #	path(r'^wiki/', include('wiki.urls')),
