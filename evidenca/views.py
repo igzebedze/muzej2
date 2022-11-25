@@ -6,6 +6,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from inventura.serializers import RacunalnikSerializer
 from rest_framework import viewsets
+from django.db.models import F 
 
 class RacunalnikListView(ListView):
     model=racunalnik
@@ -22,7 +23,7 @@ class OrganizacijeListView(ListView):
 
 class OsebaListView(ListView):
     model=oseba
-    queryset=oseba.objects.order_by('rojstvo')
+    queryset=oseba.objects.order_by(F('rojstvo').asc(nulls_last=True))
 
 def OsebaView(request, pk):
     return render(request, 'evidenca/oseba_detail.html', {
