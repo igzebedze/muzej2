@@ -56,6 +56,8 @@ urlpatterns = [
     path('evidenca/zemljevid/', TemplateView.as_view(template_name='evidenca/zemljevid.html')), 
     path('evidenca/oprojektu/', TemplateView.as_view(template_name='evidenca/oprojektu.html')), 
     path('evidenca/organizacije/', OrganizacijeListView.as_view()),
+    path('evidenca/osebe/', OsebaListView.as_view()),
+    path('evidenca/oseba/<int:pk>/', OsebaView),
 #	path(r'^wiki/', include('wiki.urls')),
 #	path(r'^autocomplete/', include('autocomplete_light.urls')),
 	path('api/', include(router.urls)),

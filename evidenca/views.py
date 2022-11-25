@@ -20,6 +20,15 @@ class OrganizacijeListView(ListView):
     model=organizacija
     queryset=organizacija.objects.order_by('ime')
 
+class OsebaListView(ListView):
+    model=oseba
+    queryset=oseba.objects.order_by('rojstvo')
+
+def OsebaView(request, pk):
+    return render(request, 'evidenca/oseba_detail.html', {
+        'oseba': oseba.objects.get(pk=pk),
+    }, content_type='text/html')
+
 class RacunalnikiGeoJsonView(ListView):
     model=racunalnik
     queryset=racunalnik.objects.order_by('nakup')

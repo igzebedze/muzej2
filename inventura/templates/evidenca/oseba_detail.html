@@ -1,0 +1,38 @@
+<h2>{{ oseba.ime }}</h2>
+<h1>{{ oseba.rojstvo.year }} - {{ oseba.smrt.year }}</h1>
+{% if oseba.povzetek %}<p>{{ oseba.povzetek }}</p>{% endif %}
+<dl>
+    {% if o.sluzba %}
+    <dt>Sluzbe:</dt>
+    <dd>
+        {% for o in oseba.sluzba %}
+        <a href="/evidenca/organizacije/#{{ o.organizacija.pk }}">{{ o.organizacija }}</a>
+        {% if forloop.last %}{% else %}, {% endif %}
+        {% endfor %}
+    </dd>
+    {% endif %}
+    {% if o.sluzba %}
+    <dt>Sluzbe:</dt>
+    <dd>
+        {% for o in oseba.sluzba %}
+        <a target="_blank" href="/evidenca/organizacije/#{{ o.organizacija.pk }}">{{ o.organizacija }}</a>
+        {% if forloop.last %}{% else %}, {% endif %}
+        {% endfor %}
+    </dd>
+    {% endif %}
+    {% if oseba.opis %}
+    <dt>Opis:</dt>
+    <dd>{{ oseba.opis }}</dd>
+    {% endif %}
+    <dt>Viri:</dt>
+    <ul>
+        {% for v in oseba.pogovor_set.all %}
+        <li>Muzejski pogovor: {{ v.datum }}</li>
+        {% endfor %}
+        {% if oseba.url %}<li><a href="{{ oseba.url }}">Osebna stran</a></li>{% endif %}
+        {% if oseba.wiki_sl %}<li><a href="{{ oseba.wiki_sl }}">Wikipedija SL</a></li>{% endif %}
+        {% if oseba.wiki_en %}<li><a href="{{ oseba.wiki_en }}">Wikipedija EN</a></li>{% endif %}
+        {% if oseba.linkedin %}<li><a href="{{ oseba.linkedin }}">Linkedin</a></li>{% endif %}
+        {% if oseba.slobia %}<li><a href="{{ oseba.slobio }}">Slovenska biografija</a></li>{% endif %}
+    </ul>
+</dl>

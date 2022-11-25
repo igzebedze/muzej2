@@ -81,8 +81,8 @@ class racunalnik(models.Model):
 		('cal', 'Programabilni kalkulator')
 	)
 	GENERACIJA_CHOICES = (
-		('A','Predgeneracija računskih strojev (releji + vakuumske diode)'),
-		('B','Prva generacija elektronskih računalnikov (vakuumske diode)'),
+		('A','Predgeneracija računskih strojev (releji + vakuumske elektronke)'),
+		('B','Prva generacija elektronskih računalnikov (vakuumske elektronke)'),
 		('C','Druga generacija elektronskih računalnikov (tranzistorji)'),
 		('D','Druga generacija elektronskih računalnikov (hibridna vezja in tranzistorji)'),
 		('E','Tretja generacija elektronskih računalnikov (integrirana vezja in MOSFET)'),

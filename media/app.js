@@ -25,9 +25,9 @@ window.onload = () => {
           .classList.remove(SELECTED_CLASSNAME);
       }
 
-      let selectedId = event.target.dataset.pk.substring(1);
-
-      fetchAndRender(selectedId);
+      let type = event.target.getAttribute("data-type");
+      let selectedId = event.target.getAttribute("data-oseba-pk");
+      fetchAndRender(selectedId, type);
 
       event.target.classList.add(SELECTED_CLASSNAME);
       document.querySelector(".details").classList.remove(HIDDEN_CLASSNAME);
@@ -48,10 +48,12 @@ window.onload = () => {
   });
 };
 
-function fetchAndRender(id) {
+function fetchAndRender(id,type) {
   const target = document.getElementById("details");
+  var url = '/evidenca';
+  if (type == 'oseba') { url = url + '/oseba'; }
   //target.innerHTML = "<div class='loading'>Nalagam podatke...</div>";
-  fetch(`/evidenca/${id}/`)
+  fetch(`${url}/${id}/`)
     .then((response) => {
       return response.text();
     })
