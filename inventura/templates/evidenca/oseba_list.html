@@ -18,7 +18,7 @@
             {% for oseba in object_list %}
             <li>
                 <a class="list-item list-item-{{ oseba.pk }}" href="#O{{ oseba.pk }}"
-                    data-oseba-pk="{{ oseba.pk }}" data-type="oseba">
+                    data-pk="{{ oseba.pk }}" data-type="oseba" >
                     <span class="index">{{ forloop.counter|stringformat:"03d" }}</span>
                     <span class="year">{{ oseba.rojstvo.year }}</span>
                     <span class="name">

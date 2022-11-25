@@ -26,7 +26,7 @@ window.onload = () => {
       }
 
       let type = event.target.getAttribute("data-type");
-      let selectedId = event.target.getAttribute("data-oseba-pk");
+      let selectedId = event.target.getAttribute("data-pk");
       fetchAndRender(selectedId, type);
 
       event.target.classList.add(SELECTED_CLASSNAME);
