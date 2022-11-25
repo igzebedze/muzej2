@@ -53,7 +53,7 @@ urlpatterns = [
     path('evidenca/', RacunalnikListView.as_view()),
     path('evidenca/geojson/', RacunalnikiGeoJsonView.as_view()),
     path('evidenca/<int:pk>/', racunalnik_detail_rendered),
-    path('evidenca/zemljevid/', TemplateView.as_view(template_name='evidenca/zemljevid.html')), 
+    path('evidenca/zemljevid/', RacunalnikiZemljevid.as_view()), 
     path('evidenca/oprojektu/', TemplateView.as_view(template_name='evidenca/oprojektu.html')), 
     path('evidenca/organizacije/', OrganizacijeListView.as_view()),
     path('evidenca/osebe/', OsebaListView.as_view()),

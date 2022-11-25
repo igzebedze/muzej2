@@ -30,10 +30,10 @@ def OsebaView(request, pk):
         'oseba': oseba.objects.get(pk=pk),
     }, content_type='text/html')
 
-class RacunalnikiGeoJsonView(ListView):
+class RacunalnikiZemljevid(ListView):
     model=racunalnik
     queryset=racunalnik.objects.order_by('nakup')
-    template_name='evidenca/racunalniki.geojson'
+    template_name='evidenca/zemljevid.html'
 
 @api_view(['GET', 'POST'])
 def racunalnik_detail(request, pk):
