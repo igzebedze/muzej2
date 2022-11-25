@@ -1,0 +1,37 @@
+{% extends "app.html" %}
+{% load smart_if %}
+
+{% block menu %}
+<ul>
+    <li><a href="/evidenca/">Seznam</a></li>
+    <li class="selected"><a href="/evidenca/osebe/">Osebe</a></li>
+    <li><a href="/evidenca/zemljevid/">Zemljevid</a></li>
+    <li><a href="/evidenca/oprojektu/">O projektu</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+<div class="app">
+    <div class="list">
+        <h1>Prvi računalnikarji v Sloveniji</h1>
+        <ul>
+            {% for oseba in object_list %}
+            <li>
+                <a class="list-item list-item-{{ oseba.pk }}" href="#O{{ oseba.pk }}"
+                    data-oseba-pk="{{ oseba.pk }}" data-type="oseba">
+                    <span class="index">{{ forloop.counter|stringformat:"03d" }}</span>
+                    <span class="year">{{ oseba.rojstvo.year }}</span>
+                    <span class="name">
+                        {{ oseba.ime }}
+                        <br />
+                        <span class="owner">{{ oseba.sluzba }}</span>
+                    </span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="details" class="details hide">
+    </div>
+</div>
+{% endblock %}
