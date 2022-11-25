@@ -29,10 +29,10 @@
         {% for v in oseba.pogovor_set.all %}
         <li>Muzejski pogovor: {{ v.datum }}</li>
         {% endfor %}
-        {% if oseba.url %}<li><a href="{{ oseba.url }}">Osebna stran</a></li>{% endif %}
-        {% if oseba.wiki_sl %}<li><a href="{{ oseba.wiki_sl }}">Wikipedija SL</a></li>{% endif %}
-        {% if oseba.wiki_en %}<li><a href="{{ oseba.wiki_en }}">Wikipedija EN</a></li>{% endif %}
-        {% if oseba.linkedin %}<li><a href="{{ oseba.linkedin }}">Linkedin</a></li>{% endif %}
-        {% if oseba.slobia %}<li><a href="{{ oseba.slobio }}">Slovenska biografija</a></li>{% endif %}
+        {% if oseba.url %}<li><a target="_blank" href="{{ oseba.url }}">Osebna stran</a></li>{% endif %}
+        {% if oseba.wiki_sl %}<li><a target="_blank" href="{{ oseba.wiki_sl }}">Wikipedija SL</a></li>{% endif %}
+        {% if oseba.wiki_en %}<li><a target="_blank" href="{{ oseba.wiki_en }}">Wikipedija EN</a></li>{% endif %}
+        {% if oseba.linkedin %}<li><a target="_blank" href="{{ oseba.linkedin }}">Linkedin</a></li>{% endif %}
+        {% if oseba.slobio %}<li><a target="_blank" href="{{ oseba.slobio }}">Slovenska biografija</a></li>{% endif %}
     </ul>
 </dl>
