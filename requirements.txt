@@ -3,7 +3,7 @@ beautifulsoup4==4.10.0
 certifi==2021.5.30
 charset-normalizer==2.0.6
 diffusers==0.4.1
-Django==3.2.15
+Django==3.2.16
 django-adminactions==2.0.0
 django-rest-framework==0.1.0
 django-simple-history==3.0.0
