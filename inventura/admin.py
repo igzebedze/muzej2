@@ -4,6 +4,11 @@ from django.shortcuts import render, redirect
 from simple_history.admin import SimpleHistoryAdmin
 #from import_export import resources
 #import wikipedia
+from django.contrib.admin import site
+import adminactions.actions as actions
+
+# register all adminactions
+actions.add_to_site(site)
 
 from inventura import models
 
