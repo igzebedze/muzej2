@@ -34,7 +34,7 @@ router.register(r'evidenca/<int:pk>/', RacunalnikViewSet)
 urlpatterns = [
 	path('', terminalView, name='terminal'),
     path('admin/', admin.site.urls),
-    path(r'^adminactions/', include('adminactions.urls')),
+    path('adminactions/', include('adminactions.urls')),
     path('home/', HomeView, name='home'),
     path('eksponat/', KategorijaList.as_view(), name='kazalo'),
     path('galerija/', GalerijaList.as_view(), name='galerija'),

@@ -94,6 +94,8 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 # Local Settings
 try:
 	from muzej2.local_settings import *

@@ -128,7 +128,7 @@ class racunalnik(models.Model):
 
 
 class sluzba(models.Model):
-	organizacija = models.ManyToManyField(organizacija)
+	organizacija = models.ForeignKey(organizacija, blank=True, null=True, on_delete=models.PROTECT)
 	od = models.DateField(blank=True, null=True)
 	do = models.DateField(blank=True, null=True)
 	naziv = models.CharField(max_length=255, blank=True)
@@ -137,7 +137,14 @@ class sluzba(models.Model):
 	updated_at = models.DateTimeField(auto_now=True)
 
 	def __str__(self):
-		return self.naziv
+		if self.organizacija and self.od and self.do:
+			return '%s %s %s-%s' % (self.naziv, self.organizacija.ime, self.od.year, self.do.year)
+		elif self.organizacija and self.od:
+			return '%s %s %s-' % (self.naziv, self.organizacija.ime, self.od.year)
+		elif self.organizacija:
+			return '%s %s' % (self.naziv, self.organizacija.ime)
+		else:
+			return ''
 
 	class Meta:
 		verbose_name_plural = "Sluzbe"
@@ -193,7 +200,7 @@ class oseba(models.Model):
 	rojstvo = models.DateField(blank=True, null=True)
 	smrt = models.DateField(blank=True, null=True)
 	spol = models.IntegerField(choices=GENDER_CHOICES, default=0)
-	sluzba = models.ForeignKey(sluzba, blank=True, null=True, on_delete=models.PROTECT)
+	sluzba = models.ManyToManyField(sluzba, blank=True)
 	dosezek = models.ManyToManyField(dosezek, blank=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
