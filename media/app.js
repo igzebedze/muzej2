@@ -1,9 +1,21 @@
 const VISIBLE_CLASSNAME = "show";
 const HIDDEN_CLASSNAME = "hide";
 const SELECTED_CLASSNAME = "selected";
+const FILTERED_CLASSNAME = "filtered-out";
 
 function getSelectedComputerId() {
   return document.location.hash.substring(2) || "";
+}
+
+function handleBackButtonClick() {
+  const selected = document.querySelector(`.${SELECTED_CLASSNAME}`);
+  if (selected) {
+    document
+      .querySelector(`.${SELECTED_CLASSNAME}`)
+      .classList.remove(SELECTED_CLASSNAME);
+  }
+
+  document.querySelector(".details").classList.add(HIDDEN_CLASSNAME);
 }
 
 window.onload = () => {
@@ -18,51 +30,88 @@ window.onload = () => {
   }
 
   document.body.addEventListener("click", (event) => {
-    if (event.target.matches(".list-item")) {
+    const target = event.target;
+    // handle computer selection from list
+    if (target.matches(".list-item")) {
       if (lastClick) {
         document
           .querySelector(`.list-item-${lastClick}`)
           .classList.remove(SELECTED_CLASSNAME);
       }
 
-      let type = event.target.getAttribute("data-type");
-      let selectedId = event.target.getAttribute("data-pk");
+      let type = target.getAttribute("data-type");
+      let selectedId = target.getAttribute("data-pk");
       fetchAndRender(selectedId, type);
 
-      event.target.classList.add(SELECTED_CLASSNAME);
+      target.classList.add(SELECTED_CLASSNAME);
       document.querySelector(".details").classList.remove(HIDDEN_CLASSNAME);
 
       lastClick = selectedId;
     }
 
-    if (event.target.matches(".back")) {
-      const selected = document.querySelector(`.${SELECTED_CLASSNAME}`);
-      if (selected) {
-        document
-          .querySelector(`.${SELECTED_CLASSNAME}`)
-          .classList.remove(SELECTED_CLASSNAME);
-      }
+    // handle back button click
+    if (target.matches(".back")) {
+      handleBackButtonClick();
+    }
 
-      document.querySelector(".details").classList.add(HIDDEN_CLASSNAME);
+    // handle organization filter click
+    if (target.matches(".org-filter")) {
+      event.preventDefault();
+
+      const listItems = document.querySelectorAll(".list-item");
+      const orgPk = event.target.href.split("#")[1];
+
+      listItems.forEach((item) => {
+        item.classList.remove(FILTERED_CLASSNAME);
+      });
+
+      listItems.forEach((item) => {
+        const orgPks = item.dataset.orgPk.replaceAll(" ", "").split("D");
+
+        if (!orgPks.includes(orgPk)) {
+          item.classList.add(FILTERED_CLASSNAME);
+        }
+      });
+
+      document.getElementById("clearFilters").classList.add(VISIBLE_CLASSNAME);
+
+      if (window.innerWidth <= 1024) {
+        handleBackButtonClick();
+      }
+    }
+
+    // reset filters
+    if (target.matches("#clearFilters")) {
+      const listItems = document.querySelectorAll(".list-item");
+
+      listItems.forEach((item) => {
+        item.classList.remove(FILTERED_CLASSNAME);
+      });
+
+      document
+        .getElementById("clearFilters")
+        .classList.remove(VISIBLE_CLASSNAME);
     }
   });
 };
 
-function fetchAndRender(id,type) {
-  const target = document.getElementById("details");
-  var url = '/evidenca';
-  if (type == 'oseba') { url = url + '/oseba'; }
-  //target.innerHTML = "<div class='loading'>Nalagam podatke...</div>";
+function fetchAndRender(id, type) {
+  const url = "/evidenca";
+
+  if (type == "oseba") {
+    url = url + "/oseba";
+  }
+
   fetch(`${url}/${id}/`)
     .then((response) => {
       return response.text();
     })
     .then((data) => {
-//      renderDetail(data);
       const target = document.getElementById("details");
-      target.innerHTML=data;
+      target.innerHTML = data;
     });
-    if (window.innerWidth > 1024) {
-      document.querySelector(".details").classList.remove(HIDDEN_CLASSNAME);
-    }
+
+  if (window.innerWidth > 1024) {
+    document.querySelector(".details").classList.remove(HIDDEN_CLASSNAME);
+  }
 }
