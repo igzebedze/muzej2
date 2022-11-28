@@ -127,7 +127,7 @@ class racunalnik(models.Model):
 		verbose_name_plural = "Racunalniki"
 
 
-class sluzba(models.Model):
+'''class sluzba(models.Model):
 	organizacija = models.ForeignKey(organizacija, blank=True, null=True, on_delete=models.PROTECT)
 	od = models.DateField(blank=True, null=True)
 	do = models.DateField(blank=True, null=True)
@@ -148,7 +148,7 @@ class sluzba(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Sluzbe"
-
+ '''
 
 class dosezek(models.Model):
 	VRSTA_CHOICES = (
@@ -200,7 +200,7 @@ class oseba(models.Model):
 	rojstvo = models.DateField(blank=True, null=True)
 	smrt = models.DateField(blank=True, null=True)
 	spol = models.IntegerField(choices=GENDER_CHOICES, default=0)
-	sluzba = models.ManyToManyField(sluzba, blank=True)
+	sluzba = models.ManyToManyField(organizacija, blank=True)
 	dosezek = models.ManyToManyField(dosezek, blank=True)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)

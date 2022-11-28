@@ -52,7 +52,7 @@ class OsebaAdmin(admin.ModelAdmin):
     date_hierarchy = 'rojstvo'
     search_fields = ('ime', 'povzetek', 'opis')
     list_filter = ('spol',  )
-    filter_horizontal = ('dosezek', )
+    filter_horizontal = ('dosezek', 'sluzba')
 
     def link(self,obj):
         url = next((s for s in (obj.url, obj.wiki_sl, obj.wiki_en, obj.linkedin, obj.slobio) if s), '')
@@ -76,14 +76,15 @@ class DosezekAdmin(admin.ModelAdmin):
     list_filter = ('vrsta', 'pomen', )
     filter_horizontal = ('eksponat',)
 
-class SluzbaAdmin(admin.ModelAdmin):
-    list_display = ('naziv', 'organizacija','od', 'do', 'naziv')
+#class SluzbaAdmin(admin.ModelAdmin):
+#    list_display = ('naziv', 'organizacija','od', 'do', 'naziv')
     #filter_horizontal = ('organizacija',)
 
 admin.site.register(models.dosezek, DosezekAdmin)
 admin.site.register(models.organizacija, OrganizacijaAdmin)
 admin.site.register(models.oseba, OsebaAdmin)
 admin.site.register(models.racunalnik, RacunalnikAdmin)
-admin.site.register(models.sluzba, SluzbaAdmin)
 admin.site.register(models.pogovor, PogovorAdmin)
 admin.site.register(models.vir, VirAdmin)
+
+#admin.site.register(models.sluzba, SluzbaAdmin)

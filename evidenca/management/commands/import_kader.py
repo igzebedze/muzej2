@@ -7,7 +7,7 @@ import csv
 import os
 import sys
 from django.utils import timezone
-from evidenca.models import racunalnik, organizacija, vir, oseba, sluzba
+from evidenca.models import racunalnik, organizacija, vir, oseba
 from inventura.models import Proizvajalec
 import pprint
 
@@ -39,9 +39,7 @@ class Command(BaseCommand):
 # create all jobs
 					for org in organizacije:
 						org.strip()
-						organ, created = organizacija.objects.get_or_create(ime=org)
-						s = sluzba(organizacija=organ)
-						s.save()
+						s, created = organizacija.objects.get_or_create(ime=org)
 						o.sluzba.add(s)
 
 # only new information
