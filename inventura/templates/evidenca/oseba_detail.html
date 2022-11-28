@@ -6,7 +6,7 @@
     <dt>Sluzbe:</dt>
     <dd>
         {% for o in oseba.sluzba %}
-        <a href="/evidenca/organizacije/#{{ o.organizacija.pk }}">{{ o.organizacija }}</a>
+        <a href="/evidenca/organizacije/#{{ o.pk }}">{{ o }}</a>
         {% if forloop.last %}{% else %}, {% endif %}
         {% endfor %}
     </dd>
@@ -15,7 +15,7 @@
     <dt>Sluzbe:</dt>
     <dd>
         {% for o in oseba.sluzba %}
-        <a target="_blank" href="/evidenca/organizacije/#{{ o.organizacija.pk }}">{{ o.organizacija }}</a>
+        <a target="_blank" href="/evidenca/organizacije/#{{ o.pk }}">{{ o }}</a>
         {% if forloop.last %}{% else %}, {% endif %}
         {% endfor %}
     </dd>

@@ -20,11 +20,11 @@
                 <a class="list-item list-item-{{ oseba.pk }}" href="#O{{ oseba.pk }}"
                     data-pk="{{ oseba.pk }}" data-type="oseba" >
                     <span class="index">{{ forloop.counter|stringformat:"03d" }}</span>
-                    <span class="year">{{ oseba.rojstvo.year }}</span>
+                    <span class="year">{{ oseba.rojstvo.year }} - {% if oseba.smrt %}{{ oseba.smrt.year }}{% endif %}</span>
                     <span class="name">
                         {{ oseba.ime }}
                         <br />
-                        <span class="owner">{{ oseba.sluzba }}</span>
+                        <span class="owner">{{ oseba.get_jobs }}</span>
                     </span>
                 </a>
             </li>

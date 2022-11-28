@@ -21,9 +21,9 @@ class RacunalnikInline(admin.StackedInline):
     filter_horizontal = ('organizacija','viri')
 
 class OrganizacijaAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'ime', 'naslov', 'racunalnikov', 'podrocje', 'latlong', 'url')
+    list_display = ('ime', 'naslov', 'racunalnikov', 'podrocje', 'latlong', 'url')
     #list_editable = ('ime', 'naslov', 'podrocje', 'latlong')
-    list_display_links = ('pk',)
+    list_display_links = ('ime',)
     filter_horizontal = ('partner',)
     search_fields = ('ime', 'naslov', 'povzetek', 'opis', 'podrocje')
     inlines = [
