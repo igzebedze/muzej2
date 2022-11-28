@@ -189,6 +189,7 @@ class oseba(models.Model):
 	GENDER_FEMALE = 1
 	GENDER_CHOICES = [(GENDER_MALE, 'Moški'), (GENDER_FEMALE, 'Ženska')]
 
+	naziv = models.CharField(max_length=255, blank=True)
 	ime = models.CharField(max_length=255, blank=True)
 	url = models.URLField(blank=True, null=True, help_text="domača stran")
 	wiki_sl = models.URLField(blank=True, null=True, help_text="<a target='_blank' href='https://sl.wikipedia.org/wiki/Glavna_stran'>slovenska wikipedia</a>")
@@ -207,6 +208,13 @@ class oseba(models.Model):
 
 	def __str__(self):
 		return self.ime
+
+	def get_jobs(self):
+		jobs = self.sluzba.all()
+		js = []
+		for j in jobs:
+			js.append(j.ime)
+		return ", ".join(js)
 
 	class Meta:
 		verbose_name_plural = "Osebe"

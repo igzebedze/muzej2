@@ -1,6 +1,7 @@
 from django.contrib import admin
 from evidenca import models
 from django.utils.html import format_html
+from django.contrib.admin import SimpleListFilter
 
 class VirAdmin(admin.ModelAdmin):
     list_display = ('sifra', 'podrocje', 'naslov', 'show_link')
@@ -47,11 +48,26 @@ class PogovorAdmin(admin.ModelAdmin):
     slika.boolean=True
     text.boolean=True
 
+class SluzbaFilter(SimpleListFilter):
+    title = 'sluzba_' # or use _('country') for translated title
+    parameter_name = 'sluzba'
+
+    def lookups(self, request, model_admin):
+        organizations = set()
+        for c in model_admin.model.objects.all():
+            for cc in c.sluzba.all():
+                organizations.add(cc)
+        return [(c.pk, c.ime) for c in organizations]
+
+    def queryset(self, request, queryset):
+        if self.value():
+            return queryset.filter(sluzba__id__exact=self.value())
+
 class OsebaAdmin(admin.ModelAdmin):
-    list_display = ('ime','rojen', 'pogovor', 'link')
+    list_display = ('ime','rojen', 'get_jobs', 'pogovor', 'link')
     date_hierarchy = 'rojstvo'
     search_fields = ('ime', 'povzetek', 'opis')
-    list_filter = ('spol',  )
+    list_filter = ('spol',  SluzbaFilter)
     filter_horizontal = ('dosezek', 'sluzba')
 
     def link(self,obj):

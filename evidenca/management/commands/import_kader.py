@@ -55,7 +55,8 @@ class Command(BaseCommand):
 						o.url = row['home']
 					if not o.slobio and 'bio' in row and row['bio']:
 						o.slobio = row['bio']
-
+					if not o.naziv and 'naziv' in row and row['naziv']:
+						o.naziv = row['naziv']
 # expand description
 					o.opis = o.opis + row['opis']
 					if row['spol'] == 'z':
