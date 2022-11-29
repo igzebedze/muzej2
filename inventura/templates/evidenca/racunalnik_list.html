@@ -13,13 +13,18 @@
 {% block content %}
 <div class="app">
     <div class="list">
-        <h1>Prvi računalniki v Sloveniji</h1>
+        <h1>
+            Prvi računalniki v Sloveniji
+        </h1>
+        <div class="filters" id="clearFilters">
+            « Nazaj na vse računalnike
+        </div>
         <ul>
             {% for racunalnik in object_list %}
             {% ifnotequal racunalnik.tip 't' %}
             <li>
                 <a class="list-item list-item-{{ racunalnik.pk }}" href="#C{{ racunalnik.pk }}"
-                    data-pk="{{ racunalnik.pk }}" data-type="racunalnik" 
+                    data-pk="{{ racunalnik.pk }}" data-type="racunalnik"
                     data-org-pk="D{{ racunalnik.nosilec.pk}} {% for o in racunalnik.organizacija.all %}D{{ o.pk }} {% endfor %}">
                     <span class="index">{{ forloop.counter|stringformat:"03d" }}</span>
                     <span class="year">{{ racunalnik.nakup.year }}</span>
