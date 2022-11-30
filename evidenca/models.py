@@ -28,6 +28,7 @@ class vir(models.Model):
 	naslov = models.TextField(blank=True)
 	vsebina = models.TextField(blank=True)
 	datum = models.DateField(blank=True, null=True)
+	sibek = models.BooleanField(default=False)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
@@ -103,7 +104,7 @@ class racunalnik(models.Model):
 
 	kos = models.SmallIntegerField(default=1)
 	nosilec = models.ForeignKey(organizacija, on_delete=models.CASCADE,related_name='nosilec', null=True)
-	organizacija = models.ManyToManyField(organizacija, related_name='clan')
+	organizacija = models.ManyToManyField(organizacija, blank=True, related_name='clan')
 	ime = models.CharField(max_length=255, blank=True)
 	tip = models.CharField(max_length=255, blank=True, choices=TIP_CHOICES)
 	uporaba = models.CharField(max_length=255, blank=True, null=True, choices=UPORABA_CHOICES)

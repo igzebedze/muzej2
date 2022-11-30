@@ -12,8 +12,7 @@
         <dt>Uporabniki:</dt>
         <dd>
             {% for o in racunalnik.organizacija.all %}
-            <a href="/evidenca/organizacije/#{{ o.pk }}" class="org-filter">{{ o }}</a>
-            {% if forloop.last %}{% else %}, {% endif %}
+            <a href="/evidenca/organizacije/#{{ o.pk }}" class="org-filter">{{ o }}</a>{% if forloop.last %}{% else %}, {% endif %}
             {% endfor %}
         </dd>
         {% endif %}
