@@ -4,10 +4,11 @@ from django.utils.html import format_html
 from django.contrib.admin import SimpleListFilter
 
 class VirAdmin(admin.ModelAdmin):
-    list_display = ('sifra', 'podrocje', 'naslov', 'show_link')
-    list_filter = ('podrocje', 'vrsta')
+    list_display = ('sifra', 'podrocje', 'naslov', 'sibek', 'show_link')
+    list_filter = ('podrocje', 'vrsta', 'sibek')
     search_fields = ('naslov', 'vsebina')
     date_hierarchy = 'datum'
+    list_editable = ('sibek',)
 
 class RacunalnikAdmin(admin.ModelAdmin):
     list_display = ('nakup', 'kraj', 'ime', 'nosilec', 'lastnistvo')
