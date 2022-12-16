@@ -14,6 +14,9 @@
 <div class="app">
     <div class="list">
         <h1>Prvi računalnikarji v Sloveniji</h1>
+        <div class="filters" id="clearFilters">
+            « Nazaj na vse osebe
+        </div>
         <ul>
             {% for oseba in object_list %}
             {% if oseba.rojstvo %}
