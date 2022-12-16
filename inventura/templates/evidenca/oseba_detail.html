@@ -11,10 +11,6 @@
             {% endfor %}
         </dd>
     {% endifnotequal %}
-    {% if oseba.opis %}
-    <dt>Opis:</dt>
-    <dd>{{ oseba.opis }}</dd>
-    {% endif %}
     <dt>Viri:</dt>
     <ul>
         {% for v in oseba.pogovor_set.all %}
@@ -26,5 +22,9 @@
         {% if oseba.linkedin %}<li><a target="_blank" href="{{ oseba.linkedin }}">Linkedin</a></li>{% endif %}
         {% if oseba.slobio %}<li><a target="_blank" href="{{ oseba.slobio }}">Slovenska biografija</a></li>{% endif %}
     </ul>
+    {% if oseba.opis %}
+    <dt>Opis:</dt>
+    <dd>{{ oseba.opis }}</dd>
+    {% endif %}
 </dl>
 </div>
