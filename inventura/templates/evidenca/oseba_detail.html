@@ -1,8 +1,7 @@
-<h1 class="back">{{ oseba.ime }}</h1>
+<h1 class="back">{{ oseba.ime }} ({{ oseba.rojstvo.year }} - {{ oseba.smrt.year }})</h1>
 <div class="detail-info">
 {% if oseba.povzetek %}<p>{{ oseba.povzetek }}</p>{% endif %}
 <dl>
-    <dt>{{ oseba.rojstvo.year }} - {{ oseba.smrt.year }}</dt>
     {% ifnotequal o.sluzba.count 0 %}
         <dt>Sluzbe:</dt>
         <dd>
