@@ -249,7 +249,7 @@ def HomeView(request):
 def stat(request):
 	drzave = {}
 	kategorije = []
-	leta = ['2021', '2020', '2019', '2012', '2011']
+	leta = ['2022', '2021', '2020', '2019', '2012', '2011']
 	primerki_leta = []
 	
 	for p in Proizvajalec.objects.all():
