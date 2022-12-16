@@ -11,6 +11,14 @@
             {% endfor %}
         </dd>
     {% endifnotequal %}
+    {% if oseba.dosezek.all %}
+    <dt>Dosežki:</dt>
+    <ul>
+        {% for d in oseba.dosezek.all %}
+        <li>{{ d }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
     <dt>Viri:</dt>
     <ul>
         {% for v in oseba.pogovor_set.all %}
