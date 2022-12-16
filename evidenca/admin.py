@@ -14,7 +14,8 @@ class RacunalnikAdmin(admin.ModelAdmin):
     list_display = ('nakup', 'kraj', 'ime', 'nosilec', 'lastnistvo')
     list_filter = ('generacija', 'lastnistvo', 'tip', 'uporaba', 'kraj')
     date_hierarchy = 'nakup'
-    search_fields = ('opombe', 'tip', 'opis', 'opombe', 'proizvajalec', 'nosilec')
+    raw_id_fields = ('eksponat',)
+    search_fields = ('opombe', 'tip', 'opis', 'proizvajalec__ime', 'nosilec__ime')
     filter_horizontal = ('organizacija','viri',)
 
 class RacunalnikInline(admin.StackedInline):
