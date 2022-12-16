@@ -15,7 +15,7 @@
     <dt>Dosežki:</dt>
     <ul>
         {% for d in oseba.dosezek.all %}
-        <li>{{ d }}</li>
+        <li>{{ d }} ({{ d.vrsta }}, {{ d.pomen }})</li>
         {% endfor %}
     </ul>
     {% endif %}
