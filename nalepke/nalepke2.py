@@ -35,7 +35,7 @@ BREAK
 
 def main():
 	if len(sys.argv) < 2:
-		print "UPORABA: python nalepke.py seznam.txt [labelnation parametri]"
+		print ("UPORABA: python nalepke.py seznam.txt [labelnation parametri]")
 		return
 
 	seznam = sys.argv[1]
