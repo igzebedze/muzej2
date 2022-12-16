@@ -16,38 +16,21 @@
             {% endfor %}
         </dd>
         {% endif %}
-        <dt>Lokacija:</dt>
-        <dd>{{ racunalnik.kraj }}</dd>
-        <dt>Proizvajalec:</dt>
-        <dd>{{ racunalnik.proizvajalec }}</dd>
-        <dt>Pričetek:</dt>
-        <dd>{{ racunalnik.nakup.year }}</dd>
-        {% if racunalnik.lastnistvo %}
-        <dt>Status:</dt>
-        <dd>{{ racunalnik.get_lastnistvo_display }}</dd>
+        <dt>Lokacija:</dt><dd>{{ racunalnik.kraj }}</dd>
+        <dt>Proizvajalec:</dt><dd>{{ racunalnik.proizvajalec }}</dd>
+        <dt>Pričetek:</dt><dd>{{ racunalnik.nakup.year }}</dd>
+        {% if racunalnik.lastnistvo %}<dt>Status:</dt> <dd>{{ racunalnik.get_lastnistvo_display }}</dd>{% endif %}
+        {% ifnotequal racunalnik.uporaba 'o' %}<dt>Uporaba:</dt><dd>{{ racunalnik.get_uporaba_display }}</dd>{% endifnotequal %}
+        {% if racunalnik.generacija %}<dt>Generacija:</dt><dd>{{ racunalnik.get_generacija_display }}</dd>{% endif %}
+        {% if racunalnik.tip %}<dt>Tip:</dt><dd>{{ racunalnik.get_tip_display }}</dd>{% endif %}
+        {% if racunalnik.opombe %}<dt>Opombe:</dt><dd>{{ racunalnik.opombe }}</dd>{% endif %}
+        {% if racunalnik.opis %}<dt>Opis:</dt><dd>{{ racunalnik.opis }}</dd>{% endif %}
+
+        {% if racunalnik.eksponat %}
+            <dt>V muzeju:</dt><dd><a target="_blank" href="/eksponat/{{ racunalnik.eksponat.pk }}/">{{ racunalnik.eksponat }}</a></dd>
         {% endif %}
-        {% ifnotequal racunalnik.uporaba 'o' %}
-        <dt>Uporaba:</dt>
-        <dd>{{ racunalnik.get_uporaba_display }}</dd>
-        {% endifnotequal %}
-        {% if racunalnik.generacija %}
-        <dt>Generacija:</dt>
-        <dd>{{ racunalnik.get_generacija_display }}</dd>
-        {% endif %}
-        {% if racunalnik.tip %}
-        <dt>Tip:</dt>
-        <dd>{{ racunalnik.get_tip_display }}</dd>
-        {% endif %}
-        {% if racunalnik.opombe %}
-        <dt>Opombe:</dt>
-        <dd>{{ racunalnik.opombe }}</dd>
-        {% endif %}
-        {% if racunalnik.opis %}
-        <dt>Opis:</dt>
-        <dd>{{ racunalnik.opis }}</dd>
-        {% endif %}
-        <dt>Viri:</dt>
-        <ul>
+
+        <dt>Viri:</dt> <ul>
             {% for v in racunalnik.viri.all %}
             <li><a target='_blank' href='{{ v.url }}'>{{ v }}</a>
                 <p>{{ v.vsebina }}</p>
