@@ -1,0 +1,4514 @@
+{
+  "userItems": [ {
+    "title": "Tadej BAJD",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Dr. Bajd je na Fakulteti za elektrotehniko Univerze v Ljubljani predaval predmete s področja robotike. Je avtor več učbenikov o robotiki, ki so izšli v slovenščini in angleščini.<\/p>",
+    "button": {
+      "buttonText": "Več",
+      "buttonLink": "/tadej-bajd",
+      "buttonNewWindow": false
+    },
+    "mediaFocalPoint": {
+      "x": 0.5055762081784386,
+      "y": 0.6177391304347826
+    },
+    "imageId": "628fd784731e6053efc9168d",
+    "image": {
+      "id": "628fd784731e6053efc9168d",
+      "recordType": 2,
+      "addedOn": 1645689982287,
+      "updatedOn": 1650535918869,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645689982287,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645690003279-Z64QA39B9M58FRRTACBD",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8809 Tadej Bajd.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e1dfe0",
+        "topRightAverage": "f5f5f5",
+        "bottomLeftAverage": "c6c3c3",
+        "bottomRightAverage": "dedcdd",
+        "centerAverage": "e7e6e7",
+        "suggestedBgColor": "c6c3c3"
+      },
+      "urlId": "2owmhzejqap6ozsqlo74dufklqhdwq-sxjtw",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645690003279-Z64QA39B9M58FRRTACBD/C75T8809+Tadej+Bajd.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Anton BERGANT",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Dr. Bergant izhaja iz slovenske šole načrtovanja in izgradnje vodnih turbin in sistemov, katere začetek sega v prvo polovico 19. stoletja. V Litostroju in na ljubljanski strojni fakulteti nadaljuje z delom dr. Vladimirja Jordana, slovenskega pionirja na področju raziskav in izračunov vodnega udara. <\/p>",
+    "button": {
+      "buttonText": "Več",
+      "buttonLink": "/anton-bergant"
+    },
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd784731e6053efc91690",
+    "image": {
+      "id": "628fd784731e6053efc91690",
+      "recordType": 2,
+      "addedOn": 1645689929454,
+      "updatedOn": 1650535918875,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645689929454,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645689948468-POZUD0PUJPNQK3DM0C8Z",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8747 Anton Bergant.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e1dfe0",
+        "topRightAverage": "f3f3f4",
+        "bottomLeftAverage": "c8c4c3",
+        "bottomRightAverage": "dbd9da",
+        "centerAverage": "e7e6e6",
+        "suggestedBgColor": "c7c4c4"
+      },
+      "urlId": "o2sbidfwuznghpqo0lc818u9kphu7w-f5x9g",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645689948468-POZUD0PUJPNQK3DM0C8Z/C75T8747+Anton+Bergant.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Janez BEŠTER",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Janez Bešter znanstvenoraziskovalno deluje na področjih IKT, multimedije, e-izobraževanja ter odkrivanja in razvoja talentov. Pri svojem delu stremi predvsem k tehnološkim rešitvam in storitvam za večjo dodano vrednost v gospodarstvu in izboljšanju kakovosti življenja.<\/p>",
+    "button": {
+      "buttonText": "Več",
+      "buttonLink": "/janez-bester"
+    },
+    "mediaFocalPoint": {
+      "x": 0.513986013986014,
+      "y": 0.21984133475096101
+    },
+    "imageAltText": "Janez Bester",
+    "imageId": "628fd784731e6053efc91693",
+    "image": {
+      "id": "628fd784731e6053efc91693",
+      "recordType": 2,
+      "addedOn": 1645689694682,
+      "updatedOn": 1650535918880,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645689694682,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645689709960-7ERYXDJHV6R4R5YOC8KV",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8917 Janez Bešter.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "dedcdd",
+        "topRightAverage": "f4f4f4",
+        "bottomLeftAverage": "c5c1c1",
+        "bottomRightAverage": "d9d7d8",
+        "centerAverage": "e6e5e6",
+        "suggestedBgColor": "bdbabb"
+      },
+      "urlId": "cmm3oobwknyyr5n4rc7p3tuvt7jk5q-rn9wj",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645689709960-7ERYXDJHV6R4R5YOC8KV/C75T8917+Janez+Bes%CC%8Cter.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Ivan BRATKO",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Ivan Bratko velja za utemeljitelja raziskav iz umetne inteligence v Sloveniji. Bil je mentor vrsti slovenskih znanstvenikov s področja umetne inteligence, ki so zdaj uveljavljeni v svetu. Raziskuje na področjih: strojno učenje, hevristične metode, programiranje v logiki, induktivno logično programiranje in kvalitativno modeliranje.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/ivan-bratko"
+    },
+    "imageAltText": "Ivan BRATKO",
+    "mediaFocalPoint": {
+      "x": 0.513986013986014,
+      "y": 0.240778604727243
+    },
+    "imageId": "628fd784731e6053efc91696",
+    "image": {
+      "id": "628fd784731e6053efc91696",
+      "recordType": 2,
+      "addedOn": 1645689458027,
+      "updatedOn": 1650535918884,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645689458027,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645689473769-GPWAPTNWEOAYPEAE87GO",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8849 Ivan Bratko.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e8e6e7",
+        "topRightAverage": "f7f7f7",
+        "bottomLeftAverage": "d0cccb",
+        "bottomRightAverage": "e2e0e1",
+        "centerAverage": "ecebeb",
+        "suggestedBgColor": "c2bfbf"
+      },
+      "urlId": "z80lc059q2yv3bqk4vni9ditc7mgt8-s2fj3",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645689473769-GPWAPTNWEOAYPEAE87GO/C75T8849+Ivan+Bratko.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Božidar BRUDAR",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Dr. Božidar je večino svojega aktivnega življenja posvetil raziskovalnemu delu v industriji. Zanimale so ga inovacije in matematično modeliranje tehnoloških procesov v metalurgiji. Posebno uspešen je bil pri izdelavi merilne naprave za optimalni razrez vročih jeklenih blokov v jeseniški valjarni Bela.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/bozidar-brudar"
+    },
+    "imageAltText": "Božidar BRUDAR",
+    "mediaFocalPoint": {
+      "x": 0.486013986013986,
+      "y": 0.251247239715384
+    },
+    "imageId": "628fd784731e6053efc91699",
+    "image": {
+      "id": "628fd784731e6053efc91699",
+      "recordType": 2,
+      "addedOn": 1645689546985,
+      "updatedOn": 1650535918889,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645689546985,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645689562313-FCZFVDW1WU9SZBUVD9IT",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8788 Božidar Brudar.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e3e1e2",
+        "topRightAverage": "f2f2f3",
+        "bottomLeftAverage": "c9c5c5",
+        "bottomRightAverage": "dad8d9",
+        "centerAverage": "e7e6e6",
+        "suggestedBgColor": "c9c6c6"
+      },
+      "urlId": "86hch2o7sm5jd97wm67vxcheopk5ht-t6e3h",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645689562313-FCZFVDW1WU9SZBUVD9IT/C75T8788+Boz%CC%8Cidar+Brudar.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Ilija DIMITRIEVSKI",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Dr. Ilija Dimitrievski je študiral na Fakulteti za kemijo in kemijsko tehnologijo Univerze v Ljubljani, smer anorganski materiali, diplomiral pa je pri prof. Ivanu Vizovišku na področju sinteze poliakrilatnih vodnih disperzij. Po zaposlitvi v Razvojno-tehnološkem institutu Sava Kranj je bil zaposlen na funkcijah od razvojnega  inženirja, raziskovalca do direktorja instituta. <\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/ilija-dimitrievski"
+    },
+    "mediaFocalPoint": {
+      "x": 0.5034965034965035,
+      "y": 0.29312177966794795
+    },
+    "imageId": "628fd784731e6053efc9169c",
+    "image": {
+      "id": "628fd784731e6053efc9169c",
+      "recordType": 2,
+      "addedOn": 1645689608615,
+      "updatedOn": 1650535918893,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645689608615,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645689622792-ISI35PDPJSYKJWMED237",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8907 Ilija Dimitrievski.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e6e5e5",
+        "topRightAverage": "f6f6f6",
+        "bottomLeftAverage": "ccc8c8",
+        "bottomRightAverage": "e0dedf",
+        "centerAverage": "eae9e9",
+        "suggestedBgColor": "c1bfbe"
+      },
+      "urlId": "7dfxxadb774s4f4zofa68as5i4atug-sy6zc",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645689622792-ISI35PDPJSYKJWMED237/C75T8907+Ilija+Dimitrievski.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Robert DOMINKO",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Dr. Dominko ves čas raziskovalne kariere posveča razvoju materialov in karakterizacijskih metod za napredne akumulatorske sisteme. Osredotoča se na sintezo novih aktivnih spojin in na <\/p><p class=\"\" style=\"white-space:pre-wrap;\">razvoj metod, ki omogočajo boljše razumevanje delovanja sodobnih akumulatorjev. <\/p><p class=\"\" data-rte-preserve-empty=\"true\" style=\"white-space:pre-wrap;\"><\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/robert-dominko"
+    },
+    "imageAltText": "Robert DOMINKO",
+    "mediaFocalPoint": {
+      "x": 0.48951048951048953,
+      "y": 0.324527684632371
+    },
+    "imageId": "628fd784731e6053efc9169f",
+    "image": {
+      "id": "628fd784731e6053efc9169f",
+      "recordType": 2,
+      "addedOn": 1645694114771,
+      "updatedOn": 1650535918901,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645694114771,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645694132928-6TQFWC4ZFY6OLX0HFS90",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T1013 Robert Dominko.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f4f4f5",
+        "topRightAverage": "fbfbfb",
+        "bottomLeftAverage": "c4c3c5",
+        "bottomRightAverage": "e9e9eb",
+        "centerAverage": "f1f1f2",
+        "suggestedBgColor": "e7e7ea"
+      },
+      "urlId": "ij1dz9g3d1vxzw36i683cuv9v61d5b-k2w79",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645694132928-6TQFWC4ZFY6OLX0HFS90/C75T1013+Robert+Dominko.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Denis ĐONLAGIĆ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Raziskovalno in razvojno delo Denisa Đonlagića sodi na področje senzorjev in fotonskih tehnologij. Bolj specifično se ukvarja z optičnimi senzorji na osnovi optičnih vlaken, opto-elektronskimi sistemi za branje in pretvorbo optičnih signalov, ki jih generirajo optični senzorji, ter z zgradbo in delovanjem posebnih optičnih vlaken.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/denis-donlagic"
+    },
+    "imageAltText": "Denis ĐONLAGIĆ",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd784731e6053efc916a2",
+    "image": {
+      "id": "628fd784731e6053efc916a2",
+      "recordType": 2,
+      "addedOn": 1645694188954,
+      "updatedOn": 1650535918906,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645694188954,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645694193305-KZOWUTL7NW4MZWYKPP83",
+      "systemDataVariants": "4032x2685,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Denis Đonlagić PUD_9475.JPG",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e9ebeb",
+        "topRightAverage": "eaeceb",
+        "bottomLeftAverage": "d0d3d3",
+        "bottomRightAverage": "cccfc8",
+        "centerAverage": "e5e8e7",
+        "suggestedBgColor": "b4b4b4"
+      },
+      "urlId": "31ho6fkaaffwflhbd8993k9zhq66mz-628ae",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645694193305-KZOWUTL7NW4MZWYKPP83/Denis+%C4%90onlagic%CC%81+PUD_9475.JPG",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "4032x2685"
+    }
+  }, {
+    "title": "Igor EMRI",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1952, Murska Sobota<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1981, doktor tehniških znanosti, Univerza v Ljubljani/California Institute of Technology, Pasadena, ZDA<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: mehanika časovno odvisnih materialov, linearna in nelinearna viskoelastičnost, reologija polimerov, dinamična analiza materialov in struktur<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/igor-emri"
+    },
+    "imageAltText": "Igor EMRI",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd784731e6053efc916a5",
+    "image": {
+      "id": "628fd784731e6053efc916a5",
+      "recordType": 2,
+      "addedOn": 1645694587640,
+      "updatedOn": 1650535918915,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645694587640,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645694603172-LUSYMGM84INQ0XTZ2NIH",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T9644 Igor Emri.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f0f0f0",
+        "topRightAverage": "f5f5f5",
+        "bottomLeftAverage": "d9d8d9",
+        "bottomRightAverage": "e5e5e7",
+        "centerAverage": "f1f1f1",
+        "suggestedBgColor": "c8c4c4"
+      },
+      "urlId": "z2gq201gk1ame2q0lkdmu1l942ihyb-74785",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645694603172-LUSYMGM84INQ0XTZ2NIH/C75T9644+Igor+Emri.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Peter FAJFAR",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1943, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1974, doktor, Fakulteta za arhitekturo, gradbeništvo in geodezijo Univerze v Ljubljani (FAGG UL)<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: potresno inženirstvo, dinamika gradbenih konstrukcij<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/peter-fajfar"
+    },
+    "imageAltText": "Peter FAJFAR",
+    "mediaFocalPoint": {
+      "x": 0.493006993006993,
+      "y": 0.3192933671383005
+    },
+    "imageId": "628fd784731e6053efc916a8",
+    "image": {
+      "id": "628fd784731e6053efc916a8",
+      "recordType": 2,
+      "addedOn": 1645694704240,
+      "updatedOn": 1650535918920,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645694704240,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645694722428-M2MR878TGU4VINB681LE",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8989 Peter Fajfar.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e4e2e3",
+        "topRightAverage": "f7f7f7",
+        "bottomLeftAverage": "ccc8c6",
+        "bottomRightAverage": "e1dfe0",
+        "centerAverage": "ebeae9",
+        "suggestedBgColor": "ccc8c7"
+      },
+      "urlId": "z7aujn0idg7rp1wrdew7k3y36mc6kh-hjaxb",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645694722428-M2MR878TGU4VINB681LE/C75T8989+Peter+Fajfar.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Matjaž GAMS",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1954, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1989, doktor, Fakulteta za računalništvo in informatiko Univerze v Ljubljani (FRI UL), programski sistemi<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: umetna inteligenca, inteligentni sistemi, programska oprema, računalništvo in informatika, inf. družba<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/matjaz-gams"
+    },
+    "imageAltText": "Matjaž GAMS",
+    "mediaFocalPoint": {
+      "x": 0.5174825174825175,
+      "y": 0.29312177966794795
+    },
+    "imageId": "628fd784731e6053efc916ab",
+    "image": {
+      "id": "628fd784731e6053efc916ab",
+      "recordType": 2,
+      "addedOn": 1645694759672,
+      "updatedOn": 1650535918924,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645694759672,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645694776915-2LJL7O622N19KKO7P52T",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8672 Matjaž Gams.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e3e2e3",
+        "topRightAverage": "f4f4f6",
+        "bottomLeftAverage": "ccc9c9",
+        "bottomRightAverage": "e0dfe0",
+        "centerAverage": "eae9e9",
+        "suggestedBgColor": "bfbdbe"
+      },
+      "urlId": "5snunchty4120vzjeq2jfikbhig4c3-znz92",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645694776915-2LJL7O622N19KKO7P52T/C75T8672+Matjaz%CC%8C+Gams.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Peter GLAVIČ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1940, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1968, doktor kemijskih znanosti, vse na Fakulteti za kemijo in kemijsko tehnologijo Univerze v Ljubljani (FKKT UL); 1972, univerzitetni diplomirani ekonomist, Visoke ekonomsko-komercialne šole Univerze v Mariboru (VEKŠ UM).<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: kemijska tehnika, procesna sistemska tehnika, anorganska kemija, okoljska tehnologija, trajnostni razvoj, visokošolsko izobraževanje, ekonomija.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/peter-glavic"
+    },
+    "imageAltText": "Peter GLAVIČ",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd784731e6053efc916ae",
+    "image": {
+      "id": "628fd784731e6053efc916ae",
+      "recordType": 2,
+      "addedOn": 1645694841823,
+      "updatedOn": 1650535918928,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645694841823,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645694865997-J1I0E8PRV5WHKTPGD782",
+      "systemDataVariants": "5152x3435,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Peter Glavič_1.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "b5b1b1",
+        "topRightAverage": "b4b1b1",
+        "bottomLeftAverage": "b1adae",
+        "bottomRightAverage": "eceaee",
+        "centerAverage": "bfbcbd",
+        "suggestedBgColor": "a3a0a0"
+      },
+      "urlId": "fjybw7j9q0lbmdm2dwww6utw6svrm2-b6prr",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645694865997-J1I0E8PRV5WHKTPGD782/Peter+Glavic%CC%8C_1.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5152x3435"
+    }
+  }, {
+    "title": "Robert GOLOB",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1967, Šempeter pri Gorici<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1994 doktor znanosti, področje elektroenergetskih sistemov, Fakulteta za elektrotehniko Univerze v Ljubljani (FE UL)<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: elektroenergetika, obratovanje elektroenergetskega sistema (EES), deregulacije EES, prestrukturiranja elektrogospodarstva, trgov električne energije, digitalizacija poslovanja, preobrazba poslovnih procesov, povezljivost naprav (IoT-Internet of things), dekarbonizacija energetike<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/robert-golob"
+    },
+    "imageAltText": "Robert GOLOB",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd784731e6053efc916b1",
+    "image": {
+      "id": "628fd784731e6053efc916b1",
+      "recordType": 2,
+      "addedOn": 1645694917823,
+      "updatedOn": 1650535918932,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645694917823,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645694926776-XZKRWXWLAF63XNLMFLRE",
+      "systemDataVariants": "2933x1955,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "dr. Robert Golob_1.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "dcdcde",
+        "topRightAverage": "a09f9c",
+        "bottomLeftAverage": "ebebee",
+        "bottomRightAverage": "bcbbb9",
+        "centerAverage": "cdcccc",
+        "suggestedBgColor": "adacaf"
+      },
+      "urlId": "3vmmdffncpw2lowf7uaefeklelu743-wed6c",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645694926776-XZKRWXWLAF63XNLMFLRE/dr.+Robert+Golob_1.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "2933x1955"
+    }
+  }, {
+    "title": "Igor GRABEC",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1939, Slovenj Gradec<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1962–diploma, 1968–magisterij,1970–doktorat iz fizikalnih znanosti, Fakulteta za naravoslovje in tehnologijo Univerze v Ljubljani<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: fizika, ionizacijski valovi ter turbulenca v plazmi, ultrazvok in akustična emisija, kaotična dinamika, sinergetika, umetne nevronske mreže, analiza akustične emisije v neporušnih preiskavah materialov, tlačnih posod in obdelovalnih procesov, razvoj senzorjev, detektorjev in analizatorjev akustične emisije, nelinearni valovni pojavi, kaotični in naključni pojavi, obdelovalni procesi, razvoj kačastih robotov, simulacija in uporaba umetnih nevronskih mrež v naravoslovju, tehniki in medicini, statistični opis fizikalnih zakonov, modeliranje in napovedovanje prometnih tokov ter zastojev.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/igor-grabec"
+    },
+    "imageAltText": "Igor GRABEC",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd784731e6053efc916b4",
+    "image": {
+      "id": "628fd784731e6053efc916b4",
+      "recordType": 2,
+      "addedOn": 1645694964725,
+      "updatedOn": 1650535918938,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645694964725,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645694978969-IFYW7I9FRIE9LNS9SPOQ",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T9697 Igor Grabec.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f1f1f1",
+        "topRightAverage": "f5f5f5",
+        "bottomLeftAverage": "d7d6d8",
+        "bottomRightAverage": "e3e3e5",
+        "centerAverage": "f1f1f1",
+        "suggestedBgColor": "d5d1d0"
+      },
+      "urlId": "fpgaf73a3e1s2pyp80tinrrnexb142-yzdl2",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645694978969-IFYW7I9FRIE9LNS9SPOQ/C75T9697+Igor+Grabec.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Janez GRUM",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1946 v Ljubljani.<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1977, doktor znanosti, Fakulteta za strojništvo Univerze v Ljubljani (FS UL), Katedra za tehnologijo materialov.<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: Inženirski materiali, Nauk o materialih, Toplotna obdelava in oplemenitenje površin, Tehnike za obdelavo površin, Preiskave materialov, Neporušne preiskave, Laserska obdelava materialov.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/janez-grum"
+    },
+    "imageAltText": "Janez GRUM",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd784731e6053efc916b7",
+    "image": {
+      "id": "628fd784731e6053efc916b7",
+      "recordType": 2,
+      "addedOn": 1645695024774,
+      "updatedOn": 1650535918943,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645695024774,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645695039458-1QW7ZTM4HE3YL9L6FZ24",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T9637 Janez Grum.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f2f2f2",
+        "topRightAverage": "f5f5f5",
+        "bottomLeftAverage": "d2d0d2",
+        "bottomRightAverage": "e4e4e6",
+        "centerAverage": "f1f1f1",
+        "suggestedBgColor": "b6b3b4"
+      },
+      "urlId": "cyt5ene1xgqcvahn8cgkhy8haxqqls-hftyg",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645695039458-1QW7ZTM4HE3YL9L6FZ24/C75T9637+Janez+Grum.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Ferdinand GUBINA",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1939, Srebrnik, Bistrica ob Sotli<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1972, doktor elektrotehniških znanosti, Fakulteta za elektrotehniko Univerze v Ljubljani (FE UL)<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: elektroenergetski sistemi: obratovanje, vodenje, zaščita, dinamika in načrtovanje<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/ferdinand-gubina"
+    },
+    "imageAltText": "Ferdinand GUBINA",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916ba",
+    "image": {
+      "id": "628fd785731e6053efc916ba",
+      "recordType": 2,
+      "addedOn": 1645695066525,
+      "updatedOn": 1650535918947,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645695066525,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645695082573-WWU2MDIHWNXPUVFB4F50",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T9686 Ferdinand Gubina.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "ededee",
+        "topRightAverage": "f7f7f8",
+        "bottomLeftAverage": "c1bebf",
+        "bottomRightAverage": "dfdfdf",
+        "centerAverage": "edecec",
+        "suggestedBgColor": "cac6c8"
+      },
+      "urlId": "q7lkhuj10f3pvsf3jprbp7tsn2f6aj-empfk",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645695082573-WWU2MDIHWNXPUVFB4F50/C75T9686+Ferdinand+Gubina.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Marko JAGODIČ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1935, Krško<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1976, doktor znanosti, področje telekomunikacij, Fakulteta za elektrotehniko Univerze v Ljubljani (FE UL)<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: mikroelektronika, elektronske komunikacije, analiza in načrtovanje komunikacijskih omrežij, teorija strežnih vrst, digitalno procesiranje signalov<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/marko-jagodic"
+    },
+    "imageAltText": "Marko JAGODIČ",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916bd",
+    "image": {
+      "id": "628fd785731e6053efc916bd",
+      "recordType": 2,
+      "addedOn": 1645695141418,
+      "updatedOn": 1650535918957,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645695141418,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645695156966-AFKVHFDQ4RBURFWTLF0B",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8623 Marko Jagodič.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e2e1e2",
+        "topRightAverage": "f4f4f5",
+        "bottomLeftAverage": "cac8c9",
+        "bottomRightAverage": "dfdedf",
+        "centerAverage": "eae9ea",
+        "suggestedBgColor": "c5c2c5"
+      },
+      "urlId": "dpz7ujtp6v98632fb9koipna9lwzll-k7bzh",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645695156966-AFKVHFDQ4RBURFWTLF0B/C75T8623+Marko+Jagodic%CC%8C.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Japec JAKOPIN",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1951, Brežice<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1974 doktor medicine, 1980, doktor znanosti (kardiologija), Medicinska fakulteta Univerze v Ljubljani (MF UL), Interna klinika in Inštitut za fiziologijo<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/japec-jakopin"
+    },
+    "imageAltText": "Japec JAKOPIN",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916c0",
+    "image": {
+      "id": "628fd785731e6053efc916c0",
+      "recordType": 2,
+      "addedOn": 1645695216183,
+      "updatedOn": 1650535918966,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645695216183,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645695231326-APSQ9U3OS9ZZU2QM97HY",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8725 Japec Jakopin.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "ecebec",
+        "topRightAverage": "f8f8f8",
+        "bottomLeftAverage": "d3cfcf",
+        "bottomRightAverage": "e7e5e6",
+        "centerAverage": "efeeef",
+        "suggestedBgColor": "d0d0d6"
+      },
+      "urlId": "kloxb0h0g6lkeyamguz5x8jxr8v6r9-akmxh",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645695231326-APSQ9U3OS9ZZU2QM97HY/C75T8725+Japec+Jakopin.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Mihael JAPELJ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen 4. avgusta 1935 v Ljubljani<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba:  redni profesor za organsko kemijsko tehnologijo na FKKT (UL, 1984).<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja delovanja: vodenje raziskav in razvoja v farmacevtski industriji, sinteza novih heterocikličnih in organskih spojin, nove metode in strategije pri sintezah izbranih biološko aktivnih učinkovin, razvoj in raziskave tehnologij za sintezo učinkovin v pilotnem in industrijskem merilu.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/miha-japelj"
+    },
+    "imageAltText": "Mihael JAPELJ",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916c3",
+    "image": {
+      "id": "628fd785731e6053efc916c3",
+      "recordType": 2,
+      "addedOn": 1645695252902,
+      "updatedOn": 1650535918971,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645695252902,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645695272638-SRAOHIK5F5JQEDE4D294",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8758 Miha Japelj.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e2e0e1",
+        "topRightAverage": "f3f3f4",
+        "bottomLeftAverage": "cac6c6",
+        "bottomRightAverage": "d8d6d7",
+        "centerAverage": "e7e6e7",
+        "suggestedBgColor": "bbb7b6"
+      },
+      "urlId": "78tlc2hlrnbk096udmnovepwq4fhk1-mttd6",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645695272638-SRAOHIK5F5JQEDE4D294/C75T8758+Miha+Japelj.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Venčeslav KAUČIČ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1977, doktor, Fakulteta za naravoslovje in tehnologijo (Oddelek za kemijo in kemijsko tehnologijo) Univerze v Ljubljani; od 1981 do 1983 2 leti podoktorsko izpopolnjevanje (University of Leicester, Anglija); od 1989 do 2010 več mesecev gostujoči profesor (University of Manchester, Anglija).<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: anorganski (nano)porozni materiali, katalizatorji, kristalografija, rentgenska in nevtronska difrakcija<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/venceslav-kaucic"
+    },
+    "imageAltText": "Venčeslav KAUČIČ",
+    "mediaFocalPoint": {
+      "x": 0.26223776223776224,
+      "y": 0.8848167539267016
+    },
+    "imageId": "628fd785731e6053efc916c6",
+    "image": {
+      "id": "628fd785731e6053efc916c6",
+      "recordType": 2,
+      "addedOn": 1645695521071,
+      "updatedOn": 1650535918976,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645695521071,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645695539757-C1G2DSQQOKBCEI9C0TDL",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8597 Slavko Kaučič.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e1e0e1",
+        "topRightAverage": "ededed",
+        "bottomLeftAverage": "c7c4c5",
+        "bottomRightAverage": "abaaad",
+        "centerAverage": "e4e3e3",
+        "suggestedBgColor": "bebabb"
+      },
+      "urlId": "uxt21w01fvfj5d3xsf9ie038hgx4lt-25668",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645695539757-C1G2DSQQOKBCEI9C0TDL/C75T8597+Slavko+Kauc%CC%8Cic%CC%8C.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Jože KOBE",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1942, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba:  doktor, Fakulteta za naravoslovje in tehnologijo Univerze v Ljubljani (FNT UL); 19711972, podoktorsko izpopolnjevanje na ICN Nucleic Acid Researh Institute, Irvine, Kalifornija, ZDA; 19781979, gostujoči znanstvenik na College of Pharmacy, University of Michigan, Ann Arbor, Michigan, ZDA;1980–1981, gostujoči znanstvenik v Astra-Läkemedel, Södertälje, Švedska; (4 m) 1984. <\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: organska kemija in kemija zdravil, heterociklična kemija in kemija nukleinskih kislin: sinteza, struktura, asimetrična sinteza, supramolekularna kemija, vezana na nanotehnologijo; ekspertne ocene industrijskih patentov<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/joze-kobe"
+    },
+    "imageAltText": "Jože KOBE",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916c9",
+    "image": {
+      "id": "628fd785731e6053efc916c9",
+      "recordType": 2,
+      "addedOn": 1645695620194,
+      "updatedOn": 1650535918982,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645695620194,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645695635999-P0KCGSKWO9XTFKTCAJB1",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8829 Jože Kobe.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "dfddde",
+        "topRightAverage": "f4f4f5",
+        "bottomLeftAverage": "c6c2c1",
+        "bottomRightAverage": "dad8d9",
+        "centerAverage": "e7e6e7",
+        "suggestedBgColor": "c5c3c4"
+      },
+      "urlId": "svelijsijg3tzax0ikw4rrhexb46lg-s7f9s",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645695635999-P0KCGSKWO9XTFKTCAJB1/C75T8829+Joz%CC%8Ce+Kobe.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Spomenka KOBE",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojena leta 1947, Maribor<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1991, doktorat, Fakulteta za naravoslovje in tehnologijo (Oddelek za kemijo in kemijsko tehnologijo) Univerze v Ljubljani; od 1989 do 1990 eno leto strokovno izpopolnjevanje (University of Twente, Enschede the Netherlands); 1996–1997, gostujoča znanstvenica (University of Western Australia, Perth, Avstralija).<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: trajnomagnetni materiali na osnovi redkih zemelj in elementov prehoda, magnetokalorični materiali, intermetalne zlitine – tanke plasti in nanostrukture, kompleksne zlitine, vpliv procesiranja in mikrostrukture na fizikalne lastnosti, uporaba trajnih magnetov za čistejše okolje.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/spomenka-kobe"
+    },
+    "imageAltText": "Spomenka KOBE",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916cc",
+    "image": {
+      "id": "628fd785731e6053efc916cc",
+      "recordType": 2,
+      "addedOn": 1645695801683,
+      "updatedOn": 1650535918989,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645695801683,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645695819132-NSZS6HBCDHR1RMGIE61A",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T9652 Spomenka Kobe.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f0f0f0",
+        "topRightAverage": "f4f4f4",
+        "bottomLeftAverage": "d6d4d5",
+        "bottomRightAverage": "e5e5e6",
+        "centerAverage": "efefef",
+        "suggestedBgColor": "e4ddd7"
+      },
+      "urlId": "clii2orj4xzz62vkd87bbtunkd7gji-ntn8t",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645695819132-NSZS6HBCDHR1RMGIE61A/C75T9652+Spomenka+Kobe.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Hubert KOSLER",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1959 v Ljubljani<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba:  2016, Univerza v Ljubljani, Fakulteta za strojništvo, doktor znanosti Področja dejavnosti: vodenje projektov, postavitev in vodenje proizvodnega podjetja za proizvodnjo robotskih celic v Ribnici, postavitev orodjarne s CAD/CAM-podporo, implementacija vitke proizvodnje, sodelovanje pri razvoju triangulacijskega sistema za robotsko sledenje zvarnega roba, razvojno delo na področju laserske robotske celice za 3D rezanje in varjenje, integracija industrijskih robotov za potrebe daljinskih laserskih obdelovalnih procesov s podporo adaptivnih sistemov.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/hubert-kosler"
+    },
+    "imageAltText": "Hubert KOSLER",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916d0",
+    "image": {
+      "id": "628fd785731e6053efc916d0",
+      "recordType": 2,
+      "addedOn": 1645700003750,
+      "updatedOn": 1650535918997,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645700003750,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645700004792-HVXQB8TPK3ZML5S351L9",
+      "systemDataVariants": "1030x970,100w,300w,500w,750w,1000w",
+      "systemDataSourceType": "PNG",
+      "filename": "Screen Shot 2022-02-24 at 11.53.11.png",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "ffffff",
+        "topRightAverage": "ffffff",
+        "bottomLeftAverage": "ffffff",
+        "bottomRightAverage": "ffffff",
+        "centerAverage": "b6876c",
+        "suggestedBgColor": "ffffff"
+      },
+      "urlId": "15ewk6atjir49gl12wqhmgexim4cfi-yr3p5",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645700004792-HVXQB8TPK3ZML5S351L9/Screen+Shot+2022-02-24+at+11.53.11.png",
+      "contentType": "image/png",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "1030x970"
+    }
+  }, {
+    "title": "Aleš KRAINER",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1942, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1990 doktor tehničnih znanosti, Fakulteta za gradbeništvo in geodezijo Univerze v Ljubljani<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: razvil je nove metode načrtovanja in oblikovanja konstrukcijskih sklopov in zgradbe kot celote na podlagi sistemske analize v okviru bioklimatskih principov kot odziv na probleme, ki so se v letih 1974 in 1976 pojavili ob energetskih krizah, in jih razširil ob sodelovanju s področji fizike Osredotočil se je predvsem na nizkotemperaturne eksergijske sisteme, na vpliv, ki ga imata dnevna svetloba in osončenje stavbe, v večini povezanih v okviru ciber-fizičnih sistemov s kontrolnimi sistemi na podlagi mehke logike in okoljskega zdravja. <\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/ales-krainer"
+    },
+    "imageAltText": "Aleš KRAINER",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916d4",
+    "image": {
+      "id": "628fd785731e6053efc916d4",
+      "recordType": 2,
+      "addedOn": 1645696027463,
+      "updatedOn": 1650535919002,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696027463,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696044630-N5FT18V41C0GXVQDV6EE",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T1023 Aleš Krainer.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f7f7f7",
+        "topRightAverage": "fcfcfc",
+        "bottomLeftAverage": "cbc9ca",
+        "bottomRightAverage": "edeef0",
+        "centerAverage": "f4f4f4",
+        "suggestedBgColor": "bfbcbe"
+      },
+      "urlId": "4djziarcuyipk58tq24dffslx4njd2-cfb55",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696044630-N5FT18V41C0GXVQDV6EE/C75T1023+Ales%CC%8C+Krainer.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Zdravko KRAVANJA",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1957, Maribor<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1990 doktor, Fakulteta za kemijo in kemijsko tehnologijo Univerze v Mariboru<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: kemijska tehnika, procesno sistemsko inženirstvo (sinteza procesov, optimiranje procesov, dinamika procesov, razvoj algoritmov, modeliranje in simuliranje, računalniško programiranje, sinteza trajnostnih sistemov, procesna fleksibilnost, operacijske raziskave, razvoj indikatorjev trajnostnega razvoja in krožnega gospodarstva)<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/zdravko-kravanja"
+    },
+    "imageAltText": "Zdravko KRAVANJA",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916d7",
+    "image": {
+      "id": "628fd785731e6053efc916d7",
+      "recordType": 2,
+      "addedOn": 1645696085806,
+      "updatedOn": 1650535919008,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696085806,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696090509-BAPKXE690NCRWCYDKL1F",
+      "systemDataVariants": "1906x1271,100w,300w,500w,750w,1000w,1500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Zdravko Kravanja_1.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e4e5e7",
+        "topRightAverage": "e3e5e7",
+        "bottomLeftAverage": "6d7373",
+        "bottomRightAverage": "394141",
+        "centerAverage": "e3e4e6",
+        "suggestedBgColor": "a09995"
+      },
+      "urlId": "mfmzvnyao473wbuyts4j500tnutas8-4br52",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696090509-BAPKXE690NCRWCYDKL1F/Zdravko+Kravanja_1.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "1906x1271"
+    }
+  }, {
+    "title": "Tamara LAH TURNŠEK",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojena leta 1947, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1984, doktorica znanosti, Univerza v Ljubljani, Fakulteta za kemijo in kemijsko tehnologijo (UL FKKT); 3 leta podoktorsko izpopolnjevanje (Wayne State University, MI, ZDA<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojena leta 1947, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: biokemija in molekularna biologija, matične celice, proteoliza, tumorska biologija<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/tamara-lah-turnsek"
+    },
+    "imageAltText": "Tamara LAH TURNŠEK",
+    "mediaFocalPoint": {
+      "x": 0.4775577170983242,
+      "y": 0.29502304867567775
+    },
+    "imageId": "628fd785731e6053efc916da",
+    "image": {
+      "id": "628fd785731e6053efc916da",
+      "recordType": 2,
+      "addedOn": 1645696144641,
+      "updatedOn": 1650535919013,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696144641,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696154788-XFGXKZMM2RG1693NVVJ5",
+      "systemDataVariants": "2048x3072,100w,300w,500w,750w,1000w,1500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Tamara Lah Turnšek-9.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "182e16",
+        "topRightAverage": "655541",
+        "bottomLeftAverage": "8e8b87",
+        "bottomRightAverage": "ada9a5",
+        "centerAverage": "996745",
+        "suggestedBgColor": "7b6c59"
+      },
+      "urlId": "zzy1zazslrqrumwnwb96k2v3p5s98x-z379t",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696154788-XFGXKZMM2RG1693NVVJ5/Tamara+Lah+Turns%CC%8Cek-9.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "2048x3072"
+    }
+  }, {
+    "title": "Jadran LENARČIČ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1955, Beograd, Jugoslavija<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1986, doktor, Fakulteta za elektrotehniko Univerze v Ljubljani (FE UL) Področja dejavnosti: vodenje robotov, robotska kinematika, biorobotika, biomehanika, humanoidni roboti<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/jadran-lenarcic"
+    },
+    "imageAltText": "Jadran LENARČIČ",
+    "mediaFocalPoint": {
+      "x": 0.513986013986014,
+      "y": 0.334996319620512
+    },
+    "imageId": "628fd785731e6053efc916dd",
+    "image": {
+      "id": "628fd785731e6053efc916dd",
+      "recordType": 2,
+      "addedOn": 1645696190820,
+      "updatedOn": 1650535919018,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696190820,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696207824-EKAF1LW8FIOTYNE6DW9C",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8884 Jadran Lenarčič.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e3e1e2",
+        "topRightAverage": "f6f6f6",
+        "bottomLeftAverage": "c7c3c3",
+        "bottomRightAverage": "dedcdd",
+        "centerAverage": "e8e7e8",
+        "suggestedBgColor": "c2c0bf"
+      },
+      "urlId": "lylm2lb4m93dsrchvy2p4a4mnl5q28-wst35",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696207824-EKAF1LW8FIOTYNE6DW9C/C75T8884+Jadran+Lenarc%CC%8Cic%CC%8C.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Vojteh LESKOVŠEK",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1947, Ptuj<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1974, univerzitetni diplomirani inženir, Fakulteta za naravoslovje in tehnologijo Univerze v Ljubljani (FNT UL), Oddelek za montanistiko, odsek za metalurgijo; 1999, doktor na področju tehnologije termičnih obdelav, Fakulteta za strojništvo in ladjedelništvo Univerze v Zagrebu, Oddelek za materiale in metalurgijo<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: vakuumska toplotna obdelava, modificiranje površin kovinskih materialov, numerične simulacije procesov toplotne obdelave in procesov inženiringa površin<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/vojteh-leskovsek"
+    },
+    "imageAltText": "Vojteh LESKOVŠEK",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916e0",
+    "image": {
+      "id": "628fd785731e6053efc916e0",
+      "recordType": 2,
+      "addedOn": 1645696247332,
+      "updatedOn": 1650535919023,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696247332,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696250702-BOMNJ4FA21W9RACT2D75",
+      "systemDataVariants": "1181x1772,100w,300w,500w,750w,1000w",
+      "systemDataSourceType": "JPG",
+      "filename": "Vojteh Leskovšek.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "ffffff",
+        "topRightAverage": "ffffff",
+        "bottomLeftAverage": "45464a",
+        "bottomRightAverage": "444447",
+        "centerAverage": "c47c78",
+        "suggestedBgColor": "afa4a4"
+      },
+      "urlId": "ifxsg41pu9w5a7h27mp22f8cb7kh22-nz8wx",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696250702-BOMNJ4FA21W9RACT2D75/Vojteh+Leskovs%CC%8Cek.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "1181x1772"
+    }
+  }, {
+    "title": "Aleksandra LOBNIK",
+    "description": null,
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/aleksandra-lobnik"
+    },
+    "imageId": "6334c0649332d920dc844271",
+    "image": {
+      "id": "6334c0649332d920dc844271",
+      "recordType": 2,
+      "addedOn": 1664401508121,
+      "updatedOn": 1664401508169,
+      "workflowState": 1,
+      "publishOn": 1664401508121,
+      "authorId": "628cbcd4dd24191b8ffc7122",
+      "systemDataId": "1664397359368-415D8Q5Z7BMNFGLR2ERZ",
+      "systemDataVariants": "1496x1468,100w,300w,500w,750w,1000w",
+      "systemDataSourceType": "PNG",
+      "filename": "al.png",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "4a4432",
+        "topRightAverage": "4a4039",
+        "bottomLeftAverage": "221712",
+        "bottomRightAverage": "54382b",
+        "centerAverage": "242122",
+        "suggestedBgColor": "3d3734"
+      },
+      "urlId": "gjv5fqhu8lg2m43ezc8zn0znz6nf9c",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "628cbcd4dd24191b8ffc7122",
+        "displayName": "nikola zupan",
+        "firstName": "Nikola",
+        "lastName": "Zupan",
+        "avatarUrl": "https://static1.squarespace.com/static/images/6321ad51d8169d57378360f7",
+        "bio": "",
+        "avatarAssetUrl": "https://static1.squarespace.com/static/images/6321ad51d8169d57378360f7"
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1664397359368-415D8Q5Z7BMNFGLR2ERZ/al.png",
+      "contentType": "image/png",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "1496x1468"
+    }
+  }, {
+    "title": "Matjaž LUKAČ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1954, Jesenice<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1979, univerzitetni diplomirani inženir tehniške fizike; 1985, magister fizike; 1986, doktor fizikalnih znanosti, Fakulteta za naravoslovje in tehnologijo Univerze v Ljubljani; 1993, Master of Business Administration, International Executive Development Centre, Brdo pri Kranju<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: laserska fizika in optična spektroskopija<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/matjaz-lukac"
+    },
+    "imageAltText": "Matjaž LUKAČ",
+    "mediaFocalPoint": {
+      "x": 0.479020979020979,
+      "y": 0.25648155720945454
+    },
+    "imageId": "628fd785731e6053efc916e3",
+    "image": {
+      "id": "628fd785731e6053efc916e3",
+      "recordType": 2,
+      "addedOn": 1645696289329,
+      "updatedOn": 1650535919027,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696289329,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696300174-AZVS2KT63RS0N61V67I2",
+      "systemDataVariants": "3516x2344,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Matjaž Lukač DSC_3797_edit.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "d0d4d5",
+        "topRightAverage": "d3d4d5",
+        "bottomLeftAverage": "c0c7cc",
+        "bottomRightAverage": "c8c8c8",
+        "centerAverage": "d2d6d7",
+        "suggestedBgColor": "bec4c6"
+      },
+      "urlId": "bjdpl2jeuso71wakb7q8z8yozw29tl-jbxd5",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696300174-AZVS2KT63RS0N61V67I2/Matjaz%CC%8C+Lukac%CC%8C+DSC_3797_edit.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "3516x2344"
+    }
+  }, {
+    "title": "Marjan MAČKOŠEK",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1954, Celje<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1982, univerzitetni diplomirani inženir strojništva, Visoka tehniška šola Maribor<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: CNC-tehnologija, avtomatizacija, robotizacija, poslovodenje, usposobljenost za člana nadzornih svetov in upravnih odborov družb<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/marjan-mackosek"
+    },
+    "imageAltText": "Marjan MAČKOŠEK",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916e6",
+    "image": {
+      "id": "628fd785731e6053efc916e6",
+      "recordType": 2,
+      "addedOn": 1645696367411,
+      "updatedOn": 1650535919033,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696367411,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696383032-1NSO30MD3G0HQFQ4OVF2",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8654 Marjan Mačkošek.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "dcdadb",
+        "topRightAverage": "f2f2f3",
+        "bottomLeftAverage": "c5c1c1",
+        "bottomRightAverage": "dcdadb",
+        "centerAverage": "e5e4e5",
+        "suggestedBgColor": "bbb8b9"
+      },
+      "urlId": "beu67b5m4batdisqf0deld348ykh0n-jh6y3",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696383032-1NSO30MD3G0HQFQ4OVF2/C75T8654+Marjan+Mac%CC%8Ckos%CC%8Cek.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Marko MARINČEK",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1963, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 2000, doktorat, Fakulteta za matematiko in fiziko, Univerza v Ljubljani; 2013, Executive education program, Univerza Chicago Booth School of Business Področja dejavnosti: fotonika, fizika laserskih izvirov, vodenje projektov, organizacija in koordinacija razvojno/raziskovalnih procesov<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/marko-marincek"
+    },
+    "imageAltText": "Marko MARINČEK",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916e9",
+    "image": {
+      "id": "628fd785731e6053efc916e9",
+      "recordType": 2,
+      "addedOn": 1645696463975,
+      "updatedOn": 1650535919037,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696463975,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696478696-FKJOV5XELMKR66EK8D44",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T9747 Marko Marinček.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "efeff0",
+        "topRightAverage": "f8f8f8",
+        "bottomLeftAverage": "c9c7c8",
+        "bottomRightAverage": "e6e6e8",
+        "centerAverage": "efefef",
+        "suggestedBgColor": "d9d6d6"
+      },
+      "urlId": "gru9w9wuqzyfu3wg3mp6k8jo4u0ulj-5l65y",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696478696-FKJOV5XELMKR66EK8D44/C75T9747+Marko+Marinc%CC%8Cek.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Zoran MARINŠEK",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1945, Pivka<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1987, doktor tehniških znanosti, Fakulteta za strojništvo Univerze v Ljubljani<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: pojavi pri vrenju; varnostne analize in varnostna instrumentacija jedrskih elektrarn; učinkovita raba energije z vodenjem procesov, tehnologija vodenja procesov, vodenje aktivnega odjema v pametnih omrežjih.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/zoran-marinsek"
+    },
+    "imageAltText": "Zoran MARINŠEK",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916ec",
+    "image": {
+      "id": "628fd785731e6053efc916ec",
+      "recordType": 2,
+      "addedOn": 1645696518906,
+      "updatedOn": 1650535919041,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696518906,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696532253-3N6HEQSHYXWYZUYBLAYV",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8972 Zoran Marinšek.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "dadbe0",
+        "topRightAverage": "f3f4f8",
+        "bottomLeftAverage": "bebfc5",
+        "bottomRightAverage": "d8d9de",
+        "centerAverage": "e5e5ea",
+        "suggestedBgColor": "c8c8cf"
+      },
+      "urlId": "0v2mkkzn6foapefjnuv2wauisue41t-za55e",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696532253-3N6HEQSHYXWYZUYBLAYV/C75T8972+Zoran+Marins%CC%8Cek.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Drago MATKO",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1947, Trbovlje<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1971, univerzitetni diplomirani inženir; 1973, magister; 1977, doktor, Fakulteta za elektrotehniko Univerze v Ljubljani (FE UL); 1980–1982, 1984, 1985 in 1986 (skupaj 30 mesecev), podoktorsko izpopolnjevanje na Institutu za regulacijsko tehniko v Darmstadtu, Nemčija<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: avtomatika<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/drago-matko"
+    },
+    "imageAltText": "Drago MATKO",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916ef",
+    "image": {
+      "id": "628fd785731e6053efc916ef",
+      "recordType": 2,
+      "addedOn": 1645696572845,
+      "updatedOn": 1650535919046,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696572845,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696573637-OR4OY0PG3BD2NBFCE2HG",
+      "systemDataVariants": "1200x1600,100w,300w,500w,750w,1000w",
+      "systemDataSourceType": "JPG",
+      "filename": "Drago_Matko_sl_1200x1600.JPG",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "d4d4da",
+        "topRightAverage": "bbbabc",
+        "bottomLeftAverage": "393c4a",
+        "bottomRightAverage": "0e0d0f",
+        "centerAverage": "aeb0b8",
+        "suggestedBgColor": "837f84"
+      },
+      "urlId": "di394xlxevir9ass9i4ahwqs5jbcc9-d28c2",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696573637-OR4OY0PG3BD2NBFCE2HG/Drago_Matko_sl_1200x1600.JPG",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "1200x1600"
+    }
+  }, {
+    "title": "Borut MAVKO",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1944, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1979, doktor, Fakulteta za elektrotehniko Univerze v Mariboru (FE UM) <\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: jedrska energetika in tehnologija, varnostne analize prehodnih pojavov in nesreč, verjetnostne ocene tveganj jedrskih naprav<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/borut-mavko"
+    },
+    "imageAltText": "Borut MAVKO",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916f2",
+    "image": {
+      "id": "628fd785731e6053efc916f2",
+      "recordType": 2,
+      "addedOn": 1645696594928,
+      "updatedOn": 1650535919050,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696594928,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696605797-R4KN36AFSF87EJDT5LAG",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8933 Borut Mavko.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e4e2e3",
+        "topRightAverage": "f5f5f5",
+        "bottomLeftAverage": "c9c5c4",
+        "bottomRightAverage": "dddbdc",
+        "centerAverage": "e8e7e8",
+        "suggestedBgColor": "bdbaba"
+      },
+      "urlId": "xv3y98c4pnho6en8fk17i2c532udvy-4b38z",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696605797-R4KN36AFSF87EJDT5LAG/C75T8933+Borut+Mavko.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Milan MEDVED",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1960, Celje<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1994, doktor, Naravoslovnotehniška fakulteta Univerze v Ljubljani (NTF UL), Oddelek za geotehnologijo in rudarstvo<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: energetika, energijski viri, preskrba z energijo, energetsko rudarstvo, proizvodnja električne energije in trgovanje z njo, ekološki in socialni vidiki rudarjenja, prestrukturiranje premogovne industrije, podzemno rudarjenje, širokočelno odkopavanje premoga, jamomerstvo, rudarske škode<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/milan-medved"
+    },
+    "imageAltText": "Milan MEDVED",
+    "mediaFocalPoint": {
+      "x": 0.7027972027972028,
+      "y": 0.4686908582243068
+    },
+    "imageId": "628fd785731e6053efc916f5",
+    "image": {
+      "id": "628fd785731e6053efc916f5",
+      "recordType": 2,
+      "addedOn": 1645696650824,
+      "updatedOn": 1650535919054,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696650824,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696651334-SL9UE8AA4KXNRVVVJP62",
+      "systemDataVariants": "642x426,100w,300w,500w",
+      "systemDataSourceType": "PNG",
+      "filename": "Milan Medved.png",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "000000",
+        "topRightAverage": "000000",
+        "bottomLeftAverage": "000000",
+        "bottomRightAverage": "10111c",
+        "centerAverage": "050709",
+        "suggestedBgColor": "000000"
+      },
+      "urlId": "a6kh1vzwymd6fy79l1ddf95l7u39yk-gms7f",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696651334-SL9UE8AA4KXNRVVVJP62/Milan+Medved.png",
+      "contentType": "image/png",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "642x426"
+    }
+  }, {
+    "title": "Dragan D. MIHAILOVIĆ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: v Ljubljani; Washingtonu, ZDA; Birminghamu, Velika Britanija; Oxfordu, Velika Britanija; 1979, diploma, University of Oxford, Velika Britanija; 1983, doktor, University of Oxford, Velika Britanija<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: Vodilni raziskovalec na področju časovno ločene spektroskopije kompleksnih snovi. Ima svetovno pomembne in priznane prispevke na več področjih v fiziki kondenzirane materije vključno z visokotemperaturnimi superprevodniki, molekularnim magnetizmom, nizko- dimenzionalnimi materiali, še posebej nanožicami.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/dragan-d-mihailovic"
+    },
+    "imageAltText": "Dragan D. MIHAILOVIĆ",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916f8",
+    "image": {
+      "id": "628fd785731e6053efc916f8",
+      "recordType": 2,
+      "addedOn": 1645696678664,
+      "updatedOn": 1650535919058,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696678664,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696692044-4DFIJRSXE2ZR9EU409PU",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T0998 Dragan Mihailović.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f4f4f6",
+        "topRightAverage": "fbfbfb",
+        "bottomLeftAverage": "bebcbd",
+        "bottomRightAverage": "e7e7e9",
+        "centerAverage": "f1f1f2",
+        "suggestedBgColor": "c0bec0"
+      },
+      "urlId": "vsc9g0fxs0n5jkh2evjfow885z79a6-ypay3",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696692044-4DFIJRSXE2ZR9EU409PU/C75T0998+Dragan+Mihailovic%CC%81.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Matjaž MIKOŠ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1959, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1993, doktor tehniških znanosti, ETH Zürich, Švica<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: inženirska hidrologija, inženirska hidrotehnika, okoljsko gradbeništvo, upravljanje tveganj<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/matjaz-mikos"
+    },
+    "imageAltText": "Matjaž MIKOŠ",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916fb",
+    "image": {
+      "id": "628fd785731e6053efc916fb",
+      "recordType": 2,
+      "addedOn": 1645696863319,
+      "updatedOn": 1650535919063,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696863319,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696878858-UPE2029PFGISMP7Z2LTG",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8766 Matjaž Mikoš.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "dfddde",
+        "topRightAverage": "f1f1f3",
+        "bottomLeftAverage": "c0bbba",
+        "bottomRightAverage": "d6d4d5",
+        "centerAverage": "e3e2e3",
+        "suggestedBgColor": "bbb7b8"
+      },
+      "urlId": "fwd1wvfpium626yzq92d5jnbj31ipi-tg7xm",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696878858-UPE2029PFGISMP7Z2LTG/C75T8766+Matjaz%CC%8C+Mikos%CC%8C.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Janez MOŽINA",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1945, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1969, univerzitetni diplomirani inženir; 1976, magister, Fakulteta za naravoslovje in tehnologijo Univerze v Ljubljani (FNT UL), Oddelek za fiziko; 1980, doktor, Fakulteta za strojništvo Univerze v Ljubljani (FS UL)<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: uporabna fizika, akustična emisija, optoakustika, optodinamika, laserska tehnika<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/janez-mozina"
+    },
+    "imageAltText": "Janez MOŽINA",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc916fe",
+    "image": {
+      "id": "628fd785731e6053efc916fe",
+      "recordType": 2,
+      "addedOn": 1645696960636,
+      "updatedOn": 1650535919068,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645696960636,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645696973957-NHNBY5JL9ZW8CWXA8XCX",
+      "systemDataVariants": "2924x3899,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Janez Možina.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f7f3e9",
+        "topRightAverage": "f3f0eb",
+        "bottomLeftAverage": "b09c7a",
+        "bottomRightAverage": "c1ae8b",
+        "centerAverage": "f5f1e8",
+        "suggestedBgColor": "cab9a7"
+      },
+      "urlId": "a3o9ezg79cjpf95mq74xag4g0y98kk-lc7kx",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645696973957-NHNBY5JL9ZW8CWXA8XCX/Janez+Moz%CC%8Cina.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "2924x3899"
+    }
+  }, {
+    "title": "Janez Novak",
+    "description": null,
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/janez-novak"
+    },
+    "imageAltText": "Janez Novak",
+    "imageId": "6334c0d92d683907f6161339",
+    "image": {
+      "id": "6334c0d92d683907f6161339",
+      "recordType": 2,
+      "addedOn": 1664401625459,
+      "updatedOn": 1664401625508,
+      "workflowState": 1,
+      "publishOn": 1664401625459,
+      "authorId": "628cbcd4dd24191b8ffc7122",
+      "systemDataId": "1664401141095-3VXS4YMSGOKLQAEO7I9M",
+      "systemDataVariants": "2706x3438,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Fotografija Janez Novak.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "838c80",
+        "topRightAverage": "909191",
+        "bottomLeftAverage": "c3d3f0",
+        "bottomRightAverage": "abbfe0",
+        "centerAverage": "70746d",
+        "suggestedBgColor": "9f9490"
+      },
+      "urlId": "j4n3tcpkbmq3vypeajz07szj1uhwf2",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "628cbcd4dd24191b8ffc7122",
+        "displayName": "nikola zupan",
+        "firstName": "Nikola",
+        "lastName": "Zupan",
+        "avatarUrl": "https://static1.squarespace.com/static/images/6321ad51d8169d57378360f7",
+        "bio": "",
+        "avatarAssetUrl": "https://static1.squarespace.com/static/images/6321ad51d8169d57378360f7"
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1664401141095-3VXS4YMSGOKLQAEO7I9M/Fotografija+Janez+Novak.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "2706x3438"
+    }
+  }, {
+    "title": "Boris OREL",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen 13. aprila 1943 v Ljubljani<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1972, doktorat iz kemije, Fakulteta za naravoslovje in tehnologijo, Univerza v Ljubljani, <\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: 1. IR in ramanska spektroskopija (do l. 1994); 2. priprava materialov in tankih prevlek (thin films) po sol-gel postopkih (od l. 1991 dalje): nanokompozitni hibridi; antikorozijske prevleke; multifunkcionalne (oleo in hidrofobne) prevleke za tekstil, elektrokromne tanke plasti z interkalacijskimi lastnostmi; elektrokromna in gasokromni »pametna (»smart«) okna 3. spektralno selektivne prevleke za sončne absorberje.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/boris-orel"
+    },
+    "imageAltText": "Boris OREL",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc91701",
+    "image": {
+      "id": "628fd785731e6053efc91701",
+      "recordType": 2,
+      "addedOn": 1645697062147,
+      "updatedOn": 1650535919073,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697062147,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697080901-BYH6NAYJGFE7O79WX5BP",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8873 Boris Orel.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "dfddde",
+        "topRightAverage": "f4f4f5",
+        "bottomLeftAverage": "c5c1c0",
+        "bottomRightAverage": "dcdadb",
+        "centerAverage": "e7e6e6",
+        "suggestedBgColor": "b3b1b1"
+      },
+      "urlId": "ydb1kky7cvmqoq8andad7rmmy5lyvj-b96k3",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697080901-BYH6NAYJGFE7O79WX5BP/C75T8873+Boris+Orel.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Stane PEJOVNIK",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1946, Dolenja vas, Občina Žalec<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: Doktoriral 1978 na Fakulteti za kemijo in kemijsko tehnologijo Univerze v Ljubljani (FKKT UL)<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: kemija, znanost in inženirstvo materialov, Li-ionske baterije, keramika, inovacijski sistemi, krožno gospodarstvo Zaposlitev/kariera: 1970–1982, raziskovalec na Institutu »Jožef Stefan« (IJS) in na FKKT UL; 1977–1978, gostujoči raziskovalec na Max-Planck Institut of Materials Sc.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/stane-pejovnik"
+    },
+    "imageAltText": "Stane PEJOVNIK",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc91704",
+    "image": {
+      "id": "628fd785731e6053efc91704",
+      "recordType": 2,
+      "addedOn": 1645697125715,
+      "updatedOn": 1650535919077,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697125715,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697142322-UOIL5KTID5C8UMJ9QYM2",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8730 Stane Pejovnik.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e5e3e4",
+        "topRightAverage": "f3f3f4",
+        "bottomLeftAverage": "cecacb",
+        "bottomRightAverage": "dcdadb",
+        "centerAverage": "e9e8e8",
+        "suggestedBgColor": "bcb9ba"
+      },
+      "urlId": "f4dviwlnstrkqv04bv2mi92iy6psj6-4cxgb",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697142322-UOIL5KTID5C8UMJ9QYM2/C75T8730+Stane+Pejovnik.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Marjan PIPENBAHER",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1957, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1981, diploma Fakultete za gradbeništvo Univerze v Mariboru (FG UM); 2004–2008, podiplomski doktorski študij na FG UM<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: raziskave in razvoj na področju gradbenih konstrukcij (mostov in inženirskih objektov), vodilni in odgovorni projektant najzahtevnejših premostitvenih in drugih inženirskih objektov, predavatelj na FG UM<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/tomaz-pisanski"
+    },
+    "imageAltText": "Marjan PIPENBAHER",
+    "mediaFocalPoint": {
+      "x": 0.47202797202797203,
+      "y": 0.3517637407711238
+    },
+    "imageId": "628fd785731e6053efc91707",
+    "image": {
+      "id": "628fd785731e6053efc91707",
+      "recordType": 2,
+      "addedOn": 1645697183873,
+      "updatedOn": 1650535919082,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697183873,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697189635-O2TI98LN0FN8MKMTYHSE",
+      "systemDataVariants": "3247x2160,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "PIPENBAHER - Foto.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e7e6e6",
+        "topRightAverage": "e5e4e4",
+        "bottomLeftAverage": "e0dfde",
+        "bottomRightAverage": "dbdada",
+        "centerAverage": "e6e4e4",
+        "suggestedBgColor": "bfbaba"
+      },
+      "urlId": "6czxp4s78u147ifc6btwphfsf9onup-hsze3",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697189635-O2TI98LN0FN8MKMTYHSE/PIPENBAHER+-+Foto.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "3247x2160"
+    }
+  }, {
+    "title": "Janez PIRŠ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen 8. 8.1945 v Ljubljani<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: univ. dipl. inž. fizike (1969), doktor fizike, (1975) – Univerza v Ljubljani; podoktorsko izpopolnjevanje (1975–1977) – Liquid Crystal Institute at Kent State University, Kent OH , ZDA<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področje dejavnosti: fizika tekočih kristalov: aplikativne raziskave modulacije svetlobe s tekočekristalnimi svetlobnimi preklopniki; fazni prehodi v tekočih kristalih; jedrska magnetne resonanca<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/janez-pirs"
+    },
+    "imageAltText": "Janez PIRŠ",
+    "mediaFocalPoint": {
+      "x": 0.45454545454545453,
+      "y": 0.22507565224503145
+    },
+    "imageId": "628fd785731e6053efc9170a",
+    "image": {
+      "id": "628fd785731e6053efc9170a",
+      "recordType": 2,
+      "addedOn": 1645697234599,
+      "updatedOn": 1650535919086,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697234599,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697249329-WY0ZAC4P65DUWE6DWOML",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T1041 Janez Pirš.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f7f7f7",
+        "topRightAverage": "fcfcfc",
+        "bottomLeftAverage": "cccacb",
+        "bottomRightAverage": "ebebed",
+        "centerAverage": "f3f3f3",
+        "suggestedBgColor": "c3c1c2"
+      },
+      "urlId": "i8mhro0sr5binr2ofyz8ggagbyj8y1-j9esf",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697249329-WY0ZAC4P65DUWE6DWOML/C75T1041+Janez+Pirs%CC%8C.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Tomaž PISANSKI",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1949, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1981, doktor matematičnih znanosti, FNT, Univerza v Ljubljani. Izpopolnjevanje Univerza v Nancyu, Francija, eno leto; Pennsylvania State University (magisterij iz računalniških znanosti)<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: diskretna matematika, matematična kemija<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/"
+    },
+    "imageAltText": "Tomaž PISANSKI",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc9170d",
+    "image": {
+      "id": "628fd785731e6053efc9170d",
+      "recordType": 2,
+      "addedOn": 1645697282839,
+      "updatedOn": 1650535919090,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697282839,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697286671-YGAQONJGSXQ494262EDA",
+      "systemDataVariants": "4014x5244,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Tomaž Pisanski.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "b4bab9",
+        "topRightAverage": "b2b7bb",
+        "bottomLeftAverage": "bec3c6",
+        "bottomRightAverage": "726d66",
+        "centerAverage": "a8a8a3",
+        "suggestedBgColor": "6f6d6d"
+      },
+      "urlId": "v09tjpylvdpz2hadby1oomkt1tyc4o-6f9cd",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697286671-YGAQONJGSXQ494262EDA/Tomaz%CC%8C+Pisanski.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "4014x5244"
+    }
+  }, {
+    "title": "Mark PLEŠKO",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1961, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: doktor fizikalnih znanosti (1987), Univerza v Ljubljani; MBA iz menedžmenta, diplomiral z odliko (1996), IEDC, Brdo<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: fizika osnovnih delcev, fizika pospeševalnikov, kontrolni sistemi za pospeševalnike, podjetništvo, menedžment<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/mark-plesko"
+    },
+    "imageAltText": "Mark PLEŠKO",
+    "mediaFocalPoint": {
+      "x": 0.4965034965034965,
+      "y": 0.35069927210272345
+    },
+    "imageId": "628fd785731e6053efc91710",
+    "image": {
+      "id": "628fd785731e6053efc91710",
+      "recordType": 2,
+      "addedOn": 1645697317890,
+      "updatedOn": 1650535919096,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697317890,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697328507-XLLOIBM29LOSELEIY0VW",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8610 Mark Pleško.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "d9d7d9",
+        "topRightAverage": "f3f3f5",
+        "bottomLeftAverage": "bbb6b6",
+        "bottomRightAverage": "d8d6d7",
+        "centerAverage": "e4e3e4",
+        "suggestedBgColor": "bebaba"
+      },
+      "urlId": "k43mu5wvw2aq9jn7w0wz3rhartv5h6-54gpa",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697328507-XLLOIBM29LOSELEIY0VW/C75T8610+Mark+Ples%CC%8Cko.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Boštjan PODOBNIK",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1967, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1992, univerzitetni diplomirani fizik, Univerza v Ljubljani; 1997, doktorat, Univerza v Ljubljani<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: laserji in laserske mikroobdelovalne tehnologije in sistemi<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/bostjan-podobnik"
+    },
+    "imageAltText": "Boštjan PODOBNIK",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc91713",
+    "image": {
+      "id": "628fd785731e6053efc91713",
+      "recordType": 2,
+      "addedOn": 1645697378583,
+      "updatedOn": 1650535919101,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697378583,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697389498-SEL1JAOAN0R9A4TU94LR",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T1056 Boštjan Podobnik.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f4f4f4",
+        "topRightAverage": "fcfcfc",
+        "bottomLeftAverage": "c6c3c5",
+        "bottomRightAverage": "ebebed",
+        "centerAverage": "f1f1f1",
+        "suggestedBgColor": "cccacc"
+      },
+      "urlId": "6fglad2o7j2gugyamnx1uu5urzxbad-2llgr",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697389498-SEL1JAOAN0R9A4TU94LR/C75T1056+Bos%CC%8Ctjan+Podobnik.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Franc POHLEVEN",
+    "description": null,
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/franc-pohleven"
+    },
+    "imageId": "6334c02c6127c3365ecaa04a",
+    "image": {
+      "id": "6334c02c6127c3365ecaa04a",
+      "recordType": 2,
+      "addedOn": 1664401452252,
+      "updatedOn": 1664401452323,
+      "workflowState": 1,
+      "publishOn": 1664401452252,
+      "authorId": "628cbcd4dd24191b8ffc7122",
+      "systemDataId": "1664397097835-NN7J5Y0C64CKGPOL5OSO",
+      "systemDataVariants": "388x452,100w,300w",
+      "systemDataSourceType": "JPG",
+      "filename": "FP-1.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "3b444a",
+        "topRightAverage": "17181c",
+        "bottomLeftAverage": "11131a",
+        "bottomRightAverage": "464b58",
+        "centerAverage": "dfdee4",
+        "suggestedBgColor": "595759"
+      },
+      "urlId": "x92s6ip0jighv1yeo1scyozc5bk9em",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "628cbcd4dd24191b8ffc7122",
+        "displayName": "nikola zupan",
+        "firstName": "Nikola",
+        "lastName": "Zupan",
+        "avatarUrl": "https://static1.squarespace.com/static/images/6321ad51d8169d57378360f7",
+        "bio": "",
+        "avatarAssetUrl": "https://static1.squarespace.com/static/images/6321ad51d8169d57378360f7"
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1664397097835-NN7J5Y0C64CKGPOL5OSO/FP-1.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "388x452"
+    }
+  }, {
+    "title": "Dušan REPOVŠ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1954, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1983, doktor matematičnih znanosti, Florida State University, Tallahassee, Florida, ZDA<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: teoretična matematika (analiza, algebra, geometrija in topologija) in uporabna matematika (nelinearna analiza)<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/dusan-repovs"
+    },
+    "imageAltText": "Dušan REPOVŠ",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc91716",
+    "image": {
+      "id": "628fd785731e6053efc91716",
+      "recordType": 2,
+      "addedOn": 1645697489853,
+      "updatedOn": 1650535919106,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697489853,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697503516-DXBMAR0YCZSAL2TEXYES",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8857 Dušan Repovš.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e0dedf",
+        "topRightAverage": "f4f4f6",
+        "bottomLeftAverage": "c2bebd",
+        "bottomRightAverage": "dad8d9",
+        "centerAverage": "e6e5e6",
+        "suggestedBgColor": "c2c0c2"
+      },
+      "urlId": "x0zsoj393yxrtmyc0ajiown0bg07c9-f756d",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697503516-DXBMAR0YCZSAL2TEXYES/C75T8857+Dus%CC%8Can+Repovs%CC%8C.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Stanislav ROŽMAN",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1948, Brežice<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1972, univerzitetni diplomirani inženir elektrotehnike, Fakulteta za elektrotehniko Univerze v Ljubljani (FE UL)<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: razvoj in avtomatizacija hidroelektrarn; elektro- energetika; jedrska energetika v Sloveniji in v svetu: obratovanje in sistemi, jedrska varnost, inženiring, projektne spremembe, varnostna kultura, obratovalne izkušnje, »management« podjetja,<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/stanislav-rozman"
+    },
+    "imageAltText": "Stanislav ROŽMAN",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc91719",
+    "image": {
+      "id": "628fd785731e6053efc91719",
+      "recordType": 2,
+      "addedOn": 1645697431128,
+      "updatedOn": 1650535919111,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697431128,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697445436-X2UMS89ZBT8QXIEJSXVO",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8698 Stane Rožman.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "dfddde",
+        "topRightAverage": "f3f3f4",
+        "bottomLeftAverage": "c9c5c4",
+        "bottomRightAverage": "dddbdc",
+        "centerAverage": "e7e6e6",
+        "suggestedBgColor": "c2bfc0"
+      },
+      "urlId": "dbz19esmwf4wwg1dlj64whta78onug-2ryfn",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697445436-X2UMS89ZBT8QXIEJSXVO/C75T8698+Stane+Roz%CC%8Cman.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Tomaž SAVŠEK",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1964, Novo mesto<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1989, univ. dipl. inž. elektrotehnike, Fakulteta za elektrotehniko Univerze v Ljubljani (FE UL); 1992, magisterij FE UL; 1998, doktorat znanosti FE UL; 2006, izpopolnjevanje na Naval Postgraduate School, Monterey, Kalifornija<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: računalniška obdelava signalov, teorija mehkih (fuzzy) množic, računalniški sistemi za podporo odločanju, simulacijski sistemi bojevanja, operacijske raziskave, strateško upravljanje virov, vodenje razvojno-raziskovalnih in inovacijskih projektov v avtomobilski industriji.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/tomaz-savsek"
+    },
+    "imageAltText": "Tomaž SAVŠEK",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc9171c",
+    "image": {
+      "id": "628fd785731e6053efc9171c",
+      "recordType": 2,
+      "addedOn": 1645697542773,
+      "updatedOn": 1650535919119,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697542773,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697547784-TECU73ODQGB64HWCXBYB",
+      "systemDataVariants": "2874x1916,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Tomaž_Savšek_obd.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "d9ddde",
+        "topRightAverage": "d9ddde",
+        "bottomLeftAverage": "b2b7b6",
+        "bottomRightAverage": "d8dcdd",
+        "centerAverage": "d9ddde",
+        "suggestedBgColor": "abaca9"
+      },
+      "urlId": "5rx95bd1vci7ueu29rqeh16bpl3pkc-dj7w2",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697547784-TECU73ODQGB64HWCXBYB/Tomaz%CC%8C_Savs%CC%8Cek_obd.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "2874x1916"
+    }
+  }, {
+    "title": "Karin STANA KLEINSCHEK",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojena leta 1964, Maribor<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: diplomirala je leta 1988 na Tehniški fakulteti Univerze v Mariboru s področja tekstilne kemije. Leta 1992 je na isti fakulteti magistrirala. Doktorirala je leta 1996 na Inštitutu za fizikalno kemijo Univerze v Gradcu, Avstrija. Od leta 1997 do 1998 bila na tem istem inštitutu aktivna kot podoktorski znanstveni sodelavec.<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področje dejavnosti: polimeri, površinska karakterizacija in modifikacija/ funkcionalizacija naravnih polimerov s poudarkom na polisaharidih in njihovih derivatih; biomedicinski materiali<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/karin-stana-kleinschek"
+    },
+    "imageAltText": "Karin STANA KLEINSCHEK",
+    "mediaFocalPoint": {
+      "x": 0.6293706293706294,
+      "y": 0.3088247321501595
+    },
+    "imageId": "628fd785731e6053efc9171f",
+    "image": {
+      "id": "628fd785731e6053efc9171f",
+      "recordType": 2,
+      "addedOn": 1645697577257,
+      "updatedOn": 1650535919123,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697577257,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697589746-T68H95QRDXIPGDJ3NL6M",
+      "systemDataVariants": "3456x2304,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Karin Stana Kleinschek_1.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "393a30",
+        "topRightAverage": "82806a",
+        "bottomLeftAverage": "2d3131",
+        "bottomRightAverage": "2f312a",
+        "centerAverage": "525042",
+        "suggestedBgColor": "575248"
+      },
+      "urlId": "1h7g84s295asbr0vhetamyyynobvk1-rxnrc",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697589746-T68H95QRDXIPGDJ3NL6M/Karin+Stana+Kleinschek_1.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "3456x2304"
+    }
+  }, {
+    "title": "Franc SOLINA",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1955, Celje<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1987, doktorat znanosti iz računalništva,  Univerza Pensilvanije, Filadelfija, ZDA;1982, magisterij iz  elektrotehnike, Univerza v Ljubljani; 1979, diplomirani inženir  elektrotehnike, Univerza v Ljubljani.<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: računalniški vid, segmentacija  in rekonstrukcija 3D modelov iz globinskih slik, uporabniški vmesniki,  uporaba računalniškega vida v dediščinski znanosti, novi mediji,  produkcija interaktivnih umetniških instalacij.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/franc-solina"
+    },
+    "imageId": "6334bf7f7b7ef5222526da66",
+    "image": {
+      "id": "6334bf7f7b7ef5222526da66",
+      "recordType": 2,
+      "addedOn": 1664401279824,
+      "updatedOn": 1664401279869,
+      "workflowState": 1,
+      "publishOn": 1664401279824,
+      "authorId": "628cbcd4dd24191b8ffc7122",
+      "systemDataId": "1664396807619-39PAO24HQ4OM6ZEOGZVN",
+      "systemDataVariants": "293x409,100w",
+      "systemDataSourceType": "JPG",
+      "filename": "franc solina.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "b6b9a6",
+        "topRightAverage": "ced1c1",
+        "bottomLeftAverage": "70797b",
+        "bottomRightAverage": "a0b3c5",
+        "centerAverage": "a9745d",
+        "suggestedBgColor": "a1968b"
+      },
+      "urlId": "ibosm8fpr9ok0mktjgiul51b39t2nx",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "628cbcd4dd24191b8ffc7122",
+        "displayName": "nikola zupan",
+        "firstName": "Nikola",
+        "lastName": "Zupan",
+        "avatarUrl": "https://static1.squarespace.com/static/images/6321ad51d8169d57378360f7",
+        "bio": "",
+        "avatarAssetUrl": "https://static1.squarespace.com/static/images/6321ad51d8169d57378360f7"
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1664396807619-39PAO24HQ4OM6ZEOGZVN/franc+solina.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "293x409"
+    }
+  }, {
+    "title": "Igor  ŠKRJANC",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen 1963 v Ljubljani.<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1988, diplomirani inženir elektrotehnike;  1991, magister; 1996, doktorat, Fakulteta za elektrotehniko Univerze v  Ljubljani (FE UL).<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: adaptivni sistemi, prediktivni sistemi vodenja in avtonomni mobilni sistemi.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/igor-skrjanc"
+    },
+    "imageAltText": "Igor  ŠKRJANC",
+    "imageId": "6334c0a70b61ca6cac4e6b16",
+    "image": {
+      "id": "6334c0a70b61ca6cac4e6b16",
+      "recordType": 2,
+      "addedOn": 1664401575895,
+      "updatedOn": 1664401575946,
+      "workflowState": 1,
+      "publishOn": 1664401575895,
+      "authorId": "628cbcd4dd24191b8ffc7122",
+      "systemDataId": "1664400945975-99659M7ZGBAL9D4G6RCW",
+      "systemDataVariants": "1103x1359,100w,300w,500w,750w,1000w",
+      "systemDataSourceType": "JPG",
+      "filename": "Skrjanc.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "b7b8b7",
+        "topRightAverage": "babbbd",
+        "bottomLeftAverage": "2b2d34",
+        "bottomRightAverage": "414248",
+        "centerAverage": "bfbebc",
+        "suggestedBgColor": "918888"
+      },
+      "urlId": "vokq4245o2jlyv1gd2bjb7ey15pjwy",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "628cbcd4dd24191b8ffc7122",
+        "displayName": "nikola zupan",
+        "firstName": "Nikola",
+        "lastName": "Zupan",
+        "avatarUrl": "https://static1.squarespace.com/static/images/6321ad51d8169d57378360f7",
+        "bio": "",
+        "avatarAssetUrl": "https://static1.squarespace.com/static/images/6321ad51d8169d57378360f7"
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1664400945975-99659M7ZGBAL9D4G6RCW/Skrjanc.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "1103x1359"
+    }
+  }, {
+    "title": "Konrad STEBLOVNIK",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1951, Celje<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1975 univerzitetni diplomirani inženir elektrotehnike (FE Ljubljana); 1985, magister računalništva in informatike (FE Ljubljana); 2007, doktor računalništva in informatike (FERI Maribor).<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: industrijska elektronika, vgrajeni sistemi, barvna televizija, računalništvo in mikroračunalništvo, komunikacijski sistemi, bela tehnika, krmilni sistemi.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/konrad-steblovnik"
+    },
+    "imageAltText": "Konrad STEBLOVNIK",
+    "mediaFocalPoint": {
+      "x": 0.5104895104895105,
+      "y": 0.251247239715384
+    },
+    "imageId": "628fd785731e6053efc91722",
+    "image": {
+      "id": "628fd785731e6053efc91722",
+      "recordType": 2,
+      "addedOn": 1645697620310,
+      "updatedOn": 1650535919129,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697620310,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697633921-PSOBJC0XWKLD5C1H7ZP0",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T9733 Konrad Steblovnik.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "efefef",
+        "topRightAverage": "f7f7f7",
+        "bottomLeftAverage": "ceccce",
+        "bottomRightAverage": "e7e7e9",
+        "centerAverage": "efefef",
+        "suggestedBgColor": "bbb9ba"
+      },
+      "urlId": "a5ydwx6szlxzow3ts8e4shc04e0s6n-pck47",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697633921-PSOBJC0XWKLD5C1H7ZP0/C75T9733+Konrad+Steblovnik.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Stanko STRMČNIK",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1979, doktor znanosti, Fakulteta za elektrotehniko Univerze v Ljubljani; izpopolnjevanje na Tehniški univerzi v Darmstadtu, Nemčija <\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: avtomatika, vodenje industrijskih procesov, matematično modeliranje, identifikacija, netehniški vidiki uvajanja sistemov za vodenje, prenos tehnologije<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/stanko-strmcnik"
+    },
+    "imageAltText": "Stanko STRMČNIK",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc91725",
+    "image": {
+      "id": "628fd785731e6053efc91725",
+      "recordType": 2,
+      "addedOn": 1645697660471,
+      "updatedOn": 1650535919133,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697660471,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697673327-YF0XL5XRWA83EQN5SOHZ",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8840 Stanko Strmčnik.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e0dedf",
+        "topRightAverage": "f5f5f6",
+        "bottomLeftAverage": "bfbbba",
+        "bottomRightAverage": "dad8d9",
+        "centerAverage": "e7e6e6",
+        "suggestedBgColor": "c4c0c1"
+      },
+      "urlId": "be3k8hj68z61hdns6s6ti7oz4m8lco-854hz",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697673327-YF0XL5XRWA83EQN5SOHZ/C75T8840+Stanko+Strmc%CC%8Cnik.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Leopold ŠKERGET",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1951, Maribor<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1984, doktor tehniških znanosti s področja strojništva, Fakulteta za strojništvo Univerze v Mariboru (FS UM)<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: procesno strojništvo, prenosni pojavi, dinamika tekočin, računalniška dinamika tekočin<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/leopold-skerget"
+    },
+    "imageAltText": "Leopold ŠKERGET",
+    "mediaFocalPoint": {
+      "x": 0.4110338835794961,
+      "y": 0.3500273458863974
+    },
+    "imageId": "628fd785731e6053efc91728",
+    "image": {
+      "id": "628fd785731e6053efc91728",
+      "recordType": 2,
+      "addedOn": 1645697713140,
+      "updatedOn": 1650535919137,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697713140,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697717103-ON1EDBSRQJWQKB2J90OR",
+      "systemDataVariants": "2126x2362,100w,300w,500w,750w,1000w,1500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Leopold Škerget.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f8f8f8",
+        "topRightAverage": "f8f8f8",
+        "bottomLeftAverage": "18243b",
+        "bottomRightAverage": "f8f8f8",
+        "centerAverage": "f8f8f8",
+        "suggestedBgColor": "bdbcc1"
+      },
+      "urlId": "fovm5kky24aonmjoxhukhpqxyttuxs-ydwc2",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697717103-ON1EDBSRQJWQKB2J90OR/Leopold+S%CC%8Ckerget.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "2126x2362"
+    }
+  }, {
+    "title": "Adolf ŠOSTAR",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen 1. marca 1934 v Ljubljani.<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: diploma na Fakulteti za strojništvo in elektrotehniko Univerze v Ljubljani, doktorat 1975 na T ehniški univerzi v Gradcu, postdoktorsko izobraževanje v ZRN (C. Zeiss)<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: proizvodne tehnologije in procesi, tehnološke meritve, menedžment kakovosti<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/adolf-sostar"
+    },
+    "imageAltText": "Adolf ŠOSTAR",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc9172b",
+    "image": {
+      "id": "628fd785731e6053efc9172b",
+      "recordType": 2,
+      "addedOn": 1645697748738,
+      "updatedOn": 1650535919142,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697748738,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697763518-089SKIL0WWB2T4WY1XVO",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8630 Adolf Šostar.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e1dfe0",
+        "topRightAverage": "f2f2f4",
+        "bottomLeftAverage": "c9c5c6",
+        "bottomRightAverage": "dcdadb",
+        "centerAverage": "e7e6e6",
+        "suggestedBgColor": "bab6b6"
+      },
+      "urlId": "x7nv49h19x05omus1s8kcmuet7qt9g-ypyep",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697763518-089SKIL0WWB2T4WY1XVO/C75T8630+Adolf+S%CC%8Costar.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Jurij Franc TASIČ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1948, Brežice<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1977, doktor, Fakulteta za elektrotehniko Univerze v Ljubljani (FE UL), Katedra za avtomatiko; 1992, izpopolnjevanje na Westminster University, London; 1994, Loughborough University of Technology, Leicestershire, Velika Britanija (VB) <\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: obdelava signalov in slik, paralelni algoritmi in arhitekture, teorija sistemov, računalniške arhitekture in inteligentni sistemi, multimedijski sistemi, interaktivni uporabniku prilagojeni sistemi, razpoznavanje objektov, telemedicina, komunikacije po elektroenergetskih vodih<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/jurij-tasic"
+    },
+    "imageAltText": "Jurij Franc TASIČ",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc9172e",
+    "image": {
+      "id": "628fd785731e6053efc9172e",
+      "recordType": 2,
+      "addedOn": 1645697850095,
+      "updatedOn": 1650535919146,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645697850095,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645697864479-L3QS56NWFE33BTMPN1TB",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8645 Jurij Tasič.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e8e6e7",
+        "topRightAverage": "f7f7f7",
+        "bottomLeftAverage": "d3d0d0",
+        "bottomRightAverage": "e6e4e5",
+        "centerAverage": "edeced",
+        "suggestedBgColor": "bfbcbc"
+      },
+      "urlId": "cyfhtp5yg148y45d10u0ovi19fqbn5-x5waa",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645697864479-L3QS56NWFE33BTMPN1TB/C75T8645+Jurij+Tasic%CC%8C.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Miha TOMAŽEVIČ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1942, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1985, doktor tehniških znanosti, Univerza v Ljubljani; 19811982, podiplomsko izpopolnjevanje na Disaster Prevention Research Institute, Univerza v Kyotu, Japonska<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: gradbeništvo, potresno inženirstvo, zidane konstrukcije, varstvo arhitekturne kulturne dediščine<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/miha-tomazevic"
+    },
+    "imageAltText": "Miha TOMAŽEVIČ",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc91731",
+    "image": {
+      "id": "628fd785731e6053efc91731",
+      "recordType": 2,
+      "addedOn": 1645699265913,
+      "updatedOn": 1650535919150,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645699265913,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645699282882-GMW0M3ILQVK0BDHCNSI2",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8819 Miha Tomaževič.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e2e0e1",
+        "topRightAverage": "f7f7f7",
+        "bottomLeftAverage": "cbc7c6",
+        "bottomRightAverage": "dedcdd",
+        "centerAverage": "eae9ea",
+        "suggestedBgColor": "c3c0c0"
+      },
+      "urlId": "v6mtcdgn7yy3vrxp86i0v7613nuwal-6fg35",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645699282882-GMW0M3ILQVK0BDHCNSI2/C75T8819+Miha+Tomaz%CC%8Cevic%CC%8C.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Marko TOPIČ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1967 v Ljubljani<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1996, doktor elektrotehniških znanosti, UL FE<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: elektronika, optoelektronika, fotovoltaika, energetika. <\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/marko-topic"
+    },
+    "imageAltText": "Marko TOPIČ",
+    "mediaFocalPoint": {
+      "x": 0.534965034965035,
+      "y": 0.376870859573076
+    },
+    "imageId": "628fd785731e6053efc91734",
+    "image": {
+      "id": "628fd785731e6053efc91734",
+      "recordType": 2,
+      "addedOn": 1645699379079,
+      "updatedOn": 1650535919155,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645699379079,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645699401097-6K6S6OMJOC17ES2PZ97L",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T0983_1 Marko Topič.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f4f5f5",
+        "topRightAverage": "f9f9f9",
+        "bottomLeftAverage": "cbcacb",
+        "bottomRightAverage": "e8e9ea",
+        "centerAverage": "f1f1f1",
+        "suggestedBgColor": "dfdcdb"
+      },
+      "urlId": "lfrk4vr3thiwgzxko1avngd5itlk07-xxskh",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645699401097-6K6S6OMJOC17ES2PZ97L/C75T0983_1+Marko+Topic%CC%8C.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Janez TRONTELJ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1941, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1971, doktor elektrotehniških znanosti, Univerza v Ljubljani, Fakulteta za elektrotehniko<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področje dejavnosti: mikroelektronika, elektronske komponente in tehnologije, načrtovanje analogno/digitalnih integriranih vezij, načrtovanje sistemov na čipu in naprednih senzorskih struktur<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/janez-trontelj"
+    },
+    "imageAltText": "Janez TRONTELJ",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc91737",
+    "image": {
+      "id": "628fd785731e6053efc91737",
+      "recordType": 2,
+      "addedOn": 1645699442663,
+      "updatedOn": 1650535919159,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645699442663,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645699456829-4NBZXCP1TJT3UI63PWCM",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8793 Janez Trontelj.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "dfddde",
+        "topRightAverage": "f1f1f2",
+        "bottomLeftAverage": "c3bfbe",
+        "bottomRightAverage": "d6d4d5",
+        "centerAverage": "e4e2e3",
+        "suggestedBgColor": "bdb8b8"
+      },
+      "urlId": "kecqjggzn58gpw8sv6n7m9ekqtfjp2-mrapd",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645699456829-4NBZXCP1TJT3UI63PWCM/C75T8793+Janez+Trontelj.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Uroš URLEB",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1957, Novo mesto<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1980 magister farmacije; 1982 magister kemijskih znanosti; 1987 doktor kemijskih znanosti na Fakulteti za kemijo in kemijsko tehnologijo Univerze v Ljubljani (FKKT UL); 1989, 1996 postdoktorski študij, Alexander Von Humboldt Fellow, Univerza v Heidelbergu<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: odkrivanje novih učinkov  in antibiotikov, razvoj generičnih zdravil, razvoj podobnih bioloških in bioloških zdravil, digitalizacija tehničnih razvojnih procesov, uporaba podatkovnih znanosti in modeliranja v razvoju bioloških zdravil, razvoj biotehnoloških procesov, razvoj analitskih metod za biološka zdravila in razvoj metod analitske karakterizacije, razvoj formulacij bioloških zdravil in razvoj proizvodnih procesov bioloških zdravil<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/uros-urleb"
+    },
+    "imageAltText": "Uroš URLEB",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc9173a",
+    "image": {
+      "id": "628fd785731e6053efc9173a",
+      "recordType": 2,
+      "addedOn": 1645699538572,
+      "updatedOn": 1650535919163,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645699538572,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645699543965-R43W8HPZEG0A3MRQ0FGU",
+      "systemDataVariants": "5616x3744,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Uros Urleb_1.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "dddddf",
+        "topRightAverage": "c2c6c9",
+        "bottomLeftAverage": "d6d7d9",
+        "bottomRightAverage": "c4c8c9",
+        "centerAverage": "d3d5d7",
+        "suggestedBgColor": "afafb2"
+      },
+      "urlId": "q8jmdp7l62o23ia6mywvytmy8k9y6u-2pm3k",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645699543965-R43W8HPZEG0A3MRQ0FGU/Uros+Urleb_1.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5616x3744"
+    }
+  }, {
+    "title": "Rok URŠIČ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1963, Postojna<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: univerzitetni diplomirani inženir elektrotehnike, Fakulteta za elektrotehniko in računalništvo Univerze v Ljubljani<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: združuje enkratno kombinacijo znanj, veščin in izkušenj s področja razvoja visokotehnoloških izdelkov, menedžmenta inovacij in inovativnih poslovnih modelov, vodenja vrhunskih razvojnih skupin, ustanavljanja in rasti tehnoloških podjetij<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/rok-ursic"
+    },
+    "imageAltText": "Rok URŠIČ",
+    "mediaFocalPoint": {
+      "x": 0.493006993006993,
+      "y": 0.34023063711458246
+    },
+    "imageId": "628fd785731e6053efc9173d",
+    "image": {
+      "id": "628fd785731e6053efc9173d",
+      "recordType": 2,
+      "addedOn": 1645699579857,
+      "updatedOn": 1650535919168,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645699579857,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645699632702-1YHZ97BMYECG43WE1KFR",
+      "systemDataVariants": "7360x4912,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Rok Uršič.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "a09c87",
+        "topRightAverage": "9d7e42",
+        "bottomLeftAverage": "888985",
+        "bottomRightAverage": "916c32",
+        "centerAverage": "a8997a",
+        "suggestedBgColor": "9a8d79"
+      },
+      "urlId": "jqx5rnjdclqo4j87aa9573s51bv6pa-8px3t",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645699632702-1YHZ97BMYECG43WE1KFR/Rok+Urs%CC%8Cic%CC%8C.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "7360x4912"
+    }
+  }, {
+    "title": "Peter VENTURINI",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen 1966 v Ljubljani<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1996, doktor kemijskih znanosti, fakulteta za kemijo in kemijsko tehnologijo Univerze v Ljubljani; 2000, MBA (Master of Business Administration), University of Kansas, ZDA<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: funkcionalni premazi, uporaba nanomaterialov, nadzorovano sproščanje zdravilnih učinkovin<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/peter-venturini"
+    },
+    "imageAltText": "Peter VENTURINI",
+    "mediaFocalPoint": {
+      "x": 0.4965034965034965,
+      "y": 0.28265314467980696
+    },
+    "imageId": "628fd785731e6053efc91740",
+    "image": {
+      "id": "628fd785731e6053efc91740",
+      "recordType": 2,
+      "addedOn": 1645699667496,
+      "updatedOn": 1650535919172,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645699667496,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645699689467-0LWI09PQQ2C4VXSFU5BH",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8684 Peter Venturini.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "dfddde",
+        "topRightAverage": "f3f3f4",
+        "bottomLeftAverage": "c5c1c1",
+        "bottomRightAverage": "dcdadb",
+        "centerAverage": "e6e5e5",
+        "suggestedBgColor": "cdc9c9"
+      },
+      "urlId": "rs6rwziulsch8t6qva56dslgszwllf-tperf",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645699689467-0LWI09PQQ2C4VXSFU5BH/C75T8684+Peter+Venturini.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Jože VIŽINTIN",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1943, Zalošče, Nova Gorica<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1978, doktor znanosti, Univerza v Ljubljani, Fakulteta za strojništvo (UL FS),<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Katedra za konstruiranje, 4 mesece podoktorsko izpopolnjevanje (BAM, NIST) Področja dejavnosti: tribologija, tehnična diagnostika, inženiring površin, mehanska gonila<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/joze-vizintin"
+    },
+    "imageAltText": "Jože VIŽINTIN",
+    "mediaFocalPoint": {
+      "x": 0.534965034965035,
+      "y": 0.345464954608653
+    },
+    "imageId": "628fd785731e6053efc91743",
+    "image": {
+      "id": "628fd785731e6053efc91743",
+      "recordType": 2,
+      "addedOn": 1645699720497,
+      "updatedOn": 1650535919178,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645699720497,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645699742145-OW72JQ4WXNNQI4JPW6SZ",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T9672 Jože Vižintin.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f0f0f0",
+        "topRightAverage": "f7f7f7",
+        "bottomLeftAverage": "d2d0d1",
+        "bottomRightAverage": "e6e6e8",
+        "centerAverage": "f1f1f1",
+        "suggestedBgColor": "bdbbbd"
+      },
+      "urlId": "ci6j631mud95u8g8i6p9leyhskuk78-kssgl",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645699742145-OW72JQ4WXNNQI4JPW6SZ/C75T9672+Joz%CC%8Ce+Viz%CC%8Cintin.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Franc VODOPIVEC",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1931, Rakitnik, Postojna<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1962, doktor, Univerza v Parizu, Francija; 1960– 1962, izpopolnjevanje na Institut de Recherches de la Sidérurgie, St. Germain- en-Laye, Francija<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: kovine in zlitine: razvoj metodike, strjevanje, fazne premene in rast zrn, vroča in hladna deformacija ter rekristalizacija, trdo- in mehkomagnetne zlitine, deformacija z lezenjem, ekspertne analize industrijskih poškodb<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/franc"
+    },
+    "imageAltText": "Franc VODOPIVEC",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc91746",
+    "image": {
+      "id": "628fd785731e6053efc91746",
+      "recordType": 2,
+      "addedOn": 1645699929835,
+      "updatedOn": 1650535919183,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645699929835,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645699930313-AR2ZINVYAE24TYRD8PUZ",
+      "systemDataVariants": "750x726,100w,300w,500w,750w",
+      "systemDataSourceType": "PNG",
+      "filename": "Screen Shot 2022-02-24 at 11.51.59.png",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "ffffff",
+        "topRightAverage": "ffffff",
+        "bottomLeftAverage": "ffffff",
+        "bottomRightAverage": "ffffff",
+        "centerAverage": "e2947c",
+        "suggestedBgColor": "ffffff"
+      },
+      "urlId": "rpm6rwdjgxejyke81ffwbhchdfipnx-e37gp",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645699930313-AR2ZINVYAE24TYRD8PUZ/Screen+Shot+2022-02-24+at+11.51.59.png",
+      "contentType": "image/png",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "750x726"
+    }
+  }, {
+    "title": "Blaž ZUPAN",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1968 v Postojni<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1997, doktorat, Univerza v Ljubljani, Fakulteta za računalništvo in informatiko; 1993, magisterij, University of Houston, Department of Computer Science; 1991, diploma, Univerza v Ljubljani, Fakulteta za elektrotehniko. <\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: umetna inteligenca, strojno učenje, bioinformatika<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/blaz-zupan"
+    },
+    "imageAltText": "Blaž ZUPAN",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc91749",
+    "image": {
+      "id": "628fd785731e6053efc91749",
+      "recordType": 2,
+      "addedOn": 1645699875359,
+      "updatedOn": 1650535919193,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645699875359,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645699889576-DQMD9Y3AZP604401KIS9",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8895 Blaž Zupan.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "f0f0f2",
+        "topRightAverage": "fcfcfc",
+        "bottomLeftAverage": "dcdadb",
+        "bottomRightAverage": "ededef",
+        "centerAverage": "f4f4f5",
+        "suggestedBgColor": "e5e3e6"
+      },
+      "urlId": "mkq852i3ji4udpee2w0ccvjfye4j8v-y75mb",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645699889576-DQMD9Y3AZP604401KIS9/C75T8895+Blaz%CC%8C+Zupan.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Jure ZUPAN",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1943, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1972, doktor, Fakulteta za naravoslovje in tehnologijo (oddelek za fiziko) Univerze v Ljubljani; 1975, znanstveno izpopolnjevanje na ETH v Zürichu, Švica; 1978, znanstveno izpopolnjevanje na NIH/EPA Bethesda, Maryland, ZDA.<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: kemometrija, statistika, nevronske mreže, povezava med strukturami spojin in njihovimi lastnostmi, grupiranje velikega števila kompleksnih podatkov, jezikoslovni problemi (pregibnost slovenskih besed, pomenske mreže), raziskave konteksta besedil.<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/work-in-progress"
+    },
+    "imageAltText": "Jure ZUPAN",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc9174c",
+    "image": {
+      "id": "628fd785731e6053efc9174c",
+      "recordType": 2,
+      "addedOn": 1645700124001,
+      "updatedOn": 1650535919198,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645700124001,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645700124790-TWE86UFXY67N5X79C561",
+      "systemDataVariants": "872x838,100w,300w,500w,750w",
+      "systemDataSourceType": "PNG",
+      "filename": "Screen Shot 2022-02-24 at 11.55.15.png",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "ffffff",
+        "topRightAverage": "ffffff",
+        "bottomLeftAverage": "ffffff",
+        "bottomRightAverage": "ffffff",
+        "centerAverage": "c18a79",
+        "suggestedBgColor": "ffffff"
+      },
+      "urlId": "178rqae9vzc4dqr6rzn228saoqj8z9-g68ll",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645700124790-TWE86UFXY67N5X79C561/Screen+Shot+2022-02-24+at+11.55.15.png",
+      "contentType": "image/png",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "872x838"
+    }
+  }, {
+    "title": "Danijel ZUPANČIČ",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1954, Muljava<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba:  2006 – magisterij Fakulteta za strojništvo v Ljubljani Univerze v Ljubljani.<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: razvoj in prenos visoko avtomatiziranih tehnologij, trajnostni razvoj in krožna proizvodnja, zaščita intelektualne lastnine, razvoj poslovnih modelov in vodenja, optimizacija proizvodnih procesov<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/danijel-zupancic"
+    },
+    "imageAltText": "Danijel ZUPANČIČ",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc9174f",
+    "image": {
+      "id": "628fd785731e6053efc9174f",
+      "recordType": 2,
+      "addedOn": 1645700172207,
+      "updatedOn": 1650535919203,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645700172207,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645700189575-016ZSERA6OLNWCJBESFR",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8717 Danijel Zupančič.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e6e4e5",
+        "topRightAverage": "f6f6f6",
+        "bottomLeftAverage": "d1cdcd",
+        "bottomRightAverage": "e0dedf",
+        "centerAverage": "edeced",
+        "suggestedBgColor": "c2bebf"
+      },
+      "urlId": "m7l8dvkopzy4z3enbtahc0ek8v4zq4-nbdpz",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645700189575-016ZSERA6OLNWCJBESFR/C75T8717+Danijel+Zupanc%CC%8Cic%CC%8C.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Boris ŽEMVA",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen leta 1940, Ljubljana<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Izobrazba: 1971, doktor kemijskih znanosti, Fakulteta za kemijo in kemijsko tehnologijo Univerze v Ljubljani (FKKT UL); 1972–1973, podoktorsko izobraževanje na University of California, Berkeley, ZDA; 1983, univerzitetni diplomirani ekonomist, VEKŠ Univerze v Mariboru (VEKŠ UM)<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področja dejavnosti: anorganska kemija fluora, kemija žlahtnih plinov, kemija koordinacijskih spojin s centralno kovino v visokih oksidacijskih stanjih, visokoenergijski oksidanti<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/boris-zemva"
+    },
+    "imageAltText": "Boris ŽEMVA",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc91752",
+    "image": {
+      "id": "628fd785731e6053efc91752",
+      "recordType": 2,
+      "addedOn": 1645700231344,
+      "updatedOn": 1650535919207,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645700231344,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645700243569-CD89Q342KPS6IPZIZ28T",
+      "systemDataVariants": "5184x3456,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "C75T8780 Boris Žemva.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "e1dfe0",
+        "topRightAverage": "f1f1f3",
+        "bottomLeftAverage": "c5c1c0",
+        "bottomRightAverage": "d7d5d6",
+        "centerAverage": "e5e4e4",
+        "suggestedBgColor": "bfbcbc"
+      },
+      "urlId": "4e7rvu5nzxh81v3rvtakii6suyok94-jsw6m",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645700243569-CD89Q342KPS6IPZIZ28T/C75T8780+Boris+Z%CC%8Cemva.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5184x3456"
+    }
+  }, {
+    "title": "Robert ŽERJAL",
+    "description": "<p class=\"\" style=\"white-space:pre-wrap;\">Osebni podatki: rojen 7. 1. 1950, Branik<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Šolska izobrazba: 1973, univ. dipl. inž. tehniške fizike, Fakulteta za naravoslovje in tehnologijo Univerze v Ljubljani<\/p><p class=\"\" style=\"white-space:pre-wrap;\">Področje dejavnosti: vžigalni sistemi motorjev z notranjim zgorevanjem, mehatronski sistemi v avtomobilski industriji, avtomatizacija merilnih in kontrolnih procesov, obnovljivi viri energije in njihovo pretvarjanje, sistemi kakovosti in poslovne odličnosti, projektno vodenje<\/p>",
+    "button": {
+      "buttonText": "Click Here",
+      "buttonLink": "/"
+    },
+    "imageAltText": "Robert ŽERJAL",
+    "mediaFocalPoint": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "imageId": "628fd785731e6053efc91755",
+    "image": {
+      "id": "628fd785731e6053efc91755",
+      "recordType": 2,
+      "addedOn": 1645700288316,
+      "updatedOn": 1650535919212,
+      "starred": false,
+      "passthrough": false,
+      "workflowState": 1,
+      "publishOn": 1645700288316,
+      "authorId": "5e46515f6d810033c565eb79",
+      "systemDataId": "1645700309830-FJMMSJ7Z7I7WVODAIAGP",
+      "systemDataVariants": "5315x3543,100w,300w,500w,750w,1000w,1500w,2500w",
+      "systemDataSourceType": "JPG",
+      "filename": "Robert_Žerjal_obd.jpg",
+      "mediaFocalPoint": {
+        "x": 0.5,
+        "y": 0.5,
+        "source": 3
+      },
+      "colorData": {
+        "topLeftAverage": "fcfcfc",
+        "topRightAverage": "fcfcfc",
+        "bottomLeftAverage": "fcfcfc",
+        "bottomRightAverage": "fcfcfc",
+        "centerAverage": "fcfcfc",
+        "suggestedBgColor": "cecdce"
+      },
+      "urlId": "cbjwip0mr9xb52f0v2v2ccm7139kkh-bfy55",
+      "title": "",
+      "body": null,
+      "likeCount": 0,
+      "commentCount": 0,
+      "publicCommentCount": 0,
+      "commentState": 2,
+      "unsaved": false,
+      "author": {
+        "id": "5e46515f6d810033c565eb79",
+        "displayName": "Goran Tomsic",
+        "firstName": "Goran",
+        "lastName": "Tomsic",
+        "bio": ""
+      },
+      "assetUrl": "https://images.squarespace-cdn.com/content/v1/61aa6dd677f8a7121959be35/1645700309830-FJMMSJ7Z7I7WVODAIAGP/Robert_Z%CC%8Cerjal_obd.jpg",
+      "contentType": "image/jpeg",
+      "items": [ ],
+      "pushedServices": { },
+      "pendingPushedServices": { },
+      "recordTypeLabel": "image",
+      "originalSize": "5315x3543"
+    }
+  } ]
+}

@@ -1,15 +1,16 @@
-<h2>{{ oseba.ime }}</h2>
-<h1>{{ oseba.rojstvo.year }} - {{ oseba.smrt.year }}</h1>
+<h1 class="back">{{ oseba.ime }}</h1>
+<div class="detail-info">
 {% if oseba.povzetek %}<p>{{ oseba.povzetek }}</p>{% endif %}
 <dl>
+    <dt>{{ oseba.rojstvo.year }} - {{ oseba.smrt.year }}</dt>
     {% ifnotequal o.sluzba.count 0 %}
-    <dt>Sluzbe:</dt>
-    <dd>
-        {% for o in oseba.sluzba.all %}
-        <a href="/evidenca/osebe/#J{{ o.pk }}">{{ o }}</a>
-        {% if forloop.last %}{% else %}, {% endif %}
-        {% endfor %}
-    </dd>
+        <dt>Sluzbe:</dt>
+        <dd>
+            {% for o in oseba.sluzba.all %}
+            <a class="org-filter" href="/evidenca/osebe/organizacije/#{{ o.pk }}">{{ o }}</a>
+            {% if forloop.last %}{% else %}, {% endif %}
+            {% endfor %}
+        </dd>
     {% endifnotequal %}
     {% if oseba.opis %}
     <dt>Opis:</dt>
@@ -27,3 +28,4 @@
         {% if oseba.slobio %}<li><a target="_blank" href="{{ oseba.slobio }}">Slovenska biografija</a></li>{% endif %}
     </ul>
 </dl>
+</div>

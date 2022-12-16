@@ -16,9 +16,11 @@
         <h1>Prvi računalnikarji v Sloveniji</h1>
         <ul>
             {% for oseba in object_list %}
+            {% if oseba.rojstvo %}
             <li>
                 <a class="list-item list-item-{{ oseba.pk }}" href="#O{{ oseba.pk }}"
-                    data-pk="{{ oseba.pk }}" data-type="oseba" >
+                    data-pk="{{ oseba.pk }}" data-type="oseba" 
+                    data-org-pk="{% for o in oseba.sluzba.all %}D{{ o.pk }} {% endfor %}">
                     <span class="index">{{ forloop.counter|stringformat:"03d" }}</span>
                     <span class="year">{{ oseba.rojstvo.year }} - {% if oseba.smrt %}{{ oseba.smrt.year }}{% endif %}</span>
                     <span class="name">
@@ -28,6 +30,7 @@
                     </span>
                 </a>
             </li>
+            {% endif %}
             {% endfor %}
         </ul>
     </div>

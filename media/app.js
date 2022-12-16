@@ -22,11 +22,16 @@ window.onload = () => {
   const id = getSelectedComputerId();
   let lastClick = id;
 
+  var type='';
+  if (window.location.href.indexOf("osebe") > -1) {
+    type = 'oseba';
+  }
+
   if (id) {
     document
       .querySelector(`.list-item-${id}`)
       .classList.add(SELECTED_CLASSNAME);
-    fetchAndRender(id);
+    fetchAndRender(id, type);
   }
 
   document.body.addEventListener("click", (event) => {
@@ -96,7 +101,7 @@ window.onload = () => {
 };
 
 function fetchAndRender(id, type) {
-  const url = "/evidenca";
+  var url = "/evidenca";
 
   if (type == "oseba") {
     url = url + "/oseba";
