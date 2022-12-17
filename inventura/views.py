@@ -230,14 +230,14 @@ def terminalView(request):
 	return render(request, 'terminal.html', context)
 
 def appView(request, category = '', object = ''):
-	object_list = Eksponat.objects.all
+	object_list = Eksponat.objects.order_by('ime')
 	if object:
 		object = Eksponat.objects.get(pk=object)
 	if category and category == 'proizvajalec':
-		object_list = Proizvajalec.objects.all
+		object_list = Proizvajalec.objects.order_by('ime')
 	elif category:
 		category = Kategorija.objects.get(ime=category)
-		object_list = category.eksponat_set.all
+		object_list = category.eksponat_set.order_by('ime')
 	else:
 		object_list = Kategorija.objects.all
 	context = {
