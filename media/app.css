@@ -423,6 +423,7 @@ button.back {
 }
 
 #menu {
+  position: relative;
   display: flex;
   align-items: center;
   height: 64px;
@@ -444,6 +445,30 @@ button.back {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#menu ul::after {
+  position: absolute;
+  display: none;
+  content: "";
+  height: 100%;
+  width: 30px;
+  top: 0;
+  right: 0;
+  background: linear-gradient(
+    -90deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  pointer-events: none;
+}
+
+#menu ul::-webkit-scrollbar {
+  display: none;
 }
 
 #menu ul li {
@@ -455,6 +480,7 @@ button.back {
   font-size: 16px;
   padding: 0 10px;
   height: 64px;
+  white-space: nowrap;
 }
 
 #menu ul li.selected {
@@ -497,4 +523,13 @@ button.back {
 .filters.show {
   opacity: 1;
   pointer-events: auto;
+}
+
+@media (max-width: 512px) {
+  #menu ul {
+    padding-right: 30px;
+  }
+  #menu ul::after {
+    display: block;
+  }
 }
