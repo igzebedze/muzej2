@@ -26,6 +26,12 @@ window.onload = () => {
   if (window.location.href.indexOf("osebe") > -1) {
     type = 'oseba';
   }
+  if (window.location.href.indexOf("app") > -1) {
+    type = 'eksponat';
+  }
+  if (window.location.href.indexOf("proizvajalec") > -1) {
+    type = 'proizvajalec';
+  }
 
   if (id) {
     document
@@ -105,6 +111,12 @@ function fetchAndRender(id, type) {
 
   if (type == "oseba") {
     url = url + "/oseba";
+  }
+  if (type == 'eksponat') {
+    url = "/app";
+  }
+  if (type == 'proizvajalec') {
+    url = "/app/proizvajalec";
   }
 
   fetch(`${url}/${id}/`)

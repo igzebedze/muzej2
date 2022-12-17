@@ -1,0 +1,44 @@
+{% extends "app.html" %}
+
+{% load extras %}
+
+{% block head %}
+		<style>.infobox, #infobox { float: right; border: 1px solid black; }</style>
+{% endblock %}
+
+{% block menu%}
+<ul>
+	<li><a href="/app/">Zbirka</a></li>
+	<li><a href="/app/proizvajalec/">Proizvajalci</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+
+<div class="app">
+    <div class="list">
+        <h1>{% if category %}Kategorija: {{ category }}{% else %}Kategorije{% endif %}</h1>
+        <div class="filters" >
+            {% if category %}<a href="/app/">« Nazaj na vse eksponate</a>{% endif %}
+        </div>
+        <ul>
+        {% for o in object_list %}
+        <li>
+            {% if category %}
+                <a class="list-item list-item-{{ o.pk }}" href="#E{{ o.pk }}" data-pk="{{ o.pk }}" data-type="eksponat" data-org-pk="D{{ o.proizvajalec.pk}}">
+            {% else %}
+                <a class="list-item" href="/app/{{ o.ime }}/">
+            {% endif %}
+                <span class="index">{{ o.pk }}</span>
+                <span class="year">{% ifnotequal o.leto_proizvodnje 'None' %}{{ o.leto_proizvodnje }}{% endifnotequal %}</span>
+                <span class="name">
+                    {{ o.ime }}
+                    <br />
+                    <span class="owner">{{ o.proizvajalec }}</span>
+                </span>
+            </a>
+        </li>
+        {% endfor %}
+    </div>
+    <div id='details' class="details hide"></div>
+{% endblock %}
