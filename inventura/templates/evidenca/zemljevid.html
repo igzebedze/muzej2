@@ -68,7 +68,7 @@
                         'type': 'geojson',
                         'data': {
                             'type': 'FeatureCollection',
-                            'features': [{% for r in object_list %}{% if r.nosilec.latlong|length > 3 %}
+                            'features': [{% for r in object_list %}{% if r.nosilec.latlong|length > 1 %}
                                 {
                                     'type': 'Feature',
                                     'properties': {
@@ -78,7 +78,7 @@
                                     },
                                     'geometry': {
                                         'type': 'Point',
-                                        'coordinates': [{{ r.nosilec.latlong|slice:"1:-1" }}]
+                                        'coordinates': [{{ r.nosilec.latlong }}]
                                     }
                                 }{% if forloop.last%}{% else %},{% endif %}
                                 {% endif %}{% endfor %}
