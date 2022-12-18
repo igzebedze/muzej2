@@ -498,3 +498,7 @@ button.back {
   opacity: 1;
   pointer-events: auto;
 }
+
+span.icon {
+  padding-right: 1.5em;
+}
