@@ -502,3 +502,5 @@ button.back {
 span.icon {
   padding-right: 1.5em;
 }
+
+ul.legend { list-style-type: none; }
