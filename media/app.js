@@ -22,22 +22,18 @@ window.onload = () => {
   const id = getSelectedComputerId();
   let lastClick = id;
 
-  var type='';
-  if (window.location.href.indexOf("osebe") > -1) {
-    type = 'oseba';
-  }
-  if (window.location.href.indexOf("app") > -1) {
-    type = 'eksponat';
-  }
-  if (window.location.href.indexOf("proizvajalec") > -1) {
-    type = 'proizvajalec';
-  }
+  var url='/';
+  // this one is for evidenca
+  if (window.location.href.indexOf("osebe") > -1) { url = '/osebe/'; }
+  // these two are for inventura
+  if (window.location.href.indexOf("app") > -1) { url = '/app/eksponat/'; }
+  if (window.location.href.indexOf("proizvajalec") > -1) { url = '/app/proizvajalec/'; }
 
   if (id) {
     document
       .querySelector(`.list-item-${id}`)
       .classList.add(SELECTED_CLASSNAME);
-    fetchAndRender(id, type);
+    fetchAndRender(id, url);
   }
 
   document.body.addEventListener("click", (event) => {
@@ -51,8 +47,9 @@ window.onload = () => {
       }
 
       let type = target.getAttribute("data-type");
+      let prefix = target.getAttribute("data-prefix");
       let selectedId = target.getAttribute("data-pk");
-      fetchAndRender(selectedId, type);
+      fetchAndRender(selectedId, prefix);
 
       target.classList.add(SELECTED_CLASSNAME);
       document.querySelector(".details").classList.remove(HIDDEN_CLASSNAME);
@@ -106,20 +103,8 @@ window.onload = () => {
   });
 };
 
-function fetchAndRender(id, type) {
-  var url = "/evidenca";
-
-  if (type == "oseba") {
-    url = url + "/oseba";
-  }
-  if (type == 'eksponat') {
-    url = "/app";
-  }
-  if (type == 'proizvajalec') {
-    url = "/app/proizvajalec";
-  }
-
-  fetch(`${url}/${id}/`)
+function fetchAndRender(id, url) {
+  fetch(`${url}${id}/`)
     .then((response) => {
       return response.text();
     })

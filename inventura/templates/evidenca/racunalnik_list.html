@@ -3,10 +3,10 @@
 {% load static %}
 {% block menu %}
 <ul>
-    <li class="selected"><a href="/evidenca/">Seznam</a></li>
-    <li><a href="/evidenca/osebe/">Osebe</a></li>
-    <li><a href="/evidenca/zemljevid/">Zemljevid</a></li>
-    <li><a href="/evidenca/oprojektu/">O projektu</a></li>
+    <li class="selected"><a href="{% url 'racunalniki' %}">Seznam</a></li>
+    <li><a href="{% url 'osebe' %}">Osebe</a></li>
+    <li><a href="{% url 'zemljevid' %}">Zemljevid</a></li>
+    <li><a href="{% url 'oprojektu' %}">O projektu</a></li>
 </ul>
 {% endblock %}
 
@@ -24,7 +24,7 @@
             {% ifnotequal racunalnik.tip 't' %}
             <li>
                 <a class="list-item list-item-{{ racunalnik.pk }}" href="#C{{ racunalnik.pk }}"
-                    data-pk="{{ racunalnik.pk }}" data-type="racunalnik"
+                    data-pk="{{ racunalnik.pk }}" data-type="racunalnik" data-prefix="{% url 'racunalniki' %}"
                     data-org-pk="D{{ racunalnik.nosilec.pk}} {% for o in racunalnik.organizacija.all %}D{{ o.pk }} {% endfor %}">
                     <span class="index">{{ forloop.counter|stringformat:"03d" }}</span>
                     <span class="year">{{ racunalnik.nakup.year }}</span>

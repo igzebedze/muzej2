@@ -4,10 +4,10 @@
 
 {% block menu %}
 <ul>
-    <li><a href="/evidenca/">Seznam</a></li>
-    <li><a href="/evidenca/osebe/">Osebe</a></li>
-    <li class="selected"><a href="/evidenca/zemljevid/">Zemljevid</a></li>
-    <li><a href="/evidenca/oprojektu/">O projektu</a></li>
+    <li><a href="{% url 'racunalniki' %}">Seznam</a></li>
+    <li><a href="{% url 'osebe' %}">Osebe</a></li>
+    <li class="selected"><a href="{% url 'zemljevid' %}">Zemljevid</a></li>
+    <li><a href="{% url 'oprojektu' %}">O projektu</a></li>
 </ul>
 {% endblock %}
 

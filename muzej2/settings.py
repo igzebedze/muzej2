@@ -25,12 +25,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'evidenca',
     'django.contrib.sites',
-    'django.contrib.flatpages'
+    'django.contrib.flatpages',
+    'django_hosts'
 ]
 
 MIDDLEWARE = [
+    'django_hosts.middleware.HostsRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    #'subdomains.middleware.SubdomainMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -38,9 +39,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'simple_history.middleware.HistoryRequestMiddleware',
+    'django_hosts.middleware.HostsResponseMiddleware'
 ]
 
 ROOT_URLCONF = 'muzej2.urls'
+ROOT_HOSTCONF = 'muzej2.hosts'
+DEFAULT_HOST = 'zbirka'
+ALLOWED_HOSTS = ['zbirka.muzej.si', 'evidenca.muzej.si', '127.0.0.1']
 
 TEMPLATES = [
     {
