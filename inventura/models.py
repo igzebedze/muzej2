@@ -7,9 +7,7 @@ import os.path
 import io
 from PIL import Image
 import datetime
-from muzej2.settings import DEBUG
-
-from muzej2.settings import SLACKWEBHOOK, MEDIA_ROOT, MEDIA_URL
+from muzej2.settings import SLACKWEBHOOK, MEDIA_ROOT, MEDIA_URL, DEBUG
 import requests
 headers = {
     'Content-type': 'application/json',
@@ -264,7 +262,7 @@ class Eksponat(models.Model):
 	
 # then for uploaded pictures,		
 		p = self.primerek_set.exclude(fotografija='')
-		if DEBUG:
+		if DEBUG is True:
 			return True
 		elif p:
 			with Image.open(p[0].fotografija.path) as im:
