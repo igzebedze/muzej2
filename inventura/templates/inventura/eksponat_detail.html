@@ -126,6 +126,9 @@
 		{% if p.vhodni_dokument.dovoli_objavo %}
 			| Doniral: {{ p.vhodni_dokument.lastnik }} ({{ p.vhodni_dokument.cas_prevzema|date:"d M Y" }})
 		{% endif%}
+		{% if p.fotografija %}
+			| <a target="_blank" href="{{ p.fotografija }}">Fotka</a> 
+		{% endif %}
 		{% if user.is_authenticated %}
 	        (<a target="_blank" href="/admin/inventura/primerek/{{ p.pk }}/change/">Uredi</a>)       
 		{% endif %}    
