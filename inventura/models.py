@@ -279,15 +279,13 @@ class Eksponat(models.Model):
 # create thumbnails in process
 	def fotografija(self):
 		thumb_dir = MEDIA_ROOT + '/thumbs/'
+		scale_dir = MEDIA_ROOT + '/scaled/'
 		thumb_name = str(self.id) + ".png"
 
 # if we have thumb already just serve it
 		if os.path.isfile(thumb_dir + thumb_name):
 			return MEDIA_URL + 'thumbs/' + thumb_name
-	
-# todo: use this for cropping:
-	# cropped = img.crop_to_aspect(200,200)
-	# cropped.thumbnail((200, 200), Image.ANTIALIAS)
+
 # then for uploaded pictures,		
 		p = self.primerek_set.exclude(fotografija='')
 		if DEBUG is True:
@@ -298,18 +296,26 @@ class Eksponat(models.Model):
 				cropped = im.crop_to_aspect(250,250)
 				cropped.thumbnail([250,250])
 				cropped.save(thumb_dir + thumb_name)
+
+			with Image.open(p[0].fotografija.path) as im:
+				# todo: fix aspect ratio
+				cropped = im.crop_to_aspect(1000,800)
+				cropped.thumbnail([1000,800])
+				cropped.save(scale_dir + thumb_name)
+
 			return MEDIA_URL + 'thumbs/' + thumb_name
 
 # finally remote picture; 
-#		if self.onlinephoto:
-#			try:
-#				r = requests.get(self.onlinephoto, timeout=4.0)
-#				with Image.open(io.BytesIO(r.content)) as im:
-#					im.thumbnail([250, 250], Image.ANTIALIAS) # resizes 512x512 to 256x256
-#					im.save(thumb_dir + thumb_name)
-#				return MEDIA_URL + 'thumbs/' + thumb_name
-#			except:
-#				pass
+		if self.onlinephoto:
+			try:
+				r = requests.get(self.onlinephoto, timeout=4.0)
+				with Image.open(io.BytesIO(r.content)) as im:
+					cropped = im.crop_to_aspect(250,250)
+					cropped.thumbnail([250,250])
+					cropped.save(thumb_dir + thumb_name)
+				return MEDIA_URL + 'thumbs/' + thumb_name
+			except:
+				pass
 
 		return ""
 
