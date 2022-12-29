@@ -16,6 +16,7 @@ Including another URLconf
 from django.urls import path, include
 from django.conf.urls.static import static
 from rest_framework import routers
+from django.views.generic import RedirectView
 
 from inventura.views import *
 from evidenca.views import *
@@ -30,6 +31,7 @@ router.register(r'evidenca', RacunalnikViewSet)
 router.register(r'evidenca/<int:pk>/', RacunalnikViewSet)
 
 urlpatterns = [
+    path('^$', RedirectView.as_view(url='/api/', permanent=True)),
 	path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ] 

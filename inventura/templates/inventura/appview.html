@@ -46,7 +46,7 @@
         {% for eksponat in category.eksponat_set.all %}
 		{% if eksponat.fotografija %}
 		<div class='box' style="border: 1px solid black; width: 120px; height: 160px; float: left;">
-			<a class="list-item list-item-{{ eksponat.pk }}" href="#{{ eksponat.id }}"
+			<a class="list-item list-item-{{ eksponat.pk }}" href="#C{{ eksponat.id }}"
                 data-pk="{{ eksponat.pk }}" data-type="eksponat" data-org-pk="D{{ eksponat.proizvajalec.pk}}">
 				<img height='120' width="120" src='{{ eksponat.fotografija }}' /><br />
 				{{ eksponat }}
