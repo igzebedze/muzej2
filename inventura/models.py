@@ -306,16 +306,16 @@ class Eksponat(models.Model):
 			return MEDIA_URL + 'thumbs/' + thumb_name
 
 # finally remote picture; 
-		if self.onlinephoto:
-			try:
-				r = requests.get(self.onlinephoto, timeout=4.0)
-				with Image.open(io.BytesIO(r.content)) as im:
-					cropped = im.crop_to_aspect(250,250)
-					cropped.thumbnail([250,250])
-					cropped.save(thumb_dir + thumb_name)
-				return MEDIA_URL + 'thumbs/' + thumb_name
-			except:
-				pass
+#		if self.onlinephoto:
+#			try:
+#				r = requests.get(self.onlinephoto, timeout=4.0)
+#				with Image.open(io.BytesIO(r.content)) as im:
+#					cropped = im.crop_to_aspect(250,250)
+#					cropped.thumbnail([250,250])
+#					cropped.save(thumb_dir + thumb_name)
+#				return MEDIA_URL + 'thumbs/' + thumb_name
+#			except:
+#				pass
 
 		return ""
 
