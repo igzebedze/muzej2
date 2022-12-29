@@ -297,11 +297,11 @@ class Eksponat(models.Model):
 				cropped.thumbnail([250,250])
 				cropped.save(thumb_dir + thumb_name)
 
-			with Image.open(p[0].fotografija.path) as im:
-				# todo: fix aspect ratio
-				cropped = im.crop_to_aspect(1000,800)
-				cropped.thumbnail([1000,800])
-				cropped.save(scale_dir + thumb_name)
+#			with Image.open(p[0].fotografija.path) as im:
+#				# todo: fix aspect ratio
+#				cropped = im.crop_to_aspect(1000,800)
+#				cropped.thumbnail([1000,800])
+#				cropped.save(scale_dir + thumb_name)
 
 			return MEDIA_URL + 'thumbs/' + thumb_name
 
