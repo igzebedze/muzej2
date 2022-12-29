@@ -295,9 +295,9 @@ class Eksponat(models.Model):
 		elif p:
 			with Image.open(p[0].fotografija.path) as im:
 				# todo: fix aspect ratio
-				im.crop_to_aspect(250,250)
-				im.thumbnail([250,250])
-				im.save(thumb_dir + thumb_name)
+				cropped = im.crop_to_aspect(250,250)
+				cropped.thumbnail([250,250])
+				cropped.save(thumb_dir + thumb_name)
 			return MEDIA_URL + 'thumbs/' + thumb_name
 
 # finally remote picture; 
