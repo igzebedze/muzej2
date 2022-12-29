@@ -171,6 +171,8 @@ a {
   width: 50%;
   height: 100%;
   background: var(--racmuz-gray-3);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .detail-info {
