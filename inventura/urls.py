@@ -38,9 +38,9 @@ urlpatterns = [
     path('home/', HomeView, name='home'),
 
     path('app/', appView, name='app'),
-    path('app/<int:pk>/', appEksponat, name='eksponat'),
-    path('app/<str:category>/', appView, name='app'),
-    path('app/proizvajalec/<int:pk>/', appProizvajalec, name='proizvajalec'),
+    path('app/<int:pk>/', appEksponat),
+    path('app/<str:category>/', appView),
+    path('app/proizvajalec/<int:pk>/', appProizvajalec),
 
     path('galerija/', GalerijaList.as_view(), name='galerija'),
     path('proizvajalec/', ProizvajalecList.as_view(), name='proizvajalci'),

@@ -7,6 +7,7 @@ import os.path
 import io
 from PIL import Image
 import datetime
+from muzej2.settings import DEBUG
 
 from muzej2.settings import SLACKWEBHOOK, MEDIA_ROOT, MEDIA_URL
 import requests
@@ -167,6 +168,9 @@ class Kategorija(models.Model):
 		list['neznani'] = others
 		return list
 
+	def st_eksponatov(self):
+		return self.eksponat_set.count()
+
 	class Meta:
 		verbose_name_plural = "Kategorije"
 
@@ -260,7 +264,9 @@ class Eksponat(models.Model):
 	
 # then for uploaded pictures,		
 		p = self.primerek_set.exclude(fotografija='')
-		if p:
+		if DEBUG:
+			return True
+		elif p:
 			with Image.open(p[0].fotografija.path) as im:
 				im.thumbnail([250,250])
 				im.save(thumb_dir + thumb_name)

@@ -26,7 +26,7 @@ window.onload = () => {
   // this one is for evidenca
   if (window.location.href.indexOf("osebe") > -1) { url = '/osebe/'; }
   // these two are for inventura
-  if (window.location.href.indexOf("app") > -1) { url = '/app/eksponat/'; }
+  if (window.location.href.indexOf("app") > -1) { url = '/app/'; }
   if (window.location.href.indexOf("proizvajalec") > -1) { url = '/app/proizvajalec/'; }
 
   if (id) {
@@ -46,7 +46,6 @@ window.onload = () => {
           .classList.remove(SELECTED_CLASSNAME);
       }
 
-      let type = target.getAttribute("data-type");
       let prefix = target.getAttribute("data-prefix");
       let selectedId = target.getAttribute("data-pk");
       fetchAndRender(selectedId, prefix);

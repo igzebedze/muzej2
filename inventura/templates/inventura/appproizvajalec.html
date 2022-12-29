@@ -10,7 +10,7 @@
     <h3>{{ o.grouper }}</h3>
     <ul>
         {% for eksponat in o.list %}
-        <li><a href="/app/{{ eksponat.kategorija }}/#E{{ eksponat.id }}">{{ eksponat }}</a>
+        <li><a href="/app/{{ eksponat.kategorija }}/#C{{ eksponat.id }}">{{ eksponat }}</a>
             ({{ eksponat.st_primerkov }})
         </li>
         {% endfor %}

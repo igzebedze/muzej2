@@ -245,6 +245,7 @@ def appView(request, category = '', object = ''):
 		'object': object,
 		'category': category,
 		'categories': Kategorija.objects.all,
+#		'photos': queryset of random 100 eksponati with photos
 	}
 	return render(request, 'inventura/appview.html', context)
 
