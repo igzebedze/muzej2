@@ -45,7 +45,6 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'muzej2.urls'
 ROOT_HOSTCONF = 'muzej2.hosts'
 DEFAULT_HOST = 'zbirka'
-ALLOWED_HOSTS = ['zbirka.muzej.si', 'evidenca.muzej.si', '127.0.0.1']
 
 TEMPLATES = [
     {

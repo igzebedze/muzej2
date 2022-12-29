@@ -31,7 +31,7 @@ router.register(r'evidenca', RacunalnikViewSet)
 router.register(r'evidenca/<int:pk>/', RacunalnikViewSet)
 
 urlpatterns = [
-    path('^$', RedirectView.as_view(url='/api/', permanent=True)),
+    path('', RedirectView.as_view(url='/api/', permanent=True)),
 	path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ] 
