@@ -106,14 +106,17 @@ a {
   background-color: var(--racmuz-gray-3);
 }
 
-.list ul li a::after {
+.arrow {
   position: absolute;
-  top: -15px;
-  right: 30px;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.arrow::after {
   transform: rotate(135deg);
   content: "";
   display: block;
-  margin: 30px auto;
   width: 25px;
   height: 25px;
   border-top: 2px solid rgba(0, 0, 0, 0.3);
@@ -137,29 +140,43 @@ a {
 }
 
 .index {
+  flex: 0;
   font-size: 28px;
   opacity: 0.2;
   margin-right: 20px;
 }
 
 .year {
+  flex: 0;
+  white-space: nowrap;
   font-size: 28px;
   margin-right: 20px;
 }
 
+.year-placeholder {
+  color: rgba(255, 255, 255, 0.05);
+}
+
 .name {
+  flex-grow: 1;
   font-size: 18px;
   color: var(--racmuz-highlight);
 }
 
+.country {
+}
+
 .owner {
-  display: block;
   font-size: 12px;
   color: var(--racmuz-white);
-  white-space: nowrap;
+  flex-grow: 1;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: calc(100vw - 250px);
+  max-width: calc(100% - 30px);
+}
+
+.generation {
+  padding-right: 1.5em;
 }
 
 .details {
@@ -303,6 +320,11 @@ button.back {
     padding-left: 60px;
   }
 
+  .list ul.people-list li a {
+    padding-left: 90px;
+    min-height: 50px;
+  }
+
   .computer {
     padding: 0 10px 10px 10px;
   }
@@ -328,6 +350,14 @@ button.back {
 
   .owner {
     max-width: calc(100vw - 115px);
+  }
+
+  .generation {
+    display: none;
+  }
+
+  .country {
+    display: none;
   }
 
   .list ul li a::after {
@@ -534,9 +564,6 @@ button.back {
   #menu ul::after {
     display: block;
   }
-}
-span.icon {
-  padding-right: 1.5em;
 }
 
 ul.legend {

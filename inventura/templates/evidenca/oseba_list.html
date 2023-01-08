@@ -1,43 +1,44 @@
-{% extends "app.html" %}
-{% load smart_if %}
-
-{% block menu %}
+{% extends "app.html" %} {% load smart_if %} {% block menu %}
 <ul>
-    <li><a href="{% url 'racunalniki' %}">Seznam</a></li>
-    <li class="selected"><a href="{% url 'osebe' %}">Osebe</a></li>
-    <li><a href="{% url 'zemljevid' %}">Zemljevid</a></li>
-    <li><a href="{% url 'oprojektu' %}">O projektu</a></li>
+  <li><a href="{% url 'racunalniki' %}">Seznam</a></li>
+  <li class="selected"><a href="{% url 'osebe' %}">Osebe</a></li>
+  <li><a href="{% url 'zemljevid' %}">Zemljevid</a></li>
+  <li><a href="{% url 'oprojektu' %}">O projektu</a></li>
 </ul>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <div class="app">
-    <div class="list">
-        <h1>Prvi računalnikarji v Sloveniji</h1>
-        <div class="filters" id="clearFilters">
-            « Nazaj na vse osebe
-        </div>
-        <ul>
-            {% for oseba in object_list %}
-            {% if oseba.rojstvo %}
-            <li>
-                <a class="list-item list-item-{{ oseba.pk }}" href="#O{{ oseba.pk }}"
-                    data-pk="{{ oseba.pk }}" data-type="oseba" data-prefix="{% url 'osebe' %}"
-                    data-org-pk="{% for o in oseba.sluzba.all %}D{{ o.pk }} {% endfor %}">
-                    <span class="index">{{ forloop.counter|stringformat:"03d" }}</span>
-                    <span class="year">{{ oseba.rojstvo.year }}&nbsp;-&nbsp;{% if oseba.smrt %}{{ oseba.smrt.year }}{% endif %}</span>
-                    <span class="name">
-                        {{ oseba.ime }}
-                        <br />
-                        <span class="owner">{{ oseba.get_jobs }}</span>
-                    </span>
-                </a>
-            </li>
-            {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
-    <div id="details" class="details hide">
-    </div>
+  <div class="list">
+    <h1>Prvi računalnikarji v Sloveniji</h1>
+    <div class="filters" id="clearFilters">« Nazaj na vse osebe</div>
+
+    <ul class="people-list">
+      {% for oseba in object_list %} {% if oseba.rojstvo %}
+      <li>
+        <a
+          class="list-item list-item-{{ oseba.pk }}"
+          href="#O{{ oseba.pk }}"
+          data-pk="{{ oseba.pk }}"
+          data-type="oseba"
+          data-prefix="{% url 'osebe' %}"
+          data-org-pk="{% for o in oseba.sluzba.all %}D{{ o.pk }} {% endfor %}"
+        >
+          <div class="index">{{ forloop.counter|stringformat:"03d" }}</div>
+          <div class="year">
+            {{ oseba.rojstvo.year }}{% if oseba.smrt %}-{{ oseba.smrt.year }}{% else %}<span class="year-placeholder">-0000</span>{% endif %}
+          </div>
+          <div class="name">
+            {{ oseba.ime }}
+            <br />
+            <div class="owner" title="{{ oseba.get_jobs }}">
+              {{ oseba.get_jobs }}
+            </div>
+          </div>
+          <span class="arrow"></span>
+        </a>
+      </li>
+      {% endif %} {% endfor %}
+    </ul>
+  </div>
+  <div id="details" class="details hide"></div>
 </div>
 {% endblock %}
