@@ -3,10 +3,10 @@
 
 {% block menu %}
 <ul>
-    <li><a href="/evidenca/">Seznam</a></li>
-    <li class="selected"><a href="/evidenca/osebe/">Osebe</a></li>
-    <li><a href="/evidenca/zemljevid/">Zemljevid</a></li>
-    <li><a href="/evidenca/oprojektu/">O projektu</a></li>
+    <li><a href="{% url 'racunalniki' %}">Seznam</a></li>
+    <li class="selected"><a href="{% url 'osebe' %}">Osebe</a></li>
+    <li><a href="{% url 'zemljevid' %}">Zemljevid</a></li>
+    <li><a href="{% url 'oprojektu' %}">O projektu</a></li>
 </ul>
 {% endblock %}
 
@@ -22,10 +22,10 @@
             {% if oseba.rojstvo %}
             <li>
                 <a class="list-item list-item-{{ oseba.pk }}" href="#O{{ oseba.pk }}"
-                    data-pk="{{ oseba.pk }}" data-type="oseba" 
+                    data-pk="{{ oseba.pk }}" data-type="oseba" data-prefix="{% url 'osebe' %}"
                     data-org-pk="{% for o in oseba.sluzba.all %}D{{ o.pk }} {% endfor %}">
                     <span class="index">{{ forloop.counter|stringformat:"03d" }}</span>
-                    <span class="year">{{ oseba.rojstvo.year }} - {% if oseba.smrt %}{{ oseba.smrt.year }}{% endif %}</span>
+                    <span class="year">{{ oseba.rojstvo.year }}&nbsp;-&nbsp;{% if oseba.smrt %}{{ oseba.smrt.year }}{% endif %}</span>
                     <span class="name">
                         {{ oseba.ime }}
                         <br />

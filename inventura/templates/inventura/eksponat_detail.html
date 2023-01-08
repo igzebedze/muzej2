@@ -1,19 +1,24 @@
-{% extends "app.html" %}
-
 {% load extras %}
+<html>
+	<head>
+		<style>
+			.infobox, #infobox { float: right; border: 1px solid black; }
+		</style>
+	</head>
+<body>
 
-{% block head %}
-		<style>.infobox, #infobox { float: right; border: 1px solid black; }</style>
-{% endblock %}
 
-{% block menu%}
-<ul>
-	{% if prev %}<li><a href='/eksponat/{{ prev }}/'><- prejšnji eksponat</a></li>{% endif %}
-	{% if next %}<li><a href='/eksponat/{{ next }}/' style="float: right;">naslednji eksponat -></a></li>{% endif %}
-</ul>
-{% endblock %}
+<div id='nav'>
+		<p>
+			{% if prev %}
+				<a href='/eksponat/{{ prev }}/'><- prejšnji eksponat</a>
+			{% endif %}
+			{% if next %}
+				<a href='/eksponat/{{ next }}/' style="float: right;">naslednji eksponat -></a>
+			{% endif %}
+		</p>
+</div>
 
-{% block content %}
 <div id='infobox'>
 <!-- previously stored versions -->
 {% if object.infobox %}
@@ -73,11 +78,9 @@
 {% endif %}
 </div>
 
-<div class="app">
-
 <h3>{{ object.kategorija }}</h3>
-<h2>{{ object.ime }}</h2>
-<h1>{{ object.proizvajalec }}</h1>
+<h1>{{ object.ime }}</h1>
+<h2>{{ object.proizvajalec }}</h2>
 <img src="{{ object.fotografija }}" />
 
 <ul>
@@ -123,6 +126,9 @@
 		{% if p.vhodni_dokument.dovoli_objavo %}
 			| Doniral: {{ p.vhodni_dokument.lastnik }} ({{ p.vhodni_dokument.cas_prevzema|date:"d M Y" }})
 		{% endif%}
+		{% if p.fotografija %}
+			| <a target="_blank" href="{{ p.fotografija }}">Fotka</a> 
+		{% endif %}
 		{% if user.is_authenticated %}
 	        (<a target="_blank" href="/admin/inventura/primerek/{{ p.pk }}/change/">Uredi</a>)       
 		{% endif %}    
@@ -131,5 +137,5 @@
 </ul>
 {% endifequal %}
 
-</div>
-{% endblock %}
+</body>
+</html>

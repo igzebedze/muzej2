@@ -229,6 +229,38 @@ def terminalView(request):
 	context = {}
 	return render(request, 'terminal.html', context)
 
+def appView(request, category = '', object = ''):
+	object_list = Eksponat.objects.order_by('ime')
+	if object:
+		object = Eksponat.objects.get(pk=object)
+	if category and category == 'proizvajalec':
+		object_list = Proizvajalec.objects.order_by('ime')
+	elif category:
+		category = Kategorija.objects.get(ime=category)
+		object_list = category.eksponat_set.order_by('ime')
+	else:
+		object_list = Kategorija.objects.all
+	context = {
+		'object_list': object_list,
+		'object': object,
+		'category': category,
+		'categories': Kategorija.objects.all,
+#		'photos': queryset of random 100 eksponati with photos
+	}
+	return render(request, 'inventura/appview.html', context)
+
+def appEksponat(request, pk):
+	return render(request, 'inventura/appeksponat.html', {
+        'object': Eksponat.objects.get(pk=pk),
+    }, content_type='text/html')
+
+def appProizvajalec(request, pk):
+	p = Proizvajalec.objects.get(pk=pk)
+	return render(request, 'inventura/appproizvajalec.html', {
+        'object': p,
+		'object_list': p.eksponat_set.order_by('kategorija'),
+    }, content_type='text/html')
+
 def HomeView(request):
 	eksponati = Eksponat.objects.all()
 	max_id = Eksponat.objects.order_by('-id')[0].id

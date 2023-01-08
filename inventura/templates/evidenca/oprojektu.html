@@ -1,11 +1,12 @@
 {% extends "app.html" %}
-
+{% load static %}
 {% block menu %}
+{% load hosts %}
 <ul>
-    <li><a href="/evidenca/">Seznam</a></li>
-    <li><a href="/evidenca/osebe/">Osebe</a></li>
-    <li><a href="/evidenca/zemljevid/">Zemljevid</a></li>
-    <li class="selected"><a href="/evidenca/oprojektu/">O projektu</a></li>
+    <li><a href="{% url 'racunalniki' %}">Seznam</a></li>
+    <li><a href="{% url 'osebe' %}">Osebe</a></li>
+    <li><a href="{% url 'zemljevid' %}">Zemljevid</a></li>
+    <li class="selected"><a href="{% url 'oprojektu' %}">O projektu</a></li>
 </ul>
 {% endblock %}
 
@@ -14,7 +15,7 @@
     <div class="organizations">
         <h1>O projektu</h1>
         <div class="about">
-            <p>Evidenca se je začela kot ambiciozna ideja, raziskati in popisati prvih <strong>40 računalnikov</strong> 
+            <p>Evidenca se je začela kot ambiciozna ideja: raziskati in popisati prvih <strong>40 računalnikov</strong> 
                 v Sloveniji - kje so bili in kaj so počeli. Dokaj hitro je raziskava prerasla v popis 
                 prvih <strong>40 let</strong> računalnikov, s prek dvesto identificiranimi stroji in podjetji, 
                 iz tisoc petsto pisnih virov.
@@ -27,13 +28,26 @@
                 računalništva v Sloveniji. Pogovori so zaenkrat samo shranjeni v muzejskem arhivu, upamo da jih uspemo uredit
                 tako, da bodo lahko v prihodnje tudi na voljo javnosti. 
             </p>
-            <p>
-                
-            </p>
-            <p>
+            <p>Cilj projekta je popisati vse računalnike, računalnikarje in njihove dosežke v Sloveniji. 
+                Verjamemo da je takšna evidenca nujno potrebna, da se nove generacije lahko učijo od predhodnikov.
                 Če opazite kako napako ali imate kake informacije, ki bi obogatile Evidenco, nam prosim javite na naslov
                 <a href="mailo:info@racunalniski-muzej.si">info@racunalniski-muzej.si</a>
             </p>
+            <h3>Članki</h3>
+            <ol>
+                <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-prvi-racunski-stroji-v-javnih-ustanovah/">prvi računski stroji v javnih ustanovah</a></li>
+                <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-2-del-racunski-stroji-v-gospodarstvu/">računski stroji v gospodarstvu</a></li>
+                <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-dodatek-a-programiranje-racunskih-strojev/">programiranje računskih strojev</a></li>
+                <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-dodatek-b-programiranje-s-karticami-in-trakovi/">programiranje s karticami in trakovi</a></li>
+                <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-3-del-elektronski-racunalniki-v-jugoslaviji/">elektronski računalniki v Jugoslaviji</a></li>
+                <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-dodatek-c-prva-generacija-programskih-jezikov/">prva generacija programskih jezikov</a></li>
+                <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-dodatek-d-druga-generacija-programskih-jezikov/">druga generacija programskih jezikov</a></li>
+                <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-4-del-elektronski-racunalnik-zuse-z-23/">Zuse Z-23</a></li>
+                <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-5-del-prvi-vecji-elektronski-center/">prvi večji elektronski center</a></li>
+                <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-6-del-racunalniki-ibm-360/">IBM 360</a></li>
+                <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-7-del-nadaljevanje-in-prvi-mini-racunalniki/">Prvi računalniki v Sloveniji, 7. del – prvi mini računalniki</a></li>
+                <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-8-del-prva-racunalniska-mreza-in-solstvo/">Prvi računalniki v Sloveniji, 8. del – prva računalniška mreža in šolstvo</a></li>
+            </ul>
         </div>
     </div>
     <div id="details" class="details">
@@ -43,20 +57,27 @@
         <dt>Programiranje</dt><dd>Boštjan Špetič, Anej Gorkič</dd>
         <dt>Donatorji</dt><dd>Dušan Omerčevič, Jernej Strasner, Boštjan Špetič</dd>
         <dt>Trajanje</dt><dd>2022-</dd>
+        <dt>Zahvale</dt><dd>Izvedba te raziskave ne bi bila mogoča brez D-Lib in Delo. Odprti arhivi omogočajo napredek znanosti.</dd>
     </dl>
-    <h3>Članki</h3>
-    <ul>
-        <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-prvi-racunski-stroji-v-javnih-ustanovah/">1 - prvi računski stroji v javnih ustanovah</a></li>
-        <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-2-del-racunski-stroji-v-gospodarstvu/">2 - računski stroji v gospodarstvu</a></li>
-        <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-dodatek-a-programiranje-racunskih-strojev/">3 - programiranje računskih strojev</a></li>
-        <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-dodatek-b-programiranje-s-karticami-in-trakovi/">4 - programiranje s karticami in trakovi</a></li>
-        <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-3-del-elektronski-racunalniki-v-jugoslaviji/">5 - elektronski računalniki v Jugoslaviji</a></li>
-        <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-dodatek-c-prva-generacija-programskih-jezikov/">6 - prva generacija programskih jezikov</a></li>
-        <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-dodatek-d-druga-generacija-programskih-jezikov/">7 - druga generacija programskih jezikov</a></li>
-        <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-4-del-elektronski-racunalnik-zuse-z-23/">8 - Zuse Z-23</a></li>
-        <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-5-del-prvi-vecji-elektronski-center/">9 - prvi večji elektronski center</a></li>
-        <li><a target="_blank" href="https://www.racunalniski-muzej.si/prvi-racunalniki-v-sloveniji-6-del-racunalniki-ibm-360/">10 - IBM 360</a></li>
-    </ul>
+    <h3>Legenda</h3>
+    <ul class="legend">
+        <li><span class="icon"><img width="30" height="30" title="A" alt="A" src="{% get_media_prefix %}A.png" /></span>
+        Predgeneracija računskih strojev (releji + vakuumske elektronke)</li>
+        <li><span class="icon"><img width="30" height="30" title="B" alt="B" src="{% get_media_prefix %}B.png" /></span>
+        Prva generacija elektronskih računalnikov (vakuumske elektronke)</li>
+        <li><span class="icon"><img width="30" height="30" title="C" alt="C" src="{% get_media_prefix %}C.png" /></span>
+        Druga generacija elektronskih računalnikov (tranzistorji)</li>
+        <li><span class="icon"><img width="30" height="30" title="D" alt="D" src="{% get_media_prefix %}D.png" /></span>
+        Druga generacija elektronskih računalnikov (hibridna vezja in tranzistorji)</li>
+        <li><span class="icon"><img width="30" height="30" title="E" alt="E" src="{% get_media_prefix %}E.png" /></span>
+        Tretja generacija elektronskih računalnikov (integrirana vezja in MOSFET)</li>
+        <li><span class="icon"><img width="30" height="30" title="F" alt="F" src="{% get_media_prefix %}F.png" /></span>
+        Četrta generacija mikro računalnikov (mikroprocesorji)</li>
+        <li><span class="icon"><img width="30" height="30" title="G" alt="G" src="{% get_media_prefix %}G.png" /></span>
+        Analogni in hibridni računalniki ()</li>
+        <li><span class="icon"><img width="30" height="30" title="X" alt="X" src="{% get_media_prefix %}X.png" /></span>
+        Zelo šibki in pomanjkljivi viri ()</li>
+    </dl>
     </div></div>
 </div>
 

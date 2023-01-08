@@ -1,0 +1,64 @@
+{% extends "app.html" %}
+
+{% load extras %}
+
+{% block head %}
+		<style>.infobox, #infobox { float: right; border: 1px solid black; }</style>
+        <title>Zbirka računalniškega muzeja</title>
+{% endblock %}
+
+{% block menu%}
+<ul>
+	<li><a href="/app/">Zbirka</a></li>
+	<li><a href="/app/proizvajalec/">Proizvajalci</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+
+<div class="app">
+    <div class="list halflist">
+        <h1>{% if category %}Kategorija: {{ category }}{% else %}Kategorije{% endif %}</h1>
+        <div class="filters" >
+            {% if category %}<a href="/app/">« Nazaj na vse eksponate</a>{% endif %}
+        </div>
+        <ul>
+        {% for o in object_list %}
+        <li>
+            {% if category %}
+                <a class="list-item list-item-{{ o.pk }}" href="#C{{ o.pk }}" data-prefix="/app/"
+                    data-pk="{{ o.pk }}" data-type="eksponat" data-org-pk="D{{ o.proizvajalec.pk}}">
+            {% else %}
+                <!-- by default show list of categories and link to their slugs -->
+                <a class="list-item" href="/app/{{ o.ime }}/">
+            {% endif %}
+                <span class="index">{{ o.pk }}</span>
+                <span class="year">{% ifnotequal o.leto_proizvodnje 'None' %}{{ o.leto_proizvodnje }}{% endifnotequal %}</span>
+                <span class="name">
+                    {{ o.ime }} ({% if category %}{{ o.st_primerkov }}{% else %}{{ o.st_eksponatov }}{% endif %})
+                    <br />
+                    <span class="owner">{{ o.proizvajalec }}</span>
+                </span>
+            </a>
+        </li>
+        {% endfor %}
+    </div>
+    <div id='details' class="details">
+        {% for eksponat in category.eksponat_set.all %}
+		{% if eksponat.fotografija %}
+		<div class='box' style="border: 1px solid black; width: 150px; height: 200px; float: left;">
+			<a class="list-item list-item-{{ eksponat.pk }}" href="#C{{ eksponat.id }}"
+                data-pk="{{ eksponat.pk }}" data-prefix="/app/" data-org-pk="D{{ eksponat.proizvajalec.pk}}">
+				<img height='150' width="150" src='{{ eksponat.fotografija }}' /><br />
+				{{ eksponat }}
+			</a>
+            <!--
+			{% if eksponat.proizvajalec %} {{ eksponat.proizvajalec }}{% endif %}
+			({{ eksponat.st_primerkov }})
+            -->
+		</div>
+		{% endif %}
+		{% endfor %}
+		<div style="clear: both;">&nbsp;</div>        
+    </div>
+{% endblock %}

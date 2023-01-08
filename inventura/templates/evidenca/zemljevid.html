@@ -4,10 +4,10 @@
 
 {% block menu %}
 <ul>
-    <li><a href="/evidenca/">Seznam</a></li>
-    <li><a href="/evidenca/osebe/">Osebe</a></li>
-    <li class="selected"><a href="/evidenca/zemljevid/">Zemljevid</a></li>
-    <li><a href="/evidenca/oprojektu/">O projektu</a></li>
+    <li><a href="{% url 'racunalniki' %}">Seznam</a></li>
+    <li><a href="{% url 'osebe' %}">Osebe</a></li>
+    <li class="selected"><a href="{% url 'zemljevid' %}">Zemljevid</a></li>
+    <li><a href="{% url 'oprojektu' %}">O projektu</a></li>
 </ul>
 {% endblock %}
 
@@ -68,7 +68,7 @@
                         'type': 'geojson',
                         'data': {
                             'type': 'FeatureCollection',
-                            'features': [{% for r in object_list %}{% if r.nosilec.latlong|length > 3 %}
+                            'features': [{% for r in object_list %}{% if r.nosilec.latlong|length > 1 %}
                                 {
                                     'type': 'Feature',
                                     'properties': {
@@ -78,7 +78,7 @@
                                     },
                                     'geometry': {
                                         'type': 'Point',
-                                        'coordinates': [{{ r.nosilec.latlong|slice:"1:-1" }}]
+                                        'coordinates': [{{ r.nosilec.latlong }}]
                                     }
                                 }{% if forloop.last%}{% else %},{% endif %}
                                 {% endif %}{% endfor %}

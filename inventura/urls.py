@@ -38,9 +38,9 @@ urlpatterns = [
     path('home/', HomeView, name='home'),
 
     path('app/', appView, name='app'),
-    path('app/<int:pk>/', appEksponat, name='eksponat'),
-    path('app/<str:category>/', appView, name='app'),
-    path('app/proizvajalec/<int:pk>/', appProizvajalec, name='proizvajalec'),
+    path('app/<int:pk>/', appEksponat),
+    path('app/<str:category>/', appView),
+    path('app/proizvajalec/<int:pk>/', appProizvajalec),
 
     path('galerija/', GalerijaList.as_view(), name='galerija'),
     path('proizvajalec/', ProizvajalecList.as_view(), name='proizvajalci'),
@@ -60,14 +60,14 @@ urlpatterns = [
     path('eksponat/<int:pk>/uredi/', update_infobox, name='infobox-edit'),
 
 	path('razstava/<int:pk>/', RazstavaView.as_view(), name='razstava-detail'),
-
-    path('evidenca/', RacunalnikListView.as_view()),
-    path('evidenca/geojson/', RacunalnikiGeoJsonView.as_view()),
+ 
+    path('evidenca/', RacunalnikListView.as_view(), name='racunalniki'),
+    path('evidenca/geojson/', RacunalnikiGeoJsonView.as_view(), name='geojson'),
     path('evidenca/<int:pk>/', racunalnik_detail_rendered),
-    path('evidenca/zemljevid/', RacunalnikiZemljevid.as_view()), 
-    path('evidenca/oprojektu/', TemplateView.as_view(template_name='evidenca/oprojektu.html')), 
-    path('evidenca/organizacije/', OrganizacijeListView.as_view()),
-    path('evidenca/osebe/', OsebaListView.as_view()),
+    path('evidenca/zemljevid/', RacunalnikiZemljevid.as_view(), name='zemljevid'), 
+    path('evidenca/oprojektu/', TemplateView.as_view(template_name='evidenca/oprojektu.html'), name='oprojektu'), 
+    path('evidenca/organizacije/', OrganizacijeListView.as_view(), name='organizacije'),
+    path('evidenca/osebe/', OsebaListView.as_view(), name='osebe'),
     path('evidenca/oseba/<int:pk>/', OsebaView),
 
 #	path(r'^wiki/', include('wiki.urls')),
@@ -76,6 +76,7 @@ urlpatterns = [
 	path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('slides/', include('django.contrib.flatpages.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ] 
 if settings.DEBUG is True:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

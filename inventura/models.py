@@ -7,12 +7,36 @@ import os.path
 import io
 from PIL import Image
 import datetime
-
-from muzej2.settings import SLACKWEBHOOK, MEDIA_ROOT, MEDIA_URL
+from muzej2.settings import SLACKWEBHOOK, MEDIA_ROOT, MEDIA_URL, DEBUG
 import requests
 headers = {
     'Content-type': 'application/json',
 }
+
+class _Image(Image.Image):
+    def crop_to_aspect(self, aspect, divisor=1, alignx=0.5, aligny=0.5):
+        """Crops an image to a given aspect ratio.
+        Args:
+            aspect (float): The desired aspect ratio.
+            divisor (float): Optional divisor. Allows passing in (w, h) pair as the first two arguments.
+            alignx (float): Horizontal crop alignment from 0 (left) to 1 (right)
+            aligny (float): Vertical crop alignment from 0 (left) to 1 (right)
+        Returns:
+            Image: The cropped Image object.
+        """
+        if self.width / self.height > aspect / divisor:
+            newwidth = int(self.height * (aspect / divisor))
+            newheight = self.height
+        else:
+            newwidth = self.width
+            newheight = int(self.width / (aspect / divisor))
+        img = self.crop((alignx * (self.width - newwidth),
+                         aligny * (self.height - newheight),
+                         alignx * (self.width - newwidth) + newwidth,
+                         aligny * (self.height - newheight) + newheight))
+        return img
+
+Image.Image.crop_to_aspect = _Image.crop_to_aspect
 
 class Search(models.Lookup):
     lookup_name = 'search'
@@ -167,6 +191,9 @@ class Kategorija(models.Model):
 		list['neznani'] = others
 		return list
 
+	def st_eksponatov(self):
+		return self.eksponat_set.count()
+
 	class Meta:
 		verbose_name_plural = "Kategorije"
 
@@ -252,18 +279,30 @@ class Eksponat(models.Model):
 # create thumbnails in process
 	def fotografija(self):
 		thumb_dir = MEDIA_ROOT + '/thumbs/'
+		scale_dir = MEDIA_ROOT + '/scaled/'
 		thumb_name = str(self.id) + ".png"
 
 # if we have thumb already just serve it
 		if os.path.isfile(thumb_dir + thumb_name):
 			return MEDIA_URL + 'thumbs/' + thumb_name
-	
+
 # then for uploaded pictures,		
 		p = self.primerek_set.exclude(fotografija='')
-		if p:
+		if DEBUG is True:
+			return True
+		elif p:
 			with Image.open(p[0].fotografija.path) as im:
-				im.thumbnail([250,250])
-				im.save(thumb_dir + thumb_name)
+				# todo: fix aspect ratio
+				cropped = im.crop_to_aspect(250,250)
+				cropped.thumbnail([250,250])
+				cropped.save(thumb_dir + thumb_name)
+
+#			with Image.open(p[0].fotografija.path) as im:
+#				# todo: fix aspect ratio
+#				cropped = im.crop_to_aspect(1000,800)
+#				cropped.thumbnail([1000,800])
+#				cropped.save(scale_dir + thumb_name)
+
 			return MEDIA_URL + 'thumbs/' + thumb_name
 
 # finally remote picture; 
@@ -271,8 +310,9 @@ class Eksponat(models.Model):
 #			try:
 #				r = requests.get(self.onlinephoto, timeout=4.0)
 #				with Image.open(io.BytesIO(r.content)) as im:
-#					im.thumbnail([250, 250], Image.ANTIALIAS) # resizes 512x512 to 256x256
-#					im.save(thumb_dir + thumb_name)
+#					cropped = im.crop_to_aspect(250,250)
+#					cropped.thumbnail([250,250])
+#					cropped.save(thumb_dir + thumb_name)
 #				return MEDIA_URL + 'thumbs/' + thumb_name
 #			except:
 #				pass

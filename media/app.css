@@ -171,6 +171,8 @@ a {
   width: 50%;
   height: 100%;
   background: var(--racmuz-gray-3);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .detail-info {
@@ -532,4 +534,11 @@ button.back {
   #menu ul::after {
     display: block;
   }
+}
+span.icon {
+  padding-right: 1.5em;
+}
+
+ul.legend {
+  list-style-type: none;
 }

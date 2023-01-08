@@ -1,0 +1,19 @@
+{% load extras %}
+<h1 class="back">{{ object.ime }}</h1>
+<div class="detail-info">
+
+<h2><a name="{{ object.ime }}">{{ object.ime }}</a></h2>
+<p>{{ object.opis }}</p>
+
+{% regroup object_list by kategorija as objects %}
+{% for o in objects %}
+    <h3>{{ o.grouper }}</h3>
+    <ul>
+        {% for eksponat in o.list %}
+        <li><a href="/app/{{ eksponat.kategorija }}/#C{{ eksponat.id }}">{{ eksponat }}</a>
+            ({{ eksponat.st_primerkov }})
+        </li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+</div>
