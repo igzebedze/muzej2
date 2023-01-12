@@ -1,9 +1,9 @@
 {% extends "app.html" %} {% load smart_if %} {% block menu %}
 <ul>
-  <li><a href="{% url 'racunalniki' %}">Seznam</a></li>
-  <li class="selected"><a href="{% url 'osebe' %}">Osebe</a></li>
-  <li><a href="{% url 'zemljevid' %}">Zemljevid</a></li>
-  <li><a href="{% url 'oprojektu' %}">O projektu</a></li>
+    <li><a href="{% url 'racunalniki' %}">Seznam</a></li>
+    <li class="selected"><a href="{% url 'osebe' %}">Osebe</a></li>
+    <li><a href="{% url 'zemljevid' %}">Zemljevid</a></li>
+    <li><a href="{% url 'oprojektu' %}">O projektu</a></li>
 </ul>
 {% endblock %} {% block content %}
 <div class="app">
@@ -24,7 +24,7 @@
         >
           <div class="index">{{ forloop.counter|stringformat:"03d" }}</div>
           <div class="year">
-            {{ oseba.rojstvo.year }}{% if oseba.smrt %}-{{ oseba.smrt.year }}{% else %}<span class="year-placeholder">-0000</span>{% endif %}
+            {{ oseba.rojstvo.year }}{% if oseba.smrt %}-{{ oseba.smrt.year }}{% else %}<span class="year-placeholder">-    </span>{% endif %}
           </div>
           <div class="name">
             {{ oseba.ime }}
