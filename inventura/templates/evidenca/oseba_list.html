@@ -25,7 +25,7 @@
                     data-pk="{{ oseba.pk }}" data-type="oseba" data-prefix="{% url 'osebe' %}"
                     data-org-pk="{% for o in oseba.sluzba.all %}D{{ o.pk }} {% endfor %}">
                     <span class="index">{{ forloop.counter|stringformat:"03d" }}</span>
-                    <span class="year">{{ oseba.rojstvo.year }}&nbsp;-&nbsp;{% if oseba.smrt %}{{ oseba.smrt.year }}{% endif %}</span>
+                    <span class="year">{{ oseba.rojstvo.year }}&nbsp;-&nbsp;{% if oseba.smrt %}{{ oseba.smrt.year }}{% else %}&nbsp;&nbsp;&nbsp;&nbsp;{% endif %}</span>
                     <span class="name">
                         {{ oseba.ime }}
                         <br />
