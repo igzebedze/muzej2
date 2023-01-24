@@ -21,7 +21,6 @@
         </div>
         <ul>
             {% for racunalnik in object_list %}
-            {% ifnotequal racunalnik.tip 't' %}
             <li>
                 <a class="list-item list-item-{{ racunalnik.pk }}" href="#C{{ racunalnik.pk }}"
                     data-pk="{{ racunalnik.pk }}" data-type="racunalnik" data-prefix="{% url 'racunalniki' %}"
@@ -40,7 +39,6 @@
                     </span>
             </a>
             </li>
-            {% endifnotequal %}
             {% endfor %}
         </ul>
     </div>
