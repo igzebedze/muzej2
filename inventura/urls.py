@@ -44,6 +44,7 @@ urlpatterns = [
 
     path('revije/', revijeIndexView),
     path('revije/<int:pk>/js', revijaJSView),
+    path('revije/<int:pk>/thumbs', revijaThumbsView),
     path('revije/<int:pk>/', revijaView.as_view()),
 
     path('galerija/', GalerijaList.as_view(), name='galerija'),

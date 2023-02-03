@@ -140,6 +140,21 @@ def revijaJSView(request, pk):
 	}
 	return render(request, 'inventura/revija.js', context, content_type='text/javascript')
 
+def revijaThumbsView(request, pk):
+	e = Tiskovina.objects.get(pk=pk)
+	pdf = e.pdf
+	location = pdf[0:-4]
+	naslovnica = e.naslovnica.name
+	start = int(naslovnica.split('.')[0])
+	context = {
+		'object': e,
+		'location': location,
+		'pages': 64, # todo: get this from database
+		'start': start, # todo: get this from datamase
+		'pages': range(start, start + 64)
+	}
+	return render(request, 'inventura/thumbs.js', context, content_type='text/javascript')
+
 class KategorijaList(ListView):
 	model = Kategorija
 
