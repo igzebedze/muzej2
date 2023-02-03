@@ -124,7 +124,7 @@ window.eddata.pages = [
     page_num_tb: '{{ forloop.counter }}',
     title: '',
     page_title_calc: 'Page {{ forloop.counter }}',
-    sef: 'page{{ forloop.counter }',
+    sef: 'page{{ forloop.counter }}',
     event_load: 0,
     interactive: [],
     canvas: qfp_sta({{ forloop.counter }},"_canvas"),
