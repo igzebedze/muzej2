@@ -129,11 +129,13 @@ def revijaJSView(request, pk):
 	e = Tiskovina.objects.get(pk=pk)
 	pdf = e.pdf
 	location = pdf[0:-4]
+	naslovnica = e.naslovnica.name
+	start = int(naslovnica.split('.')[0])
 	context = {
 		'object': e,
 		'location': location,
 		'pages': 64, # todo: get this from database
-		'start': 2422, # todo: get this from datamase
+		'start': start, # todo: get this from datamase
 		'pages': range(64)
 	}
 	return render(request, 'inventura/revija.js', context, content_type='text/javascript')
