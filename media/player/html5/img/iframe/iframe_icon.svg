@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" baseProfile="tiny" id="ICONS" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 24 24" overflow="auto" xml:space="preserve">
+<path fill="#EEEEEE" d="M22,21.1H2c-0.4,0-0.8-0.3-0.8-0.8V3.9C1.3,3.5,1.6,3.1,2,3.1h20c0.4,0,0.8,0.3,0.8,0.8v16.4
+	C22.8,20.7,22.4,21.1,22,21.1z M2.8,19.6h18.5v-13H2.8V19.6z"/>
+<g>
+	<path fill="#EEEEEE" d="M4.4,12.7l5.1-2.1v1.6l-3.1,1.2l3.1,1.2v1.6L4.4,14V12.7z"/>
+	<path fill="#EEEEEE" d="M12.3,9h1.5l-1.7,8.5h-1.5L12.3,9z"/>
+	<path fill="#EEEEEE" d="M19.7,12.7V14l-5.1,2.1v-1.6l3.1-1.2l-3.1-1.2v-1.6L19.7,12.7z"/>
+</g>
+</svg>

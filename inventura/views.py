@@ -23,7 +23,7 @@ from django.db.models import Q
 from .serializers import PrimerekSerializer, RazstavaSerializer, KategorijaSerializer
 from rest_framework import viewsets, generics
 
-from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec, Kveri
+from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec, Kveri, Tiskovina
 
 
 class KategorijeViewSet(viewsets.ReadOnlyModelViewSet):
@@ -118,6 +118,25 @@ def listki(request):
 		
 	context = {'form': form}
 	return render(request, 'listkiform.html', context)	
+
+class revijeIndexView(ListView):
+	model = Tiskovina
+
+class revijaView(DetailView):
+	model = Tiskovina
+
+def revijaJSView(request, pk):
+	e = Tiskovina.objects.get(pk=pk)
+	pdf = e.pdf
+	location = pdf[0:-4]
+	context = {
+		'object': e,
+		'location': location,
+		'pages': 64, # todo: get this from database
+		'start': 2422, # todo: get this from datamase
+		'pages': range(64)
+	}
+	return render(request, 'inventura/revija.js', context, content_type='text/javascript')
 
 class KategorijaList(ListView):
 	model = Kategorija

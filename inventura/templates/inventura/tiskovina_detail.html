@@ -1,0 +1,185 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="no-js  " >
+<head>
+<!--serving static https://stumbles.id.au/nginx-dynamic-image-resizing-with-caching.html -->
+<meta charset="utf-8">
+<title>{{ object.eksponat }} {{ object.stevilka }}</title>
+<meta name="description" content="{{ object.kazalo }}">
+<meta name="keywords" content="Joker, Gaming, Gaming, en">
+<meta name="robots" content="index,follow">
+<meta name="author" content="Edition Digital">
+
+<meta name="fragment" content="!">
+<!-- meta tags -->
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<meta name="GUID" content="ed24a98f58fd5ad2402c192b444ef0d6-728ccc12753270f038324f300dce9c58-e32645be8d1015f9764fb095e134b8b6" />
+
+<!-- og tags -->
+<meta property="og:title" content="{{ object.eksponat }} {{ object.stevilka }}">
+<meta property="og:site_name" content="{{ object.eksponat }} {{ object.stevilka }}">
+<meta property="og:description" content="{{ object.kazalo }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://zbirka.muzej.si/revije/">
+
+<meta property="og:image" content="{{ object.naslovnica }}">
+<meta property="og:image:secure_url" content="{{ object.naslovnica }}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- twitter tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ object.eksponat }} {{ object.stevilka }}">
+<meta name="twitter:description" content="{{ object.kazalo }}">
+<meta name="twitter:image" content="{{ object.naslovnica }}">
+
+<!-- pagination -->
+<link rel="index" href="" title="{{ object.eksponat }} {{ object.stevilka }}">
+<link rel="start" href="" title="{{ object.eksponat }} {{ object.stevilka }}">
+<link rel="next" href="" title="{{ object.eksponat }} {{ object.stevilka }}">
+
+<!-- icons -->
+<link rel="apple-touch-icon" href="{% get_media_prefix %}player/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="{% get_media_prefix %}player/images/apple-touch-icon-76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="{% get_media_prefix %}player/images/apple-touch-icon-120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="{% get_media_prefix %}player/images/apple-touch-icon-152.png">
+
+<link rel="icon" href="/favicon.ico" sizes="16x16" type="image/x-icon">
+
+<!-- CSS3 animation for header, article, footer -->
+<link rel="stylesheet" type="text/css" href="{% get_media_prefix %}/player/rq/loading_gv1363230202.css">
+
+<!-- SCRIPTS -->
+<script language="javascript" type="text/javascript">
+	if (typeof console == "undefined") { window.console = {log: function(){}}; }  /* CONSOLE LOG FIX */
+	/*DEFINES*/
+	window.edgl={
+		argo:'base64() ',
+		plversion:'gv1363230202' ,
+		eddevp:'',
+		additional_data:'',
+		ed_domain_view:'http:\/\/zbirka.muzej.si',
+		xmlversion:'xmv1ll20szydtob2',	
+		base_path:'/revije/',
+				player:'',
+		review_mode:0,
+		preview_mode:0, 
+		teaser_mode:0,
+		webapp:'',
+		lvm: 0,
+		lvm_allowed: 0,
+		unpublished_msg_name: '',
+		only_mobile_for_apps:'[[ONLY-MOBILE-FOR-APPS]]',
+		edition_article_static_html:0,
+						
+		/*ADDITIONAL ADDED*/
+		edition:{
+			id:1198867586,
+			rq_ef_edt:'https://zbirka.muzej.si/revije/{{ object.id }}/',
+			url:'{% get_media_prefix %}',
+			short_url:'',
+			edident:'22bgsfgth',
+			gen_ver:'1363230202',
+			gen_date:'2023-02-02',
+			js_file:'js', // serving dynamically 
+			js_file2:'js', // serving dynamically
+			title:'{{ object.eksponat }} {{ object.stevilka }}',
+			contain_mobile_version:0,
+			restricted_access:0,
+			api_custom_branding:0,
+			edition_type: ''
+		},
+		/*ADDITIONAL ADDED*/
+		chub_sites: []	}
+	
+	var add_to_request = '';
+	add_to_request += '&pv='+window.edgl.plversion.toString();
+
+	window.edgl.js_css_files={
+		css_init:'{% get_media_prefix %}player/rq/init_gv1363230202.css',
+		js_init:'{% get_media_prefix %}player/rq/init_gv1363230202.js',
+		css_mobile:'{% get_media_prefix %}player/rq/mobile_gv1363230202.css',
+		js_mobile:'{% get_media_prefix %}player/rq/mobile_gv1363230202.js',
+		css_html5:'{% get_media_prefix %}player/rq/html5_gv1363230202.css',
+		js_html5:'{% get_media_prefix %}player/rq/html5_gv1363230202.js',
+		
+		css_init2:'{% get_media_prefix %}player/rq/init2_gv1363230202.css',
+		js_init2:'{% get_media_prefix %}player/rq/init2_gv1363230202.js',
+		css_mobile2:'{% get_media_prefix %}player/rq/mobile2_gv1363230202.css',
+		js_mobile2:'{% get_media_prefix %}player/rq/mobile2_gv1363230202.js',
+		css_html52:'{% get_media_prefix %}player/rq/html52_gv1363230202.css',
+		js_html52:'{% get_media_prefix %}player/rq/html52_gv1363230202.js'		
+		
+	}
+	
+	window.edgl.js_css_files.js_base64thumbs='{% get_media_prefix %}player/rq/base64tbthumbs_gv1363230202.js';
+	window.edgl.js_css_files.js_base64thumbs2='{% get_media_prefix %}player/rq/base64tbthumbs2_gv1363230202.js';
+	
+	/*DEFINES*/
+</script>
+<script  src="{% get_media_prefix %}player/rq/loading_gv1363230202.js" type="text/javascript"></script>
+
+</head>
+<body class="no_ed_cprb" >
+	<!-- noscript tag for non-javascript browsers -->
+	<noscript>
+		<h1>{{ object.eksponat }} {{ object.stevilka }}</h1>
+		<p>{{ object.kazalo }}</p>
+	</noscript>
+
+	<!-- SEO publication page -->
+	<article class="seo-main" itemscope itemtype="http://schema.org/Book">
+		<h1 itemprop="name" id="seo-title">{{ object.eksponat }} {{ object.stevilka }}</h1>
+		<figure id="seo-cover">
+			<img itemprop="image" src="{% get_media_prefix %}{{ object.naslovnica }}" width="300" height="157" alt="{{ object.eksponat }} {{ object.stevilka }}">
+		</figure>
+		<p itemprop="text" id="seo-description">{{ object.kazalo }}</p>
+		<small itemprop="about" class="seo-edition-desc">Joker, Gaming, Gaming, en</small> <small class="seo-edition-desc">Number of pages: </small>
+		<span itemprop="numberOfPages" class="seo-edition-desc">64</span>
+		<small class="seo-edition-desc">Going Live: </small>
+		<span itemprop="datePublished" class="seo-edition-desc">2022-11-14 09:36:44</span>
+	</article>
+	
+	<!-- self explanatory -->
+	<div id="pusher"></div>
+	<div id="nav-bar-bg"></div>
+	
+	<div class="edition_popup_loader preloader-wrapper small active">
+		<div class="spinner-layer spinner-blue-only">
+		  <div class="circle-clipper left">
+			<div class="circle"></div>
+		  </div><div class="gap-patch">
+			<div class="circle"></div>
+		  </div><div class="circle-clipper right">
+			<div class="circle"></div>
+		  </div>
+		</div>
+	</div>
+	
+	<main id="edition-bg">
+	<div id="edition-player" class="edition-layer edition-player"></div>
+	<div id="edition-toolbar" class="edition-layer edition-toolbar"></div>
+	<div id="edition-addon" class="edition-layer edition-addon">
+		
+	</div>
+	<div id="edition-layers" class="edition-layer edition-layers"></div>
+	<div id="edition-ads" class="edition-layer edition-ads">
+	</div>
+	</main>
+
+ <h2 class="seo-edition-desc">Shortcuts</h2>
+	<a class="seo-edition-desc" href="#navigation" title="Highlited stories"></a>
+	<br>
+	<a class="seo-edition-desc" href="#pagination" title="Links to other pages"></a>
+	<br>
+ 		
+	<footer itemscope itemtype="http://schema.org/CreativeWork" class="seo-edition-desc">
+	</footer>
+
+</body>
+</html>

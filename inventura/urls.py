@@ -42,6 +42,10 @@ urlpatterns = [
     path('app/<str:category>/', appView),
     path('app/proizvajalec/<int:pk>/', appProizvajalec),
 
+    path('revije/', revijeIndexView),
+    path('revije/<int:pk>/js', revijaJSView),
+    path('revije/<int:pk>/', revijaView.as_view()),
+
     path('galerija/', GalerijaList.as_view(), name='galerija'),
     path('proizvajalec/', ProizvajalecList.as_view(), name='proizvajalci'),
 
