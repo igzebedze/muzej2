@@ -459,10 +459,10 @@ class Primerek(models.Model):
 # note: it is possible to have an entry without actually having an object
 # todo: add model for individual pages
 class Tiskovina(models.Model):
-	stevilka = models.IntegerField(blank=True, null=True)
-	leto = models.IntegerField(blank=True, null=True)
-	mesec = models.IntegerField(blank=True, null=True)
-	datum = models.DateField(blank=True, null=True)
+	stevilka = models.IntegerField(blank=True, null=True, help_text='ce obstaja')
+	leto = models.IntegerField(blank=True, null=True, help_text='priporoceno')
+	mesec = models.IntegerField(blank=True, null=True, help_text='priporoceno')
+	datum = models.DateField(blank=True, null=True, help_text='ce ni stevilke')
 	besedilo = models.TextField(blank=True, null=True)
 	kazalo = models.TextField(blank=True, null=True)
 	naslovnica = models.URLField(blank=True, null=True)

@@ -136,7 +136,7 @@ def revijaJSView(request, pk):
 		'location': location,
 		'pages': e.pages, # todo: get this from database
 		'start': start, # todo: get this from datamase
-		'pages': range(64)
+		'range': range(64)
 	}
 	return render(request, 'inventura/revija.js', context, content_type='text/javascript')
 
@@ -151,7 +151,7 @@ def revijaThumbsView(request, pk):
 		'location': location,
 		'pages': e.pages, # todo: get this from database
 		'start': start, # todo: get this from datamase
-		'pages': range(start, start + 64)
+		'range': range(start, start + 64)
 	}
 	return render(request, 'inventura/thumbs.js', context, content_type='text/javascript')
 
