@@ -129,12 +129,12 @@ def revijaJSView(request, pk):
 	e = Tiskovina.objects.get(pk=pk)
 	pdf = e.pdf
 	location = pdf[0:-4]
-	naslovnica = e.naslovnica.name
+	naslovnica = e.naslovnica.split('/')[-1]
 	start = int(naslovnica.split('.')[0])
 	context = {
 		'object': e,
 		'location': location,
-		'pages': 64, # todo: get this from database
+		'pages': e.pages, # todo: get this from database
 		'start': start, # todo: get this from datamase
 		'pages': range(64)
 	}
@@ -144,12 +144,12 @@ def revijaThumbsView(request, pk):
 	e = Tiskovina.objects.get(pk=pk)
 	pdf = e.pdf
 	location = pdf[0:-4]
-	naslovnica = e.naslovnica.name
+	naslovnica = e.naslovnica.split('/')[-1]
 	start = int(naslovnica.split('.')[0])
 	context = {
 		'object': e,
 		'location': location,
-		'pages': 64, # todo: get this from database
+		'pages': e.pages, # todo: get this from database
 		'start': start, # todo: get this from datamase
 		'pages': range(start, start + 64)
 	}

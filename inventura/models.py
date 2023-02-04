@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from simple_history.models import HistoricalRecords
 import os.path
 import io
+import re
 from PIL import Image
 import datetime
 from muzej2.settings import SLACKWEBHOOK, MEDIA_ROOT, MEDIA_URL, DEBUG
@@ -456,6 +457,7 @@ class Primerek(models.Model):
 		super( Primerek, self ).save( *args, **kw )
 
 # note: it is possible to have an entry without actually having an object
+# todo: add model for individual pages
 class Tiskovina(models.Model):
 	stevilka = models.IntegerField(blank=True, null=True)
 	leto = models.IntegerField(blank=True, null=True)
@@ -463,8 +465,9 @@ class Tiskovina(models.Model):
 	datum = models.DateField(blank=True, null=True)
 	besedilo = models.TextField(blank=True, null=True)
 	kazalo = models.TextField(blank=True, null=True)
-	naslovnica = models.ImageField(blank=True, null=True)
+	naslovnica = models.URLField(blank=True, null=True)
 	pdf = models.URLField(blank=True, null=True)
+	pages = models.IntegerField(blank=True, null=True)
 	primerek = models.ForeignKey(Primerek, blank=True, null=True, on_delete=models.PROTECT)
 	eksponat = models.ForeignKey(Eksponat, on_delete=models.PROTECT)
 
@@ -484,6 +487,12 @@ class Tiskovina(models.Model):
 		return "%s %s" % (self.eksponat, stevilka)
 	class Meta:
 		verbose_name_plural = "Tiskovine"
+
+	def get_absolute_url(self):
+		return "/revije/%i/" % self.id
+
+	def get_cover_image(self):
+		return re.sub("\.jpg$", "_small_for_html5.jpg", self.naslovnica)
 		
 class Razstava(models.Model):
 	primerki = models.ManyToManyField(Primerek)

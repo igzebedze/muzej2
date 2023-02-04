@@ -137,7 +137,7 @@
 	<article class="seo-main" itemscope itemtype="http://schema.org/Book">
 		<h1 itemprop="name" id="seo-title">{{ object.eksponat }} {{ object.stevilka }}</h1>
 		<figure id="seo-cover">
-			<img itemprop="image" src="{% get_media_prefix %}{{ object.naslovnica }}" width="300" height="157" alt="{{ object.eksponat }} {{ object.stevilka }}">
+			<img itemprop="image" src="{{ object.get_cover_image }}" width="300" height="157" alt="{{ object.eksponat }} {{ object.stevilka }}">
 		</figure>
 		<p itemprop="text" id="seo-description">{{ object.kazalo }}</p>
 		<small itemprop="about" class="seo-edition-desc">Joker, Gaming, Gaming, en</small> <small class="seo-edition-desc">Number of pages: </small>
