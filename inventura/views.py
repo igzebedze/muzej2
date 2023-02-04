@@ -121,6 +121,7 @@ def listki(request):
 
 class revijeIndexView(ListView):
 	model = Tiskovina
+	ordering = ['eksponat']
 
 class revijaView(DetailView):
 	model = Tiskovina
