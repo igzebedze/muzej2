@@ -1,5 +1,5 @@
 window.thumbs_base64=
-{   {% for i in pages %}
+{   {% for i in range %}
     "{{ forloop.counter }}": "{{ location }}/{{ i|stringformat:"08d" }}_tbthumb.jpg"{% if forloop.last %}{% else %},{% endif %}
     {% endfor %} 
 }

@@ -26,8 +26,8 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://zbirka.muzej.si/revije/">
 
-<meta property="og:image" content="{{ object.naslovnica }}">
-<meta property="og:image:secure_url" content="{{ object.naslovnica }}">
+<meta property="og:image" content="{{ object.get_cover_image }}">
+<meta property="og:image:secure_url" content="{{ object.get_cover_image }}">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ object.eksponat }} {{ object.stevilka }}">
 <meta name="twitter:description" content="{{ object.kazalo }}">
-<meta name="twitter:image" content="{{ object.naslovnica }}">
+<meta name="twitter:image" content="{{ object.get_cover_image }}">
 
 <!-- pagination -->
 <link rel="index" href="" title="{{ object.eksponat }} {{ object.stevilka }}">

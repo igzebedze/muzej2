@@ -118,7 +118,7 @@ window.eddata.path = {
 };
 window.eddata.edition_templates_css = '';
 window.eddata.pages = [
-    {% for i in pages %}
+    {% for i in range %}
     {
     id: {{ forloop.counter }},
     page_num_tb: '{{ forloop.counter }}',
