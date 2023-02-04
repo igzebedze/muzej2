@@ -492,7 +492,7 @@ class Tiskovina(models.Model):
 		return "/revije/%i/" % self.id
 
 	def get_cover_image(self):
-		return re.sub("\.jpg$", "_small_for_html5.jpg", self.naslovnica)
+		return re.sub("\.jpg$", "_tbthumb.jpg", self.naslovnica)
 		
 class Razstava(models.Model):
 	primerki = models.ManyToManyField(Primerek)
