@@ -58,8 +58,13 @@ class Command(BaseCommand):
 				for pattern in patterns:
 					z = re.match(pattern, pdf)
 					if z:
-						year = z.group(1)
-						month = z.group(2)
+						if dir == 'informatica':
+							year = z.group(2)
+							month = z.group(1)
+						else:
+							year = z.group(1)
+							month = z.group(2)
+
 						date = '%s-%s-%s' % (year, month, 1)
 
 						t, created = Tiskovina.objects.get_or_create(
