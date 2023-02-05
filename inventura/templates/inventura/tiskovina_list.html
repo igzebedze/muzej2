@@ -3,7 +3,9 @@
 <html lang="en" class="no-js  " >
 <head>
     <style>
-        .box { width: 120px; float: left; padding: 10px; }
+        .box { width: 120px; float: left; padding: 10px;  }
+        .box img { box-shadow: 4px 4px black; }
+        h1, h2, hr { clear: both; }
     </style>
     <meta charset="utf-8">
     <title>Revije v knjižnici računalniškega muzeja</title>
@@ -12,22 +14,23 @@
     {% regroup object_list by eksponat as newlist %}
     {% for title in newlist %}
     <h1>{{ title.grouper }}</h1>
-        <!-- Iterate over object_list -->
-        {% for object in title.list %}
-        <!-- Display Objects -->
+
+        {% regroup title.list|dictsort:"leto" by leto as letniki %}
+        {% for leto in letniki %}
+        <h2>{{ leto.grouper }}</h2>
+
+        {% for object in leto.list|dictsort:"datum" %}
         <div class="box">
             <a target="_blank" href="{{ object.get_absolute_url }}">
                 <img src="{{ object.get_cover_image }}" />
-                <p>{{ object }}</p>
             </a>
             {% if object.datum %}<p>{{ object.datum|date:"E Y" }}</p>
             {% else %}<p>{{ object.mesec}} - {{ object.leto }}</p>{% endif %}
             <p>{{ object.pages }} strani</p>
         </div>
-        <!-- If object_list is empty  -->
-        {% empty %}
-        No objects yet.
         {% endfor %}
+        {% endfor %}
+        <hr />
     {% endfor %}
 </body>
 </html>
