@@ -12,7 +12,15 @@
 </head>
 <body>
     {% regroup object_list by eksponat as newlist %}
+    <h1>Arhiv revij računalniškega muzeja</h1>
+    <ul>
+        {% for title in newlist %}
+        <li><a href="#{{ title.grouper }}">{{ title.grouper }}</a> ({{ title.list|length }})</li>
+        {% endfor %}
+    </ul>
+    <hr />
     {% for title in newlist %}
+    <a name='{{ title.grouper }}'></a>
     <h1>{{ title.grouper }}</h1>
 
         {% regroup title.list|dictsort:"leto" by leto as letniki %}
