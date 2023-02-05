@@ -43,7 +43,7 @@ class Command(BaseCommand):
 				pages = row['pages']
 
 				# Joker_St-52_1997-11.pdf
-				z = re.match(".*Joker_St-(\d+)_(\d+)-(\d+)\.pdf", pdf)
+				z = re.match(".*Joker_St-(\d+)[_-](\d+)-(\d+)\.pdf", pdf)
 
 				if not z:
 					print (pdf)

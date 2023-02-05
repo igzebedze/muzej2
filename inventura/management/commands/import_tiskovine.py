@@ -47,23 +47,29 @@ class Command(BaseCommand):
 				# BIT-1984-09/00000000.jpg
 				# BIT-1984-09.pdf
 				# z = re.match(".*Joker_St-(\d+)_(\d+)-(\d+)\.pdf", pdf)
-				z = re.match(".*(\d\d\d\d)-(\d+)\.pdf", pdf)
+				# Novice_1972_07.pdf
+				# Novice_1978_12_18.pdf
+				# informatica-Vol_23,_No_3_1999.pdf 
+				patterns = (
+					".*(\d\d\d\d)[-_](\d+)\.pdf",	# generic
+					".*(\d\d\d\d)[-_](\d+)_\d\d\.pdf", # ijs exact date format
+					".*(\d+)_(\d\d\d\d)\.pdf"	# informatica year last format
+				)
+				for pattern in patterns:
+					z = re.match(pattern, pdf)
+					if z:
+						year = z.group(1)
+						month = z.group(2)
+						date = '%s-%s-%s' % (year, month, 1)
 
-				if not z:
-					print ("fail: " + pdf)
-				else:
-					year = z.group(1)
-					month = z.group(2)
-					date = '%s-%s-%s' % (year, month, 1)
-
-					t, created = Tiskovina.objects.get_or_create(
-						pdf=pdf,
-						naslovnica=cover,
-						pages=int(pages),
-						leto = int(year),
-						mesec = int(month),
-						eksponat=eksponat,
-						datum=date
-					)
-
-					print ('success: ' + pdf)
+						t, created = Tiskovina.objects.get_or_create(
+							pdf=pdf,
+							naslovnica=cover,
+							pages=int(pages),
+							leto = int(year),
+							mesec = int(month),
+							eksponat=eksponat,
+							datum=date
+						)
+						print ('success: ' + pdf)
+					

@@ -15,7 +15,8 @@
     <h1>Arhiv revij računalniškega muzeja</h1>
     <ul>
         {% for title in newlist %}
-        <li><a href="#{{ title.grouper }}">{{ title.grouper }}</a> ({{ title.list|length }})</li>
+        {% regroup title.list|dictsort:"leto" by leto as letniki %}
+        <li><a href="#{{ title.grouper }}">{{ title.grouper }}</a> ({{ letniki.0.grouper }}-, {{ title.list|length }})</li>
         {% endfor %}
     </ul>
     <hr />
