@@ -123,6 +123,11 @@ class revijeIndexView(ListView):
 	model = Tiskovina
 	ordering = ['eksponat']
 
+class revijeYearsView(ListView):
+	model = Tiskovina
+	ordering = ['eksponat']
+	template_name = "inventura/letniki.html"
+
 class revijaView(DetailView):
 	model = Tiskovina
 

@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="no-js  " >
+<head>
+    <style>
+        .box { width: 120px; float: left; padding: 10px;  }
+        .box img { box-shadow: 4px 4px black; }
+        h1, h2, hr { clear: both; }
+        #sidebar { width: 10%; position: fixed; }
+        #content { width: 90%; margin-left: 10%; }
+        .nav { list-style-type: none; }
+        .nav li { float: left; padding: 10px; }
+    </style>
+    <meta charset="utf-8">
+    <title>Revije v knjižnici računalniškega muzeja</title>
+</head>
+<body>
+    <div id="sidebar">
+        <ul>
+            {% regroup object_list|dictsort:"leto" by leto as newlist %}
+            {% for title in newlist %}
+            <li><a href="#{{ title.grouper }}">{{ title.grouper }}</a> ({{ title.list|length }})</li>
+            {% endfor %}
+        </ul>    
+    </div>
+    <div id="content">
+    {% regroup object_list|dictsort:"leto" by leto as newlist %}
+    <h1>Arhiv revij računalniškega muzeja</h1>
+    {% regroup object_list by eksponat as revije %}
+    <ul class="nav">
+        {% for revija in revije %}<li>{{ revija.grouper }}</li>{% endfor %}
+    </ul>
+
+    {% for year in newlist %}
+    <a name='{{ year.grouper }}'></a>
+    <h1>{{ year.grouper }}</h1>
+        {% regroup year.list|dictsort:"leto" by eksponat as letniki %}
+        {% for leto in letniki %}
+
+        <div class="{{ leto.grouper }}">
+        <h2>{{ leto.grouper }}</h2>
+        {% for object in leto.list|dictsort:"datum" %}
+        <div class="box">
+            <a target="_blank" href="{{ object.get_absolute_url }}">
+                <img src="{{ object.get_cover_image }}" />
+            </a>
+            {% if object.datum %}<p>{{ object.datum|date:"E Y" }}</p>
+            {% else %}<p>{{ object.mesec}} - {{ object.leto }}</p>{% endif %}
+            <p>{{ object.pages }} strani</p>
+        </div>
+        {% endfor %}
+        </div>
+        {% endfor %}
+        <hr />
+    {% endfor %}
+    </div>
+</body>
+</html>

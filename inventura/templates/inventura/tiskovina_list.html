@@ -23,7 +23,12 @@
     {% for title in newlist %}
     <a name='{{ title.grouper }}'></a>
     <h1>{{ title.grouper }}</h1>
-
+    <p>{{ title.list.0.eksponat.opis }}</p>
+    <p>{{ title.list.0.eksponat.proizvajalec }}</p>
+    <p>{{ title.list.0.eksponat.wikipedia }}</p>
+    <p>{{ title.list.0.eksponat.uradnastran }}</p>
+    <p>{{ title.list.0.eksponat.vir }}</p>
+    
         {% regroup title.list|dictsort:"leto" by leto as letniki %}
         {% for leto in letniki %}
         <h2>{{ leto.grouper }}</h2>

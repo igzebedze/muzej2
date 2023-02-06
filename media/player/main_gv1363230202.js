@@ -102,8 +102,12 @@ window.eddata.appearance = {
     semi_facingpages: '0',
     link_style: '',
     page_transition_effect: '',
-    channels: [],
-    sharers: [],
+    channels: [
+        {"url":"https:\/\/www.racunalniski-muzej.si","name":"home","title":"Home"},{"url":"https:\/\/www.facebook.com\/racunalniskimuzej","name":"facebook","title":"Facebook"},{"url":"https:\/\/twitter.com\/muzej","name":"twitter","title":"Twitter"},{"url":"https:\/\/www.youtube.com\/user\/muzej","name":"youtube","title":"Youtube"},{"url":"https:\/\/www.linkedin.com\/company\/racunalniskimuzej","name":"linkedin","title":"Linkedin"},{"url":"https:\/\/www.instagram.com\/muzej","name":"instagram","title":"Instagram"}
+    ],
+    sharers: [
+        {"url":"https:\/\/www.facebook.com\/dialog\/share?href=[[SHARE_URL]]&app_id=921889891312289&display=popup","name":"facebook","title":"Facebook"},{"url":"http:\/\/twitter.com\/share?text=[[SHARE_TITLE]]%20via%20%40EditionDigital&url=[[SHARE_URL]]&hashtags=","name":"twitter","title":"Twitter"},{"url":"https:\/\/api.whatsapp.com\/send?text=[[SHARE_TITLE]];[[SHARE_URL]]","name":"whatsapp","title":"WhatsApp"},{"url":"https:\/\/www.pinterest.com\/pin\/create\/button\/?url=[[SHARE_URL]]&media=[[PAGE_IMG]]","name":"pinterest","title":"Pinterest"},{"url":"https:\/\/www.linkedin.com\/shareArticle?mini=true&url=[[SHARE_URL]]&title=[[SHARE_TITLE]]","name":"linkedin","title":"LinkedIn"}
+    ],
     short_url_rq_url: ''
 };
 window.eddata.ipad = {

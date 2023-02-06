@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
 
+import os
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -26,7 +28,8 @@ INSTALLED_APPS = [
     'evidenca',
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'django_hosts'
+    'django_hosts',
+    'haystack'
 ]
 
 MIDDLEWARE = [
@@ -64,6 +67,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'muzej2.wsgi.application'
 
+HAYSTACK_CONNECTIONS = { 
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index') 
+    },
+}
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 # Password validation
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
