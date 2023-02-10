@@ -35,11 +35,14 @@ class Command(BaseCommand):
 			if filename.endswith('.pdf'):
 				revija = os.path.splitext(os.path.basename(filename))[0]
 				pdf = baseurl + dir + '/' + revija + '.pdf'
+				print (pdf)
 				tiskovina = Tiskovina.objects.get(pdf=pdf)
 				
 				for pagefile in os.listdir(options['file'][0] + '/' + revija):
-					if pagefile.endswith('.txt'):
+					#print (pagefile)
+					if pagefile.endswith('.txt') and (pagefile != ".txt"):
 						stran = os.path.splitext(os.path.basename(pagefile))[0]
+						#print (stran)
 						with open(options['file'][0] + '/' + revija + '/' + pagefile, "r") as file:
 							content = file.read()
 							
