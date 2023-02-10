@@ -220,7 +220,6 @@ class IzhodAdmin(SimpleHistoryAdmin):
 	list_display = ('prevzemnik', 'ustanova', 'namen')
 	list_filter = ('namen', 'ustanova')
 
-
 class LokacijaAdmin(admin.ModelAdmin):
 	list_display = ('ime', 'naslov', 'st_primerkov')
 
@@ -238,6 +237,10 @@ class TiskovinaAdmin(admin.ModelAdmin):
 	search_fields = ('besedilo', 'kazalo')	
 	date_hiearchy = 'datum'
 	
+class StranAdmin(admin.ModelAdmin):
+	search_fields = ('cistopis',)
+	list_display = ('stevilka', 'tiskovina', 'slika')
+
 admin.site.register(models.Kategorija)
 admin.site.register(models.Iskalnik)
 admin.site.register(models.Proizvajalec, ProizvajalecAdmin)
@@ -250,5 +253,6 @@ admin.site.register(models.Razstava, RazstavaAdmin)
 admin.site.register(models.Izhod, IzhodAdmin)
 admin.site.register(models.Pregled, PregledAdmin)
 admin.site.register(models.Kveri, KveriAdmin)
-admin.site.register(models.Tiskovina)
+admin.site.register(models.Tiskovina, TiskovinaAdmin)
+admin.site.register(models.Stran, StranAdmin)
 admin.site.register(models.Projekt, ProjektAdmin)

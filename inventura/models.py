@@ -485,6 +485,7 @@ class Tiskovina(models.Model):
 			stevilka = "%s" % (self.datum)
 
 		return "%s %s" % (self.eksponat, stevilka)
+
 	class Meta:
 		verbose_name_plural = "Tiskovine"
 
@@ -494,6 +495,26 @@ class Tiskovina(models.Model):
 	def get_cover_image(self):
 		return re.sub("\.jpg$", "_tbthumb.jpg", self.naslovnica)
 		
+class Stran (models.Model):
+	tiskovina = models.ForeignKey(Tiskovina, on_delete=models.PROTECT)
+	stevilka = models.IntegerField(default=0)
+	ocr = models.TextField(blank=True, null=True)
+	cistopis = models.TextField(blank=True, null=True)
+	slika = models.URLField(blank=True, null=True)
+
+	dnevnik = HistoricalRecords()
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)	
+
+	def __str__(self):
+		return "%s, stran %d" % (self.tiskovina, self.stevilka)
+
+	class Meta:
+		verbose_name_plural = "Strani"
+	
+	def get_cover_image(self):
+		return re.sub("\.jpg$", "_tbthumb.jpg", self.slika)
+
 class Razstava(models.Model):
 	primerki = models.ManyToManyField(Primerek)
 	naslov = models.CharField(max_length=255)

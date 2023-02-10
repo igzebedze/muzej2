@@ -17,7 +17,6 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><input type="submit" class="btn btn-primary" value="Add Customer">  </li>
     </ul>
     </div>
   </div>
@@ -26,7 +25,7 @@
 
 {% block content %}
 <div class="container-fluid bg-3 text-center">  
-<form method="get" action="." class="form" role="form">
+<form method="get" action="/search/" class="form" role="form">
         {{ form.non_field_errors }}
         <div class="form-group">
                 {{ form.as_p }}
