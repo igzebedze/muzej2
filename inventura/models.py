@@ -497,6 +497,12 @@ class Tiskovina(models.Model):
 	def get_cover_image(self):
 		return re.sub("\.jpg$", "_tbthumb.jpg", self.naslovnica)
 
+	def image_tag(self):
+		from django.utils.html import escape
+		return mark_safe(u'<img src="%s" />' % escape(re.sub("\.jpg$", "_tbthumb.jpg", self.naslovnica)))
+	image_tag.short_description = 'Predogled'
+	image_tag.allow_tags = True
+
 	def get_strani(self):
 		return self.stran_set.count()
 		

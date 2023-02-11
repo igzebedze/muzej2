@@ -42,21 +42,13 @@
                 <div class="col-sm-4">
                   <div class="thumbnail">
                     <div class="form-group">
-                        <p>Eksponat : {{result.object.eksponat.ime}} </p>
-                    </div>
-                    <div class="form-group">
-                        <p>Opis : {{result.object.eksponat.opis}} </p>
-                    </div>
-                    <div class="form-group">
+                        <h4>Primerek {{ result.object }}</h4>
+                        <p>Stanje: {{ result.object.stanje }}</p>
+                        <p>Zgodovina: {{ result.object.zgodovina }}</p>
                         <p>Kategorija : {{result.object.eksponat.kategorija}} </p>
-                    </div>
-                    <div class="form-group">
                         <p>Velikost : {{result.object.eksponat.sirina_cm}} x {{result.object.eksponat.visina_cm}} x {{result.object.eksponat.dolzina_cm}}</p>
-                    </div>
-                    <div class="form-group">
                         <p>Stevilo primerkov v zbirki : {{result.object.eksponat.st_primerkov}} </p>
-                    </div>
-                    <div class="form-group">
+                        <p>Opis : {{result.object.eksponat.opis}} </p>
                       <p>Povezave:</p>
                       <ul>
                         {% if result.object.eksponat.wikipedia %}<li><a target="_blank" href="{{ result.object.eksponat.wikipedia }}">Wikipedia</a></li>{% endif %}
@@ -65,7 +57,7 @@
                         {% if result.object.eksponat.vir %}<li><a target="_blank" href="{{ result.object.eksponat.vir }}">Vir</a></li>{% endif %}
                       </ul>
                     </div>
-                    {% if result.object.eksponat.fotografija %}<img src="{{result.object.eksponat.fotografija.url }}" />{% endif %}
+                    {% if result.object.eksponat.fotografija %}<img src="{{result.object.eksponat.fotografija }}" />{% endif %}
                   </div>
                 </div>
                 {% empty %}

@@ -237,7 +237,7 @@ class TiskovinaAdmin(admin.ModelAdmin):
 	search_fields = ('besedilo', 'kazalo')	
 	date_hiearchy = 'datum'
 	list_filter = ('leto', 'mesec')
-	list_display = ('eksponat', 'leto', 'mesec', 'stevilka', 'pdf', 'naslovnica', 'pages', 'get_strani')
+	list_display = ('image_tag', 'eksponat', 'leto', 'mesec', 'stevilka', 'pdf', 'pages', 'get_strani')
 	
 # todo: slikce strani
 class StranAdmin(admin.ModelAdmin):
