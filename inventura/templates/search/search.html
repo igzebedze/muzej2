@@ -42,30 +42,30 @@
                 <div class="col-sm-4">
                   <div class="thumbnail">
                     <div class="form-group">
-                        <p>Ime : {{result.eksponat.ime}} </p>
+                        <p>Eksponat : {{result.object.eksponat.ime}} </p>
                     </div>
                     <div class="form-group">
-                        <p>Opis : {{result.eksponat.opis}} </p>
+                        <p>Opis : {{result.object.eksponat.opis}} </p>
                     </div>
                     <div class="form-group">
-                        <p>Kategorija : {{result.eksponat.kategorija}} </p>
+                        <p>Kategorija : {{result.object.eksponat.kategorija}} </p>
                     </div>
                     <div class="form-group">
-                        <p>Velikost : {{result.eksponat.sirina_cm}} x {{result.eksponat.visina_cm}} x {{result.eksponat.dolzina_cm}}</p>
+                        <p>Velikost : {{result.object.eksponat.sirina_cm}} x {{result.object.eksponat.visina_cm}} x {{result.object.eksponat.dolzina_cm}}</p>
                     </div>
                     <div class="form-group">
-                        <p>Stevilo primerkov v zbirki : {{result.eksponat.st_primerkov}} </p>
+                        <p>Stevilo primerkov v zbirki : {{result.object.eksponat.st_primerkov}} </p>
                     </div>
                     <div class="form-group">
                       <p>Povezave:</p>
                       <ul>
-                        {% if result.eksponat.wikipedia %}<li><a target="_blank" href="{{ result.eksponat.wikipedia }}">Wikipedia</a></li>{% endif %}
-                        {% if result.eksponat.oldcomputers %}<li><a target="_blank" href="{{ result.eksponat.oldcomputers }}">Old computers</a></li>{% endif %}
-                        {% if result.eksponat.uradnastran %}<li><a target="_blank" href="{{ result.eksponat.uradnastran }}">Uradna stran</a></li>{% endif %}
-                        {% if result.eksponat.vir %}<li><a target="_blank" href="{{ result.eksponat.vir }}">Vir</a></li>{% endif %}
+                        {% if result.object.eksponat.wikipedia %}<li><a target="_blank" href="{{ result.object.eksponat.wikipedia }}">Wikipedia</a></li>{% endif %}
+                        {% if result.object.eksponat.oldcomputers %}<li><a target="_blank" href="{{ result.object.eksponat.oldcomputers }}">Old computers</a></li>{% endif %}
+                        {% if result.object.eksponat.uradnastran %}<li><a target="_blank" href="{{ result.object.eksponat.uradnastran }}">Uradna stran</a></li>{% endif %}
+                        {% if result.object.eksponat.vir %}<li><a target="_blank" href="{{ result.object.eksponat.vir }}">Vir</a></li>{% endif %}
                       </ul>
                     </div>
-                    {% if result.eksponat.fotografija %}<img src="{{result.eksponat.fotografija}}" />{% endif %}
+                    {% if result.object.eksponat.fotografija %}<img src="{{result.object.eksponat.fotografija.url }}" />{% endif %}
                   </div>
                 </div>
                 {% empty %}
