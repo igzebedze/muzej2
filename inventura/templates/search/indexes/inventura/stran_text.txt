@@ -1,0 +1,3 @@
+{{ object.ocr }}
+{{ object.cistopis }}
+{{ object.tiskovina.eksponat.ime }}

@@ -1,0 +1,6 @@
+{{object.eksponat__opis}}
+{{object.eksponat__tip}}
+{{object.eksponat__kategorija}}
+{{object.zgodovina}}
+{{object.stanje}}
+{{vhodni_dokument__opis}}

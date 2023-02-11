@@ -10,6 +10,8 @@ from PIL import Image
 import datetime
 from muzej2.settings import SLACKWEBHOOK, MEDIA_ROOT, MEDIA_URL, DEBUG
 import requests
+from django.utils.html import mark_safe
+
 headers = {
     'Content-type': 'application/json',
 }
@@ -446,14 +448,14 @@ class Primerek(models.Model):
 			data = data.encode('utf-8')
 			response = requests.post(SLACKWEBHOOK, headers=headers, data=data)
 # update search index
-		fields = (self.serijska_st, self.stanje, self.zgodovina, self.eksponat.ime, self.eksponat.tip, self.eksponat.opis)
-		vsebina = ' '.join(filter(None, fields))
-		i = self.iskalnik
-		try:
-			i.vsebina = vsebina
-			i.save()		
-		except: 
-			pass
+		#fields = (self.serijska_st, self.stanje, self.zgodovina, self.eksponat.ime, self.eksponat.tip, self.eksponat.opis)
+		#vsebina = ' '.join(filter(None, fields))
+		#i = self.iskalnik
+		#try:
+		#	i.vsebina = vsebina
+		#	i.save()		
+		#except: 
+		#	pass
 		super( Primerek, self ).save( *args, **kw )
 
 # note: it is possible to have an entry without actually having an object
@@ -494,6 +496,9 @@ class Tiskovina(models.Model):
 
 	def get_cover_image(self):
 		return re.sub("\.jpg$", "_tbthumb.jpg", self.naslovnica)
+
+	def get_strani(self):
+		return self.stran_set.count()
 		
 class Stran (models.Model):
 	tiskovina = models.ForeignKey(Tiskovina, on_delete=models.PROTECT)
@@ -508,12 +513,28 @@ class Stran (models.Model):
 
 	def __str__(self):
 		return "%s, stran %d" % (self.tiskovina, self.stevilka)
+	
+	def __unicode__(self):
+		return "%s, stran %d" % (self.tiskovina, self.stevilka)
+
+# https://zbirka.muzej.si/revije/50/#!page2
+	def get_absolute_url(self):
+		return "/revije/%i/#!page%d" % (self.tiskovina.id, self.stevilka)
 
 	class Meta:
 		verbose_name_plural = "Strani"
 	
 	def get_cover_image(self):
 		return re.sub("\.jpg$", "_tbthumb.jpg", self.slika)
+
+	def image_tag(self):
+		from django.utils.html import escape
+		return mark_safe(u'<img src="%s" />' % escape(re.sub("\.jpg$", "_tbthumb.jpg", self.slika)))
+	image_tag.short_description = 'Predogled'
+	image_tag.allow_tags = True
+
+	def revija(self):
+		return self.tiskovina.eksponat.ime
 
 class Razstava(models.Model):
 	primerki = models.ManyToManyField(Primerek)
