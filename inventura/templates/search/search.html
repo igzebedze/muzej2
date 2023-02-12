@@ -57,7 +57,7 @@
                         {% if result.object.eksponat.vir %}<li><a target="_blank" href="{{ result.object.eksponat.vir }}">Vir</a></li>{% endif %}
                       </ul>
                     </div>
-                    {% if result.object.eksponat.fotografija %}<img src="{{result.object.eksponat.fotografija }}" />{% endif %}
+                    {% if result.object.eksponat.fotografija %}{{ result.object.eksponat.image_tag }}{% endif %}
                   </div>
                 </div>
                 {% empty %}
