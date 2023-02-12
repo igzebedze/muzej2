@@ -437,6 +437,8 @@ class Primerek(models.Model):
 		return "%d" % self.razstava_set.count()
 	st_razstav.short_description = u'Št razstav'
 
+	
+
 	class Meta:
 		verbose_name_plural = "Primerki"
 		ordering = ['-leto_proizvodnje']
@@ -499,8 +501,7 @@ class Tiskovina(models.Model):
 
 	def image_tag(self):
 		from django.utils.html import escape
-		return mark_safe(u'<img src="%s" />' % escape(re.sub("\.jpg$", "_tbthumb.jpg", self.naslovnica)))
-	image_tag.short_description = 'Predogled'
+		return mark_safe(u'<img src="%s" />' % escape( self.fotografija ))
 	image_tag.allow_tags = True
 
 	def get_strani(self):

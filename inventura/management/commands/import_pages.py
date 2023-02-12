@@ -40,7 +40,7 @@ class Command(BaseCommand):
 				
 				for pagefile in os.listdir(options['file'][0] + '/' + revija):
 					#print (pagefile)
-					if pagefile.endswith('.txt') and (pagefile != ".txt"):
+					if pagefile.endswith('.txt') and (pagefile != ".txt") and not pagefile.endswith('.txt.txt'):
 						stran = os.path.splitext(os.path.basename(pagefile))[0]
 						#print (stran)
 						with open(options['file'][0] + '/' + revija + '/' + pagefile, "r") as file:
