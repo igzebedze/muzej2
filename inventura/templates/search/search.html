@@ -1,9 +1,9 @@
 {% load highlight %} 
 
 {% block head %}
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <style>
   p.highlights { font-style: italic;} 
   span.highlighted { background-color: yellow; }
@@ -28,7 +28,7 @@
                 <div class="col-sm-4">                    
                   <div class="thumbnail">
                     {% if result.object.eksponat %}
-                    <div class="form-group">
+                      <div class="form-group">
                         <h4>Primerek {{ result.object }}</h4>
                         <p class="highlights">{% highlight result.text with query %}</p>
                         <hr />
@@ -39,14 +39,14 @@
                         <p>Stevilo primerkov v zbirki : {{result.object.eksponat.st_primerkov}} </p>
                         <p>Opis : {{result.object.eksponat.opis}} </p>
                         <p>Povezave:</p>
-                      <ul>
-                        {% if result.object.eksponat.wikipedia %}<li><a target="_blank" href="{{ result.object.eksponat.wikipedia }}">Wikipedia</a></li>{% endif %}
-                        {% if result.object.eksponat.oldcomputers %}<li><a target="_blank" href="{{ result.object.eksponat.oldcomputers }}">Old computers</a></li>{% endif %}
-                        {% if result.object.eksponat.uradnastran %}<li><a target="_blank" href="{{ result.object.eksponat.uradnastran }}">Uradna stran</a></li>{% endif %}
-                        {% if result.object.eksponat.vir %}<li><a target="_blank" href="{{ result.object.eksponat.vir }}">Vir</a></li>{% endif %}
-                      </ul>
-                    </div>
-                    {% if result.object.eksponat.fotografija %}{{ result.object.eksponat.image_tag }}{% endif %}
+                        <ul>
+                          {% if result.object.eksponat.wikipedia %}<li><a target="_blank" href="{{ result.object.eksponat.wikipedia }}">Wikipedia</a></li>{% endif %}
+                          {% if result.object.eksponat.oldcomputers %}<li><a target="_blank" href="{{ result.object.eksponat.oldcomputers }}">Old computers</a></li>{% endif %}
+                          {% if result.object.eksponat.uradnastran %}<li><a target="_blank" href="{{ result.object.eksponat.uradnastran }}">Uradna stran</a></li>{% endif %}
+                          {% if result.object.eksponat.vir %}<li><a target="_blank" href="{{ result.object.eksponat.vir }}">Vir</a></li>{% endif %}
+                        </ul>
+                      </div>
+                     {% if result.object.eksponat.fotografija %}{{ result.object.eksponat.image_tag }}{% endif %}
 
                     {% elif result.object.tiskovina %}
                       <h4>{{ result.object.tiskovina }}</h4>
