@@ -54,9 +54,8 @@
                       </a>
                     
                     {% elif result.object.racunalnik_set %}
-                      <h4>Vir {{ result.object.sifra }}</h4>
+                      <h4>Raziskovalni vir {{ result.object.sifra }}</h4>
                       <p>{{ result.object.naslov }}</p>
-                      <p>{{ result.object.datum }}</p>
                       <p class="highlights">{% highlight result.object.vsebina with query %}</p>
                       <p><a href="{{ result.object.url }}" target="_blank">Povezava</a></p>
                     {% endif %}
