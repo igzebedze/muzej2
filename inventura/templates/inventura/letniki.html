@@ -28,7 +28,7 @@
         <h1>Arhiv revij računalniškega muzeja</h1>
         {% regroup object_list by eksponat as revije %}
         <ul class="nav">
-            {% for revija in revije %}<li><a href="#{{ revija.grouper }}">{{ revija.grouper }}</a> ({{ revija.list|length }})</li>{% endfor %}
+            {% for revija in revije %}<li><a href="#{{ revija.grouper.id }}" revija="{{ revija.grouper }}">{{ revija.grouper }}</a> ({{ revija.list|length }})</li>{% endfor %}
         </ul>    
     </div>
     <div id="content">
@@ -41,7 +41,7 @@
         <div class="{{ leto.grouper }}">
         <h2>{{ leto.grouper }}</h2>
         {% for object in leto.list|dictsort:"datum" %}
-        <div class="box">
+        <div class="box {{ object.eksponat.id }}" revija="{{ object.eksponat.ime }}">
             <a target="_blank" href="{{ object.get_absolute_url }}">
                 <img src="{{ object.get_cover_image }}" />
             </a>
