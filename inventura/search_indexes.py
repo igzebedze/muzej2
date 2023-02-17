@@ -16,4 +16,4 @@ class PredmetiIndex(indexes.ModelSearchIndex, indexes.Indexable):
 class EvidencaIndex(indexes.ModelSearchIndex, indexes.Indexable):
     class Meta:
         model = vir
-        fields = []
+        fields = ['vsebina', 'naslov']

@@ -45,6 +45,20 @@
                       </ul>
                     </div>
                     {% if result.object.eksponat.fotografija %}{{ result.object.eksponat.image_tag }}{% endif %}
+
+                    {% elif result.object.tiskovina %}
+                      <h4>{{ result.object.tiskovina }}</h4>
+                      <p class="highlights">{% highlight result.text with query %}</p>
+                      <a target="_blank" href="{{ result.object.get_absolute_url }}">
+                        <img src="{{ result.object.get_cover_image }}" />
+                      </a>
+                    
+                    {% elif result.object.racunalnik_set %}
+                      <h4>Vir {{ result.object.sifra }}</h4>
+                      <p>{{ result.object.naslov }}</p>
+                      <p>{{ result.object.datum }}</p>
+                      <p class="highlights">{% highlight result.object.vsebina with query %}</p>
+                      <p><a href="{{ result.object.url }}" target="_blank">Povezava</a></p>
                     {% endif %}
                   </div>
                 </div>

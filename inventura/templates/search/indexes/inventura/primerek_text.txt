@@ -3,4 +3,4 @@
 {{object.eksponat__kategorija}}
 {{object.zgodovina}}
 {{object.stanje}}
-{{vhodni_dokument__opis}}
+{{object.vhodni_dokument__opis}}
