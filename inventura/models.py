@@ -496,10 +496,7 @@ class Tiskovina(models.Model):
 		verbose_name_plural = "Tiskovine"
 
 	def get_absolute_url(self):
-		if self.dovoljenje:
-			return "/revije/%i/" % self.id
-		else:
-			return self.eksponat.uradnastran
+		return "/revije/%i/" % self.id
 
 	def get_cover_image(self):
 		return re.sub("\.jpg$", "_tbthumb.jpg", self.naslovnica)

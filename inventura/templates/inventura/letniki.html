@@ -30,7 +30,7 @@
             <span id="search">
                 <form method="get" action="/revije/" class="form" role="form">
                     {{ form.non_field_errors }}
-                    <input type="search" name="q" value="{{ query }}" id="id_q">
+                    <input type="search" name="q" value="{% if query %}{{ query }}{% endif %}" id="id_q">
                     <input type="submit" class="btn btn-primary" value="Iskanje">
                 </form>
             </span>
@@ -51,9 +51,13 @@
         <h2>{{ leto.grouper }}</h2>
         {% for object in leto.list|dictsort:"datum" %}
         <div class="box {{ object.eksponat.id }}" revija="{{ object.eksponat.ime }}">
-            <a target="_blank" href="{{ object.get_absolute_url }}">
-                <img src="{{ object.get_cover_image }}" />
-            </a>
+            {% if user.is_authenticated %}
+            <a target="_blank" href="{{ object.get_absolute_url }}"><img src="{{ object.get_cover_image }}" /></a>
+            {% elif object.dovoljenje %}
+            <a target="_blank" href="{{ object.get_absolute_url }}"><img src="{{ object.get_cover_image }}" /></a>
+            {% else %}
+            <a target="_blank" href="{{ object.eksponat.uradnastran }}"><img src="{{ object.get_cover_image }}" /></a>
+            {% endif %}
             {% if object.datum %}<p>{{ object.datum|date:"E Y" }}</p>
             {% else %}<p>{{ object.mesec}} - {{ object.leto }}</p>{% endif %}
             <p>{{ object.pages }} strani</p>

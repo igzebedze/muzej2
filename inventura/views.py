@@ -143,7 +143,8 @@ class revijeYearsView(ListView):
 			revije = []
 			for o in results:
 				revije.append(o.object.tiskovina)
-			object_list=revije
+			if len(revije) > 0:
+				object_list=revije
 		return object_list
 
 class revijaView(DetailView):
