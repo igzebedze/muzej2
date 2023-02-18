@@ -474,6 +474,7 @@ class Tiskovina(models.Model):
 	pages = models.IntegerField(blank=True, null=True)
 	primerek = models.ForeignKey(Primerek, blank=True, null=True, on_delete=models.PROTECT)
 	eksponat = models.ForeignKey(Eksponat, on_delete=models.PROTECT)
+	dovoljenje = models.BooleanField(default=False, help_text='Ali imamo dovoljenje za spletno objavo vsebine')
 
 	dnevnik = HistoricalRecords()
 	created_at = models.DateTimeField(auto_now_add=True)
@@ -508,11 +509,20 @@ class Tiskovina(models.Model):
 		return self.stran_set.count()
 		
 class Stran (models.Model):
+	VRSTA_CHOICES = (
+			('vsebina', 'vsebina'),
+			('oglasi', 'oglasi'),
+			('mesano', 'mesano'),
+			('naslovnica', 'naslovnica'),
+			('kazalo', 'kazalo')
+	)
+
 	tiskovina = models.ForeignKey(Tiskovina, on_delete=models.PROTECT)
 	stevilka = models.IntegerField(default=0)
-	ocr = models.TextField(blank=True, null=True)
-	cistopis = models.TextField(blank=True, null=True)
-	slika = models.URLField(blank=True, null=True)
+	ocr = models.TextField(blank=True, null=True, help_text='besedilo kot smo ga pridobili iz OCR procesa')
+	cistopis = models.TextField(blank=True, null=True, help_text='urednisko precisceno besedilo')
+	slika = models.URLField(blank=True, null=True, help_text='visokoresolucijska slika strani')
+	vrsta = models.CharField(choices=VRSTA_CHOICES, max_length=255, default='', help_text='Opis prevladujoce vsebine na strani')
 
 	dnevnik = HistoricalRecords()
 	created_at = models.DateTimeField(auto_now_add=True)

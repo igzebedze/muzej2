@@ -44,6 +44,7 @@ urlpatterns = [
 
 #    path('revije/', revijeIndexView.as_view()),
     path('revije/', revijeYearsView.as_view()),
+    path('revije/oprojektu/', TemplateView.as_view(template_name='inventura/revijeoprojektu.html'), name='oprojektu'), 
     path('revije/<int:pk>/js', revijaJSView),
     path('revije/<int:pk>/thumbs', revijaThumbsView),
     path('revije/<int:pk>/', revijaView.as_view()),
