@@ -11,6 +11,7 @@ import datetime
 from muzej2.settings import SLACKWEBHOOK, MEDIA_ROOT, MEDIA_URL, DEBUG
 import requests
 from django.utils.html import mark_safe
+from django.utils.html import escape
 
 headers = {
     'Content-type': 'application/json',
@@ -495,14 +496,17 @@ class Tiskovina(models.Model):
 		verbose_name_plural = "Tiskovine"
 
 	def get_absolute_url(self):
-		return "/revije/%i/" % self.id
+		if self.dovoljenje:
+			return "/revije/%i/" % self.id
+		else:
+			return self.eksponat.uradnastran
 
 	def get_cover_image(self):
 		return re.sub("\.jpg$", "_tbthumb.jpg", self.naslovnica)
 
 	def image_tag(self):
-		from django.utils.html import escape
-		return mark_safe(u'<img src="%s" />' % escape( self.fotografija ))
+		img = re.sub("\.jpg$", "_tbthumb.jpg", self.naslovnica)
+		return mark_safe(u'<img src="%s" />' % escape( img))
 	image_tag.allow_tags = True
 
 	def get_strani(self):
@@ -544,8 +548,7 @@ class Stran (models.Model):
 	def get_cover_image(self):
 		return re.sub("\.jpg$", "_tbthumb.jpg", self.slika)
 
-	def image_tag(self):
-		from django.utils.html import escape
+	def image_tag(self):		
 		return mark_safe(u'<img src="%s" />' % escape(re.sub("\.jpg$", "_tbthumb.jpg", self.slika)))
 	image_tag.short_description = 'Predogled'
 	image_tag.allow_tags = True

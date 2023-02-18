@@ -236,15 +236,16 @@ class ProjektAdmin(admin.ModelAdmin):
 class TiskovinaAdmin(admin.ModelAdmin):
 	search_fields = ('besedilo', 'kazalo')	
 	date_hiearchy = 'datum'
-	list_filter = ('leto', 'mesec')
-	list_display = ('image_tag', 'eksponat', 'leto', 'mesec', 'stevilka', 'pdf', 'pages', 'get_strani')
+	list_filter = ('dovoljenje', 'leto', 'mesec')
+	list_display = ('image_tag', 'eksponat', 'leto', 'mesec', 'stevilka', 'pdf', 'pages', 'get_strani', 'dovoljenje')
+	list_editable = ('dovoljenje',)
 	
-# todo: slikce strani
 class StranAdmin(admin.ModelAdmin):
 	search_fields = ('cistopis', 'ocr')
-	list_display = ('image_tag', 'stevilka', 'tiskovina')
+	list_display = ('image_tag', 'stevilka', 'tiskovina', 'vrsta')
 	date_hierarchy = 'tiskovina__datum'
 	readonly_fields = ('image_tag',)
+	list_editable = ('vrsta',)
 
 admin.site.register(models.Kategorija)
 admin.site.register(models.Iskalnik)
