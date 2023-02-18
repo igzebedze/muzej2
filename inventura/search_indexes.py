@@ -2,11 +2,23 @@
 from haystack import indexes 
 from inventura.models import Stran, Primerek
 from evidenca.models import racunalnik, vir
+#from whoosh.analysis import StemmingAnalyzer
+#from gensim.parsing.porter import PorterStemmer
+#from whoosh.fields import TEXT, ID, Schema
+
+#stemmer = PorterStemmer(lang='sl')
+#analyzer = StemmingAnalyzer(stemfn=stemmer.stem)
 
 class RevijeIndex(indexes.ModelSearchIndex, indexes.Indexable):
     class Meta:
         model = Stran
         fields = ['ocr', 'cistopis', 'tiskovina__revija__eksponat__ime']
+
+#    def prepare(self, obj):
+#        self.prepared_data = super(RevijeIndex, self).prepare(obj)
+#        self.prepared_data['text'] = self.prepared_data['text'].lower()
+#        self.prepared_data['text'] = ' '.join([token.text for token in analyzer(self.prepared_data['text'])])
+#        return self.prepared_data
 
 class PredmetiIndex(indexes.ModelSearchIndex, indexes.Indexable):
     class Meta:

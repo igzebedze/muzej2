@@ -526,7 +526,7 @@ class Stran (models.Model):
 	ocr = models.TextField(blank=True, null=True, help_text='besedilo kot smo ga pridobili iz OCR procesa')
 	cistopis = models.TextField(blank=True, null=True, help_text='urednisko precisceno besedilo')
 	slika = models.URLField(blank=True, null=True, help_text='visokoresolucijska slika strani')
-	vrsta = models.CharField(choices=VRSTA_CHOICES, max_length=255, default='', help_text='Opis prevladujoce vsebine na strani')
+	vrsta = models.CharField(choices=VRSTA_CHOICES, max_length=255, default='vsebina', help_text='Opis prevladujoce vsebine na strani')
 
 	dnevnik = HistoricalRecords()
 	created_at = models.DateTimeField(auto_now_add=True)

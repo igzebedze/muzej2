@@ -6,6 +6,7 @@ from simple_history.admin import SimpleHistoryAdmin
 #import wikipedia
 from django.contrib.admin import site
 import adminactions.actions as actions
+from haystack.admin import SearchModelAdmin
 
 # register all adminactions
 actions.add_to_site(site)

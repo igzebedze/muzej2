@@ -23,7 +23,7 @@ from django.db.models import Q
 from .serializers import PrimerekSerializer, RazstavaSerializer, KategorijaSerializer
 from rest_framework import viewsets, generics
 
-from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec, Kveri, Tiskovina
+from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec, Kveri, Tiskovina, Stran
 
 
 class KategorijeViewSet(viewsets.ReadOnlyModelViewSet):
@@ -127,6 +127,24 @@ class revijeYearsView(ListView):
 	model = Tiskovina
 	ordering = ['eksponat']
 	template_name = "inventura/letniki.html"
+
+	def get_context_data(self, **kwargs):
+		context = super(revijeYearsView, self).get_context_data(**kwargs)
+		q = self.request.GET.get("q")
+		context['query'] = q
+		return context
+
+	def get_queryset(self):
+		q = self.request.GET.get("q")
+		object_list = self.model.objects.all()
+		if q:
+			from haystack.query import SearchQuerySet
+			results = SearchQuerySet().filter(content=q).models(Stran)
+			revije = []
+			for o in results:
+				revije.append(o.object.tiskovina)
+			object_list=revije
+		return object_list
 
 class revijaView(DetailView):
 	model = Tiskovina

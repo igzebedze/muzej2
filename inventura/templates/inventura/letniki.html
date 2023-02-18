@@ -11,6 +11,7 @@
         .nav { list-style-type: none; }
         .nav li { float: left; padding: 10px; }
         #top { position: fixed; width: 90%; top: 0px; margin-left: 10%;  background-color: bisque; }
+        #search { float: right; margin-right: 2em; }
     </style>
     <meta charset="utf-8">
     <title>Revije v knjižnici računalniškega muzeja</title>
@@ -25,7 +26,15 @@
         </ul>    
     </div>
     <div id="top">
-        <h1>Arhiv revij računalniškega muzeja</h1>
+        <h1>Arhiv tiskovin računalniškega muzeja
+            <span id="search">
+                <form method="get" action="/revije/" class="form" role="form">
+                    {{ form.non_field_errors }}
+                    <input type="search" name="q" value="{{ query }}" id="id_q">
+                    <input type="submit" class="btn btn-primary" value="Iskanje">
+                </form>
+            </span>
+        </h1>
         {% regroup object_list by eksponat as revije %}
         <ul class="nav">
             {% for revija in revije %}<li><a href="#{{ revija.grouper.id }}" revija="{{ revija.grouper }}">{{ revija.grouper }}</a> ({{ revija.list|length }})</li>{% endfor %}
