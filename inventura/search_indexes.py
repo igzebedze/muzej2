@@ -13,7 +13,7 @@ class RevijeIndex(indexes.ModelSearchIndex, indexes.Indexable):
     class Meta:
         model = Stran
         exclude = ['dnevnik', 'created_at', 'updated_at']
-        #fields = ['ocr', 'cistopis', 'tiskovina__revija__eksponat__ime']
+        #fields = ['ocr', 'cistopis', 'tiskovina__eksponat__ime']
 
 #    def prepare(self, obj):
 #        self.prepared_data = super(RevijeIndex, self).prepare(obj)

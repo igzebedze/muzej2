@@ -4,3 +4,4 @@
 {{object.zgodovina}}
 {{object.stanje}}
 {{object.vhodni_dokument__opis}}
+{{object.eksponat__ime}}
