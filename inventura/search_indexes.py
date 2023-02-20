@@ -12,7 +12,8 @@ from evidenca.models import racunalnik, vir
 class RevijeIndex(indexes.ModelSearchIndex, indexes.Indexable):
     class Meta:
         model = Stran
-        fields = ['ocr', 'cistopis', 'tiskovina__revija__eksponat__ime']
+        exclude = ['dnevnik', 'created_at', 'updated_at']
+        #fields = ['ocr', 'cistopis', 'tiskovina__revija__eksponat__ime']
 
 #    def prepare(self, obj):
 #        self.prepared_data = super(RevijeIndex, self).prepare(obj)
@@ -23,9 +24,11 @@ class RevijeIndex(indexes.ModelSearchIndex, indexes.Indexable):
 class PredmetiIndex(indexes.ModelSearchIndex, indexes.Indexable):
     class Meta:
         model = Primerek
-        fields = ['eksponat__opis', 'eksponat__ime', 'eksponat__kategorija', 'zgodovina', 'stanje', 'eksponat__tip', 'vhodni_dokument__opis']
+        exclude = ['dnevnik', 'created_at', 'updated_at']
+        #fields = ['eksponat__opis', 'eksponat__ime', 'eksponat__kategorija', 'zgodovina', 'stanje', 'eksponat__tip', 'vhodni_dokument__opis']
 
 class EvidencaIndex(indexes.ModelSearchIndex, indexes.Indexable):
     class Meta:
         model = vir
-        fields = ['vsebina', 'naslov']
+        exclude = ['dnevnik', 'created_at', 'updated_at']
+        #fields = ['vsebina', 'naslov']

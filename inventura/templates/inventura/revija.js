@@ -21,14 +21,14 @@ function qfp_sta(page, type) {
 window.eddata.head = {
     projectName: 'ProjectName',
     editionName: 'edition_name',
-    AllPages: {{ object.pages }},
+    AllPages: {{ object.pages }}, // django model
     pageWidth: 986,
     pageHeight: 1300,
     pageWidthHD: 1669,
     pageHeightHD: 2200,
     edition_id: 1198867586,
     edident: '22bgsfgth',
-    edition_title: '{{ object }}',
+    edition_title: '{{ object }}', // django model
     publicationLanguage: 'en',
     rtl: 0,
     stand_alone: 1,
@@ -125,17 +125,17 @@ window.eddata.pages = [
     {% for i in range %}
     {
     id: {{ forloop.counter }},
-    page_num_tb: '{{ forloop.counter }}',
+    page_num_tb: '{{ forloop.counter }}', // django
     title: '',
-    page_title_calc: 'Page {{ forloop.counter }}',
-    sef: 'page{{ forloop.counter }}',
+    page_title_calc: 'Page {{ forloop.counter }}', // django
+    sef: 'page{{ forloop.counter }}', // django
     event_load: 0,
     interactive: [],
-    canvas: qfp_sta({{ forloop.counter }},"_canvas"),
-    thumb: qfp_sta({{ forloop.counter }},"_small_for_html5"),
-    canvasHD: qfp_sta({{ forloop.counter }},"_hd"),
-    tbthumb: qfp_sta({{ forloop.counter }},"_tbthumb")
-}{% if forloop.last %}{% else %},{% endif %}
+    canvas: qfp_sta({{ forloop.counter }},"_canvas"), // django
+    thumb: qfp_sta({{ forloop.counter }},"_small_for_html5"), // django
+    canvasHD: qfp_sta({{ forloop.counter }},"_hd"), // django
+    tbthumb: qfp_sta({{ forloop.counter }},"_tbthumb") // django
+}{% if forloop.last %}{% else %},{% endif %} // django loop
     {% endfor %}
 ];
 window.eddata.pages_mobile = [];
