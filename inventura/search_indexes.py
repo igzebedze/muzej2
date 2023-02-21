@@ -26,7 +26,7 @@ class PredmetiIndex(indexes.ModelSearchIndex, indexes.Indexable):
         #fields = ['eksponat__opis', 'eksponat__ime', 'eksponat__kategorija', 'zgodovina', 'stanje', 'eksponat__tip', 'vhodni_dokument__opis']
 
     def prepare(self, obj):
-        self.prepared_data = super(RevijeIndex, self).prepare(obj)
+        self.prepared_data = super(PredmetiIndex, self).prepare(obj)
         tokens = self.prepared_data['text'].lower().split()
         self.prepared_data['text'] = ' '.join([lemmatizer.lemmatize(token) for token in tokens])
         return self.prepared_data
@@ -38,7 +38,7 @@ class EvidencaIndex(indexes.ModelSearchIndex, indexes.Indexable):
         #fields = ['vsebina', 'naslov']
 
     def prepare(self, obj):
-        self.prepared_data = super(RevijeIndex, self).prepare(obj)
+        self.prepared_data = super(EvidencaIndex, self).prepare(obj)
         tokens = self.prepared_data['text'].lower().split()
         self.prepared_data['text'] = ' '.join([lemmatizer.lemmatize(token) for token in tokens])
         return self.prepared_data
