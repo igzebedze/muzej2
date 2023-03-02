@@ -29,7 +29,7 @@ window.eddata.head = {
     edition_id: 1198867586,
     edident: '22bgsfgth',
     edition_title: '{{ object }}', // django model
-    publicationLanguage: 'en',
+    publicationLanguage: 'si',
     rtl: 0,
     stand_alone: 1,
     no_ed_cprb: 0

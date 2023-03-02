@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.flatpages',
     'django_hosts',
-    'haystack'
+    'haystack',
+    'user_visit'
 ]
 
 MIDDLEWARE = [
@@ -42,7 +43,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'simple_history.middleware.HistoryRequestMiddleware',
-    'django_hosts.middleware.HostsResponseMiddleware'
+    'django_hosts.middleware.HostsResponseMiddleware',
+    'user_visit.middleware.UserVisitMiddleware',
 ]
 
 ROOT_URLCONF = 'muzej2.urls'
