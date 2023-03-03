@@ -9,6 +9,7 @@
   span.highlighted { background-color: yellow; }
   br, hr { clear: both; }
   ul#id_models { display: none; }
+  li.inline { display: inline; padding-right: 1em; }
 </style>
 {% endblock %}
 
@@ -21,11 +22,16 @@
   <input type="submit" class="btn btn-primary" value="Iskanje">
   <hr />
   {% if query %}
-      <h3>Najdbe</h3>
-        <div class="container-fluid bg-4 text-left">    
+  {% regroup page.object_list by object.eksponat.kategorija as grouped_objects %}
+    <h3>Najdbe</h3>
+    <ul class="inline">{%for category in grouped_objects %}<li class="inline">{{ category.grouper }} ({{ category.list|length }})</li>{% endfor %}</ul>
+    <div class="container-fluid bg-4 text-left">    
                 <div class="row">
-                    {% for result in page.object_list %}
-                <div class="col-sm-4">                    
+                  {% for category in grouped_objects %}
+                  <hr />
+                  <h4>Najdbe vrste: {{ category.grouper }}</h4>
+                  {% for result in category.list %}
+                <div class="col-sm-4">
                   <div class="thumbnail">
                     {% if result.object.eksponat %}
                       <div class="form-group">
@@ -34,7 +40,7 @@
                         <hr />
                         <p>Stanje: {{ result.object.stanje }}</p>
                         <p>Zgodovina: {{ result.object.zgodovina }}</p>
-                        <p>Kategorija : {{result.object.eksponat.kategorija}} </p>
+                        <p>Kategorija : {{ result.object.eksponat.kategorija }} </p>
                         <p>Velikost : {{result.object.eksponat.sirina_cm}} x {{result.object.eksponat.visina_cm}} x {{result.object.eksponat.dolzina_cm}}</p>
                         <p>Stevilo primerkov v zbirki : {{result.object.eksponat.st_primerkov}} </p>
                         <p>Opis : {{result.object.eksponat.opis}} </p>
@@ -66,6 +72,7 @@
                 {% empty %}
                    <p style="text-center">No results found.</p>
                     {% endfor%}
+                    {% endfor %}
                 </div>
         </div>   
         {% endif %}
