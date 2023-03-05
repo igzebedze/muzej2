@@ -41,7 +41,7 @@ class Command(BaseCommand):
 				pdf = baseurl + dir + '/' + row['pdf']
 				cover = baseurl + dir + '/' + row['cover']
 				pages = row['pages']
-				eksponat = Eksponat.objects.get(ime=dir)
+				eksponat = Eksponat.objects.get(tip=dir)	# warning - need to adjust the production settings
 
 				# Joker_St-52_1997-11.pdf
 				# BIT-1984-09/00000000.jpg
@@ -53,7 +53,8 @@ class Command(BaseCommand):
 				patterns = (
 					".*(\d\d\d\d)[-_](\d+)\.pdf",	# generic
 					".*(\d\d\d\d)[-_](\d+)_\d\d\.pdf", # ijs exact date format
-					".*(\d+)_(\d\d\d\d)\.pdf"	# informatica year last format
+					".*(\d+)_(\d\d\d\d)\.pdf",	# informatica year last format
+					".*(\d\d\d\d)\.pdf",	# only year, at the end
 				)
 				for pattern in patterns:
 					z = re.match(pattern, pdf)
@@ -61,20 +62,30 @@ class Command(BaseCommand):
 						if dir == 'informatica':
 							year = z.group(2)
 							month = z.group(1)
-						else:
+							date = '%s-%s-%s' % (year, month, 1)
+						elif len(z.groups()) == 1:
+							year = z.group(1)
+							date = '%s-%s-%s' % (year, 1, 1)
+							month = False
+						elif len(z.groups()) == 2:
 							year = z.group(1)
 							month = z.group(2)
-
-						date = '%s-%s-%s' % (year, month, 1)
+							if int(month) > 12:
+								month = 1
+							date = '%s-%s-%s' % (year, month, 1)
 
 						t, created = Tiskovina.objects.get_or_create(
 							pdf=pdf,
 							naslovnica=cover,
 							pages=int(pages),
-							leto = int(year),
-							mesec = int(month),
 							eksponat=eksponat,
-							datum=date
 						)
+						if year:
+							t.leto = int(year)
+						if month:
+							t.mesec = int(month)
+						if date:
+							t.datum = date
+						t.save()
 						print ('success: ' + pdf)
 					

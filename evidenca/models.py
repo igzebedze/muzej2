@@ -243,3 +243,24 @@ class pogovor(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Pogovori"
+
+''' todo
+v tem modelu naj bi hranili vse obstojece slovenske programe, ne glede na vrsto dokaza
+class program(models.Model):
+	eksponat -> inventura
+	zvrst (entertainment, utility, productivity,...)
+	polje (geografija, pisarna, industrija, ...)
+	avtor -> oseba
+	izdajatelj -> organizacija
+
+kako zaobjamemo raven:
+	Evidence of its existence. Mentions in interviews or contemporary articles.
+	Documented inputs & outputs. Screenshots or manuals.
+	Binary files. Often salvaged from disks and tapes.
+	Binary + data. Taken from some kind of production environment.
+	Source code. 
+	Bonus: original hardware. 
+	Extra bonus: the actual original machine that ran this specific software.
+	Ultimate goal: live reconstruction.
+
+'''

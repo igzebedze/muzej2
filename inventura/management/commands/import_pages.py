@@ -36,15 +36,26 @@ class Command(BaseCommand):
 				revija = os.path.splitext(os.path.basename(filename))[0]
 				pdf = baseurl + dir + '/' + revija + '.pdf'
 				print (pdf)
-				tiskovina = Tiskovina.objects.get(pdf=pdf)
-				
+				tiskovina = Tiskovina.objects.get(pdf=pdf)	
+
 				for pagefile in os.listdir(options['file'][0] + '/' + revija):
 					#print (pagefile)
 					if pagefile.endswith('.txt') and (pagefile != ".txt") and not pagefile.endswith('.txt.txt'):
 						stran = os.path.splitext(os.path.basename(pagefile))[0]
 						#print (stran)
+
+						vrsta = 'vsebina'
+						k = re.compile(r'\bvsebina\b|\bkazalo\b|\bcontents\b', flags=re.I | re.X)
+
 						with open(options['file'][0] + '/' + revija + '/' + pagefile, "r") as file:
 							content = file.read()
+							wordcount = len(content.split())
+							if int(stran) == 0: 
+								vrsta = 'naslovnica'
+							elif k.match(content) and int(stran) < 5:
+								vrsta = 'kazalo'
+							elif wordcount < 100:
+								vrsta = 'oglas'
 							
 							s, created = Stran.objects.get_or_create(
 								tiskovina=tiskovina,
@@ -53,6 +64,8 @@ class Command(BaseCommand):
 							)
 							if created:
 								s.ocr = content
+								s.vrsta = vrsta
+								s.stevilo_besed = wordcount
 								s.save()
 
 

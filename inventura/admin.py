@@ -244,10 +244,11 @@ class TiskovinaAdmin(admin.ModelAdmin):
 	
 class StranAdmin(admin.ModelAdmin):
 	search_fields = ('cistopis', 'ocr')
-	list_display = ('image_tag', 'stevilka', 'tiskovina', 'vrsta')
+	list_display = ('image_tag', 'stevilka', 'tiskovina', 'vrsta', 'stevilo_besed')
 	date_hierarchy = 'tiskovina__datum'
 	readonly_fields = ('image_tag',)
 	list_editable = ('vrsta',)
+	list_filter = ('vrsta',)
 
 admin.site.register(models.Kategorija)
 admin.site.register(models.Iskalnik)

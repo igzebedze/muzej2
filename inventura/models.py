@@ -524,6 +524,7 @@ class Stran (models.Model):
 	cistopis = models.TextField(blank=True, null=True, help_text='urednisko precisceno besedilo')
 	slika = models.URLField(blank=True, null=True, help_text='visokoresolucijska slika strani')
 	vrsta = models.CharField(choices=VRSTA_CHOICES, max_length=255, default='vsebina', help_text='Opis prevladujoce vsebine na strani')
+	stevilo_besed = models.IntegerField(default=0)
 
 	dnevnik = HistoricalRecords()
 	created_at = models.DateTimeField(auto_now_add=True)
