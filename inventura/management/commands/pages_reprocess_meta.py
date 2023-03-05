@@ -13,14 +13,13 @@ class Command(BaseCommand):
 			first = t.stran_set.order_by('stevilka').first()
 			for s in t.stran_set.all():
 				wordcount = len(s.ocr.split())
+				vrsta = 'vsebina'
 				if s.stevilka == first.stevilka: 
 					vrsta = 'naslovnica'
 				elif k.match(s.ocr) and int(s.stevilka) < 5:
 					vrsta = 'kazalo'
 				elif wordcount < 100:
 					vrsta = 'oglas'
-				else:
-					vrsta = 'vsebina'
 						
 				s.vrsta = vrsta
 				s.stevilo_besed = wordcount
