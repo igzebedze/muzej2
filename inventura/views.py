@@ -11,13 +11,13 @@ from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from django.contrib.sites.shortcuts import get_current_site
 from django.http import Http404
 from django import forms
 from django.views.generic import ListView, DetailView
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from django.shortcuts import redirect
 from django.db.models import Q
 
 from .serializers import PrimerekSerializer, RazstavaSerializer, KategorijaSerializer
@@ -119,9 +119,19 @@ def listki(request):
 	context = {'form': form}
 	return render(request, 'listkiform.html', context)	
 
-class revijeIndexView(ListView):
-	model = Tiskovina
-	ordering = ['eksponat']
+def revijaYearsView(request, tip):
+	object_list = Tiskovina.objects.filter(eksponat__tip=tip)
+	context = {}
+	site = get_current_site(request)
+	if not site:
+		site = '/revije/'
+	elif site == 'zbirka':
+		site = 'revije'
+	elif site == 'revije':
+		site = '/`'
+	context['site'] = site
+	context['object_list'] = object_list
+	return render(request, "inventura/letniki.html", context)
 
 class revijeYearsView(ListView):
 	model = Tiskovina
@@ -132,6 +142,14 @@ class revijeYearsView(ListView):
 		context = super(revijeYearsView, self).get_context_data(**kwargs)
 		q = self.request.GET.get("q")
 		context['query'] = q
+		site = get_current_site(self.request)
+		if not site:
+			site = '/revije/'
+		elif site == 'zbirka':
+			site = 'revije'
+		elif site == 'revije':
+			site = '/`'
+		context['site'] = site
 		return context
 
 	def get_queryset(self):

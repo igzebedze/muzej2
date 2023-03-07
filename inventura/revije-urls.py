@@ -6,6 +6,7 @@ from inventura.views import *
 
 urlpatterns = [
     path('', revijeYearsView.as_view()),
+    path('<str:tip>/', revijaYearsView),
     path('oprojektu/', TemplateView.as_view(template_name='inventura/revijeoprojektu.html'), name='oprojektu'), 
     path('<int:pk>/js', revijaJSView),
     path('<int:pk>/thumbs', revijaThumbsView),
