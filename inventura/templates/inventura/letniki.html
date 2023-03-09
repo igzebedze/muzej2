@@ -28,7 +28,7 @@
     <div id="top">
         <h1>Arhiv tiskovin računalniškega muzeja
             <span id="search">
-                <form method="get" action="/revije/" class="form" role="form">
+                <form method="get" action="{{ root }}" class="form" role="form">
                     {{ form.non_field_errors }}
                     <input type="search" name="q" value="{% if query %}{{ query }}{% endif %}" id="id_q">
                     <input type="submit" class="btn btn-primary" value="Iskanje">

@@ -122,13 +122,11 @@ def revijaYearsView(request, tip):
 	object_list = Tiskovina.objects.filter(eksponat__tip=tip)
 	context = {}
 	site = request.META['HTTP_HOST']
-	root = site
 	if site == 'revije.muzej.si':
-		root = ''
+		context['root'] = ''
 	else:
-		root = '/revije'
+		context['root'] = '/revije'
 	context['domain'] = site
-	context['root'] = root
 	context['object_list'] = object_list
 	return render(request, "inventura/letniki.html", context)
 
@@ -142,13 +140,11 @@ class revijeYearsView(ListView):
 		q = self.request.GET.get("q")
 		context['query'] = q
 		site = self.request.META['HTTP_HOST']
-		root = site
 		if site == 'revije.muzej.si':
-			root = ''
+			context['root'] = ''
 		else:
-			root = '/revije'
+			context['root'] = '/revije'
 		context['domain'] = site
-		context['root'] = root
 		return context
 
 # todo add snippets and page numbers
