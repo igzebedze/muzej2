@@ -121,14 +121,12 @@ def listki(request):
 def revijaYearsView(request, tip):
 	object_list = Tiskovina.objects.filter(eksponat__tip=tip)
 	context = {}
-	current_site = get_current_site(request)
-	site = current_site.domain
+	site = request.META['HTTP_HOST']
 	root = site
 	if site == 'revije.muzej.si':
 		root = ''
 	else:
 		root = '/revije'
-	context['site'] = current_site
 	context['domain'] = site
 	context['root'] = root
 	context['object_list'] = object_list
@@ -143,14 +141,12 @@ class revijeYearsView(ListView):
 		context = super(revijeYearsView, self).get_context_data(**kwargs)
 		q = self.request.GET.get("q")
 		context['query'] = q
-		current_site = get_current_site(self.request)
-		site = current_site.domain
+		site = self.request.META['HTTP_HOST']
 		root = site
 		if site == 'revije.muzej.si':
 			root = ''
 		else:
 			root = '/revije'
-		context['site'] = current_site
 		context['domain'] = site
 		context['root'] = root
 		return context
