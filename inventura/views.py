@@ -125,14 +125,10 @@ def revijaYearsView(request, tip):
 	current_site = Site.objects.get_current()
 	site = current_site.domain
 	root = site
-	if not site:
-			root = '/revije'
-	elif site == 'zbirka.muzej.si':
-			root = '/revije'
-	elif site == 'revije.muzej.si':
-			root = '/`'
+	if site == 'revije.muzej.si':
+		root = ''
 	else:
-			root = '/revije'
+		root = '/revije'
 	context['site'] = current_site
 	context['domain'] = site
 	context['root'] = root
@@ -151,12 +147,8 @@ class revijeYearsView(ListView):
 		current_site = Site.objects.get_current()
 		site = current_site.domain
 		root = site
-		if not site:
-			root = '/revije'
-		elif site == 'zbirka.muzej.si':
-			root = '/revije'
-		elif site == 'revije.muzej.si':
-			root = '/`'
+		if site == 'revije.muzej.si':
+			root = ''
 		else:
 			root = '/revije'
 		context['site'] = current_site
