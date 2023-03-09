@@ -127,9 +127,9 @@ def revijaYearsView(request, tip):
 	root = site
 	if not site:
 			root = '/revije'
-	elif site == 'zbirka':
+	elif site == 'zbirka.muzej.si':
 			root = '/revije'
-	elif site == 'revije':
+	elif site == 'revije.muzej.si':
 			root = '/`'
 	else:
 			root = '/revije'
@@ -153,9 +153,9 @@ class revijeYearsView(ListView):
 		root = site
 		if not site:
 			root = '/revije'
-		elif site == 'zbirka':
+		elif site == 'zbirka.muzej.si':
 			root = '/revije'
-		elif site == 'revije':
+		elif site == 'revije.muzej.si':
 			root = '/`'
 		else:
 			root = '/revije'
