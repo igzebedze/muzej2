@@ -12,6 +12,9 @@ class Command(BaseCommand):
 		for t in Tiskovina.objects.all():
 			first = t.stran_set.order_by('stevilka').first()
 			for s in t.stran_set.all():
+				if s.vrsta and s.stevilo_besed:
+					next
+
 				wordcount = len(s.ocr.split())
 				vrsta = 'vsebina'
 				if s.stevilka == first.stevilka: 
