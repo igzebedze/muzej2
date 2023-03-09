@@ -22,7 +22,7 @@ from django.db.models import Q
 
 from .serializers import PrimerekSerializer, RazstavaSerializer, KategorijaSerializer
 from rest_framework import viewsets, generics
-
+from django.contrib.sites.models import Site
 from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec, Kveri, Tiskovina, Stran
 
 
@@ -122,14 +122,20 @@ def listki(request):
 def revijaYearsView(request, tip):
 	object_list = Tiskovina.objects.filter(eksponat__tip=tip)
 	context = {}
-	site = get_current_site(request)
+	current_site = Site.objects.get_current()
+	site = current_site.domain
+	root = site
 	if not site:
-		site = '/revije/'
+			root = '/revije'
 	elif site == 'zbirka':
-		site = 'revije'
+			root = '/revije'
 	elif site == 'revije':
-		site = '/`'
-	context['site'] = site
+			root = '/`'
+	else:
+			root = '/revije'
+	context['site'] = current_site
+	context['domain'] = site
+	context['root'] = root
 	context['object_list'] = object_list
 	return render(request, "inventura/letniki.html", context)
 
@@ -142,16 +148,23 @@ class revijeYearsView(ListView):
 		context = super(revijeYearsView, self).get_context_data(**kwargs)
 		q = self.request.GET.get("q")
 		context['query'] = q
-		site = get_current_site(self.request)
+		current_site = Site.objects.get_current()
+		site = current_site.domain
+		root = site
 		if not site:
-			site = '/revije/'
+			root = '/revije'
 		elif site == 'zbirka':
-			site = 'revije'
+			root = '/revije'
 		elif site == 'revije':
-			site = '/`'
-		context['site'] = site
+			root = '/`'
+		else:
+			root = '/revije'
+		context['site'] = current_site
+		context['domain'] = site
+		context['root'] = root
 		return context
 
+# todo add snippets and page numbers
 	def get_queryset(self):
 		q = self.request.GET.get("q")
 		object_list = self.model.objects.all()
