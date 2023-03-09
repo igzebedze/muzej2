@@ -22,7 +22,6 @@ from django.db.models import Q
 
 from .serializers import PrimerekSerializer, RazstavaSerializer, KategorijaSerializer
 from rest_framework import viewsets, generics
-from django.contrib.sites.models import Site
 from inventura.models import Vhod, Primerek, Lokacija, Izhod, Eksponat, Kategorija, Razstava, Proizvajalec, Kveri, Tiskovina, Stran
 
 
@@ -122,7 +121,7 @@ def listki(request):
 def revijaYearsView(request, tip):
 	object_list = Tiskovina.objects.filter(eksponat__tip=tip)
 	context = {}
-	current_site = Site.objects.get_current()
+	current_site = get_current_site(request)
 	site = current_site.domain
 	root = site
 	if site == 'revije.muzej.si':
@@ -144,7 +143,7 @@ class revijeYearsView(ListView):
 		context = super(revijeYearsView, self).get_context_data(**kwargs)
 		q = self.request.GET.get("q")
 		context['query'] = q
-		current_site = Site.objects.get_current()
+		current_site = get_current_site(self.request)
 		site = current_site.domain
 		root = site
 		if site == 'revije.muzej.si':
