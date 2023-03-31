@@ -150,7 +150,7 @@ class revijeYearsView(ListView):
 # todo add snippets and page numbers
 	def get_queryset(self):
 		q = self.request.GET.get("q")
-		object_list = self.model.objects.all()
+		object_list = self.model.objects.order_by('eksponat')
 		if q:
 			from haystack.query import SearchQuerySet
 			results = SearchQuerySet().filter(content=q).models(Stran)
