@@ -60,11 +60,7 @@ class Command(BaseCommand):
 				for pattern in patterns:
 					z = re.match(pattern, pdf)
 					if z:
-						if dir == 'informatica':
-							year = z.group(2)
-							month = z.group(1)
-							date = '%s-%s-%s' % (year, month, 1)
-						elif len(z.groups()) == 1:
+						if len(z.groups()) == 1:
 							year = z.group(1)
 							date = '%s-%s-%s' % (year, 1, 1)
 							month = False
