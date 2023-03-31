@@ -50,6 +50,7 @@ class Command(BaseCommand):
 				# Novice_1972_07.pdf
 				# Novice_1978_12_18.pdf
 				# informatica-Vol_23,_No_3_1999.pdf 
+				# UI-1-1993.pdf
 				patterns = (
 					".*(\d\d\d\d)[-_](\d+)\.pdf",	# generic
 					".*(\d\d\d\d)[-_](\d+)_\d\d\.pdf", # ijs exact date format
@@ -59,7 +60,7 @@ class Command(BaseCommand):
 				for pattern in patterns:
 					z = re.match(pattern, pdf)
 					if z:
-						if dir == 'informatica' or dir == 'uporabnainformatika' or dir == 'svetelektronike':
+						if dir == 'informatica':
 							year = z.group(2)
 							month = z.group(1)
 							date = '%s-%s-%s' % (year, month, 1)
@@ -68,8 +69,10 @@ class Command(BaseCommand):
 							date = '%s-%s-%s' % (year, 1, 1)
 							month = False
 						elif len(z.groups()) == 2:
-							year = z.group(1)
-							month = z.group(2)
+							a = int(z.group(1))
+							b = int(z.group(2))
+							year = max(a,b)
+							month = min(a,b)
 							if int(month) > 12:
 								month = 1
 							date = '%s-%s-%s' % (year, month, 1)
