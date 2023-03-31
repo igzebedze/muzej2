@@ -53,7 +53,7 @@ class Command(BaseCommand):
 				patterns = (
 					".*(\d\d\d\d)[-_](\d+)\.pdf",	# generic
 					".*(\d\d\d\d)[-_](\d+)_\d\d\.pdf", # ijs exact date format
-					".*(\d+)_(\d\d\d\d)\.pdf",	# informatica month+year last format
+					".*(\d+)[-_](\d\d\d\d)\.pdf",	# informatica month+year last format
 					".*(\d\d\d\d)\.pdf",	# only year, at the end
 				)
 				for pattern in patterns:
