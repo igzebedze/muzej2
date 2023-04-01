@@ -239,8 +239,8 @@ class TiskovinaAdmin(admin.ModelAdmin):
 	search_fields = ('besedilo', 'kazalo', 'eksponat__ime')	
 	date_hiearchy = 'datum'
 	list_filter = ('dovoljenje', 'leto', 'mesec')
-	list_display = ('image_tag', 'eksponat', 'leto', 'mesec', 'stevilka', 'pdf', 'pages', 'get_strani', 'dovoljenje')
-	list_editable = ('dovoljenje',)
+	list_display = ('image_tag', 'eksponat', 'leto', 'mesec', 'datum', 'stevilka', 'pdf', 'pages', 'get_strani', 'dovoljenje')
+	list_editable = ('dovoljenje','mesec', 'datum', 'stevilka')
 	
 class StranAdmin(admin.ModelAdmin):
 	search_fields = ('cistopis', 'ocr')
