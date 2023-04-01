@@ -57,6 +57,7 @@ class Command(BaseCommand):
 					".*(\d+)[-_](\d\d\d\d)\.pdf",	# informatica month+year last format
 					".*(\d\d\d\d)\.pdf",	# only year, at the end
 				)
+				print("trying: " + pdf)
 				for pattern in patterns:
 					z = re.match(pattern, pdf)
 					if z:
@@ -87,4 +88,5 @@ class Command(BaseCommand):
 							t.datum = date
 						t.save()
 						print ('success: ' + pdf)
+						continue
 					
