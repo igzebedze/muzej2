@@ -54,13 +54,14 @@ class Command(BaseCommand):
 				patterns = (
 					".*(\d\d\d\d)[-_](\d+)\.pdf",	# generic
 					".*(\d\d\d\d)[-_](\d+)_\d\d\.pdf", # ijs exact date format
-					".*(\d+)[-_](\d\d\d\d)\.pdf",	# informatica month+year last format
+					".*?(\d+)[-_](\d\d\d\d)\.pdf",	# informatica month+year last format
 					".*(\d\d\d\d)\.pdf",	# only year, at the end
 				)
 				print("trying: " + pdf)
 				for pattern in patterns:
 					z = re.match(pattern, pdf)
 					if z:
+						print ("matched: " + pattern)
 						if len(z.groups()) == 1:
 							year = z.group(1)
 							date = '%s-%s-%s' % (year, 1, 1)
@@ -88,5 +89,5 @@ class Command(BaseCommand):
 							t.datum = date
 						t.save()
 						print ('success: ' + pdf)
-						continue
+						break
 					
