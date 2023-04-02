@@ -37,7 +37,7 @@
         </h1>
         {% regroup object_list by eksponat as revije %}
         <ul class="nav">
-            <li><a href="{{ root }}">Vse</a></li>
+            <li><a href="{% if root %}{{ root }}{% else %}/{% endif %}">Vse</a></li>
             {% for revija in revije %}<li><a href="{{ root }}/{{ revija.grouper.tip }}/" 
                 revija="{{ revija.grouper }}">{{ revija.grouper }}</a> ({{ revija.list|length }})</li>{% endfor %}
         </ul>    
