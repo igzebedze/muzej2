@@ -62,11 +62,11 @@ class Command(BaseCommand):
 								stevilka = stran,
 								slika = baseurl + dir + '/' + revija + '/' + stran + '.jpg'
 							)
-
-							s.ocr = content
-							s.vrsta = vrsta
-							s.stevilo_besed = wordcount
-							s.save()
+							if created:
+								s.ocr = content
+								s.vrsta = vrsta
+								s.stevilo_besed = wordcount
+								s.save()
 
 
 # list all pdfs

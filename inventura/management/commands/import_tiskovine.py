@@ -77,17 +77,18 @@ class Command(BaseCommand):
 
 						t, created = Tiskovina.objects.get_or_create(
 							pdf=pdf,
-							naslovnica=cover,
+							#naslovnica=cover,
 							pages=int(pages),
 							eksponat=eksponat,
 						)
-						if year:
-							t.leto = int(year)
-						if month:
-							t.mesec = int(month)
-						if date:
-							t.datum = date
-						t.save()
-						print ('success: ' + pdf)
-						break
+						if created:
+							if year:
+								t.leto = int(year)
+							if month:
+								t.mesec = int(month)
+							if date:
+								t.datum = date
+							t.save()
+							print ('success: ' + pdf)
+							break
 					
