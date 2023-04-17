@@ -82,6 +82,8 @@ class Command(BaseCommand):
 							eksponat=eksponat,
 						)
 						if created:
+							if cover:
+								t.naslovnica=cover
 							if year:
 								t.leto = int(year)
 							if month:
@@ -91,4 +93,7 @@ class Command(BaseCommand):
 							t.save()
 							print ('success: ' + pdf)
 							break
-					
+							
+						if not t.naslovnica and cover:
+							t.naslovnica = cover
+							t.save()					
