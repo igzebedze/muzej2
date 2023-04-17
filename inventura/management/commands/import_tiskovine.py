@@ -77,7 +77,7 @@ class Command(BaseCommand):
 
 						t, created = Tiskovina.objects.get_or_create(
 							pdf=pdf,
-							naslovnica=cover,
+							#naslovnica=cover,
 							pages=int(pages),
 							eksponat=eksponat,
 						)
