@@ -93,8 +93,7 @@ class Command(BaseCommand):
 							t.save()
 							print ('success: ' + pdf)
 							break
+
 						if not t.naslovnica and cover:
 							t.naslovnica = cover
 							t.save()
-
-						
