@@ -6,6 +6,7 @@ from django.utils import timezone
 from inventura.models import Eksponat, Primerek, User, Kategorija
 import pprint
 
+
 class Command(BaseCommand):
 	help = 'imports new editions of cds that belong to magazines'
 

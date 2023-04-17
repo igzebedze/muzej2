@@ -81,13 +81,14 @@ class Command(BaseCommand):
 							pages=int(pages),
 							eksponat=eksponat,
 						)
-						if year:
-							t.leto = int(year)
-						if month:
-							t.mesec = int(month)
-						if date:
-							t.datum = date
-						t.save()
-						print ('success: ' + pdf)
-						break
+						if created:
+							if year:
+								t.leto = int(year)
+							if month:
+								t.mesec = int(month)
+							if date:
+								t.datum = date
+							t.save()
+							print ('success: ' + pdf)
+							break
 					

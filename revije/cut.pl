@@ -7,7 +7,7 @@ foreach my $pdf (readpipe("ls *.pdf")) {
     chop $pdf;
     my ($name, $ending) = split/\./,$pdf;
     system ("mkdir $name") if !-d $name; 
-    system ("convert -background white -alpha remove $pdf  $name/0%07d.jpg");
+    system ("convert -density 300 -resize 3000x3000 -background white -alpha remove $pdf  $name/0%07d.jpg");
 }
 
 #print join("\t", 'pdf', 'cover', 'pages')."\n";
