@@ -113,6 +113,8 @@ REST_FRAMEWORK = {
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+SESSION_COOKIE_DOMAIN=".muzej.si"
+
 # Local Settings
 try:
 	from muzej2.local_settings import *
