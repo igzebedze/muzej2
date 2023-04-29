@@ -52,7 +52,7 @@ class Command(BaseCommand):
 							wordcount = len(content.split())
 							if int(stran) == 0: 
 								vrsta = 'naslovnica'
-							elif k.match(content) and int(stran) < 5:
+							elif k.match(content) and int(stran) < 6:
 								vrsta = 'kazalo'
 							elif wordcount < 100:
 								vrsta = 'oglas'
