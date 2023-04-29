@@ -56,9 +56,9 @@
         {% for object in leto.list|dictsort:"datum" %}
         <div class="box {{ object.eksponat.id }}" revija="{{ object.eksponat.ime }}">
             {% if user.is_authenticated %}
-            <a target="_blank" href="{{ object.get_absolute_url }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
+            <a target="_blank" href="{{ root }}/{{ object.id }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
             {% elif object.dovoljenje %}
-            <a target="_blank" href="{{ object.get_absolute_url }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
+            <a target="_blank" href="{{ root }}/{{ object.id }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
             {% else %}
             <a target="_blank" href="{{ object.eksponat.uradnastran }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
             {% endif %}
