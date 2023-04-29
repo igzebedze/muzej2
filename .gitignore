@@ -1,4 +1,6 @@
 inventura/migrations/
+muzej2/whoosh_index/
+*~
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
