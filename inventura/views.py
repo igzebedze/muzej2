@@ -1,8 +1,8 @@
 import re
-import wikipedia
-import wptools
-import wikitextparser as wtp
-import urllib.parse
+#import wikipedia
+#import wptools
+#import wikitextparser as wtp
+#import urllib.parse
 import random
 import os.path
 import pprint
@@ -68,17 +68,17 @@ def update_infobox(request, pk=None):
 	e = Eksponat.objects.get(id=pk)
 	
 	# if this is a POST request we need to process the form data
-	if request.method == 'POST':
-		if 'wikiurl' in request.POST:
-			wikiurl = urllib.parse.unquote(request.POST.get('wikiurl'))
-			e.wikipedia = wikiurl
-		if 'wikiimage' in request.POST:
-			wikiimage = urllib.parse.unquote(request.POST.get('wikiimage'))
-			e.onlinephoto = wikiimage
-		if 'infobox' in request.POST:
-			infobox = urllib.parse.unquote(request.POST.get('infobox'))
-			e.infobox = infobox
-		e.save()
+	# if request.method == 'POST':
+	# 	if 'wikiurl' in request.POST:
+	# 		wikiurl = urllib.parse.unquote(request.POST.get('wikiurl'))
+	# 		e.wikipedia = wikiurl
+	# 	if 'wikiimage' in request.POST:
+	# 		wikiimage = urllib.parse.unquote(request.POST.get('wikiimage'))
+	# 		e.onlinephoto = wikiimage
+	# 	if 'infobox' in request.POST:
+	# 		infobox = urllib.parse.unquote(request.POST.get('infobox'))
+	# 		e.infobox = infobox
+	# 	e.save()
 			
 	return redirect('/eksponat/%d/' % (pk))
 
@@ -235,65 +235,65 @@ class EksponatView(DetailView):
 #		if e.infobox:
 #			return context
 
-		w = e.wikipedia
-# if we don't have wiki page yet, search api for the object
-		if self.request.user.is_authenticated and (not e.wikipedia or not e.onlinephoto):
-			search = e.ime # e.proizvajalec.ime + " " + 
-			#if e.tip:
-			#	search = search + " " + e.tip
-			search = search.replace("tipkovnica", "keyboard")
-			search = search.replace("usmerjevalnik", "router")
-			search = search.replace("kasetar", "casette player")
-			search = search.replace("miška", "mouse")
-			search = search.replace("ZDA", "USA")
-			print ('checking: ' + search)
-			try:
-				pages = wikipedia.search(search, results=5)
-				print (pages)
-				#wiki = wikipedia.page(wikipedia.search(search, results=1))
-			except:
-				print ('blah: ' + search)
-			else:
-				context['wiki'] = []
-				for p in pages:
-					try:
-						page = wikipedia.page(p)
-						#pp = pprint.PrettyPrinter(indent=4)
-						#pp.pprint (page)
-					except:
-						pass
-					else:
-						wiki = {'save': False}
-						save = False
-						if not e.wikipedia:
-							wiki['wikiurl'] = page.url
-							#pp.pprint (page.url)
-							wiki['wikiname'] = page.title
-							save = True
-						try:
-							if not e.onlinephoto:
-								wiki['wikiimage'] = page.images[0]
-								wiki['wikiimages'] = page.images[0,5]
-								save = True
-						except:
-							pass
+# 		w = e.wikipedia
+# # if we don't have wiki page yet, search api for the object
+# 		if self.request.user.is_authenticated and (not e.wikipedia or not e.onlinephoto):
+# 			search = e.ime # e.proizvajalec.ime + " " + 
+# 			#if e.tip:
+# 			#	search = search + " " + e.tip
+# 			search = search.replace("tipkovnica", "keyboard")
+# 			search = search.replace("usmerjevalnik", "router")
+# 			search = search.replace("kasetar", "casette player")
+# 			search = search.replace("miška", "mouse")
+# 			search = search.replace("ZDA", "USA")
+# 			print ('checking: ' + search)
+# 			try:
+# 				pages = wikipedia.search(search, results=5)
+# 				print (pages)
+# 				#wiki = wikipedia.page(wikipedia.search(search, results=1))
+# 			except:
+# 				print ('blah: ' + search)
+# 			else:
+# 				context['wiki'] = []
+# 				for p in pages:
+# 					try:
+# 						page = wikipedia.page(p)
+# 						#pp = pprint.PrettyPrinter(indent=4)
+# 						#pp.pprint (page)
+# 					except:
+# 						pass
+# 					else:
+# 						wiki = {'save': False}
+# 						save = False
+# 						if not e.wikipedia:
+# 							wiki['wikiurl'] = page.url
+# 							#pp.pprint (page.url)
+# 							wiki['wikiname'] = page.title
+# 							save = True
+# 						try:
+# 							if not e.onlinephoto:
+# 								wiki['wikiimage'] = page.images[0]
+# 								wiki['wikiimages'] = page.images[0,5]
+# 								save = True
+# 						except:
+# 							pass
 						
-						if save:
-							context['wiki'].append(wiki)
-							#print (wiki)
+# 						if save:
+# 							context['wiki'].append(wiki)
+# 							#print (wiki)
 
-# parse the data and store it
-		if w and not e.infobox:
-			slug = w.rsplit('/', 1)[-1]		# we only accept well formed wiki urls
-			wiki = wptools.page(slug)
-			try:
-				page = wiki.get_restbase('/page/html/').data['html']
-			except:
-				pass
-			else:
-				infobox = re.findall("<table class=\"infobox.*?<\/table>", page)
-				if infobox:
-					context['infobox'] = "\n<br>\n".join(infobox)
+# # parse the data and store it
+# 		if w and not e.infobox:
+# 			slug = w.rsplit('/', 1)[-1]		# we only accept well formed wiki urls
+# 			wiki = wptools.page(slug)
+# 			try:
+# 				page = wiki.get_restbase('/page/html/').data['html']
+# 			except:
+# 				pass
+# 			else:
+# 				infobox = re.findall("<table class=\"infobox.*?<\/table>", page)
+# 				if infobox:
+# 					context['infobox'] = "\n<br>\n".join(infobox)
 		
 		return context
 
