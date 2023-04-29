@@ -1,0 +1,10 @@
+LeftMargin       8
+BottomMargin     13
+LabelWidth       64,6
+LabelHeight      33,8
+HorizSpace       0
+VertSpace        0
+HorizNumLabels   3
+VertNumLabels    8
+FontName         Arial
+FontSize         7
