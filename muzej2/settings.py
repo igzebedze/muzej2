@@ -114,6 +114,7 @@ REST_FRAMEWORK = {
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 SESSION_COOKIE_DOMAIN=".muzej.si"
+SESSION_COOKIE_NAME = 'muzejsi'
 
 # Local Settings
 try:
