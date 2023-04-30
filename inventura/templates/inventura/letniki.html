@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load l10n %}
+{% load extras %}
 
 {% block title %}Revije v knjižnici računalniškega muzeja{% endblock %}
 
@@ -8,6 +8,7 @@
         .box { width: 120px; float: left; padding: 10px; }
         .box img { box-shadow: 4px 4px black; } 
         h3, h4, hr { clear: both; }
+        .sidebar, #head { background-color: #efefef; }
 {% endblock %}
 
 {% block head %}
@@ -31,32 +32,12 @@
         <hr />
     </div>
     <div class="row">
-        <div id="menu" class="sidebar col-8">
-            {% regroup object_list by eksponat as revije %}
-            <ul class="nav flex-column">
-                <li class="nav-item ">
-                    <a class="nav-link {% if selected %}{% else %}active{% endif %}"  href="{% if root %}{{ root }}{% else %}/{% endif %}">
-                        Vsi&nbsp;naslovi&nbsp;({{ object_list|length }})</a>
-                </li>
-                {% for revija in revije %}
-                <li class="nav-item ">
-                    <a class="nav-link {% if selected == revija.grouper.tip %}active{% endif %}"  href="{{ root }}/{{ revija.grouper.tip }}/" 
-                    revija="{{ revija.grouper }}">{{ revija.grouper }}&nbsp;({{ revija.list|length }})</a></li>{% endfor %}
-            </ul>    
-        </div>
-
-        <div id="years" class="sidebar col-4">
-                <ul class="nav flex-column">
-                    {% regroup object_list|dictsort:"leto" by leto as newlist %}
-                    {% for title in newlist %}
-                    <li><a href="#{{ title.grouper }}">{{ title.grouper }}</a>&nbsp;({{ title.list|length }})</li>
-                    {% endfor %}
-                </ul>    
-        </div>
+        {% revije_nav tip %}
     </div>
 </div><!-- end of head column -->
 
 <div id="content" class="col-9">
+    {% regroup object_list|dictsort:"leto" by leto as newlist %}
     {% for year in newlist %}
     <a name='{{ year.grouper }}'></a>
     <h3>{{ year.grouper }}</h3>

@@ -1,8 +1,42 @@
-<html>
-    <head>
+{% extends 'base.html' %}
+{% load static %}
+{% load extras %}
 
-    </head>
-    <body>
+{% block title %}Revije v knjižnici računalniškega muzeja{% endblock %}
+
+{% block css %}
+        .box { width: 120px; float: left; padding: 10px; }
+        .box img { box-shadow: 4px 4px black; } 
+        h3, h4, hr { clear: both; }
+        .sidebar, #head { background-color: #efefef; }
+{% endblock %}
+
+{% block head %}
+        <meta charset="utf-8">
+{% endblock %}
+
+{% block content %}
+<div id="main" class="container-fluid">
+    <div class="row align-items-start">
+    <div id="head" class="col-3">
+        <div class="row">
+        <h3>Arhiv tiskovin računalniškega muzeja</h3>
+            <p id="about"><a href="{{ root }}/oprojektu/">O projektu</a>, <a href="https://www.racunalniski-muzej.si">Domov</a></p>
+            <p id="search">
+                <form method="get" action="{{ root }}" class="form" role="form">
+                    {{ form.non_field_errors }}
+                    <input type="search" name="q" value="{% if query %}{{ query }}{% endif %}" id="id_q">
+                    <input type="submit" class="btn btn-primary" value="Iskanje">
+                </form>
+            </p>
+        <hr />
+    </div>
+    <div class="row">
+        {% revije_nav tip %}
+    </div>
+</div><!-- end of head column -->
+
+<div id="content" class="col-9">
         <p>Knjiznica Racunalniskega muzeja zbira, hrani in daje na voljo za raziskovanje obsirno zbirko knjig in revij, 
             ki so oblikovale slovenski racunalniski prostor. Stare racunalniske knjige splosne knjiznice redno odpisujejo, 
             tako da smo za marsikatero se edini enostavno dostopen vir.</p>
@@ -58,5 +92,4 @@
             <li>OCR: Tesseract 4.0</li>
             <li>Lastnosti novih posnetkov: ScanSnap ix500, 200 dpi, nizka kompresija</li>
         </ul>
-    </body>
-</html>
+{% endblock %}

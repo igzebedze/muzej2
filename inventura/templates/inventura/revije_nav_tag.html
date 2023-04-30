@@ -1,0 +1,22 @@
+<div id="menu" class="sidebar col-8">
+    {% regroup object_list by eksponat as revije %}
+    <ul class="nav flex-column">
+        <li class="nav-item ">
+            <a class="nav-link {% if selected %}{% else %}active{% endif %}"  href="{% if root %}{{ root }}{% else %}/{% endif %}">
+                Vsi&nbsp;naslovi&nbsp;({{ object_list|length }})</a>
+        </li>
+        {% for revija in revije %}
+        <li class="nav-item ">
+            <a class="nav-link {% if selected == revija.grouper.tip %}active{% endif %}"  href="{{ root }}/{{ revija.grouper.tip }}/" 
+            revija="{{ revija.grouper }}">{{ revija.grouper }}&nbsp;({{ revija.list|length }})</a></li>{% endfor %}
+    </ul>    
+</div>
+
+<div id="years" class="sidebar col-4">
+        <ul class="nav flex-column">
+            {% regroup object_list|dictsort:"leto" by leto as newlist %}
+            {% for title in newlist %}
+            <li><a href="#{{ title.grouper }}">{{ title.grouper }}</a>&nbsp;({{ title.list|length }})</li>
+            {% endfor %}
+        </ul>    
+</div>
