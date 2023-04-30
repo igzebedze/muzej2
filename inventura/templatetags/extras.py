@@ -16,4 +16,4 @@ def revije_nav(tip, root, selected):
     object_list = Tiskovina.objects.all()
     if not selected:
         selected = object_list
-    return {'revije': object_list, 'selected': tip, 'root': root, 'object_list': selected }
+    return {'vserevije': object_list, 'selected': tip, 'root': root, 'object_list': selected }

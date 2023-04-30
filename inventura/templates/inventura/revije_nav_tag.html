@@ -1,6 +1,6 @@
 
 <div id="menu" class="sidebar col-8">
-    {% regroup object_list by eksponat as revije %}
+    {% regroup vserevije by eksponat as revije %}
     <ul class="nav flex-column nav-pills">
         <li class="nav-item {% if selected %}{% else %}active{% endif %}">
             <a class="nav-link {% if selected %}{% else %}active{% endif %}"  href="{% if root %}{{ root }}{% else %}/{% endif %}">
