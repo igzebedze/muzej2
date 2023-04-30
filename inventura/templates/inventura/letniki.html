@@ -1,76 +1,89 @@
+{% extends 'base.html' %}
 {% load static %}
-<!doctype html>
-<html lang="en" class="no-js  " >
-<head>
-    <style>
-        .box { width: 120px; float: left; padding: 10px;  }
-        .box img { box-shadow: 4px 4px black; }
-        h1, h2, hr { clear: both; }
-        #sidebar { width: 10%; position: fixed; top: 0px; background-color: bisque;}
-        #content { width: 90%; margin-left: 12%; margin-top: 120px; }
-        .nav { list-style-type: none; }
-        .nav li { float: left; padding: 10px; }
-        #top { position: fixed; width: 90%; top: 0px; margin-left: 10%;  background-color: bisque; }
-        #search { float: right; margin-right: 2em; }
-        #about { float: right; margin-right: 2em; font-size: 0.5em; margin-bottom: 0px; }
-    </style>
-    <meta charset="utf-8">
-    <title>Revije v knjižnici računalniškega muzeja</title>
-</head>
-<body>
-    <div id="sidebar">
-        <ul>
-            {% regroup object_list|dictsort:"leto" by leto as newlist %}
-            {% for title in newlist %}
-            <li><a href="#{{ title.grouper }}">{{ title.grouper }}</a> ({{ title.list|length }})</li>
-            {% endfor %}
-        </ul>    
-    </div>
-    <div id="top">
-        <h1>Arhiv tiskovin računalniškega muzeja
-            <span id="about"><a href="{{ root }}/oprojektu/">O projektu</a></span>
-            <span id="search">
+{% load l10n %}
+
+{% block title %}Revije v knjižnici računalniškega muzeja{% endblock %}
+
+{% block css %}
+        .box { width: 120px; float: left; padding: 10px; }
+        .box img { box-shadow: 4px 4px black; } 
+        h3, h4, hr { clear: both; }
+{% endblock %}
+
+{% block head %}
+        <meta charset="utf-8">
+{% endblock %}
+
+{% block content %}
+<div id="main" class="container-fluid">
+    <div class="row align-items-start">
+    <div id="head" class="col-3">
+        <div class="row">
+        <h3>Arhiv tiskovin računalniškega muzeja</h3>
+            <p id="about"><a href="{{ root }}/oprojektu/">O projektu</a>, <a href="https://www.racunalniski-muzej.si">Domov</a></p>
+            <p id="search">
                 <form method="get" action="{{ root }}" class="form" role="form">
                     {{ form.non_field_errors }}
                     <input type="search" name="q" value="{% if query %}{{ query }}{% endif %}" id="id_q">
                     <input type="submit" class="btn btn-primary" value="Iskanje">
                 </form>
-            </span>
-        </h1>
-        {% regroup object_list by eksponat as revije %}
-        <ul class="nav">
-            <li><a href="{% if root %}{{ root }}{% else %}/{% endif %}">Vse</a></li>
-            {% for revija in revije %}<li><a href="{{ root }}/{{ revija.grouper.tip }}/" 
-                revija="{{ revija.grouper }}">{{ revija.grouper }}</a> ({{ revija.list|length }})</li>{% endfor %}
-        </ul>    
+            </p>
+        <hr />
     </div>
-    <div id="content">
+    <div class="row">
+        <div id="menu" class="sidebar col-8">
+            {% regroup object_list by eksponat as revije %}
+            <ul class="nav flex-column">
+                <li class="nav-item ">
+                    <a class="nav-link {% if selected %}{% else %}active{% endif %}"  href="{% if root %}{{ root }}{% else %}/{% endif %}">
+                        Vsi&nbsp;naslovi&nbsp;({{ object_list|length }})</a>
+                </li>
+                {% for revija in revije %}
+                <li class="nav-item ">
+                    <a class="nav-link {% if selected == revija.grouper.tip %}active{% endif %}"  href="{{ root }}/{{ revija.grouper.tip }}/" 
+                    revija="{{ revija.grouper }}">{{ revija.grouper }}&nbsp;({{ revija.list|length }})</a></li>{% endfor %}
+            </ul>    
+        </div>
+
+        <div id="years" class="sidebar col-4">
+                <ul class="nav flex-column">
+                    {% regroup object_list|dictsort:"leto" by leto as newlist %}
+                    {% for title in newlist %}
+                    <li><a href="#{{ title.grouper }}">{{ title.grouper }}</a>&nbsp;({{ title.list|length }})</li>
+                    {% endfor %}
+                </ul>    
+        </div>
+    </div>
+</div><!-- end of head column -->
+
+<div id="content" class="col-9">
     {% for year in newlist %}
     <a name='{{ year.grouper }}'></a>
-    <h1>{{ year.grouper }}</h1>
-        {% regroup year.list|dictsort:"leto" by eksponat as letniki %}
+    <h3>{{ year.grouper }}</h3>
+    <hr />
+    {% regroup year.list|dictsort:"leto" by eksponat as letniki %}
         {% for leto in letniki %}
 
         <div class="{{ leto.grouper }}">
-        <h2>{{ leto.grouper }}</h2>
+        <h4 class="leto">{{ leto.grouper }}</h4>
         {% for object in leto.list|dictsort:"datum" %}
-        <div class="box {{ object.eksponat.id }}" revija="{{ object.eksponat.ime }}">
-            {% if user.is_authenticated %}
-            <a target="_blank" href="{{ root }}/{{ object.id }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
-            {% elif object.dovoljenje %}
-            <a target="_blank" href="{{ root }}/{{ object.id }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
-            {% else %}
-            <a target="_blank" href="{{ object.eksponat.uradnastran }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
-            {% endif %}
-            {% if object.datum %}<p>{{ object.datum|date:"E Y" }}</p>
-            {% else %}<p>{{ object.mesec}} - {{ object.leto }}</p>{% endif %}
-            <p>{{ object.pages }} strani</p>
-        </div>
+            <div class="box {{ object.eksponat.id }}" revija="{{ object.eksponat.ime }}">
+                {% if user.is_authenticated %}
+                <a target="_blank" href="{{ root }}/{{ object.id }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
+                {% elif object.dovoljenje %}
+                <a target="_blank" href="{{ root }}/{{ object.id }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
+                {% else %}
+                <a target="_blank" href="{{ object.eksponat.uradnastran }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
+                {% endif %}
+                {% if object.datum %}<p>{{ object.datum|date:"E Y" }}
+                {% else %}<p>{{ object.mesec}} - {{ object.leto }}{% endif %}
+                <br />{{ object.pages }} strani</p>
+            </div>
         {% endfor %}
         </div>
         {% endfor %}
         <hr />
     {% endfor %}
     </div>
-</body>
-</html>
+</div></div>
+{% endblock %}
