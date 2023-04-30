@@ -9,6 +9,7 @@
         .box img { box-shadow: 4px 4px black; } 
         h3, h4, hr { clear: both; }
         .sidebar, #head { background-color: #efefef; }
+        body { font-family: Roboto; }
 {% endblock %}
 
 {% block head %}
@@ -21,7 +22,7 @@
     <div id="head" class="col-3">
         <div class="row">
         <h3>Arhiv tiskovin računalniškega muzeja</h3>
-            <p id="about"><a href="{{ root }}/oprojektu/">O projektu</a>, <a href="https://www.racunalniski-muzej.si">Domov</a></p>
+            <p id="about"><a href="{{ root }}/oprojektu/">O projektu</a>, <a href="https://www.racunalniski-muzej.si">O muzeju</a></p>
             <p id="search">
                 <form method="get" action="{{ root }}" class="form" role="form">
                     {{ form.non_field_errors }}
