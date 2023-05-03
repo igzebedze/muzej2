@@ -41,15 +41,15 @@
 
 <div id="content" class="col-9">
     {% regroup object_list|dictsort:"leto" by leto as newlist %}
+    {% if selected %}<h2>{{ eksponat.ime }}</h2><p>{{ eksponat.opis }}</p>{% endif %}
     {% for year in newlist %}
     <a name='{{ year.grouper }}'></a>
     <h3>{{ year.grouper }}</h3>
-    <hr />
+    {% if selected %}{% else %}<hr />{% endif %}
     {% regroup year.list|dictsort:"leto" by eksponat as letniki %}
         {% for leto in letniki %}
-
-        <div class="{{ leto.grouper }}">
-        <h4 class="leto">{{ leto.grouper }}</h4>
+            <div class="{{ leto.grouper }}">
+        {% if selected %}{% else %}<h4 class="leto">{{ leto.grouper }}</h4>{% endif %}
         {% for object in leto.list|dictsort:"datum" %}
             <div class="box {{ object.eksponat.id }}" revija="{{ object.eksponat.ime }}">
                 {% if user.is_authenticated %}
@@ -66,7 +66,7 @@
         {% endfor %}
         </div>
         {% endfor %}
-        <hr />
+        {% if selected %}{% else %}<hr />{% endif %}
     {% endfor %}
     </div>
 

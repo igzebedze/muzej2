@@ -129,6 +129,7 @@ def revijaYearsView(request, tip):
 	context['domain'] = site
 	context['object_list'] = object_list
 	context['selected'] = tip
+	context['eksponat'] = Eksponat.objects.get(tip=tip)
 	return render(request, "inventura/letniki.html", context)
 
 class revijeYearsView(ListView):
