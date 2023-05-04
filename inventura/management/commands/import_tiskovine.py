@@ -51,7 +51,9 @@ class Command(BaseCommand):
 				# Novice_1978_12_18.pdf
 				# informatica-Vol_23,_No_3_1999.pdf 
 				# UI-1-1993.pdf
+				# ZIT-01-1955-0.pdf
 				patterns = (
+					".*(\d+)[-_](\d\d\d\d)[-_](\d+)\.pdf",	# generic with issue numbers in front
 					".*(\d\d\d\d)[-_](\d+)\.pdf",	# generic
 					".*(\d\d\d\d)[-_](\d+)_\d\d\.pdf", # ijs exact date format
 					".*?(\d+)[-_](\d\d\d\d)\.pdf",	# informatica month+year last format
@@ -74,6 +76,15 @@ class Command(BaseCommand):
 							if int(month) > 12:
 								month = 1
 							date = '%s-%s-%s' % (year, month, 1)
+						elif len(z.groups()) == 3:
+							issue = z.group(1)
+							a = int(z.group(2))
+							b = int(z.group(3))
+							year = max(a,b)
+							month = min(a,b)
+							if int(month) > 12:
+								month = 1
+							date = '%s-%s-%s' % (year, month, 1)
 
 						t, created = Tiskovina.objects.get_or_create(
 							pdf=pdf,
@@ -90,6 +101,8 @@ class Command(BaseCommand):
 								t.mesec = int(month)
 							if date:
 								t.datum = date
+							if issue:
+								t.stevilka = issue
 							t.save()
 							print ('success: ' + pdf)
 							break
