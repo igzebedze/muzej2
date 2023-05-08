@@ -13,7 +13,7 @@ def add_zeros(mixed):
 
 @register.inclusion_tag('inventura/revije_nav_tag.html')
 def revije_nav(tip, root, selected):
-    object_list = Tiskovina.objects.all()
+    object_list = Tiskovina.objects.all().order_by('eksponat')
     if not selected:
         selected = object_list
     return {'vserevije': object_list, 'selected': tip, 'root': root, 'object_list': selected }
