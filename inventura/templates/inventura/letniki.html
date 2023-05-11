@@ -26,7 +26,7 @@
         <h3>Arhiv tiskovin računalniškega muzeja</h3>
             <p id="about"><a href="{{ root }}/oprojektu/">O projektu</a>, <a href="https://www.racunalniski-muzej.si">O muzeju</a></p>
             <p id="search">
-                <form method="get" action="{{ root }}" class="form" role="form">
+                <form method="get" action="{{ root }}{% if selected %}/{{ selected }}/{% endif %}" class="form" role="form">
                     {{ form.non_field_errors }}
                     <input type="search" name="q" value="{% if query %}{{ query }}{% endif %}" id="id_q">
                     <input type="submit" class="btn btn-primary" value="Iskanje">

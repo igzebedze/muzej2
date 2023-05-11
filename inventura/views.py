@@ -121,6 +121,15 @@ def listki(request):
 def revijaYearsView(request, tip):
 	object_list = Tiskovina.objects.filter(eksponat__tip=tip)
 	context = {}
+	q = request.GET.get("q")
+	if q:
+		from haystack.query import SearchQuerySet
+		results = SearchQuerySet().filter(content=q).models(Stran)
+		revije = []
+		for o in results:
+			revije.append(o.object.tiskovina)
+		if len(revije) > 0:
+			object_list=revije
 	site = request.META['HTTP_HOST']
 	if site == 'revije.muzej.si':
 		context['root'] = ''
