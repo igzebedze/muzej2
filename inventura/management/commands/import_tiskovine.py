@@ -64,6 +64,7 @@ class Command(BaseCommand):
 					z = re.match(pattern, pdf)
 					if z:
 						print ("matched: " + pattern)
+						issue = 0
 						if len(z.groups()) == 1:
 							year = z.group(1)
 							date = '%s-%s-%s' % (year, 1, 1)
@@ -101,7 +102,7 @@ class Command(BaseCommand):
 								t.mesec = int(month)
 							if date:
 								t.datum = date
-							if issue:
+							if issue != 0:
 								t.stevilka = issue
 							t.save()
 							print ('success: ' + pdf)
