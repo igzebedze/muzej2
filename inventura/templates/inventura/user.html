@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% load extras %}
 
+{% block content %}
 <h1>pozdravljen {{ user }}</h1>
 <p>imas dostop do:</p>
 <ul>
     {% if user|has_group:"revije" %}<li><a href="https://revije.muzej.si">arhiv revij</a></li>{% endif %}
     {% if user.is_staff %}<li><a href="https://zbirka.muzej.si/admin/">admin</a></li>{% endif %}
 </ul>
+{% endblock %}
