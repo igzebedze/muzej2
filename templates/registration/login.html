@@ -37,10 +37,6 @@
 </form>
 
 <p>{% blocktrans %}<a href="{{ auth_pwd_reset_url }}">Forgot your password?</a>{% endblocktrans %}</p>
-{# NOTE: settings is not put into the template by default, you have to override the login view with extra_context #}
-{# See https://docs.djangoproject.com/en/2.2/topics/auth/default/#django.contrib.auth.views.LoginView #}
-{% if settings.REGISTRATION_OPEN %}
-    <p>{% blocktrans %}<a href="{{ register_url }}">Need an account</a>?{% endblocktrans %}</p>
-{% endif %}
+<p>{% blocktrans %}<a href="{{ register_url }}">Need an account</a>?{% endblocktrans %}</p>
 
 {% endblock %}
