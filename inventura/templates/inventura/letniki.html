@@ -26,7 +26,9 @@
         <h3>Arhiv tiskovin računalniškega muzeja</h3>
             <p id="about"><a href="{{ root }}/oprojektu/">O projektu</a>, 
                 <a target="_blank" href="https://www.racunalniski-muzej.si">O muzeju</a>, 
-                {% if user.is_authenticated %}{{ user }}{% else %}
+                {% if user.is_authenticated %}
+                <a target="_blank" href="https://zbirka.muzej.si/accounts/profile/">{{ user }}</a>
+                    {% else %}
                 <a target="_blank" href="https://zbirka.muzej.si/accounts/login/">Prijava</a>
                 {% endif %}
             </p>

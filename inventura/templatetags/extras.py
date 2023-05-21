@@ -17,3 +17,7 @@ def revije_nav(tip, root, selected):
     if not selected:
         selected = object_list
     return {'vserevije': object_list, 'selected': tip, 'root': root, 'object_list': selected }
+
+@register.filter(name='has_group') 
+def has_group(user, group_name):
+    return user.groups.filter(name=group_name).exists()
