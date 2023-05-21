@@ -30,7 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'django_hosts',
     'haystack',
-    'user_visit'
+    'user_visit',
+    'django_registration'
 ]
 
 MIDDLEWARE = [
@@ -116,6 +117,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 SESSION_COOKIE_DOMAIN=".muzej.si"
 SESSION_COOKIE_NAME = 'muzejsi'
+
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
 
 # Local Settings
 try:
