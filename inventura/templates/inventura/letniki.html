@@ -24,7 +24,10 @@
     <div id="head" class="col-3 ">
         <div class="row">
         <h3>Arhiv tiskovin računalniškega muzeja</h3>
-            <p id="about"><a href="{{ root }}/oprojektu/">O projektu</a>, <a href="https://www.racunalniski-muzej.si">O muzeju</a></p>
+            <p id="about"><a href="{{ root }}/oprojektu/">O projektu</a>, 
+                <a href="https://www.racunalniski-muzej.si">O muzeju</a>, 
+                <a href="/accounts/login/">Prijava</a>
+            </p>
             <p id="search">
                 <form method="get" action="{{ root }}{% if selected %}/{{ selected }}/{% endif %}" class="form" role="form">
                     {{ form.non_field_errors }}
@@ -32,7 +35,6 @@
                     <input type="submit" class="btn btn-primary" value="Iskanje">
                 </form>
             </p>
-            <p><a href="/accounts/login/">Prijava</a></p>
         <hr />
     </div>
     <div class="row">
