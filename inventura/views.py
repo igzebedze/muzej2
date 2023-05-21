@@ -205,6 +205,10 @@ def revijaThumbsView(request, pk):
 	}
 	return render(request, 'inventura/thumbs.js', context, content_type='text/javascript')
 
+@login_required
+def user_profile(request):
+	return render(request, 'inventura/user.html', {'user': request.user})
+
 class KategorijaList(ListView):
 	model = Kategorija
 
