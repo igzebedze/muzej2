@@ -4,7 +4,7 @@
     <ul class="nav flex-column nav-pills">
         <li class="nav-item {% if selected %}{% else %}active{% endif %}">
             <a class="nav-link {% if selected %}{% else %}active{% endif %}"  href="{% if root %}{{ root }}{% else %}/{% endif %}">
-                Vsi&nbsp;naslovi&nbsp;({{ object_list|length }})</a>
+                Vsi&nbsp;naslovi&nbsp;({{ vserevije.count }})</a>
         </li>
         {% for revija in revije %}
         <li class="nav-item {% if selected == revija.grouper.tip %}active{% endif %}">
