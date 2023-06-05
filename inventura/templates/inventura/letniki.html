@@ -80,3 +80,11 @@
 <!-- end container and row -->    
 </div></div>
 {% endblock %}
+
+{% block endbody %}
+    <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+    <script type="text/javascript">
+        Paddle.Environment.set('sandbox');
+        Paddle.Setup({ vendor: 12563 });
+    </script>
+{% endblock %}

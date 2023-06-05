@@ -31,7 +31,8 @@ INSTALLED_APPS = [
     'django_hosts',
     'haystack',
     'user_visit',
-    'django_registration'
+    'django_registration',
+    'djpaddle'
 ]
 
 MIDDLEWARE = [
@@ -63,6 +64,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'djpaddle.context_processors.vendor_id',
+                'djpaddle.context_processors.vendor_id',
             ],
         },
     },
@@ -119,6 +122,8 @@ SESSION_COOKIE_DOMAIN=".muzej.si"
 SESSION_COOKIE_NAME = 'muzejsi'
 
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
+
+
 
 # Local Settings
 try:
