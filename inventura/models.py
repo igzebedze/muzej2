@@ -327,6 +327,10 @@ class Eksponat(models.Model):
 		return "%d" % self.primerek_set.count()
 	st_primerkov.short_description = u'Št primerkov'
 
+	def st_digital(self):
+		return "%d" % self.tiskovina_set.count()
+	st_digital.short_description = u'Št digital'
+
 	def __str__(self):
 		return self.ime
 

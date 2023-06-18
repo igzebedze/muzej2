@@ -108,7 +108,7 @@ class EksponatAdmin(SimpleHistoryAdmin):
 	list_select_related = True
 	list_editable = ('ime', 'tip', 'kategorija',)
 	#inlines = [ PrimerekInline, ]
-	list_display = ('proizvajalec', 'ime', 'tip', 'kategorija',  'leto_proizvodnje', 'st_primerkov')
+	list_display = ('proizvajalec', 'ime', 'tip', 'kategorija',  'leto_proizvodnje', 'st_primerkov', 'st_digital')
 	list_filter = ('kategorija', 'proizvajalec')
 	search_fields = ('ime', 'tip')
 	date_hierarchy = 'created_at'
