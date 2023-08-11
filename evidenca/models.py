@@ -20,6 +20,11 @@ class vir(models.Model):
 			('Domača izdelava','Domača izdelava'),
 			('Programiranje','Programiranje'),
 			('Splošno','Splošno'),
+			('Bančništvo','Bančništvo'),
+			('Telekomunikacije','Telekomunikacije'),
+			('Mikroelektronika','Mikroelektronika'),
+			('Avtomatika','Avtomatika'),
+			('Mikroračunalniki','Mikroračunalniki')
 	)
 	sifra = models.CharField(max_length=15, blank=True)
 	url = models.URLField(blank=True, null=True,max_length=1000)
