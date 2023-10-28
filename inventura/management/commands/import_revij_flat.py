@@ -53,7 +53,10 @@ class Command(BaseCommand):
 					vhod = Vhod.objects.get(id=(int(v)))
 
 				try:
-					e = Eksponat.objects.get(ime=eksponat)
+					if eksponat=='Joker':
+						e = Eksponat.objects.get(pk=465)	# we have two that need to be merged
+					else:
+						e = Eksponat.objects.get(ime=eksponat)
 				except:
 					e = Eksponat(
 						ime=eksponat,
