@@ -15,6 +15,8 @@
 40000-41000	inventar
 	0-95	batch 1
 
+100000-101500 	knjige
+
 # supplemental prints
 	file: supplemental1.txt
 

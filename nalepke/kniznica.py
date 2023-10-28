@@ -51,7 +51,8 @@ def main():
 	subprocess.call([lnpath, 
 		'-d', 'BREAK',
 		'-c', '-i', codefile.name,
-		'-o', lnout.name] + lnargs)
+		'-p', 'b8151095',
+		'-o', lnout.name])
 
 	outf = open("nalepke.ps", "wb")
 
