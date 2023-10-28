@@ -19,10 +19,10 @@ class RevijeIndex(indexes.ModelSearchIndex, indexes.Indexable):
         self.prepared_data['text'] = ' '.join([lemmatizer.lemmatize(token) for token in tokens])
         return self.prepared_data
 
-class PredmetiIndex(indexes.ModelSearchIndex, indexes.Indexable):
-    class Meta:
-        model = Primerek
-        exclude = ['dnevnik', 'created_at', 'updated_at']
+#class PredmetiIndex(indexes.ModelSearchIndex, indexes.Indexable):
+#    class Meta:
+#        model = Primerek
+#        exclude = ['dnevnik', 'created_at', 'updated_at']
         #fields = ['eksponat__opis', 'eksponat__ime', 'eksponat__kategorija', 'zgodovina', 'stanje', 'eksponat__tip', 'vhodni_dokument__opis']
 
 #    def prepare(self, obj):
