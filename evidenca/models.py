@@ -84,7 +84,8 @@ class racunalnik(models.Model):
 		('me', 'Mini računalnik, birojski/poslovni računalnik'),
 		('pe', 'Procesni računalnik'),
 		('mic', 'Mikro računalnik (domači/osebni/ostali)'),
-		('cal', 'Programabilni kalkulator')
+		('cal', 'Programabilni kalkulator'),
+		('smin', 'SUPERMINI')
 	)
 	GENERACIJA_CHOICES = (
 		('A','Predgeneracija računskih strojev (releji + vakuumske elektronke)'),
