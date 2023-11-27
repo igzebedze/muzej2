@@ -32,7 +32,14 @@ INSTALLED_APPS = [
     'haystack',
     'user_visit',
     'django_registration',
-    'djpaddle'
+    'djpaddle',
+    'tailwind',
+	'theme'
+]
+
+TAILWIND_APP_NAME = 'theme'
+INTERNAL_IPS = [
+    "127.0.0.1",
 ]
 
 MIDDLEWARE = [
@@ -65,7 +72,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'djpaddle.context_processors.vendor_id',
-                'djpaddle.context_processors.vendor_id',
+                'djpaddle.context_processors.sandbox',
             ],
         },
     },

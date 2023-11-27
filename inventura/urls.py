@@ -90,6 +90,7 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/profile/', user_profile),
     path("paddle/", include("djpaddle.urls", namespace="djpaddle")),
+    path("themetest/", include(("theme.urls", 'theme'), namespace='theme')),
 ] 
 if settings.DEBUG is True:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

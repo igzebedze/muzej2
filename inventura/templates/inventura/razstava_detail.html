@@ -1,3 +1,15 @@
+{% load static tailwind_tags %}
+
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    {% tailwind_css %}
+</head>
+
 <h3>Razstava / zbirka</h3>
 <h1>{{ object.naslov }}</h1>
 <h2>{{ object.otvoritev }} - {{ object.zakljucek }}, {{ object.lokacija }}</h2>
@@ -23,5 +35,5 @@
 
 {% for primerek in object.primerki.all %}
 	<h2>{{ primerek }}</a></h2>
-	{{ primerek.
+	<img src='{{ primerek.fotografija }}' />
 {% endfor %}
