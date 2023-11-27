@@ -250,6 +250,26 @@ class pogovor(models.Model):
 	class Meta:
 		verbose_name_plural = "Pogovori"
 
+class zbiratelj(models.Model):
+	oseba = models.ForeignKey('inventura.Oseba', on_delete=models.PROTECT)
+	lokacija = models.ForeignKey('inventura.Lokacija', blank=True, on_delete=models.PROTECT)
+	url = models.URLField(blank=True, null=True,max_length=1000)
+	eksponat = models.ManyToManyField('inventura.Eksponat', blank=True)
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
+
+	def __str__(self):
+		return self.oseba.ime
+
+	def eksponatov(self):
+		return self.eksponat.count()
+	def kraj(self):
+		return self.lokacija.kraj
+
+	class Meta:
+		verbose_name_plural = "Zbiratelji"
+
+
 ''' todo
 v tem modelu naj bi hranili vse obstojece slovenske programe, ne glede na vrsto dokaza
 class program(models.Model):

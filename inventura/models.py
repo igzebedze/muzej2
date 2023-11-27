@@ -72,10 +72,10 @@ class Kveri(models.Model):
 		verbose_name_plural = "Kveriji"
 		
 class Lokacija(models.Model):
-	ime = models.CharField(
-			max_length=255)
-
+	ime = models.CharField(max_length=255)
 	naslov = models.TextField(blank=True)
+	kraj = models.CharField(max_length=255, blank=True)
+	pokrajina = models.CharField(max_length=255, blank=True)
 	
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
@@ -89,6 +89,7 @@ class Lokacija(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Lokacije"
+		ordering = ['ime']
 
 def get_default_lokacija():
 	return Lokacija.objects.get(ime="Celovška 111")
@@ -110,6 +111,7 @@ class Oseba(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Osebe"
+		ordering = ['ime']
 
 class Vhod(models.Model):
 	izrocitelj = models.ForeignKey(Oseba, blank=True, null=True, on_delete=models.PROTECT,
@@ -225,6 +227,7 @@ class Proizvajalec(models.Model):
 
 	class Meta:
 		verbose_name_plural = "Proizvajalci"
+		ordering = ['ime']
 
 class Eksponat(models.Model):
 	ime = models.CharField(
@@ -332,7 +335,7 @@ class Eksponat(models.Model):
 	st_digital.short_description = u'Št digital'
 
 	def __str__(self):
-		return self.ime
+		return "%s - %s" % (self.ime, self.tip)
 
 	def get_absolute_url(self):
 		return "/eksponat/%d/" % (self.id,)
@@ -441,8 +444,6 @@ class Primerek(models.Model):
 	def st_razstav(self):
 		return "%d" % self.razstava_set.count()
 	st_razstav.short_description = u'Št razstav'
-
-	
 
 	class Meta:
 		verbose_name_plural = "Primerki"

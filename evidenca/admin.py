@@ -1,5 +1,6 @@
 from django.contrib import admin
 from evidenca import models
+from inventura import models as inventura
 from django.utils.html import format_html
 from django.contrib.admin import SimpleListFilter
 
@@ -94,6 +95,18 @@ class DosezekAdmin(admin.ModelAdmin):
     list_filter = ('vrsta', 'pomen', )
     filter_horizontal = ('eksponat',)
 
+#class EksponatInline(admin.StackedInline):
+ #   model = inventura.Eksponat.through
+  #  filter_horizontal = ('organizacija','viri')
+
+class ZbirateljAdmin(admin.ModelAdmin):
+    list_display = ('oseba', 'kraj', 'eksponatov')
+    list_filter = ('lokacija__kraj',)
+    filter_horizontal = ('eksponat',)
+#    inlines = [
+ #       EksponatInline,
+  #  ]
+
 #class SluzbaAdmin(admin.ModelAdmin):
 #    list_display = ('naziv', 'organizacija','od', 'do', 'naziv')
     #filter_horizontal = ('organizacija',)
@@ -104,5 +117,6 @@ admin.site.register(models.oseba, OsebaAdmin)
 admin.site.register(models.racunalnik, RacunalnikAdmin)
 admin.site.register(models.pogovor, PogovorAdmin)
 admin.site.register(models.vir, VirAdmin)
+admin.site.register(models.zbiratelj, ZbirateljAdmin)
 
 #admin.site.register(models.sluzba, SluzbaAdmin)
