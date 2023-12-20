@@ -312,9 +312,9 @@ var load = function load() {
             if (obj.eksponat.tip) out += (slo ? "\nTip: " : "\nModel: ") + obj.eksponat.tip;
             if (obj.eksponat.proizvajalec) out += (slo ? "\nProizvajalec: " : "\nManufacturer: ") + obj.eksponat.proizvajalec;
             if (obj.leto_proizvodnje) out += (slo ? "\nLeto: " : "\nYear: ") + obj.leto_proizvodnje;
-            if (obj.eksponat.opis) out += (slo ? "\nOpis: " : "\nDescription: ") + obj.eksponat.opis;
+            if (obj.eksponat.opis) out += (slo ? "\nOpis: " : "\nDescription: ") + obj.eksponat.opis; // In future, API could return separate property for description in english
             if (obj.stanje) out += (slo ? "\nStanje: " : "\nCondition: ") + obj.stanje;
-            if (obj.zgodovina) out += (slo ? "\nZgodovina: " : "\nHistory: ") + obj.zgodovina;
+            if (obj.zgodovina) out += (slo ? "\nZgodovina: " + obj.zgodovina : ""); // Don't display 'history' at all if user has choosen ENGLISH
             if (obj.donator) out += (slo ? "\nEksponat je prijazno doniral/-a " : "\nKindly donated by ") + obj.donator.replace(',', '');
 
             if (obj.fotografija) {
