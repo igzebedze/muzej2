@@ -452,9 +452,11 @@ def premik(request):
 			polica = form.cleaned_data['polica']
 
 			id_set = set()
+# support the url structure from our QR codes on the stickers
 			for id in re.findall("http://racunalniski-muzej.si/i/([0-9]+)/?", zapisnik, re.I):
 				id_set.add(int(id))
-			for id in re.findall("^([0-9]+?)$", zapisnik, re.M):
+# also support manual list of ids, ignore anything after a number
+			for id in re.findall("^([0-9]+).*?$", zapisnik, re.M):
 				id_set.add(int(id))
 
 			primerki = []
