@@ -72,7 +72,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'djpaddle.context_processors.vendor_id',
-                'djpaddle.context_processors.sandbox',
+ #               'djpaddle.context_processors.sandbox',
             ],
         },
     },
