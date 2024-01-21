@@ -7,7 +7,7 @@ from simple_history.admin import SimpleHistoryAdmin
 from django.contrib.admin import site
 import adminactions.actions as actions
 from haystack.admin import SearchModelAdmin
-
+from django.forms import ModelForm
 # register all adminactions
 actions.add_to_site(site)
 
@@ -87,7 +87,46 @@ def batch_update_view(model_admin, request, queryset, field_name):
 				'media': model_admin.media,
 			}
 		)
-	
+
+def batch_add_related_view(model_admin, request, queryset, field_name):
+
+		# removes all other fields from the django admin form for a model
+	def remove_fields(form):
+		for field in list(form.base_fields.keys()):
+			if not field == field_name:
+				del form.base_fields[field]
+		return form
+
+		# the return value is the form class, not the form class instance
+	form_class = remove_fields(model_admin.get_form(request))
+
+	if request.method == 'POST':
+		form = form_class()
+
+		# the view is already called via POST from the django admin changelist
+		# here we have to distinguish between just showing the intermediary view via post
+		# and actually confirming the bulk edits
+		# for this there is a hidden field 'form-post' in the html template
+		if 'form-post' in request.POST:
+			form = form_class(request.POST)
+			if form.is_valid():
+				exhibition = models.Razstava.objects.last()
+				selected = queryset.values_list("pk", flat=True)
+				for s in selected:
+					exhibition.primerki.add(s)
+				model_admin.message_user(request, "Added {} items to {}".format(queryset.count(), exhibition))
+				return redirect(request.get_full_path())
+
+	return render(
+			request,
+			'admin/batch_editing_intermediary.html',
+			context={
+				'form': form,
+				'items': queryset,
+				'media': model_admin.media,
+			}
+		)
+
 class PregledAdmin(SimpleHistoryAdmin):
 	list_display = ('primerek', 'izvajalec', 'datum', 'deluje')
 	list_filter = ('izvajalec', 'deluje')
@@ -153,14 +192,14 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 	raw_id_fields = ("povezani",)
 	list_display = ('stevilka', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'st_razstav', 'ima_vhod')
 #	list_filter = ('lokacija', VhodiCountListFilter, 'eksponat__kategorija')
-	list_filter = ('eksponat__kategorija', 'lokacija')
+	list_filter = ('eksponat__kategorija', 'lokacija', 'polica')
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')
 	search_fields = ('inventarna_st', 'serijska_st', 'eksponat__ime', 'eksponat__proizvajalec__ime', 'zgodovina', 'stanje')
 	inlines = [ RazstaveAdmin, PregledInline ]
 	date_hierarchy = 'datum_inventarizacije'
 	#date_hierarchy = 'leto_proizvodnje'
 	autocomplete_fields = ['eksponat']	
-	actions = ['spremeni_eksponat', 'premakni_polico', 'naredi_vhod']
+	actions = ['spremeni_eksponat', 'premakni_polico', 'naredi_vhod', 'dodaj_razstavi']
 
 	def save_model(self, request, obj, form, change):
 		if not change:
@@ -176,6 +215,7 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 			field_name='eksponat',
 		)
 	spremeni_eksponat.short_description = "Spremeni eksponat izbranim primerkom"
+	
 	def premakni_polico(self, request, queryset):
 		return batch_update_view(
 			model_admin=self,
@@ -185,6 +225,7 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 			field_name='polica',
 		)
 	premakni_polico.short_description = "Nastavi polico izbranim primerkom"
+	
 	def naredi_vhod(self, request, queryset):
 		return batch_update_view(
 			model_admin=self,
@@ -194,6 +235,19 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 			field_name='vhodni_dokument',
 		)
 	naredi_vhod.short_description = "Nastavi vhodni dokument"
+	
+	def dodaj_razstavi(self, request, queryset):
+		#selected = queryset.values_list("pk", flat=True)
+		#exhibition = models.Razstava.objects.last()
+		#exhibition.primerki.add(selected)
+		return batch_add_related_view(
+			model_admin=self,
+			request=request,
+			queryset=queryset,
+			# this is the name of the field on the YourModel model
+			field_name='primerki',
+		)
+	dodaj_razstavi.short_description = "Dodaj oznacene primerke v zadnjo razstavo"
 		
 class VhodAdmin(SimpleHistoryAdmin):
 	list_display = ('stevilka', 'lastnik', 'razlog',  'prevzel', 'cas_prevzema', 'inventorizirano')
