@@ -1,5 +1,5 @@
 {% load static tailwind_tags %}
-
+{% load extras %}
 <head>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,7 +32,7 @@
 		{% for primerek in object.primerki.all %}
 
 		<div class="bg-white rounded-lg border p-4">
-			{% if primerek.fotografija %}<img src='{{ primerek.fotografija }}' class="w-full h-48 rounded-md object-cover" />{% endif %}
+			{% if primerek.fotografija %}<img src='{{ primerek.fotografija.url }}' class="w-full h-48 rounded-md object-cover" />{% endif %}
 			<div class="px-1 py-4">
 			  <div class="font-bold text-xl mb-2">
 				<a href="{{ primerek.eksponat.get_absolute_url }}">{{ primerek.eksponat.ime }} 
@@ -42,10 +42,10 @@
 				<p>{{ primerek.eksponat.kategorija }}</p>
 				<p>{{ primerek.eksponat.opis }}</p>
 				<ul>
-					{% if primerek.eksponat.wikipedia %}<li><a href="{{ primerek.eksponat.wikipedia }}">Wikipedia</a></li>{% endif %}
-					{% if primerek.eksponat.oldcomputers %}<li><a href="{{ primerek.eksponat.oldcomputers }}">Druge zbirke</a></li>{% endif %}
-					{% if primerek.eksponat.uradnastran %}<li><a href="{{ primerek.eksponat.uradnastran }}">Uradna stran</a></li>{% endif %}
-					{% if primerek.eksponat.vir %}<li><a href="{{ primerek.eksponat.vir }}">Drugi viri</a></li>{% endif %}
+					{% if primerek.eksponat.wikipedia %}<li><a class="text-blue-500 hover:underline" href="{{ primerek.eksponat.wikipedia }}">-> Wikipedia</a></li>{% endif %}
+					{% if primerek.eksponat.oldcomputers %}<li><a class="text-blue-500 hover:underline" href="{{ primerek.eksponat.oldcomputers }}">-> Druge zbirke</a></li>{% endif %}
+					{% if primerek.eksponat.uradnastran %}<li><a class="text-blue-500 hover:underline" href="{{ primerek.eksponat.uradnastran }}">-> Uradna stran</a></li>{% endif %}
+					{% if primerek.eksponat.vir %}<li><a class="text-blue-500 hover:underline" href="{{ primerek.eksponat.vir }}">-> Drugi viri</a></li>{% endif %}
 				</ul>
 				{% if primerek.donator %}<p>Donator: {{ primerek.donator }}</p>{% endif %}
 				
