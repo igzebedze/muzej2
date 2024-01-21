@@ -15,9 +15,7 @@
 <h2>{{ object.otvoritev }} - {{ object.zakljucek }}, {{ object.lokacija }}</h2>
 
 <p>{{ object.opis }}</p>
-{% if user.is_authenticated %}
-        <p><a target="_blank" href="/admin/inventura/razstava/{{ object.id }}/change/">Uredi</a></p>       
-{% endif %}    
+{% if user.is_authenticated %}<p><a target="_blank" href="/admin/inventura/razstava/{{ object.id }}/change/">Uredi</a></p>{% endif %}    
 
 <h4>Avtorji</h4>
 <ul>
@@ -42,6 +40,7 @@
 			{% if primerek.eksponat.vir %}<li><a href="{{ primerek.eksponat.vir }}">Drugi viri</a></li>{% endif %}
 		</ul>
 		{% if primerek.donator %}<p>Donator: {{ primerek.donator }}</p>{% endif %}
+		{% if user.is_authenticated %}<p><a target="_blank" href="/admin/inventura/primerek/{{ primerek.pk }}/change/">Uredi</a></p>{% endif %}    
 	</li>
 	{% endfor %}
 </ul>
