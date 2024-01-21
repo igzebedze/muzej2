@@ -29,11 +29,19 @@
 <h4>Kazalo</h4>
 <ul>
 	{% for primerek in object.primerki.all %}
-	<li><a href="{{ primerek.eksponat.get_absolute_url }}">{{ primerek }}</a></li>
+	<li class='item'>
+		<p>{{ primerek.eksponat.kategorija }}</p>
+		{% if primerek.fotografija %}<img src='{{ primerek.fotografija }}' />{% endif %}
+		<a href="{{ primerek.eksponat.get_absolute_url }}">{{ primerek.eksponat.ime }} 
+			{% if primerek.leto_proizvodnje %}({{ primerek.leto_proizvodnje }}){% endif %}</a>
+		<p>{{ primerek.eksponat.opis }}</p>
+		<ul>
+			{% if primerek.eksponat.wikipedia %}<li><a href="{{ primerek.eksponat.wikipedia }}">Wikipedia</a></li>{% endif %}
+			{% if primerek.eksponat.oldcomputers %}<li><a href="{{ primerek.eksponat.oldcomputers }}">Druge zbirke</a></li>{% endif %}
+			{% if primerek.eksponat.uradnastran %}<li><a href="{{ primerek.eksponat.uradnastran }}">Uradna stran</a></li>{% endif %}
+			{% if primerek.eksponat.vir %}<li><a href="{{ primerek.eksponat.vir }}">Drugi viri</a></li>{% endif %}
+		</ul>
+		{% if primerek.donator %}<p>Donator: {{ primerek.donator }}</p>{% endif %}
+	</li>
 	{% endfor %}
 </ul>
-
-{% for primerek in object.primerki.all %}
-	<h2>{{ primerek }}</h2>
-	<img src='{{ primerek.fotografija }}' />
-{% endfor %}

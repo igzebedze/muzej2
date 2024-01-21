@@ -104,7 +104,7 @@
 {% endif %}    
 
 <h3>Primerki</h3>
-{% ifequal object.kategorija.ime "Revija" %}
+{% if object.kategorija.ime == "Revija" %}
   		{% regroup object.primerek_set.all by leto_proizvodnje as primerki %}
   		<table>
   		{% for l in primerki|dictsort:"grouper" %}
@@ -135,7 +135,7 @@
 	</li>
 	{% endfor %}
 </ul>
-{% endifequal %}
+{% endif %}
 
 </body>
 </html>
