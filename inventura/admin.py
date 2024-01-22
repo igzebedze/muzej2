@@ -266,7 +266,7 @@ class VhodAdmin(SimpleHistoryAdmin):
 
 class RazstavaAdmin(SimpleHistoryAdmin):
 	filter_horizontal = ('primerki','avtorji')
-	list_display = ('naslov', 'otvoritev', 'lokacija')
+	list_display = ('naslov', 'otvoritev', 'lokacija', 'image_tag')
 	search_fields = ('naslov', 'lokacija', 'opis', 'naslov', 'avtorji',)
 	list_filter = ('lokacija',)
 	date_hierarchy = 'otvoritev'

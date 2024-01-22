@@ -579,6 +579,14 @@ class Razstava(models.Model):
 		return "%s, %s, %s" % (self.naslov, self.lokacija, self.otvoritev)
 	def get_absolute_url(self):
 		return "/razstava/%d/" % (self.pk,)
+	def image_tag(self):
+		from django.utils.html import escape
+		if self.fotografija:
+			return mark_safe(u'<img style="max-height: 150px" src="%s" />' % escape(self.fotografija.url))
+		else:
+			return mark_safe(u'<img src="" />')
+	image_tag.short_description = 'Image'
+	image_tag.allow_tags = True
 	class Meta:
 		verbose_name_plural = "Razstave"
     
