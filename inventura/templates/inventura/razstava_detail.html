@@ -1,166 +1,179 @@
 {% load static tailwind_tags %}
 {% load extras %}
+
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    {% tailwind_css %}
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet" />
+	{% tailwind_css %}
 </head>
- 
-<body class="bg-gray-200">
 
-<!-- start hero -->
+<body class="bg-gray-200 pt-[90px] lg:pt-[115px]">
 
-	<div class="lg:px-6 2xl:px-0 clear-both bg-white">
-		<div class="container mx-auto relative z-20">
-			<nav class="w-full absolute">
-				<div class="hidden lg:flex w-full f-f-p justify-between items-center py-6 relative">
-					<div class="w-2/3" aria-label="pivot. logo" role="img">
-						<img class="dark:bg-white pb-1 px-2" width="135" 
-							 src="https://www.racunalniski-muzej.si/wp-content/uploads/2019/01/logo20-header2.png" alt="logo"/>     
-					</div>
-					<div class="md:w-1/2 xl:w-1/3">
-						<ul class="flex justify-between w-full items-center text-gray-600 ">
-							<li class="border-b-4 border-indigo-600 pb-1">
-								<a href="https://www.racunalniski-muzej.si">Domača stran</a>
-							</li>
-							<li class="border-b-4 hover:border-indigo-600 border-transparent pb-1">
-								<a href="https://www.racunalniski-muzej.si/razstave/">Razstave</a>
-							</li>
-							<li class="border-b-4  hover:border-indigo-600 border-transparent pb-1">
-								<a href="https://zbirka.muzej.si">Iskalnik</a>
-							</li>
-							<li class="border-b-4  hover:border-indigo-600 border-transparent pb-1">
-								<a href="https://www.racunalniski-muzej.si/category/zgodovina/">Raziskave</a>
-							</li>
-							<li class="border-b-4  hover:border-indigo-600 border-transparent pb-1">
-								<a href="https://www.racunalniski-muzej.si/nasa-izkaznica/">Izkaznica</a>
-							</li>
-						</ul>
-					</div>
+	<header class="fixed h-[90px] top-0 left-0 right-0 w-full z-30 bg-white drop-shadow lg:h-[115px]">
+		<div class="h-3 bg-gradient"></div>
+		<div class="container mx-auto">
+			<div class="flex p-3 justify-between items-center lg:p-6">
+				<a href="https://www.racunalniski-muzej.si" class="block max-w-[100px]">
+					<img class="block" class="w-full"
+						src="https://www.racunalniski-muzej.si/wp-content/uploads/2019/01/logo20-header2.png"
+						alt="Računalniški muzej" />
+				</a>
+				<nav id="navigation"
+					class="fixed hidden bg-white z-40 top-[90px] left-0 h-lvh w-full text-lg font-semibold lg:flex lg:static lg:w-auto lg:h-auto">
+					<a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-orange"
+						href="https://www.racunalniski-muzej.si">Domača stran</a>
+					<a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-pink"
+						href="https://www.racunalniski-muzej.si/razstave/">Razstave</a>
+					<a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-gray-1"
+						href="https://zbirka.muzej.si">Iskalnik</a>
+					<a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-gray-3"
+						href="https://www.racunalniski-muzej.si/category/zgodovina/">Raziskave</a>
+					<a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-green"
+						href="https://www.racunalniski-muzej.si/nasa-izkaznica/">Izkaznica</a>
+				</nav>
+				<div id="navigation-trigger"
+					class="flex items-center justify-center w-[40px] h-[40px] cursor-pointer lg:hidden">
+					<svg aria-haspopup="true" aria-label="Main Menu" xmlns="http://www.w3.org/2000/svg"
+						class="show-m-menu icon icon-tabler icon-tabler-menu" width="28" height="28" viewBox="0 0 24 24"
+						stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+						stroke-linejoin="round">
+						<path stroke="none" d="M0 0h24v24H0z"></path>
+						<line x1="4" y1="8" x2="20" y2="8"></line>
+						<line x1="4" y1="16" x2="20" y2="16"></line>
+					</svg>
 				</div>
-			</nav>
-			<nav class="lg:hidden">
-				<div class="flex py-6 justify-between items-center px-4">
-					<div aria-label="pivot. Logo" role="img">
-						<img class="pb-1 px-2" width="135" 
-							 src="https://www.racunalniski-muzej.si/wp-content/uploads/2019/01/logo20-header2.png" alt="logo"/>
-					</div>
-					<div class="visible flex items-center">
-						<button id="open" class="xl:hidden dark:bg-white focus:ring-2 focus:outline-none focus:ring-gray-600" onclick="MenuHandler(true)" >
-							<img onclick="MenuHandler(true)" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left_aligned_with_cta_and_placeholder-svg2.svg" alt="menuhandler"/>
-							
-						</button>
-						<ul id="list" class="hidden p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-16 md:mt-16">
-							<li class="flex cursor-pointer text-gray-600  text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-								<a href="javascript:void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-gray-600">
-									<span class="font-bold">Home</span>
-								</a>
-							</li>
-							<li class="flex cursor-pointer text-gray-600  text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
-								<a href="javascript:void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-gray-600">
-									<span class="font-bold">Stats</span>
-								</a>
-							</li>
-							<li class="flex cursor-pointer text-gray-600  text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-								<a href="javascript:void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-gray-600">
-									<span class="font-bold">Coins</span>
-								</a>
-							</li>
-							<li class="flex cursor-pointer text-gray-600  text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
-								<a href="javascript:void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-gray-600">
-									<span class="font-bold">Blog</span>
-								</a>
-							</li>
-							<li class="flex cursor-pointer text-gray-600  text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
-								<a href="javascript:void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-gray-600">
-									<span class="font-bold">About Us</span>
-								</a>
-							</li>
-						</ul>
-						<div class="xl:hidden">
-							<button id="close" class="hidden close-m-menu focus:ring-2 focus:outline-none focus:ring-gray-600" onclick="MenuHandler(false)">
-								<img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left_aligned_with_cta_and_placeholder-svg3.svg" alt="close handler"/>
-								
-							</button>
-						</div>
-					</div>
-				</div>
-			</nav>
+			</div>
 		</div>
+		<script>
+			const navigation = document.getElementById("navigation");
+			const trigger = document.getElementById("navigation-trigger");
 
-		<div class="mx-auto container relative z-0 px-4 xl:px-0">
-			<div class="flex flex-col-reverse md:flex-row">
-				<div class="md:w-3/5 md:pt-24 pb-10 lg:py-32 xl:py-48">
-					<h1 class="text-3xl lg:text-6xl xl:text-8xl font-black text-gray-900 text-center md:text-left tracking-tighter f-f-i md:w-7/12 leading-tight text-heading-color">
+			trigger.addEventListener("click", () => {
+				navigation.classList.toggle("hidden");
+				trigger.classList.toggle("bg-gray-100");
+			});
+		</script>
+	</header>
+
+	<div class="bg-white lg:py-32 drop-shadow">
+		<div class="mx-auto container">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 p-0 lg:px-6 justify-between items-center lg:gap-6">
+				<div class="flex flex-col justify-center px-3 py-6 order-2 text-gray-700 lg:px-0 lg:py-0 lg:order-1">
+
+					<h1 class="mb-6 text-3xl lg:text-6xl font-black text-gray-900">
 						{{ object.naslov }}
 					</h1>
-					<h2 class="md:w-8/12 my-4 text-center md:text-left md:my-8 text-gray-700 text-lg lg:text-2xl">
-						{% if object.otvoritev %}{{ object.otvoritev }} - {{ object.zakljucek }}, {% endif %}{{ object.lokacija }}
-					</h2>
-					<div class="w-full flex justify-center md:block">
-						<p>{{ object.opis }}</p>
-						<h4>Avtorji:</h4>
-						<ul>
+					<p class="mb-6 text-xl lg:text-2xl">{{ object.opis }}</p>
+
+
+					<ul class="list-disc pl-6 text-xl lg:text-2xl">
+						<li class="mb-1 text-gray-700">
+							{{ object.lokacija }}
+						</li>
+						{% if object.otvoritev %}
+						<li class="mb-1">{{ object.otvoritev }} - {{ object.zakljucek }}</li>
+						{% endif %}
+						<li>
+							Avtorji:
 							{% for avtor in object.avtorji.all %}
-							<li>{{ avtor }}</li>
+							{{ avtor }}
 							{% endfor %}
-						</ul>
-						{% if user.is_authenticated %}<a target="_blank" class="text-blue-500 hover:underline" href="/admin/inventura/razstava/{{ object.pk }}/change/">Uredi</a>{% endif %}
-						<!-- button class="hover:opacity-90 bg-indigo-700 py-3 px-10 lg:py-7 lg:px-20 rounded-full text-white text-sm md:text-lg f-f-p focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700">Learn More</button -->
-					</div>
+						</li>
+					</ul>
+					{% if user.is_authenticated %}
+					<a target=" _blank" class="mt-4 text-blue-500 hover:underline"
+						href="/admin/inventura/razstava/{{ object.pk }}/change/">Uredi</a>
+					{% endif %}
+					<!--  src="{{ object.fotografija.url }}" button class="hover:opacity-90 bg-indigo-700 py-3 px-10 lg:py-7 lg:px-20 rounded-full text-white text-sm md:text-lg f-f-p focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700">Learn More</button -->
+
 				</div>
-				<div class="w-1/2 sm:w-2/5 h-64 md:h-auto m-auto flex items-center overflow-hidden">
-				   
-					<img class="md:absolute md:w-1/2 md:-ml-28" 
-						 src="{% if object.fotografija %}{{ object.fotografija.url }}{% endif %}" 
-						 alt="Vzorcna fotografija razstave ali zbirke" role="img" />
+				{% if object.fotografija %}
+				<div class="order-1 lg:order-2">
+					<img class="block w-full"
+						src="https://www.racunalniski-muzej.si/wp-content/uploads/2022/11/meda-web-2-1024x572.png"
+						alt="Vzorcna fotografija razstave ali zbirke" role="img" />
 				</div>
+				{% endif %}
 			</div>
 		</div>
 	</div>
-  
-<!-- end hero, start object list -->	
 
-	<div class="bg-gradient-to-bl from-blue-50 to-violet-50 flex items-center justify-center lg:h-screen flex-wrap">
-		<div class="container mx-auto p-4">
-		  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
-		{% for primerek in object.primerki.all %}
+	<div class="bg-gradient-to-bl from-blue-50 to-violet-50">
+		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-12">
+			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+				{% for primerek in object.primerki.all %}
 
-		<div class="bg-white rounded-lg border p-4">
-			{% if primerek.eksponat.fotografija %}
-				<img src='{{ primerek.eksponat.fotografija }}' class="w-full h-48 rounded-md object-cover" />
-			{% endif %}
-			<div class="px-1 py-4">
-			  <div class="font-bold text-xl mb-2">
-				<a href="{{ primerek.eksponat.get_absolute_url }}">{{ primerek.eksponat.ime }} 
-					{% if primerek.leto_proizvodnje %}({{ primerek.leto_proizvodnje }}){% endif %}</a>
-			  </div>
-			  <p class="text-gray-700 text-base">
-				<p>#{{ primerek.pk }}</p>
-				<p>{{ primerek.eksponat.kategorija }}</p>
-				<p>{{ primerek.eksponat.opis }}</p>
-				<ul>
-					{% if primerek.eksponat.wikipedia %}<li><a class="text-blue-500 hover:underline" href="{{ primerek.eksponat.wikipedia }}">-> Wikipedia</a></li>{% endif %}
-					{% if primerek.eksponat.oldcomputers %}<li><a class="text-blue-500 hover:underline" href="{{ primerek.eksponat.oldcomputers }}">-> Druge zbirke</a></li>{% endif %}
-					{% if primerek.eksponat.uradnastran %}<li><a class="text-blue-500 hover:underline" href="{{ primerek.eksponat.uradnastran }}">-> Uradna stran</a></li>{% endif %}
-					{% if primerek.eksponat.vir %}<li><a class="text-blue-500 hover:underline" href="{{ primerek.eksponat.vir }}">-> Drugi viri</a></li>{% endif %}
-				</ul>
-				{% if primerek.donator %}<p>Donator: {{ primerek.donator }}</p>{% endif %}
-				
-			  </p>
+				<div class="flex flex-col bg-white p-4 drop-shadow">
+					{% if primerek.eksponat.fotografija %}
+					<a href="{{ primerek.eksponat.get_absolute_url }}" class="block">
+						<img src='{{ primerek.eksponat.fotografija }}'
+							class="block w-full h-48 rounded-md object-cover" />
+					</a>
+					{% else %}
+					<div class="flex items-center justify-center h-48 bg-gray-200 text-gray-400 uppercase">Fotografija
+						ni na voljo
+					</div>
+					{% endif %}
+					<div class="grow pt-4">
+						<h3 class="font-bold text-xl mb-2">
+							<a href="{{ primerek.eksponat.get_absolute_url }}" class="block text-brand-pink">
+								{% if primerek.eksponat.ime %}
+								{{ primerek.eksponat.ime }}
+								{% else %}
+								#{{ primerek.pk }}
+								{% endif %}
+							</a>
+						</h3>
+						{% if primerek.leto_proizvodnje %}
+						<p class="font-semibold mb-2" title="ID: #{{ primerek.pk }}">
+							{{ primerek.leto_proizvodnje }}
+						</p>
+						{% endif %}
+						<p class="text-gray-600 mb-2">{{ primerek.eksponat.kategorija }}, {{ primerek.eksponat.opis }}
+						</p>
+
+						{% if primerek.donator %}<p class="text-gray-600">Donator: {{ primerek.donator }}</p>{% endif %}
+						<ul class="mb-6">
+							{% if primerek.eksponat.wikipedia %}
+							<li>- <a class="text-brand-pink hover:underline"
+									href="{{ primerek.eksponat.wikipedia }}">Wikipedia</a>
+							</li>
+							{% endif %}
+							{% if primerek.eksponat.oldcomputers %}
+							<li>- <a class="text-brand-pink hover:underline"
+									href="{{ primerek.eksponat.oldcomputers }}">Druge zbirke</a>
+							</li>
+							{% endif %}
+							{% if primerek.eksponat.uradnastran %}
+							<li>- <a class="text-brand-pink hover:underline"
+									href="{{ primerek.eksponat.uradnastran }}">Uradna stran</a>
+							</li>
+							{% endif %}
+							{% if primerek.eksponat.vir %}
+							<li>- <a class="text-brand-pink hover:underline" href="{{ primerek.eksponat.vir }}">Drugi
+									viri</a>
+							</li>
+							{% endif %}
+						</ul>
+					</div>
+					<div class="grow-0">
+						<a href="{{ primerek.eksponat.get_absolute_url }}"
+							class="inline-flex  text-brand-pink border-brand-pink mr-3 hover:bg-opacity-90 uppercase text-sm font-semibold">+
+							Podrobnosti
+						</a>
+						{% if user.is_authenticated %}
+						<a target="_blank" class="text-brand-pink hover:underline"
+							href="/admin/inventura/primerek/{{ primerek.pk }}/change/">Uredi</a>
+						{% endif %}
+
+					</div>
+				</div>
+				{% endfor %}
 			</div>
-			<div class="px-1 py-4">
-			  <a href="{{ primerek.eksponat.get_absolute_url }}" class="text-blue-500 hover:underline">Več...</a>
-			  {% if user.is_authenticated %}<a target="_blank" class="text-blue-500 hover:underline" href="/admin/inventura/primerek/{{ primerek.pk }}/change/">Uredi</a>{% endif %}
-			</div>
-		  </div>
-	{% endfor %}
-</div>
-</div>
-</div>
-
+		</div>
+	</div>
 </body>
