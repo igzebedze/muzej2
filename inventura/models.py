@@ -587,6 +587,12 @@ class Razstava(models.Model):
 			return mark_safe(u'<img src="" />')
 	image_tag.short_description = 'Image'
 	image_tag.allow_tags = True
+	def eksponati(self):
+		eksponati = list()
+		for p in self.primerki.all():
+			eksponati.append(p)
+		return set(eksponati)
+	
 	class Meta:
 		verbose_name_plural = "Razstave"
     
