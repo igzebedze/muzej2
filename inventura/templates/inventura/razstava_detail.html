@@ -11,21 +11,115 @@
 </head>
  
 <body class="bg-gray-200">
-<h3>Razstava / zbirka</h3>
-<h1>{{ object.naslov }}</h1>
-<h2>{{ object.otvoritev }} - {{ object.zakljucek }}, {{ object.lokacija }}</h2>
 
-<p>{{ object.opis }}</p>
-{% if user.is_authenticated %}<p><a target="_blank" href="/admin/inventura/razstava/{{ object.id }}/change/">Uredi</a></p>{% endif %}    
+<!-- start hero -->
 
-<h4>Avtorji</h4>
-<ul>
-	{% for avtor in object.avtorji.all %}
-	<li>{{ avtor }}</li>
-	{% endfor %}
-</ul>
+	<div class="lg:px-6 2xl:px-0" style="background-color: white;">
+		<div class="container mx-auto relative z-20">
+			<nav class="w-full absolute">
+				<div class="hidden lg:flex w-full f-f-p justify-between items-center py-6 relative">
+					<div class="w-2/3" aria-label="pivot. logo" role="img">
+						<img class="dark:bg-white pb-1 px-2" width="135" src="https://www.racunalniski-muzej.si/wp-content/uploads/2019/01/logo20-header2.png" alt="logo"/>     
+					</div>
+					<div class="md:w-1/2 xl:w-1/3">
+						<ul class="flex justify-between w-full items-center text-gray-600 dark:text-gray-200">
+							<li class="border-b-4 border-indigo-600 pb-1">
+								<a href="https://www.racunalniski-muzej.si">Domača stran</a>
+							</li>
+							<li class="border-b-4 hover:border-indigo-600 border-transparent pb-1">
+								<a href="https://www.racunalniski-muzej.si/razstave/">Razstave</a>
+							</li>
+							<li class="border-b-4  hover:border-indigo-600 border-transparent pb-1">
+								<a href="https://zbirka.muzej.si">Iskalnik</a>
+							</li>
+							<li class="border-b-4  hover:border-indigo-600 border-transparent pb-1">
+								<a href="https://www.racunalniski-muzej.si/category/zgodovina/">Raziskave</a>
+							</li>
+							<li class="border-b-4  hover:border-indigo-600 border-transparent pb-1">
+								<a href="https://www.racunalniski-muzej.si/nasa-izkaznica/">Izkaznica</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<nav class="lg:hidden">
+				<div class="flex py-6 justify-between items-center px-4">
+					<div aria-label="pivot. Logo" role="img">
+						<img class="dark:bg-white pb-1 px-2" src="https://www.racunalniski-muzej.si/wp-content/uploads/2019/01/logo20-header2.png" alt="logo"/>
+					</div>
+					<div class="visible flex items-center">
+						<button id="open" class="xl:hidden dark:bg-white focus:ring-2 focus:outline-none focus:ring-gray-600" onclick="MenuHandler(true)" >
+							<img onclick="MenuHandler(true)" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left_aligned_with_cta_and_placeholder-svg2.svg" alt="menuhandler"/>
+							
+						</button>
+						<ul id="list" class="hidden p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-16 md:mt-16">
+							<li class="flex cursor-pointer text-gray-600 dark:text-gray-200 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+								<a href="javascript:void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-gray-600">
+									<span class="font-bold">Home</span>
+								</a>
+							</li>
+							<li class="flex cursor-pointer text-gray-600 dark:text-gray-200 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
+								<a href="javascript:void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-gray-600">
+									<span class="font-bold">Stats</span>
+								</a>
+							</li>
+							<li class="flex cursor-pointer text-gray-600 dark:text-gray-200 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+								<a href="javascript:void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-gray-600">
+									<span class="font-bold">Coins</span>
+								</a>
+							</li>
+							<li class="flex cursor-pointer text-gray-600 dark:text-gray-200 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
+								<a href="javascript:void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-gray-600">
+									<span class="font-bold">Blog</span>
+								</a>
+							</li>
+							<li class="flex cursor-pointer text-gray-600 dark:text-gray-200 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
+								<a href="javascript:void(0)" class="ml-2 focus:outline-none focus:ring-2 focus:ring-gray-600">
+									<span class="font-bold">About Us</span>
+								</a>
+							</li>
+						</ul>
+						<div class="xl:hidden">
+							<button id="close" class="hidden close-m-menu focus:ring-2 focus:outline-none focus:ring-gray-600" onclick="MenuHandler(false)">
+								<img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left_aligned_with_cta_and_placeholder-svg3.svg" alt="close handler"/>
+								
+							</button>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
 
-<h4>Kazalo</h4>
+		<div class="mx-auto container relative z-0 px-4 xl:px-0">
+			<div class="flex flex-col-reverse md:flex-row">
+				<div class="md:w-3/5 md:pt-24 pb-10 lg:py-32 xl:py-48">
+					<h1 class="text-3xl lg:text-6xl xl:text-8xl font-black text-gray-900 dark:text-white text-center md:text-left tracking-tighter f-f-i md:w-7/12 leading-tight text-heading-color">
+						{{ object.naslov }}
+					</h1>
+					<h2 class="md:w-8/12 my-4 text-center md:text-left md:my-8 text-gray-700 dark:text-gray-200 text-lg lg:text-2xl">
+						{{ object.otvoritev }} - {{ object.zakljucek }}, {{ object.lokacija }}
+					</h2>
+					<div class="w-full flex justify-center md:block">
+						<p>{{ object.opis }}</p>
+						<h4>Avtorji:</h4>
+						<ul>
+							{% for avtor in object.avtorji.all %}
+							<li>{{ avtor }}</li>
+							{% endfor %}
+						</ul>
+						<!-- button class="hover:opacity-90 bg-indigo-700 py-3 px-10 lg:py-7 lg:px-20 rounded-full text-white text-sm md:text-lg f-f-p focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700">Learn More</button -->
+					</div>
+				</div>
+				<div class="w-1/2 sm:w-2/5 h-64 md:h-auto m-auto flex items-center overflow-hidden">
+				   
+					<img class="md:absolute md:w-1/2 md:-ml-28" src="{{ object.fotografija.url }}" alt="Laptop with pivot page on screen" role="img" />
+				</div>
+			</div>
+		</div>
+	</div>
+  
+<!-- end hero, start object list -->	
+
 	<div class="bg-gradient-to-bl from-blue-50 to-violet-50 flex items-center justify-center lg:h-screen">
 		<div class="container mx-auto mx-auto p-4">
 		  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-4">
