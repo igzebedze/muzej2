@@ -19,7 +19,8 @@
 			<nav class="w-full absolute">
 				<div class="hidden lg:flex w-full f-f-p justify-between items-center py-6 relative">
 					<div class="w-2/3" aria-label="pivot. logo" role="img">
-						<img class="dark:bg-white pb-1 px-2" width="135" src="https://www.racunalniski-muzej.si/wp-content/uploads/2019/01/logo20-header2.png" alt="logo"/>     
+						<img class="dark:bg-white pb-1 px-2" width="135" 
+							 src="https://www.racunalniski-muzej.si/wp-content/uploads/2019/01/logo20-header2.png" alt="logo"/>     
 					</div>
 					<div class="md:w-1/2 xl:w-1/3">
 						<ul class="flex justify-between w-full items-center text-gray-600 dark:text-gray-200">
@@ -45,7 +46,8 @@
 			<nav class="lg:hidden">
 				<div class="flex py-6 justify-between items-center px-4">
 					<div aria-label="pivot. Logo" role="img">
-						<img class="dark:bg-white pb-1 px-2" width="135" src="https://www.racunalniski-muzej.si/wp-content/uploads/2019/01/logo20-header2.png" alt="logo"/>
+						<img class="dark:bg-white pb-1 px-2" width="135" 
+							 src="https://www.racunalniski-muzej.si/wp-content/uploads/2019/01/logo20-header2.png" alt="logo"/>
 					</div>
 					<div class="visible flex items-center">
 						<button id="open" class="xl:hidden dark:bg-white focus:ring-2 focus:outline-none focus:ring-gray-600" onclick="MenuHandler(true)" >
@@ -112,7 +114,9 @@
 				</div>
 				<div class="w-1/2 sm:w-2/5 h-64 md:h-auto m-auto flex items-center overflow-hidden">
 				   
-					<img class="md:absolute md:w-1/2 md:-ml-28" src="{{ object.fotografija.url }}" alt="Laptop with pivot page on screen" role="img" />
+					<img class="md:absolute md:w-1/2 md:-ml-28" 
+						 src="{% if object.fotografija %}{{ object.fotografija.url }}{% endif %}" 
+						 alt="Vzorcna fotografija razstave ali zbirke" role="img" />
 				</div>
 			</div>
 		</div>
