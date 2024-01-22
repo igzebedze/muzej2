@@ -295,9 +295,9 @@ class Eksponat(models.Model):
 
 # then for uploaded pictures,		
 		p = self.primerek_set.exclude(fotografija='')
-		if DEBUG is True:
+		if DEBUG is True:	# development environment
 			return True
-		elif p:
+		elif p:				# production environment should work... but this breaks if problems with conversion
 			with Image.open(p[0].fotografija.path) as im:
 				# todo: fix aspect ratio
 				cropped = im.crop_to_aspect(250,250)

@@ -131,7 +131,7 @@
 		{% for primerek in object.primerki.all %}
 
 		<div class="bg-white rounded-lg border p-4">
-			{% if primerek.fotografija %}<img src='{{ primerek.fotografija.url }}' class="w-full h-48 rounded-md object-cover" />{% endif %}
+			{% if primerek.fotografija %}<img src='{{ primerek.eksponat.fotografija }}' class="w-full h-48 rounded-md object-cover" />{% endif %}
 			<div class="px-1 py-4">
 			  <div class="font-bold text-xl mb-2">
 				<a href="{{ primerek.eksponat.get_absolute_url }}">{{ primerek.eksponat.ime }} 
