@@ -109,6 +109,7 @@
 							<li>{{ avtor }}</li>
 							{% endfor %}
 						</ul>
+						{% if user.is_authenticated %}<a target="_blank" class="text-blue-500 hover:underline" href="/admin/inventura/razstava/{{ object.pk }}/change/">Uredi</a>{% endif %}
 						<!-- button class="hover:opacity-90 bg-indigo-700 py-3 px-10 lg:py-7 lg:px-20 rounded-full text-white text-sm md:text-lg f-f-p focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700">Learn More</button -->
 					</div>
 				</div>
