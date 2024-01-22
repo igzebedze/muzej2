@@ -568,6 +568,9 @@ class Razstava(models.Model):
 	avtorji = models.ManyToManyField(Oseba)
 	opis = models.TextField()
 	dnevnik = HistoricalRecords()
+	fotografija = models.ImageField(upload_to='razstave', blank=True, null=True,
+		help_text='vzorčna fotografija, ki se uporablja v spletnem katalogu'
+	)
 	
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
