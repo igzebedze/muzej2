@@ -37,8 +37,10 @@
 				</div>
 				{% if object.fotografija %}
 				<div class="order-1 lg:order-2">
-					<img class="block w-full" src="{% get_media_prefix %}{{ object.fotografija.url }}"
+					{% if object.fotografija %}
+					<img class="block w-full" src="{{ object.fotografija }}"
 						alt="{{ object.ime }} eksponat" role="img" />
+					{% endif %}
 				</div>
 				{% endif %}
 			</div>
