@@ -13,26 +13,23 @@
 		rel="stylesheet" />
 	{% tailwind_css %}
 </head>
-<body class="bg-gray-200 pt-[90px] lg:pt-[115px]">
+<body class="bg-gray-50 pt-[90px] lg:pt-[115px]">
 	{% include '../_components/header.html' %}
-	<nav class=" bg-gray-100 text-sm lg:text-base ">
-		<div class="container mx-auto px-6 py-3 flex justify-between lg:justify-start">
+	
+	<nav class="bg-gray-50 text-sm lg:text-base ">
+		<div class="container mx-auto px-6 py-3 flex justify-between">
 		{% if prev %}
 			<a class="text-brand-pink hover:underline" href="/eksponat/{{ prev }}/">« Prejšnji eksponat</a>
-		{% endif %}
-		
+		{% endif %}		
 		{% if next %}
-			<span class="text-gray-600 px-3">•</span>
 			<a class="text-brand-pink hover:underline" href="/eksponat/{{ next }}/">Naslednji eksponat »</a>
 		{% endif %}
 		</div>
 	</nav>
-
-	<div class="bg-white lg:py-32 drop-shadow">
+	<div class="bg-white lg:py-32 mb-12 border-y-2 border-gray-100">
 		<div class="mx-auto container pb-3 lg:pb-12">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 p-0 lg:px-6 justify-between items-center lg:gap-6">
 				<div class="flex flex-col justify-center px-3 py-6 order-2 text-gray-700 lg:px-0 lg:py-0 lg:order-1">
-
 					<h1 class="mb-6 text-3xl lg:text-6xl font-black text-gray-900">
 						{{ object.ime }}
 					</h1>
@@ -47,8 +44,10 @@
 			</div>
 		</div>
 		<div class="mx-auto container px-3 py-3 lg:px-6 ">
-		<hr class="border-t-4 border-brand-gray-3 mb-12" />
-		<article class="prose max-w-full lg:prose-xl">
+		<hr class="border-t-2 border-gray-100 mb-12" />
+		<div class="flex flex-col lg:flex-row w-full">
+		<article class="prose grow max-w-full text-wrap lg:pr-16 prose-a:text-brand-pink prose-a:no-underline hover:prose-a:underline prose-a:break-all  prose-table:w-full lg:prose-xl">
+			<p>Podatki iz arhiva:</p>
 			<ul>
 				{% if object.tip %}
 					<li>Tip: {{ object.tip }}</li>
@@ -99,18 +98,6 @@
 						</ul>
 					{% endif %}
 				</li>				
-				{% if object.wikipedia %}
-				<li>Wikipedia: <a href="{{ object.wikipedia }}" target="_blank">{{ object.wikipedia }}</a></li>
-				{% endif %}
-				{% if object.oldcomputers %}
-					<li>Oldcomputers spletni vir: <a href="{{ object.oldcomputers }}" target="_blank">{{ object.oldcomputers }}</a></li>
-				{% endif %}
-				{% if object.uradnastran %}
-					<li>Uradna stran: <a href="{{ object.uradnastran }}" target="_blank">{{ object.uradnastran }}</a></li>
-				{% endif %}
-				{% if object.vir %}
-					<li>Drugi spletni viri: <a href="{{ object.vir }}" target="_blank">{{ object.vir }}</a></li>
-				{% endif %}
 				{% if razstave %}
 				<li>Razstavljen:<br />
 					<ul>
@@ -120,78 +107,85 @@
 					</ul>
 				</li>
 				{% endif %}
-			</ul>
-			{% if user.is_authenticated %}
-				<p><a target="_blank" href="/admin/inventura/eksponat/{{ object.id }}/change/">Uredi</a></p>       
-			{% endif %}
-
+				{% if object.wikipedia %}
+				<li><a href="{{ object.wikipedia }}" target="_blank">Wikipedia link</a></li>
+				{% endif %}
+				{% if object.oldcomputers %}
+					<li><a href="{{ object.oldcomputers }}" target="_blank">Oldcomputers link</a></li>
+				{% endif %}
+				{% if object.uradnastran %}
+					<li><a href="{{ object.uradnastran }}" target="_blank">Uradna stran</a></li>
+				{% endif %}
+				{% if object.vir %}
+					<li>Drugi spletni viri: <a href="{{ object.vir }}" target="_blank">{{ object.vir }}</a></li>
+				{% endif %}
+				</ul>
+				{% if user.is_authenticated %}
+					<p><a target="_blank" href="/admin/inventura/eksponat/{{ object.id }}/change/">Uredi</a></p>       
+				{% endif %}
 		</article>
-	</div>
-	</div>
-
-
-<div id="infobox">
-<!-- previously stored versions -->
-{% if object.infobox %}
-	<h4>Osnovni podatki (vir: Wikipedia)</h4>
-	{{ object.infobox|safe }}	
-{% endif %}
-<!--
-{% if object.onlinephoto %}
-	<h4>Primer (vir: Wikipedia)</h4>
-	<img class='infobox' src="{{ object.onlinephoto }}" height="300px" />
-{% endif %}
--->
-<!-- realtime fetched preview to be confirmed -->
-{% if user.is_authenticated %}
-	{% if wiki %}
-	<h4>Samodejno smo našli:</h4>
-
-	{% for w in wiki %}
-		{% if w.wikiurl %}<p>Wiki vir: <a href='{{ w.wikiurl }}' target='_blank'>{{ w.wikiname }}</a></p>{% endif %}
-			<form action="/eksponat/{{ object.id }}/uredi/" method="post">
-			    {% csrf_token %}
-			    <input type='hidden' name='wikiurl' value='{{ w.wikiurl|urlencode }}'>
-			    <button type="submit" value="Shrani">Shrani</button>
-			</form>
-	{% endfor %}
-
-	{% for w in wiki %}
-		{% for i in w.wikiimages %}
-			<p>Sliko: <img src='{{ i }}' height=200 /></p>
-			<form action="/eksponat/{{ object.id }}/uredi/" method="post">
-			    {% csrf_token %}
-			    <input type='hidden' name='wikiimage' value='{{ i|urlencode }}'>
-			    <button type="submit" value="Shrani">Shrani</button>
-			</form>
-		{% endfor %}
-		{% if w.wikiimage %}
-			<p>Sliko: <img src='{{ w.wikiimage }}' width=200 /></p>
-			<form action="/eksponat/{{ object.id }}/uredi/" method="post">
-			    {% csrf_token %}
-			    <input type='hidden' name='wikiimage' value='{{ w.wikiimage|urlencode }}'>
-			    <button type="submit" value="Shrani">Shrani</button>
-			</form>
+		
+		<!-- previously stored versions -->
+		{% if object.infobox %}
+		<div class="bg-gray-100 flex grow-0 p-3 rounded-lg">
+			<article class="prose max-w-full">
+				<h4 class="text-center">Podatki iz Wikipedie</h4>
+				{{ object.infobox|safe }}	
+			</article>
+		</div>
 		{% endif %}
-	{% endfor %}
-	{% endif %}
+	</div>
+		<!--
+		{% if object.onlinephoto %}
+			<h4>Primer (vir: Wikipedia)</h4>
+			<img class='infobox' src="{{ object.onlinephoto }}" height="300px" />
+		{% endif %}
+		-->
 
-	{% if infobox %}
-		<p>Wiki infobox: </p>
-		{{ infobox|safe }}
-		<form action="/eksponat/{{ object.id }}/uredi/" method="post">
-		    {% csrf_token %}
-		    <!-- todo: check if field.label already exists under object.bio -->	
-		    <input type='hidden' name='infobox' value="{{ infobox|escape }}">
-		    <button type="submit" value="Shrani">Shrani</button>
-		</form>
-	{% endif %}
-{% endif %}
-</div>
-
- 
-
-
-
+		<!-- realtime fetched preview to be confirmed -->
+		{% if user.is_authenticated %}
+			{% if wiki %}
+				<h4>Samodejno smo našli:</h4>
+		
+				{% for w in wiki %}
+					{% if w.wikiurl %}<p>Wiki vir: <a href='{{ w.wikiurl }}' target='_blank'>{{ w.wikiname }}</a></p>{% endif %}
+						<form action="/eksponat/{{ object.id }}/uredi/" method="post">
+							{% csrf_token %}
+							<input type='hidden' name='wikiurl' value='{{ w.wikiurl|urlencode }}'>
+							<button type="submit" value="Shrani">Shrani</button>
+						</form>
+				{% endfor %}
+		
+				{% for w in wiki %}
+					{% for i in w.wikiimages %}
+						<p>Sliko: <img src='{{ i }}' height=200 /></p>
+						<form action="/eksponat/{{ object.id }}/uredi/" method="post">
+							{% csrf_token %}
+							<input type='hidden' name='wikiimage' value='{{ i|urlencode }}'>
+							<button type="submit" value="Shrani">Shrani</button>
+						</form>
+					{% endfor %}
+					{% if w.wikiimage %}
+						<p>Sliko: <img src='{{ w.wikiimage }}' width=200 /></p>
+						<form action="/eksponat/{{ object.id }}/uredi/" method="post">
+							{% csrf_token %}
+							<input type='hidden' name='wikiimage' value='{{ w.wikiimage|urlencode }}'>
+							<button type="submit" value="Shrani">Shrani</button>
+						</form>
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		
+			{% if infobox %}
+				<p>Wiki infobox: </p>
+				{{ infobox|safe }}
+				<form action="/eksponat/{{ object.id }}/uredi/" method="post">
+					{% csrf_token %}
+					<!-- todo: check if field.label already exists under object.bio -->	
+					<input type='hidden' name='infobox' value="{{ infobox|escape }}">
+					<button type="submit" value="Shrani">Shrani</button>
+				</form>
+			{% endif %}
+		{% endif %}
+	</div>
 </body>
-</html>
