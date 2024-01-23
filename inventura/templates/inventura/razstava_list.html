@@ -55,9 +55,11 @@
 						{% endif %}
 						<li>
 							Avtorji:
+                            <ul>
 							{% for avtor in object.avtorji.all %}
-							{{ avtor }}
+							<li>{{ avtor }}</li>
 							{% endfor %}
+                            </ul>
 						</li>
 					</ul>
 					{% if user.is_authenticated %}
