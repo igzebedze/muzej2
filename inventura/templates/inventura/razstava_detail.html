@@ -14,6 +14,7 @@
 
 <body class="bg-gray-200 pt-[90px] lg:pt-[115px]">
 
+<!-- navigation -->
 	<header class="fixed h-[90px] top-0 left-0 right-0 w-full z-30 bg-white drop-shadow lg:h-[115px]">
 		<div class="h-3 bg-gradient"></div>
 		<div class="container mx-auto">
@@ -60,6 +61,7 @@
 		</script>
 	</header>
 
+<!-- hero -->	
 	<div class="bg-white lg:py-32 drop-shadow">
 		<div class="mx-auto container">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 p-0 lg:px-6 justify-between items-center lg:gap-6">
@@ -103,12 +105,29 @@
 		</div>
 	</div>
 
+<!-- table of contents -->
+	<div class="bg-white">
+		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-12">
+			{% regroup object.primerki.all by eksponat.kategorija as kategorije %}
+			<nav id="kazalo" class="fixed hidden bg-white z-40 top-[90px] left-0 h-lvh w-full text-lg font-semibold lg:flex lg:static lg:w-auto lg:h-auto">
+				<span class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3">
+					Kategorije predmetov na razstavi: </span>
+				{% for kategorija in kategorije %}
+				<li class="list-none">
+					<a href='' class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-orange">
+						{{ kategorija.grouper }} ({{ kategorija.list|length }})</a></li>
+			{% endfor %}
+			</ul>
+		</div>
+	</div>
+
+<!-- grid -->
 	<div class="bg-gradient-to-bl from-blue-50 to-violet-50">
 		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-12">
 			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
 				{% for primerek in object.primerki.all %}
 
-				<div class="flex flex-col bg-white p-4 drop-shadow">
+				<div class="flex flex-col bg-white p-4 drop-shadow {{ primerek.eksponat.kategorija }}">
 					{% if primerek.eksponat.fotografija %}
 					<a href="{{ primerek.eksponat.get_absolute_url }}" class="block">
 						<img src='{{ primerek.eksponat.fotografija }}'
