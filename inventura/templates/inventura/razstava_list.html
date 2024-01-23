@@ -62,10 +62,16 @@
                             </ul>
 						</li>
 					</ul>
-					{% if user.is_authenticated %}
-					<a target=" _blank" class="mt-4 text-blue-500 hover:underline"
-						href="/admin/inventura/razstava/{{ object.pk }}/change/">Uredi</a>
-					{% endif %}
+					<div class="grow-0">
+						<a href="{{ object.id }}/"
+							class="inline-flex  text-brand-pink border-brand-pink mr-3 hover:bg-opacity-90 uppercase text-sm font-semibold">+
+							Podrobnosti
+						</a>
+						{% if user.is_authenticated %}
+						<a target="_blank" class="text-brand-pink hover:underline"
+							href="/admin/inventura/razstava/{{ object.pk }}/change/">Uredi</a>
+						{% endif %}
+					</div>
 
 				</div>
 				{% if object.fotografija %}
