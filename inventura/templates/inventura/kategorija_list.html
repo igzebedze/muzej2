@@ -44,7 +44,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 p-0 lg:px-6 justify-between items-center lg:gap-6">
 	<div class="flex flex-col justify-center px-3 py-6 order-2 text-gray-700 lg:px-0 lg:py-0 lg:order-1">
   {% for proizvajalec, eksponati in kategorija.proizvajalci.items %}
-  <div class="flex flex-col bg-white p-4 border-2 border-gray-100 {{ kategorija.ime }}">
+  <div class="flex flex-col bg-white p-4 border-2 border-gray-100" data-category="{{ kategorija.ime }}">
 	<h3 class="font-bold text-xl mb-2">
   	<a href="/proizvajalec/#{{ proizvajalec.ime }}">{{ proizvajalec }}</a>
 	</h3>
