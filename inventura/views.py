@@ -19,6 +19,7 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.db.models import Q
+from django.db.models import Case, When, Value, BooleanField
 
 from .serializers import PrimerekSerializer, RazstavaSerializer, KategorijaSerializer
 from rest_framework import viewsets, generics
@@ -311,6 +312,10 @@ class EksponatView(DetailView):
 # 					context['infobox'] = "\n<br>\n".join(infobox)
 		
 		return context
+
+class RazstavaList(ListView):
+	model = Razstava
+	queryset = Razstava.objects.order_by('-pk').annotate(vrsta=Case(When(otvoritev__isnull=True, then=Value('Razstave')), default=Value('Zbirke'), output_field=BooleanField()))
 
 class RazstavaView(DetailView):
 	model = Razstava

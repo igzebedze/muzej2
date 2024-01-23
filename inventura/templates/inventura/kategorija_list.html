@@ -1,25 +1,53 @@
+{% load static tailwind_tags %}
 {% load extras %}
+{% load static %}
 
-<h1>Računalniški muzej</h1>
-<p>Seznam vseh eksponatov v zbirki Društva računalniški muzej</p>
+<head>
+	<title>Računalniški muzej | Eksponat | {{ object.ime }}</title>
+	<meta description="Eksponat je del arhiva Računalniškega muzeja" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet" />
+	{% tailwind_css %}
+</head>
+<body class="bg-gray-50 pt-[90px] lg:pt-[115px]">
+	{% include '../_components/header.html' %}
 
-<h3>Kazalo po kategorijah</h3>
-<ul>
+	<!-- table of contents -->
+	<div class="bg-gray-50 border-y-2 border-gray-100">
+		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-6">
+			<p class="block text-gray-700 font-semibold pb-3 hover:text-gray-900">
+				Kategorije predmetov v zbirki:</p>
+			<nav id="kazalo" class="text-sm">
+				{% for kategorija in object_list %}
+				<a href="#{{ kategorija.ime }}"
+					class="inline-flex py-2 px-4 mr-2 rounded-full font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white">
+					{{ kategorija.ime }} ({{ kategorija.eksponat_set.count }})
+				</a>
+				{% endfor %}
+			</nav>
+		</div>
+	</div>
+
+	<!-- contents -->
+	<div class="bg-white lg:py-32 mb-12 border-y-2 border-gray-100">
+		<div class="mx-auto container pb-3 lg:pb-12">
+
 {% for kategorija in object_list %}
-	<li><a href="#{{ kategorija.ime }}">{{ kategorija.ime }}</a> ({{ kategorija.eksponat_set.count }})</li>
-{% endfor %}
-</ul>
-<hr />
+	<h2 class="font-bold text-xl mb-2"><a name="{{ kategorija.ime }}">{{ kategorija.ime }}</a></h2>
+	<p>{{ kategorija.opis }}</p>
 
-{% for kategorija in object_list %}
-<h2><a name="{{ kategorija.ime }}">{{ kategorija.ime }}</a></h2>
-<p>{{ kategorija.opis }}</p>
-
-{% ifequal kategorija.ime "Revija" %}
-<ul>
+{% if kategorija.ime == "Revija" %}
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 p-0 lg:px-6 justify-between items-center lg:gap-6">
+	<div class="flex flex-col justify-center px-3 py-6 order-2 text-gray-700 lg:px-0 lg:py-0 lg:order-1">
   {% for proizvajalec, eksponati in kategorija.proizvajalci.items %}
-  <li>
+  <div class="flex flex-col bg-white p-4 border-2 border-gray-100 {{ kategorija.ime }}">
+	<h3 class="font-bold text-xl mb-2">
   	<a href="/proizvajalec/#{{ proizvajalec.ime }}">{{ proizvajalec }}</a>
+	</h3>
   <ul>
   	{% for e in eksponati %}
   		<li><a href="/eksponat/{{ e.pk }}/">{{ e }}</a> ({{ e.st_primerkov }})</li>
@@ -38,23 +66,26 @@
   		{% endfor %}
 		</table>  		
   	{% endfor %}
-  </ul></li>
+  </ul>
+  </div>
   {% endfor %}
-</ul>
+</div></div>
 
 {% else %}
-<ul>
-  {% for proizvajalec, eksponati in kategorija.proizvajalci.items %}
-  <li>
-  	<a href="/proizvajalec/#{{ proizvajalec.ime }}">{{ proizvajalec }}</a>
-  <ul>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 p-0 lg:px-6 justify-between items-center lg:gap-6">
+	<div class="flex flex-col justify-center px-3 py-6 order-2 text-gray-700 lg:px-0 lg:py-0 lg:order-1">
+{% for proizvajalec, eksponati in kategorija.proizvajalci.items %}
+  <div class="flex flex-col bg-white p-4 border-2 border-gray-100 {{ kategorija.ime }}">
+  	<h3 class="font-bold text-xl mb-2"><a href="/proizvajalec/#{{ proizvajalec.ime }}">{{ proizvajalec }}</a></h3>
+	<p>{{ proizvajalec.opis }}</p>
+  	<h4 class="font-bold">Eksponati:</h4>
   	{% for e in eksponati %}
   		<li><a href="/eksponat/{{ e.pk }}/">{{ e }}</a> ({{ e.st_primerkov }})</li>
   	{% endfor %}
-  </ul></li>
-  {% endfor %}
-</ul>
-{% endifequal %}
-
-<hr />
+	</div>
 {% endfor %}
+	</div></div>
+{% endif %}
+{% endfor %}
+
+</div></div></div></div>

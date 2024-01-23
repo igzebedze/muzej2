@@ -1,0 +1,78 @@
+{% load static tailwind_tags %}
+{% load extras %}
+{% load static %}
+
+<head>
+	<title>Računalniški muzej | {{ object.naslov }}</title>
+	<meta description="{{ object.opis }}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet" />
+	{% tailwind_css %}
+</head>
+
+<body class="bg-gray-50 pt-[90px] lg:pt-[115px]">
+
+	<!-- navigation -->
+	{% include '../_components/header.html' %}
+
+	<!-- table of contents -->
+	<div class="bg-gray-50 border-y-2 border-gray-100">
+		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-6">
+			<nav id="kazalo" class="text-sm">
+                {% regroup object_list by vrsta as vrste%}
+                {% for v in vrste %}
+				<a href=''
+					class="inline-flex py-2 px-4 mr-2 rounded-full font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white">
+					{{ v.grouper }} ({{ v.list|length }})
+				</a>
+                {% endfor %}
+			</nav>
+		</div>
+	</div>
+    
+    <!-- izpis -->
+    {% for object in object_list %}
+	<div class="bg-white lg:py-32 {{ object.vrsta }}">
+		<div class="mx-auto container">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 p-0 lg:px-6 justify-between items-center lg:gap-6">
+				<div class="flex flex-col justify-center px-3 py-6 order-2 text-gray-700 lg:px-0 lg:py-0 lg:order-1">
+
+					<h1 class="mb-6 text-3xl lg:text-6xl font-black text-gray-900">
+						{{ object.naslov }}
+					</h1>
+					<p class="mb-6 text-xl lg:text-2xl">{{ object.opis }}</p>
+
+					<ul class="list-disc pl-6 text-xl lg:text-2xl">
+						<li class="mb-1 text-gray-700">
+							{{ object.lokacija }}
+						</li>
+						{% if object.otvoritev %}
+						<li class="mb-1">{{ object.otvoritev }} - {{ object.zakljucek }}</li>
+						{% endif %}
+						<li>
+							Avtorji:
+							{% for avtor in object.avtorji.all %}
+							{{ avtor }}
+							{% endfor %}
+						</li>
+					</ul>
+					{% if user.is_authenticated %}
+					<a target=" _blank" class="mt-4 text-blue-500 hover:underline"
+						href="/admin/inventura/razstava/{{ object.pk }}/change/">Uredi</a>
+					{% endif %}
+
+				</div>
+				{% if object.fotografija %}
+				<div class="order-1 lg:order-2">
+					<img class="block w-full" src="{% get_media_prefix %}{{ object.fotografija }}"
+						alt="Vzorcna fotografija razstave ali zbirke" role="img" />
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+    {% endfor %}

@@ -566,7 +566,7 @@ class Razstava(models.Model):
 	primerki = models.ManyToManyField(Primerek)
 	naslov = models.CharField(max_length=255)
 	lokacija = models.ForeignKey(Lokacija, on_delete=models.PROTECT)
-	otvoritev = models.DateField(blank=True, null=True)
+	otvoritev = models.DateField(blank=True, null=True)	# ce ni otvoritve potem je to v bistvu zbirka
 	zakljucek = models.DateField(blank=True, null=True)
 	avtorji = models.ManyToManyField(Oseba)
 	opis = models.TextField()
