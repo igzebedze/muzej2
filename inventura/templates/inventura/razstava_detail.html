@@ -1,5 +1,6 @@
 {% load static tailwind_tags %}
 {% load extras %}
+{% load static %}
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -94,7 +95,7 @@
 				{% if object.fotografija %}
 				<div class="order-1 lg:order-2">
 					<img class="block w-full"
-						src="{{ object.fotografija }}"
+						src="{% get_media_prefix %}{{ object.fotografija }}"
 						alt="Vzorcna fotografija razstave ali zbirke" role="img" />
 				</div>
 				{% endif %}
