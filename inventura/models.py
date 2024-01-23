@@ -437,7 +437,10 @@ class Primerek(models.Model):
 
 	def get_absolute_url(self):
 		return "/admin/inventura/primerek/%d/" % (self.pk,)
-		
+
+	def kategorija(self):
+		return self.eksponat.kategorija	
+
 	def eksponat_name(self):
 		return "%s" % (self.eksponat.ime)
 		

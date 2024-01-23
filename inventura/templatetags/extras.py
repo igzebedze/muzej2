@@ -21,3 +21,17 @@ def revije_nav(tip, root, selected):
 @register.filter(name='has_group') 
 def has_group(user, group_name):
     return user.groups.filter(name=group_name).exists()
+
+@register.filter
+def sort_by(queryset, order):
+    return queryset.order_by(order)
+
+@register.filter()
+def groups_sort(groups):
+    groups.sort(key=lambda group: len(group[1]))
+    return groups
+
+@register.filter()
+def groups_sort_reversed(groups):
+    groups.sort(key=lambda group: len(group[1]), reverse=True)
+    return groups
