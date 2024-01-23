@@ -1,7 +1,6 @@
 {
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#5C1206",
-        "titleBar.activeBackground": "#811909",
-        "titleBar.activeForeground": "#FFFCFB"
-    }
+  "files.associations": {
+    "**/templates/*.html": "django-html",
+    "**/templates/*": "django-txt"
+  }
 }

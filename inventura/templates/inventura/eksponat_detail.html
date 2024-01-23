@@ -1,25 +1,136 @@
+{% load static tailwind_tags %}
 {% load extras %}
-<html>
-	<head>
-		<style>
-			.infobox, #infobox { float: right; border: 1px solid black; }
-		</style>
-	</head>
-<body>
+{% load static %}
 
+<head>
+	<title>Računalniški muzej | Eksponat | {{ object.ime }}</title>
+	<meta description="Eksponat je del arhiva Računalniškega muzeja" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet" />
+	{% tailwind_css %}
+</head>
+<body class="bg-gray-200 pt-[90px] lg:pt-[115px]">
+	{% include '../_components/header.html' %}
+	<nav class=" bg-gray-100 text-sm lg:text-base ">
+		<div class="container mx-auto px-6 py-3 flex justify-between lg:justify-start">
+		{% if prev %}
+			<a class="text-brand-pink hover:underline" href="/eksponat/{{ prev }}/">« Prejšnji eksponat</a>
+		{% endif %}
+		
+		{% if next %}
+			<span class="text-gray-600 px-3">•</span>
+			<a class="text-brand-pink hover:underline" href="/eksponat/{{ next }}/">Naslednji eksponat »</a>
+		{% endif %}
+		</div>
+	</nav>
 
-<div id='nav'>
-		<p>
-			{% if prev %}
-				<a href='/eksponat/{{ prev }}/'><- prejšnji eksponat</a>
+	<div class="bg-white lg:py-32 drop-shadow">
+		<div class="mx-auto container pb-3 lg:pb-12">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 p-0 lg:px-6 justify-between items-center lg:gap-6">
+				<div class="flex flex-col justify-center px-3 py-6 order-2 text-gray-700 lg:px-0 lg:py-0 lg:order-1">
+
+					<h1 class="mb-6 text-3xl lg:text-6xl font-black text-gray-900">
+						{{ object.ime }}
+					</h1>
+					<p class="text-xl lg:text-2xl">{{ object.kategorija }}, {{ object.proizvajalec }}</p>
+				</div>
+				{% if object.fotografija %}
+				<div class="order-1 lg:order-2">
+					<img class="block w-full" src="{% get_media_prefix %}{{ object.fotografija.url }}"
+						alt="{{ object.ime }} eksponat" role="img" />
+				</div>
+				{% endif %}
+			</div>
+		</div>
+		<div class="mx-auto container px-3 py-3 lg:px-6 ">
+		<hr class="border-t-4 border-brand-gray-3 mb-12" />
+		<article class="prose max-w-full lg:prose-xl">
+			<ul>
+				{% if object.tip %}
+					<li>Tip: {{ object.tip }}</li>
+				{% endif %}
+				{% if object.opis %}
+					<li>Opis: {{ object.opis }}</li>
+				{% endif %}
+				{% if object.leto_proizvodnje %}
+					<li>Leto proizvodnje: {{ object.leto_proizvodnje }}</li>
+				{% endif %}			
+				<li>Število primerkov: {{ object.st_primerkov }}</li>
+				<li>Primerki:
+					{% if object.kategorija.ime == "Revija" %}
+					{% regroup object.primerek_set.all by leto_proizvodnje as primerki %}
+						<ul>
+							{% for l in primerki|dictsort:"grouper" %}
+								<li>
+									<strong>{{ l.grouper }}</strong>
+									{% for p in l.list|dictsort:"serijska_st" %}	
+										{% if p.fotografije is not None %}
+										<a href='{{ p.fotografije }}' target='_blank'>
+										{% endif %}
+											{% with prefix=l.grouper|to_unicode|add:'-' %}
+											{{ p.serijska_st|cut:prefix|add_zeros }}
+											{% endwith %}
+										{% if p.fotografije is not None %}
+										</a>
+										{% endif %}
+									{% endfor %}
+								</li>
+							{% endfor %}
+						</ul>  		
+					{% else %}
+						<ul>
+							{% for p in object.primerek_set.all %}
+							<li>{{ p }}, {{ p.serijska_st }}
+								{% if p.vhodni_dokument.dovoli_objavo %}
+									| Doniral: {{ p.vhodni_dokument.lastnik }} ({{ p.vhodni_dokument.cas_prevzema|date:"d M Y" }})
+								{% endif%}
+								{% if p.fotografija %}
+									| <a target="_blank" href="/media/{{ p.fotografija }}">Fotka</a> 
+								{% endif %}
+								{% if user.is_authenticated %}
+									(<a target="_blank" href="/admin/inventura/primerek/{{ p.pk }}/change/">Uredi</a>)       
+								{% endif %}    
+							</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				</li>				
+				{% if object.wikipedia %}
+				<li>Wikipedia: <a href="{{ object.wikipedia }}" target="_blank">{{ object.wikipedia }}</a></li>
+				{% endif %}
+				{% if object.oldcomputers %}
+					<li>Oldcomputers spletni vir: <a href="{{ object.oldcomputers }}" target="_blank">{{ object.oldcomputers }}</a></li>
+				{% endif %}
+				{% if object.uradnastran %}
+					<li>Uradna stran: <a href="{{ object.uradnastran }}" target="_blank">{{ object.uradnastran }}</a></li>
+				{% endif %}
+				{% if object.vir %}
+					<li>Drugi spletni viri: <a href="{{ object.vir }}" target="_blank">{{ object.vir }}</a></li>
+				{% endif %}
+				{% if razstave %}
+				<li>Razstavljen:<br />
+					<ul>
+					{% for r in razstave %}
+						{% if r %}<li><a href="{{ r.get_absolute_url }}">{{ r }}</a></li>{% endif %}
+					{% endfor %}
+					</ul>
+				</li>
+				{% endif %}
+			</ul>
+			{% if user.is_authenticated %}
+				<p><a target="_blank" href="/admin/inventura/eksponat/{{ object.id }}/change/">Uredi</a></p>       
 			{% endif %}
-			{% if next %}
-				<a href='/eksponat/{{ next }}/' style="float: right;">naslednji eksponat -></a>
-			{% endif %}
-		</p>
-</div>
 
-<div id='infobox'>
+		</article>
+	</div>
+	</div>
+
+
+<div id="infobox">
 <!-- previously stored versions -->
 {% if object.infobox %}
 	<h4>Osnovni podatki (vir: Wikipedia)</h4>
@@ -78,64 +189,9 @@
 {% endif %}
 </div>
 
-<h3>{{ object.kategorija }}</h3>
-<h1>{{ object.ime }}</h1>
-<h2>{{ object.proizvajalec }}</h2>
-<img src="{{ object.fotografija }}" />
+ 
 
-<ul>
-	{% if object.tip %}<li>Tip: {{ object.tip }}</li>{% endif %}
-	{% if object.opis %}<li>Opis: {{ object.opis }}</li>{% endif %}
-	{% if object.wikipedia %}<li>Wikipedia: <a href="{{ object.wikipedia }}" target="_blank">{{ object.wikipedia }}</a></li>{% endif %}
-	{% if object.oldcomputers %}<li>Oldcomputers spletni vir: <a href="{{ object.oldcomputers }}" target="_blank">{{ object.oldcomputers }}</a></li>{% endif %}
-	{% if object.uradnastran %}<li>Uradna stran: <a href="{{ object.uradnastran }}" target="_blank">{{ object.uradnastran }}</a></li>{% endif %}
-	{% if object.vir %}<li>Drugi spletni viri: <a href="{{ object.vir }}" target="_blank">{{ object.vir }}</a></li>{% endif %}
-	{% if object.leto_proizvodnje %}<li>Leto proizvodnje: {{ object.leto_proizvodnje }}</li>{% endif %}
-	<li>stevilo primerkov: {{ object.st_primerkov }}</li>
 
-	{% if razstave %}
-	{% for r in razstave %}
-	<li>Razstavljen: {% if r %}<a href="{{ r.get_absolute_url }}">{{ r }}</a>{% endif %}</li>
-	{% endfor %}
-	{% endif %}
-</ul>
-{% if user.is_authenticated %}
-        <p><a target="_blank" href="/admin/inventura/eksponat/{{ object.id }}/change/">Uredi</a></p>       
-{% endif %}    
-
-<h3>Primerki</h3>
-{% if object.kategorija.ime == "Revija" %}
-  		{% regroup object.primerek_set.all by leto_proizvodnje as primerki %}
-  		<table>
-  		{% for l in primerki|dictsort:"grouper" %}
-  		<tr><td style='width: 3em'><b>{{ l.grouper }}</b></td>
-  			{% for p in l.list|dictsort:"serijska_st" %}
-  			<td style='width: 1.5em'>{% if p.fotografije is not None %}<a href='{{ p.fotografije }}' target='_blank'>{% endif %}
-  				{% with prefix=l.grouper|to_unicode|add:'-' %}
-  				{{ p.serijska_st|cut:prefix|add_zeros }}
-  				{% endwith %}
-  			</a></td>
-  			{% endfor %}
-  		</tr>
-  		{% endfor %}
-		</table>  		
-{% else %}
-<ul>
-	{% for p in object.primerek_set.all %}
-	<li>{{ p }}, {{ p.serijska_st }}
-		{% if p.vhodni_dokument.dovoli_objavo %}
-			| Doniral: {{ p.vhodni_dokument.lastnik }} ({{ p.vhodni_dokument.cas_prevzema|date:"d M Y" }})
-		{% endif%}
-		{% if p.fotografija %}
-			| <a target="_blank" href="/media/{{ p.fotografija }}">Fotka</a> 
-		{% endif %}
-		{% if user.is_authenticated %}
-	        (<a target="_blank" href="/admin/inventura/primerek/{{ p.pk }}/change/">Uredi</a>)       
-		{% endif %}    
-	</li>
-	{% endfor %}
-</ul>
-{% endif %}
 
 </body>
 </html>
