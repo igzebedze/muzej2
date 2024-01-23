@@ -69,7 +69,7 @@
 				Kategorije predmetov na razstavi:</p>
 			{% regroup object.primerki.all|sort_by:'eksponat__kategorija' by eksponat.kategorija as kategorije %}
 			<nav id="kazalo" class="text-sm">
-				{% for kategorija in kategorije %}
+				{% for kategorija in kategorije|groups_sort_reversed %}
 				<a href=''
 					class="inline-flex py-2 px-4 mr-2 rounded-full font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white">
 					{{ kategorija.grouper }} ({{ kategorija.list|length }})
