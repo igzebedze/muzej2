@@ -23,7 +23,7 @@
 	<div class="bg-gray-50 border-y-2 border-gray-100">
 		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-6">
 			<nav id="kazalo" class="text-sm">
-                {% regroup object_list by vrsta as vrste%}
+                {% regroup object_list|sort_by:"vrsta" by vrsta as vrste%}
                 {% for v in vrste %}
 				<a href=''
 					class="inline-flex py-2 px-4 mr-2 rounded-full font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white">
