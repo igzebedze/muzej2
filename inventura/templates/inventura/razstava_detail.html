@@ -64,16 +64,17 @@
 
 	<!-- table of contents -->
 	<div class="bg-gray-50 border-y-2 border-gray-100">
-		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-6">
+		<div class="container mx-auto px-3 pt-6 pb-4 lg:px-6 lg:pt-6">
 			<p class="block text-gray-700 font-semibold pb-3 hover:text-gray-900">
 				Kategorije predmetov na razstavi:</p>
 			{% regroup object.primerki.all|sort_by:'eksponat__kategorija' by eksponat.kategorija as kategorije %}
 			<nav id="kazalo" class="text-sm">
+				<span data-category="all" class="filter inline-flex py-2 px-4 mr-2 mb-2 bg-brand-pink text-white rounded-full font-semibold cursor-pointer">Vse</span>
 				{% for kategorija in kategorije|groups_sort_reversed %}
-				<a href=''
-					class="inline-flex py-2 px-4 mr-2 rounded-full font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white">
+				<span data-category="{{ kategorija.grouper|lower|cut:' ' }}"
+					class="filter inline-flex py-2 px-4 mr-2 mb-2 rounded-full font-semibold bg-gray-300 text-gray-700 hover:brightness-110 cursor-pointer">
 					{{ kategorija.grouper }} ({{ kategorija.list|length }})
-				</a>
+				</span>
 				{% endfor %}
 			</nav>
 		</div>
@@ -85,7 +86,7 @@
 			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
 				{% for primerek in object.primerki.all %}
 
-				<div class="flex flex-col bg-white p-4 border-2 border-gray-100 {{ primerek.eksponat.kategorija }}">
+				<div class="primerek flex flex-col bg-white p-4 border-2 border-gray-100" data-category="{{ primerek.eksponat.kategorija|lower|cut:' '  }}">
 					<a href="{{ primerek.eksponat.get_absolute_url }}" class="block">
 					{% if primerek.eksponat.fotografija %}
 						<img src='{{ primerek.eksponat.fotografija }}'
@@ -154,4 +155,40 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+		const items = document.querySelectorAll(".primerek");
+        const filters = document.querySelectorAll(".filter");
+
+		filters.forEach((filter) => {
+			filter.addEventListener("click", (event) => {
+				const button = event.target;
+				const category = button.dataset.category;
+
+				document.querySelectorAll(".filter").forEach(filter => {
+					if(filter.classList.contains("bg-brand-pink")) {
+						filter.classList.remove("bg-brand-pink");
+						filter.classList.remove("text-white");
+						filter.classList.add("bg-gray-300");
+						filter.classList.add("text-gray-700");
+					}					
+				})
+
+				button.classList.remove("bg-gray-300");
+				button.classList.remove("text-gray-700");
+				button.classList.add("bg-brand-pink");
+				button.classList.add("text-white");
+
+				items.forEach(item => {
+					item.classList.remove("hidden");
+
+					if(item.dataset.category !== category && category !== "all") {
+						item.classList.add("hidden");
+					}
+				})
+
+			});
+		})
+      
+	</script>
 </body>
