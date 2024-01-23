@@ -315,7 +315,7 @@ class EksponatView(DetailView):
 
 class RazstavaList(ListView):
 	model = Razstava
-	queryset = Razstava.objects.order_by('-pk').annotate(vrsta=Case(When(otvoritev__isnull=True, then=Value('Razstave')), default=Value('Zbirke'), output_field=BooleanField()))
+	queryset = Razstava.objects.order_by('-pk').annotate(vrsta=Case(When(otvoritev__isnull=True, then=Value('Zbirke')), default=Value('Razstave'), output_field=BooleanField()))
 
 class RazstavaView(DetailView):
 	model = Razstava
