@@ -3,6 +3,8 @@
 {% load static %}
 
 <head>
+	<title>Računalniški muzej | {{ object.naslov }}</title>
+	<meta description="{{ object.opis }}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,55 +16,12 @@
 
 <body class="bg-gray-200 pt-[90px] lg:pt-[115px]">
 
-<!-- navigation -->
-	<header class="fixed h-[90px] top-0 left-0 right-0 w-full z-30 bg-white drop-shadow lg:h-[115px]">
-		<div class="h-3 bg-gradient"></div>
-		<div class="container mx-auto">
-			<div class="flex p-3 justify-between items-center lg:p-6">
-				<a href="https://www.racunalniski-muzej.si" class="block max-w-[100px]">
-					<img class="block" class="w-full"
-						src="https://www.racunalniski-muzej.si/wp-content/uploads/2019/01/logo20-header2.png"
-						alt="Računalniški muzej" />
-				</a>
-				<nav id="navigation"
-					class="fixed hidden bg-white z-40 top-[90px] left-0 h-lvh w-full text-lg font-semibold lg:flex lg:static lg:w-auto lg:h-auto">
-					<a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-orange"
-						href="https://www.racunalniski-muzej.si">Domača stran</a>
-					<a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-pink"
-						href="https://www.racunalniski-muzej.si/razstave/">Razstave</a>
-					<a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-gray-1"
-						href="https://zbirka.muzej.si">Iskalnik</a>
-					<a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-gray-3"
-						href="https://www.racunalniski-muzej.si/category/zgodovina/">Raziskave</a>
-					<a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-green"
-						href="https://www.racunalniski-muzej.si/nasa-izkaznica/">Izkaznica</a>
-				</nav>
-				<div id="navigation-trigger"
-					class="flex items-center justify-center w-[40px] h-[40px] cursor-pointer lg:hidden">
-					<svg aria-haspopup="true" aria-label="Main Menu" xmlns="http://www.w3.org/2000/svg"
-						class="show-m-menu icon icon-tabler icon-tabler-menu" width="28" height="28" viewBox="0 0 24 24"
-						stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
-						stroke-linejoin="round">
-						<path stroke="none" d="M0 0h24v24H0z"></path>
-						<line x1="4" y1="8" x2="20" y2="8"></line>
-						<line x1="4" y1="16" x2="20" y2="16"></line>
-					</svg>
-				</div>
-			</div>
-		</div>
-		<script>
-			const navigation = document.getElementById("navigation");
-			const trigger = document.getElementById("navigation-trigger");
+	<!-- navigation -->
+	{% include '../_components/header.html' %}
 
-			trigger.addEventListener("click", () => {
-				navigation.classList.toggle("hidden");
-				trigger.classList.toggle("bg-gray-100");
-			});
-		</script>
-	</header>
 
-<!-- hero -->	
-	<div class="bg-white lg:py-32 drop-shadow">
+	<!-- hero -->
+	<div class="bg-white lg:py-32">
 		<div class="mx-auto container">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 p-0 lg:px-6 justify-between items-center lg:gap-6">
 				<div class="flex flex-col justify-center px-3 py-6 order-2 text-gray-700 lg:px-0 lg:py-0 lg:order-1">
@@ -96,8 +55,7 @@
 				</div>
 				{% if object.fotografija %}
 				<div class="order-1 lg:order-2">
-					<img class="block w-full"
-						src="{% get_media_prefix %}{{ object.fotografija }}"
+					<img class="block w-full" src="{% get_media_prefix %}{{ object.fotografija }}"
 						alt="Vzorcna fotografija razstave ali zbirke" role="img" />
 				</div>
 				{% endif %}
@@ -105,23 +63,24 @@
 		</div>
 	</div>
 
-<!-- table of contents -->
-	<div class="bg-white">
+	<!-- table of contents -->
+	<div class="bg-white drop-shadow">
 		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-12">
+			<p class="block text-gray-700 font-semibold border-b-4 border-transparent py-3 hover:text-gray-900">
+				Kategorije predmetov na razstavi:</p>
 			{% regroup object.primerki.all by eksponat.kategorija as kategorije %}
-			<nav id="kazalo" class="fixed hidden bg-white z-40 top-[90px] left-0 h-lvh w-full text-lg font-semibold lg:flex lg:static lg:w-auto lg:h-auto">
-				<span class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3">
-					Kategorije predmetov na razstavi: </span>
+			<nav id="kazalo" class="text-sm">
 				{% for kategorija in kategorije %}
-				<li class="list-none">
-					<a href='' class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-orange">
-						{{ kategorija.grouper }} ({{ kategorija.list|length }})</a></li>
-			{% endfor %}
-			</ul>
+				<a href=''
+					class="inline-flex py-2 px-4 mr-2 rounded-full font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white">
+					{{ kategorija.grouper }} ({{ kategorija.list|length }})
+				</a>
+				{% endfor %}
+			</nav>
 		</div>
 	</div>
 
-<!-- grid -->
+	<!-- grid -->
 	<div class="bg-gradient-to-bl from-blue-50 to-violet-50">
 		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-12">
 			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
