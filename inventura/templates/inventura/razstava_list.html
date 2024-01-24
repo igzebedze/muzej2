@@ -3,8 +3,8 @@
 {% load static %}
 
 <head>
-	<title>Računalniški muzej | {{ object.naslov }}</title>
-	<meta description="{{ object.opis }}" />
+	<title>Računalniški muzej | Razstave</title>
+	<meta description="Seznam razstav Računalniškega muzeja" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,12 +21,12 @@
 
 	<!-- table of contents -->
 	<div class="bg-gray-50 border-y-2 border-gray-100">
-		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-6">
+		<div class="container mx-auto px-3 pt-6 pb-4 lg:px-6 lg:pt-6">
 			<nav id="kazalo" class="text-sm">
                 {% regroup object_list|sort_by:"vrsta" by vrsta as vrste%}
                 {% for v in vrste %}
 				<a href=''
-					class="inline-flex py-2 px-4 mr-2 rounded-full font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white">
+					class="inline-flex py-2 px-4 mr-2 rounded-full mb-2 text-gray-700 font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white">
 					{{ v.grouper }} ({{ v.list|length }})
 				</a>
                 {% endfor %}
@@ -36,17 +36,17 @@
     
     <!-- izpis -->
     {% for object in object_list %}
-	<div class="bg-white lg:py-32" data-category="{{ object.vrsta }}">
+	<div class="bg-white lg:py-32 border-b-2 border-gray-100" data-category="{{ object.vrsta }}">
 		<div class="mx-auto container">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 p-0 lg:px-6 justify-between items-center lg:gap-6">
 				<div class="flex flex-col justify-center px-3 py-6 order-2 text-gray-700 lg:px-0 lg:py-0 lg:order-1">
-                    <button style="text-align: left;">{{ object.vrsta }}</button>
+                    {% comment %} <button style="text-align: left;">{{ object.vrsta }}</button> {% endcomment %}
 					<h1 class="mb-6 text-3xl lg:text-6xl font-black text-gray-900">
-						{{ object.naslov }}
+						<a href="{{ object.id }}/">{{ object.naslov }}</a>
 					</h1>
-					<p class="mb-6 text-xl lg:text-2xl">{{ object.opis }}</p>
+					<p class="mb-6 text-lg lg:text-2xl overflow-hidden">{{ object.opis }}</p>
 
-					<ul class="list-disc pl-6 text-xl lg:text-2xl">
+					<ul class="list-disc mb-6 pl-6 text-lg lg:text-2xl">
 						<li class="mb-1 text-gray-700">
 							{{ object.lokacija }}
 						</li>
@@ -55,23 +55,20 @@
 						{% endif %}
 						<li>
 							Avtorji:
-                            <ul>
 							{% for avtor in object.avtorji.all %}
-							<li>{{ avtor }}</li>
+							{{ avtor }}
 							{% endfor %}
-                            </ul>
 						</li>
 					</ul>
-					<div class="grow-0">
-						<a href="{{ object.id }}/"
-							class="inline-flex  text-brand-pink border-brand-pink mr-3 hover:bg-opacity-90 uppercase text-sm font-semibold">+
-							Podrobnosti
-						</a>
-						{% if user.is_authenticated %}
-						<a target="_blank" class="text-brand-pink hover:underline"
-							href="/admin/inventura/razstava/{{ object.pk }}/change/">Uredi</a>
-						{% endif %}
-					</div>
+					<a href="{{ object.id }}/"
+						class="inline-flex  text-brand-pink border-brand-pink mr-3 hover:bg-opacity-90 uppercase text-sm font-semibold">+
+						preberi Več
+					</a>
+					{% if user.is_authenticated %}
+					<a target="_blank" class="text-brand-pink hover:underline"
+						href="/admin/inventura/razstava/{{ object.pk }}/change/">Uredi</a>
+					{% endif %}
+
 
 				</div>
 				{% if object.fotografija %}
