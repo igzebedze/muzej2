@@ -5,13 +5,7 @@
 <head>
 	<title>Računalniški muzej | Eksponat | {{ object.ime }}</title>
 	<meta description="Eksponat je del arhiva Računalniškega muzeja" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link
-		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-		rel="stylesheet" />
-	{% tailwind_css %}
+	{% include '../_components/head_common.html' %}
 </head>
 <body class="bg-gray-50 pt-[90px] lg:pt-[115px]">
 	{% include '../_components/header.html' %}
@@ -28,19 +22,16 @@
 	</nav>
 	<div class="bg-white lg:py-32 mb-12 border-y-2 border-gray-100">
 		<div class="mx-auto container pb-3 lg:pb-12">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 p-0 lg:px-6 justify-between items-center lg:gap-6">
-				<div class="flex flex-col justify-center px-3 py-6 order-2 text-gray-700 lg:px-0 lg:py-0 lg:order-1">
+			<div class="flex flex-col lg:flex-row lg:px-6 items-center">
+				<div class="flex-1 w-full px-3 py-6 text-gray-700 lg:px-0 lg:py-0 order-2 lg:order-1">
 					<h1 class="mb-6 text-3xl lg:text-6xl font-black text-gray-900">
 						{{ object.ime }}
 					</h1>
 					<p class="text-xl lg:text-2xl">{{ object.kategorija }}, {{ object.proizvajalec }}</p>
 				</div>
 				{% if object.fotografija %}
-				<div class="order-1 lg:order-2">
-					{% if object.fotografija %}
-					<img class="block w-full" src="{{ object.fotografija }}"
-						alt="{{ object.ime }} eksponat" role="img" />
-					{% endif %}
+				<div class="flex w-full lg:basis-1/2 order-1 lg:order-2 lg:pl-12">
+					<img class="block w-full" src="{{ object.fotografija }}" alt="{{ object.ime }} eksponat" role="img" />
 				</div>
 				{% endif %}
 			</div>
@@ -48,7 +39,7 @@
 		<div class="mx-auto container px-3 py-3 lg:px-6 ">
 		<hr class="border-t-2 border-gray-100 mb-12" />
 		<div class="flex flex-col lg:flex-row w-full">
-		<article class="prose grow max-w-full text-wrap lg:pr-16 prose-a:text-brand-pink prose-a:no-underline hover:prose-a:underline prose-a:break-all  prose-table:w-full lg:prose-xl">
+		<article class="prose grow max-w-full text-wrap lg:pr-16 prose-a:text-brand-pink prose-a:no-underline hover:prose-a:underline prose-a:break-word  prose-table:w-full lg:prose-xl">
 			<p>Podatki iz arhiva:</p>
 			<ul>
 				{% if object.tip %}
