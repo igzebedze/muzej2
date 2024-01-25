@@ -146,7 +146,7 @@ class PregledInline(admin.TabularInline):
 class EksponatAdmin(SimpleHistoryAdmin):
 	list_select_related = True
 	list_editable = ('ime', 'tip', 'kategorija',)
-	#inlines = [ PrimerekInline, ]
+	inlines = [ PrimerekInline, ]
 	list_display = ('proizvajalec', 'ime', 'tip', 'kategorija',  'leto_proizvodnje', 'st_primerkov', 'st_digital')
 	list_filter = ('kategorija', 'proizvajalec')
 	search_fields = ('ime', 'tip')
@@ -177,6 +177,8 @@ class EksponatAdmin(SimpleHistoryAdmin):
 	
 class OsebaAdmin(admin.ModelAdmin):
 	search_fields = ('ime',)
+	inlines = [ PrimerekInline, ]
+	list_display = ('ime', 'email', 'telefon', 'izrocitelj', 'lastnik', 'donator', 'zbiratelj', 'izposoj', 'razstav', 'pregledov',)
 
 class ProizvajalecAdmin(admin.ModelAdmin):
 	list_filter = ('drzava',)

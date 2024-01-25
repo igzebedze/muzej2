@@ -108,6 +108,21 @@ class Oseba(models.Model):
 
 	def __str__(self):
 		return self.ime
+	
+	def izrocitelj(self):
+		return "%d" % self.izrocitelj_set.count()
+	def lastnik(self):
+		return "%d" % self.lastnik_set.count()
+	def izposoj(self):
+		return "%d" % self.prevzemnik.count()
+	def donator(self):
+		return "%d" % self.primerek_set.count()
+	def razstav(self):
+		return "%d" % self.razstava_set.count()
+	def pregledov(self):
+		return "%d" % self.pregled_set.count()
+	def zbiratelj(self):
+		return "%d" % self.zbiratelj_set.count()
 
 	class Meta:
 		verbose_name_plural = "Osebe"
@@ -115,12 +130,12 @@ class Oseba(models.Model):
 
 class Vhod(models.Model):
 	izrocitelj = models.ForeignKey(Oseba, blank=True, null=True, on_delete=models.PROTECT,
-			related_name="izrocitelj",
+			related_name="izrocitelj_set",
 			verbose_name="izročitelj",
 			help_text="kdo je prinesel eksponat (če ni lastnik)")
 
 	lastnik = models.ForeignKey(Oseba, on_delete=models.PROTECT,
-			related_name="lastnik",
+			related_name="lastnik_set",
 			help_text="kdo je trenutno lastnik eksponata")
 
 	opis = models.TextField(
@@ -180,7 +195,9 @@ class Vhod(models.Model):
 class Kategorija(models.Model):
 	ime = models.CharField(max_length=255)
 	opis = models.TextField()
-	
+	fotografija = models.ImageField(upload_to='primerki', blank=True, null=True,
+		help_text='vzorčna fotografija, ki se uporablja v spletnem katalogu'
+	)
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
 
@@ -335,7 +352,10 @@ class Eksponat(models.Model):
 	st_digital.short_description = u'Št digital'
 
 	def __str__(self):
-		return "%s - %s" % (self.ime, self.tip)
+		if self.tip:
+			return "%s - %s" % (self.ime, self.tip)
+		else:
+			return self.ime
 
 	def get_absolute_url(self):
 		return "/eksponat/%d/" % (self.id,)
