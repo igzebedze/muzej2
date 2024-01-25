@@ -19,73 +19,23 @@
 	<!-- table of contents -->
 	<div class="bg-gray-50 border-y-2 border-gray-100">
 		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-6">
-			<p class="block text-gray-700 font-semibold pb-3 hover:text-gray-900">
-				Kategorije predmetov v zbirki:</p>
-			<nav id="kazalo" class="text-sm">
-				{% for kategorija in object_list %}
-				<a href="#{{ kategorija.ime }}"
-					class="inline-flex py-2 px-4 mr-2 rounded-full font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white">
-					{{ kategorija.ime }} ({{ kategorija.eksponat_set.count }})
-				</a>
-				{% endfor %}
-			</nav>
+			<h2 class="font-bold text-xl mb-2">Zbirka računalniškega muzeja</h2>
 		</div>
 	</div>
+	
 
 	<!-- contents -->
-	<div class="bg-white lg:py-32 mb-12 border-y-2 border-gray-100">
-		<div class="mx-auto container pb-3 lg:pb-12">
+	<div class="bg-white mb-12 border-b-2 border-gray-100">
+		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-12">
+			<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8">
 
 {% for kategorija in object_list %}
-	<h2 class="font-bold text-xl mb-2"><a name="{{ kategorija.ime }}">{{ kategorija.ime }}</a></h2>
+<div class="primerek flex flex-col bg-white p-4 border-2 border-gray-100" data-category="{{ kategorija.slug }}">
+	<h2 class="font-bold text-xl mb-2"><a href="{{ kategorija.slug }}/">{{ kategorija.ime }}</a></h2>
+	<p>{{ kategorija.eksponat_set.count }} eksponatov</p>
+	{% if kategorija.fotografija %}<img src="{{ kategorija.fotografija.url }}">{% endif %}
 	<p>{{ kategorija.opis }}</p>
+</div>
+{% endfor %}
 
-{% if kategorija.ime == "Revija" %}
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 p-0 lg:px-6 justify-between items-center lg:gap-6">
-	<div class="flex flex-col justify-center px-3 py-6 order-2 text-gray-700 lg:px-0 lg:py-0 lg:order-1">
-  {% for proizvajalec, eksponati in kategorija.proizvajalci.items %}
-  <div class="flex flex-col bg-white p-4 border-2 border-gray-100" data-category="{{ kategorija.ime }}">
-	<h3 class="font-bold text-xl mb-2">
-  	<a href="/proizvajalec/#{{ proizvajalec.ime }}">{{ proizvajalec }}</a>
-	</h3>
-  <ul>
-  	{% for e in eksponati %}
-  		<li><a href="/eksponat/{{ e.pk }}/">{{ e }}</a> ({{ e.st_primerkov }})</li>
-  		{% regroup e.primerek_set.all by leto_proizvodnje as primerki %}
-  		<table>
-  		{% for l in primerki|dictsort:"grouper" %}
-  		<tr><td style='width: 3em'><b>{{ l.grouper }}</b></td>
-  			{% for p in l.list|dictsort:"serijska_st" %}
-  			<td style='width: 1.5em'>{% if p.fotografije is not None %}<a href='{{ p.fotografije }}' target='_blank'>{% endif %}
-  				{% with prefix=l.grouper|to_unicode|add:'-' %}
-  				{{ p.serijska_st|cut:prefix|add_zeros }}
-  				{% endwith %}
-  			</a></td>
-  			{% endfor %}
-  		</tr>
-  		{% endfor %}
-		</table>  		
-  	{% endfor %}
-  </ul>
-  </div>
-  {% endfor %}
 </div></div>
-
-{% else %}
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-0 p-0 lg:px-6 justify-between items-center lg:gap-6">
-	<div class="flex flex-col justify-center px-3 py-6 order-2 text-gray-700 lg:px-0 lg:py-0 lg:order-1">
-{% for proizvajalec, eksponati in kategorija.proizvajalci.items %}
-  <div class="flex flex-col bg-white p-4 border-2 border-gray-100 {{ kategorija.ime }}">
-  	<h3 class="font-bold text-xl mb-2"><a href="/proizvajalec/#{{ proizvajalec.ime }}">{{ proizvajalec }}</a></h3>
-	<p>{{ proizvajalec.opis }}</p>
-  	<h4 class="font-bold">Eksponati:</h4>
-  	{% for e in eksponati %}
-  		<li><a href="/eksponat/{{ e.pk }}/">{{ e }}</a> ({{ e.st_primerkov }})</li>
-  	{% endfor %}
-	</div>
-{% endfor %}
-	</div></div>
-{% endif %}
-{% endfor %}
-
-</div></div></div></div>

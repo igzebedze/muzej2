@@ -194,6 +194,7 @@ class Vhod(models.Model):
 
 class Kategorija(models.Model):
 	ime = models.CharField(max_length=255)
+	slug = models.SlugField(max_length=255, null=True)
 	opis = models.TextField()
 	fotografija = models.ImageField(upload_to='primerki', blank=True, null=True,
 		help_text='vzorčna fotografija, ki se uporablja v spletnem katalogu'
@@ -203,6 +204,15 @@ class Kategorija(models.Model):
 
 	def __str__(self):
 		return self.ime
+
+	def image_tag(self):
+		from django.utils.html import escape
+		if self.fotografija:
+			return mark_safe(u'<img style="max-height: 150px" src="%s" />' % escape(self.fotografija.url))
+		else:
+			return mark_safe(u'<img src="" />')
+	image_tag.short_description = 'Image'
+	image_tag.allow_tags = True
 		
 	def proizvajalci(self):
 		list = {}

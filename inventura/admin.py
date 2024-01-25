@@ -306,7 +306,11 @@ class StranAdmin(admin.ModelAdmin):
 	list_editable = ('vrsta',)
 	list_filter = ('vrsta',)
 
-admin.site.register(models.Kategorija)
+class KategorijaAdmin(admin.ModelAdmin):
+	prepopulated_fields = {"slug": ["ime"]}
+	list_display = ('ime', 'slug', 'image_tag')
+
+admin.site.register(models.Kategorija, KategorijaAdmin)
 admin.site.register(models.Iskalnik)
 admin.site.register(models.Proizvajalec, ProizvajalecAdmin)
 admin.site.register(models.Eksponat, EksponatAdmin)

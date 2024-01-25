@@ -213,6 +213,13 @@ def user_profile(request):
 class KategorijaList(ListView):
 	model = Kategorija
 
+class KategorijaView(DetailView):
+	model = Kategorija
+	def get_context_data(self, **kwargs):
+		context = super().get_context_data(**kwargs)
+		context['object_list'] = Kategorija.objects.all()
+		return context
+
 class GalerijaList(ListView):
 	model = Kategorija
 	template_name = "inventura/galerija.html"
