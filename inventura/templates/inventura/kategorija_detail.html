@@ -23,7 +23,7 @@
 				Kategorije predmetov v zbirki:</p>
 			<nav id="kazalo" class="text-sm">
 				{% for kategorija in object_list %}
-				<a href="#{{ kategorija.ime }}"
+				<a href="/eksponat/{{ kategorija.slug }}/"
 					class="inline-flex py-2 px-4 mr-2 rounded-full font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white">
 					{{ kategorija.ime }} ({{ kategorija.eksponat_set.count }})
 				</a>
@@ -32,10 +32,30 @@
 		</div>
 	</div>
 
-	<h2 class="font-bold text-xl mb-2"><a href="{{ kategorija.slug }}/">{{ kategorija.ime }}</a></h2>
-	<p>{{ kategorija.eksponat_set.count }} eksponatov</p>
-	{% if kategorija.fotografija %}<img src="{{ kategorija.fotografija.url }}">{% endif %}
-	<p>{{ kategorija.opis }}</p>
+
+	<!-- hero -->
+	<div class="bg-white lg:py-32">
+		<div class="mx-auto container">
+			<div class="flex flex-col lg:flex-row lg:px-6 items-center">
+				<div class="flex-1 w-full px-3 py-6 text-gray-700 lg:px-0 lg:py-0 order-2 lg:order-1">
+					<h1 class="mb-6 text-3xl lg:text-6xl font-black text-gray-900">
+						<a href="{{ kategorija.slug }}/">{{ kategorija.ime }}</a>
+					</h1>
+					<p class="mb-6 text-lg lg:text-2xl">{{ kategorija.opis }}</p>
+					<p>{{ kategorija.eksponat_set.count }} eksponatov</p>
+					{% if user.is_authenticated %}
+					<a target=" _blank" class="mt-4 text-blue-500 hover:underline"
+						href="/admin/inventura/kategorija/{{ object.pk }}/change/">Uredi</a>
+					{% endif %}
+				</div>
+				{% if kategorija.fotografija %}
+				<div class="flex w-full lg:basis-1/2 order-1 lg:order-2 lg:pl-12">
+					<img class="block w-full" src="{% get_media_prefix %}{{ kategorija.fotografija }}"	alt="Vzorčna fotografija kategorije" role="img" />
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
 
 	<!-- contents -->
 	<div class="bg-white mb-12 border-b-2 border-gray-100">
