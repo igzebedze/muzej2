@@ -64,9 +64,9 @@ urlpatterns = [
     path('listki/', listki, name='listki'),
 
     path('eksponat/', KategorijaList.as_view(), name='kazalo'),
-    path('eksponat/<str:slug>/', KategorijaView.as_view(), name='kategorija'),
 	path('eksponat/<int:pk>/', EksponatView.as_view(), name='eksponat-detail'),
     path('eksponat/<int:pk>/uredi/', update_infobox, name='infobox-edit'),
+    path('eksponat/<str:slug>/', KategorijaView.as_view(), name='kategorija'),
 
     path('razstava/', RazstavaList.as_view(), name='razstave'),
 	path('razstava/<int:pk>/', RazstavaView.as_view(), name='razstava-detail'),

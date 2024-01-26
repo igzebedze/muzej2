@@ -206,6 +206,8 @@ class Kategorija(models.Model):
 		return self.ime
 	
 	def fotka(self):
+		if self.fotografija:
+			return self.fotografija
 		p = Primerek.objects.filter(fotografija__isnull=False).exclude(fotografija='').filter(eksponat__kategorija=self).order_by('?').first()
 		if p:
 			return p.fotografija
