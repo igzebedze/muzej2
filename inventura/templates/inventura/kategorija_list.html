@@ -30,13 +30,15 @@
 			<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8">
 
 {% for kategorija in object_list %}
-<div class="primerek flex flex-col bg-white p-4 border-2 border-gray-100" data-category="{{ kategorija.slug }}">
-	<div class="">
+<div class="flex flex-col lg:flex-row lg:px-6 items-center">
+	<div class="flex-1 w-full px-3 py-6 text-gray-700 lg:px-0 lg:py-0 order-2 lg:order-1">
 		<h2 class="font-bold text-xl mb-2"><a href="/eksponat/{{ kategorija.slug }}/">{{ kategorija.ime }}</a></h2>
 		<p>{{ kategorija.eksponat_set.count }} eksponatov</p>
 		<p>{{ kategorija.opis }}</p>
 	</div>
-	<img width="150" height="150" src="{% get_media_prefix %}{{ kategorija.fotka }}" />
+	<div class="flex w-full lg:basis-1/2 order-1 lg:order-2 lg:pl-12">
+		<img width="150" height="150" src="{% get_media_prefix %}{{ kategorija.fotka }}" />
+	</div>
 </div>
 {% endfor %}
 
