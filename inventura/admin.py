@@ -308,7 +308,7 @@ class StranAdmin(admin.ModelAdmin):
 
 class KategorijaAdmin(admin.ModelAdmin):
 	prepopulated_fields = {"slug": ["ime"]}
-	list_display = ('ime', 'slug', 'image_tag')
+	list_display = ('ime', 'slug', 'st_eksponatov', 'image_tag')
 
 admin.site.register(models.Kategorija, KategorijaAdmin)
 admin.site.register(models.Iskalnik)

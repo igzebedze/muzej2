@@ -31,10 +31,12 @@
 
 {% for kategorija in object_list %}
 <div class="primerek flex flex-col bg-white p-4 border-2 border-gray-100" data-category="{{ kategorija.slug }}">
-	<h2 class="font-bold text-xl mb-2"><a href="/eksponat/{{ kategorija.slug }}/">{{ kategorija.ime }}</a></h2>
-	<p>{{ kategorija.eksponat_set.count }} eksponatov</p>
-	{% if kategorija.fotografija %}<img src="{{ kategorija.fotografija.url }}">{% endif %}
-	<p>{{ kategorija.opis }}</p>
+	<div class="">
+		<h2 class="font-bold text-xl mb-2"><a href="/eksponat/{{ kategorija.slug }}/">{{ kategorija.ime }}</a></h2>
+		<p>{{ kategorija.eksponat_set.count }} eksponatov</p>
+		<p>{{ kategorija.opis }}</p>
+	</div>
+	<img width="150" height="150" src="{% get_media_prefix %}{{ kategorija.fotka }}" />
 </div>
 {% endfor %}
 
