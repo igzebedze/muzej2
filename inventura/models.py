@@ -206,8 +206,11 @@ class Kategorija(models.Model):
 		return self.ime
 	
 	def fotka(self):
-		p = Primerek.objects.filter(fotografija__isnull=False).filter(eksponat__kategorija=self).order_by('?').first()
-		return p.fotografija
+		p = Primerek.objects.filter(fotografija__isnull=False).exclude(fotografija='').filter(eksponat__kategorija=self).order_by('?').first()
+		if p:
+			return p.fotografija
+		else:
+			return False
 
 	def image_tag(self):
 		from django.utils.html import escape
