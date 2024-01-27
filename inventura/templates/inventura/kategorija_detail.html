@@ -64,11 +64,10 @@
 
 {% if object.ime == "Revija" %}
   {% for proizvajalec, eksponati in object.proizvajalci.items %}
-  <div class="flex flex-col bg-white p-4 border-2 border-gray-100" data-category="{{ object.ime }}">
-	<h3 class="font-bold text-xl mb-2">{{ proizvajalec }}</h3>
-  <ul>
   	{% for e in eksponati %}
-  		<li><a href="/eksponat/{{ e.pk }}/">{{ e }}</a> ({{ e.st_primerkov }})</li>
+	  <div class="flex flex-col bg-white p-4 border-2 border-gray-100">
+		<h3 class="font-bold text-xl mb-2"><a href="/eksponat/{{ e.pk }}/">{{ e }}</a> ({{ e.st_primerkov }})</h3>
+		<p>{{ e.opis }}</p>
   		{% regroup e.primerek_set.all by leto_proizvodnje as primerki %}
   		<table>
   		{% for l in primerki|dictsort:"grouper" %}
@@ -82,10 +81,9 @@
   			{% endfor %}
   		</tr>
   		{% endfor %}
-		</table>  		
-  	{% endfor %}
-  </ul>
-  </div>
+		</table>
+	</div>
+	{% endfor %}
   	{% endfor %}
 	{% else %}
 	{% for proizvajalec, eksponati in kategorija.proizvajalci.items %}
