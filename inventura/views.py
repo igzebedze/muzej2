@@ -119,6 +119,7 @@ def listki(request):
 	context = {'form': form}
 	return render(request, 'listkiform.html', context)	
 
+# view of individual magazine 
 def revijaYearsView(request, tip):
 	object_list = Tiskovina.objects.filter(eksponat__tip=tip)
 	context = {}
@@ -142,6 +143,7 @@ def revijaYearsView(request, tip):
 	context['eksponat'] = Eksponat.objects.get(tip=tip)
 	return render(request, "inventura/letniki.html", context)
 
+# default view of all magazines
 class revijeYearsView(ListView):
 	model = Tiskovina
 	ordering = ['eksponat']
@@ -173,6 +175,7 @@ class revijeYearsView(ListView):
 				object_list=revije
 		return object_list
 
+# actual individual issue, online reading
 class revijaView(DetailView):
 	model = Tiskovina
 

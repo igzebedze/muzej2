@@ -1,44 +1,53 @@
-{% extends 'base.html' %}
-{% load static %}
 {% load extras %}
+{% load static tailwind_tags %}
 
-{% block title %}Revije v knjižnici računalniškega muzeja{% endblock %}
-
-{% block css %}
-        .box { width: 120px; float: left; padding: 10px; }
-        .box img { box-shadow: 4px 4px black; } 
-        h3, h4, hr { clear: both; }
-        .sidebar, #head { background-color: #efefef; }
-        body { font-family: Roboto; }
-{% endblock %}
-
-{% block head %}
+<head>
         <meta charset="utf-8">
-{% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet" />
+        {% tailwind_css %}
+    </head>
+    <body class="bg-gray-50 pt-[90px] lg:pt-[115px]">
 
-{% block content %}
-<div id="main" class="container-fluid">
-    <div class="row align-items-start">
-    <div id="head" class="col-3">
-        <div class="row">
-        <h3>Arhiv tiskovin računalniškega muzeja</h3>
-            <p id="about"><a href="{{ root }}/oprojektu/">O projektu</a>, <a href="https://www.racunalniski-muzej.si">O muzeju</a></p>
-            <p id="search">
-                <form method="get" action="{{ root }}" class="form" role="form">
-                    {{ form.non_field_errors }}
-                    <input type="search" name="q" value="{% if query %}{{ query }}{% endif %}" id="id_q">
-                    <input type="submit" class="btn btn-primary" value="Iskanje">
-                </form>
-            </p>
-        <hr />
-    </div>
-    <div class="row">
-        {% revije_nav tip root object_list %}
-    </div>
-</div><!-- end of head column -->
+        <!-- uniheader -->
+    {% include '_components/header.html' %}
 
-<div id="content" class="col-9">
-        <p>Knjiznica Racunalniskega muzeja zbira, hrani in daje na voljo za raziskovanje obsirno zbirko knjig in revij, 
+	<!-- table of contents -->
+	<div class="bg-gray-50 border-y-2 border-gray-100">
+		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-6">
+			<p class="block text-gray-700 font-semibold pb-3 hover:text-gray-900">
+				Digitalna zbirka revij o računalništvu</p>
+            <nav id="kazalo" class="text-sm">
+                <div id="search" class="inline-flex py-2 px-4 mr-2 mb-2 text-gray-700 font-semibold ">
+                    <form method="get" action="{{ root }}{% if selected %}/{{ selected }}/{% endif %}" class="form" role="form">
+                        {{ form.non_field_errors }}
+                        <input type="search" name="q" value="{% if query %}{{ query }}{% endif %}" id="id_q">
+                        <input type="submit" class="inline-flex py-2 px-4 mr-2 rounded-full mb-2 text-gray-700 font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white" value="Iskanje">
+                    </form>
+                </div>
+                <a class="inline-flex py-2 px-4 mr-2 rounded-full mb-2 text-gray-700 font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white"
+                    href="{{ root }}/oprojektu/">O projektu Revije</a>
+
+                {% if user.is_authenticated %}
+                    <a class="float-right inline-flex py-2 px-4 mr-2 rounded-full mb-2 text-gray-700 font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white"
+                        target="_blank" href="https://zbirka.muzej.si/accounts/profile/">Pozdravljen {{ user }}</a>
+                        {% else %}
+                    <a class="float-right inline-flex py-2 px-4 mr-2 rounded-full mb-2 text-gray-700 font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white"
+                        target="_blank" href="https://zbirka.muzej.si/accounts/login/">Prijava</a>
+                {% endif %}
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- content -->
+    <div class="container mx-auto px-3 py-6 lg:px-6 lg:py-12">
+
+            <p>Knjiznica Racunalniskega muzeja zbira, hrani in daje na voljo za raziskovanje obsirno zbirko knjig in revij, 
             ki so oblikovale slovenski racunalniski prostor. Stare racunalniske knjige splosne knjiznice redno odpisujejo, 
             tako da smo za marsikatero se edini enostavno dostopen vir.</p>
         <p>Zbiramo vse revije v slovenskem jeziku, ki se primarno ukvarjajo z računalništvom, in posamične izvode drugih strokovnih revij, 
@@ -92,4 +101,4 @@
             <li>OCR: Tesseract 4.0</li>
             <li>Lastnosti novih posnetkov: ScanSnap ix500, 200 dpi, nizka kompresija</li>
         </ul>
-{% endblock %}
+</div>

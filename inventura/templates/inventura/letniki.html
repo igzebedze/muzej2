@@ -1,74 +1,155 @@
-{% extends 'base.html' %}
-{% load static %}
 {% load extras %}
+{% load static tailwind_tags %}
 
-{% block title %}Revije v knjižnici računalniškega muzeja{% endblock %}
-
-{% block css %}
-        .box { width: 120px; float: left; padding: 10px; }
-        .box img { box-shadow: 4px 4px black; } 
-        h3, h4, hr { clear: both; }
-        .sidebar, #head { background-color: #efefef; }
-        body { font-family: Roboto; }
-{% endblock %}
-
-{% block head %}
+<head>
         <meta charset="utf-8">
-{% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet" />
+        {% tailwind_css %}
+    </head>
+    <body class="bg-gray-50 pt-[90px] lg:pt-[115px]">
 
-{% block content %}
-<div id="main" class="container-fluid">
-    <div class="row align-items-start">
+        <!-- uniheader -->
+    {% include '_components/header.html' %}
 
-<!-- actual content -->
-    <div id="head" class="col-3 ">
-        <div class="row">
-        <h3>Arhiv tiskovin računalniškega muzeja</h3>
-            <p id="about"><a href="{{ root }}/oprojektu/">O projektu</a>, 
-                <a target="_blank" href="https://www.racunalniski-muzej.si">O muzeju</a>, 
+	<!-- table of contents -->
+	<div class="bg-gray-50 border-y-2 border-gray-100">
+		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-6">
+			<p class="block text-gray-700 font-semibold pb-3 hover:text-gray-900">
+				Digitalna zbirka revij o računalništvu</p>
+            <nav id="kazalo" class="text-sm">
+                <div id="search" class="inline-flex py-2 px-4 mr-2 mb-2 text-gray-700 font-semibold ">
+                    <form method="get" action="{{ root }}{% if selected %}/{{ selected }}/{% endif %}" class="form" role="form">
+                        {{ form.non_field_errors }}
+                        <input type="search" name="q" value="{% if query %}{{ query }}{% endif %}" id="id_q">
+                        <input type="submit" class="btn btn-primary" value="Iskanje">
+                    </form>
+                </div>
+                <a class="inline-flex py-2 px-4 mr-2 rounded-full mb-2 text-gray-700 font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white"
+                    href="{{ root }}/oprojektu/">O projektu Revije</a>
+
                 {% if user.is_authenticated %}
-                <a target="_blank" href="https://zbirka.muzej.si/accounts/profile/">{{ user }}</a>
-                    {% else %}
-                <a target="_blank" href="https://zbirka.muzej.si/accounts/login/">Prijava</a>
+                    <a class="float-right inline-flex py-2 px-4 mr-2 rounded-full mb-2 text-gray-700 font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white"
+                        target="_blank" href="https://zbirka.muzej.si/accounts/profile/">Pozdravljen {{ user }}</a>
+                        {% else %}
+                    <a class="float-right inline-flex py-2 px-4 mr-2 rounded-full mb-2 text-gray-700 font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white"
+                        target="_blank" href="https://zbirka.muzej.si/accounts/login/">Prijava</a>
                 {% endif %}
-            </p>
-            <p id="search">
-                <form method="get" action="{{ root }}{% if selected %}/{{ selected }}/{% endif %}" class="form" role="form">
-                    {{ form.non_field_errors }}
-                    <input type="search" name="q" value="{% if query %}{{ query }}{% endif %}" id="id_q">
-                    <input type="submit" class="btn btn-primary" value="Iskanje">
-                </form>
-            </p>
-        <hr />
+            </nav>
+        </div>
     </div>
-    <div class="row">
-        {% revije_nav selected root object_list %}
-    </div>
-</div><!-- end of head column -->
 
-<div id="content" class="col-9">
+    <!-- years histogram -->
+	<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-12">
+        <!--
+        <h2 class="text-xl font-bold">Monthly Revenue</h2>
+		<span class="text-sm font-semibold text-gray-500">2020</span>
+        -->
+        {% regroup object_list|dictsort:"leto" by leto as newlist %}
+		<div class="flex items-end flex-grow w-full mt-2 space-x-2 sm:space-x-3">
+            {% for title in newlist %}
+			<div class="relative flex flex-col items-center flex-grow pb-5 group">
+				<span class="absolute top-0 hidden -mt-6 text-xs font-bold group-hover:block">{{ title.list|length }}</span>
+				<div class="relative flex justify-center w-full min-h-4 h-[{{ title.list|length }}px] bg-indigo-400"></div>
+				<span class="absolute bottom-0 text-xs font-bold rotate-45">
+                    <a href='#'>{{ title.grouper }}</a>
+                </span>
+			</div>
+            {% endfor %}
+        </div>
+    </div>
+
+	<!-- hero if individual page -->
+    {% if selected %}
+	<div class="bg-white lg:py-32">
+		<div class="mx-auto container">
+			<div class="flex flex-col lg:flex-row lg:px-6 items-center">
+				<div class="flex-1 w-full px-3 py-6 text-gray-700 lg:px-0 lg:py-0 order-2 lg:order-1">
+					<h1 class="mb-6 text-3xl lg:text-6xl font-black text-gray-900">
+						<a href="{{ eksponat.slug }}/">{{ eksponat.ime }}</a>
+					</h1>
+					<p class="mb-6 text-lg lg:text-2xl">{{ eksponat.opis }}</p>
+					<p>{{ eksponat.tiskovina_set.count }} izdaj</p>
+                    <p>Letniki: {{ eksponat.leto_proizvodnje }}</p>
+					{% if user.is_authenticated %}
+					<a target=" _blank" class="mt-4 text-blue-500 hover:underline"
+						href="/admin/inventura/eksponat/{{ object.pk }}/change/">Uredi</a>
+					{% endif %}
+				</div>
+				<div class="flex w-full lg:basis-1/2 order-1 lg:order-2 lg:pl-12">
+					<img class="block w-full" src="{{ eksponat.tiskovina_set.all|random|get_cover }}" role="img" />
+				</div>
+			</div>
+		</div>
+	</div>   
+    {% else %}   
+
+    <!-- block with all magazine tiles -->
+	<div class="bg-white mb-12 border-b-2 border-gray-100">
+		<div class="container mx-auto px-3 py-6 lg:px-6 lg:py-12">
+			<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+                {% regroup object_list by eksponat as revije %}
+                    {% for revija in revije %}
+                <div class="flex flex-col lg:flex-row lg:px-6 items-center">
+                    <div class="flex-1 w-full px-3 py-6 text-gray-700 lg:px-0 lg:py-0 order-2 lg:order-1">
+                        <h3 class="font-bold text-xl mb-2">
+                            <a class="nav-link {% if selected == revija.grouper.tip %}active{% endif %}"  
+                                href="{{ root }}/{{ revija.grouper.tip }}/" 
+                                revija="{{ revija.grouper }}">{{ revija.grouper.ime }}</a>
+                        </h3>
+                        <p>{{ revija.list|length }} izvodov</p>
+                        <p>Letniki: {{ revija.grouper.leto_proizvodnje }}</p>
+                        <p>{{ revija.grouper.opis }}</p>
+                    </div>
+                    <div class="flex w-full lg:basis-1/2 order-1 lg:order-2 lg:pl-12">
+                        <img width="150" height="150" src="{{ revija.list|random|get_cover }}" />
+                    </div>      
+                </div>          
+                    {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}  
+
+    <!-- all filtered issues -->
+    <div class="container mx-auto px-3 py-6 lg:px-6 lg:py-12">
+
     {% regroup object_list|dictsort:"leto" by leto as newlist %}
     {% if selected %}<h2>{{ eksponat.ime }}</h2><p>{{ eksponat.opis }}</p>{% endif %}
     {% for year in newlist %}
+
+    <!-- letnik -->
     <a name='{{ year.grouper }}'></a>
-    <h3>{{ year.grouper }}</h3>
+    <h2 class="font-bold text-xl mb-2 px-6">{{ year.grouper }}</h3>
     {% if selected %}{% else %}<hr />{% endif %}
     {% regroup year.list|dictsort:"leto" by eksponat as letniki %}
-        {% for leto in letniki %}
-            <div class="{{ leto.grouper }}">
-        {% if selected %}{% else %}<h4 class="leto">{{ leto.grouper }}</h4>{% endif %}
-        {% for object in leto.list|dictsort:"datum" %}
-            <div class="box {{ object.eksponat.id }}" revija="{{ object.eksponat.ime }}">
-                {% if user.is_authenticated %}
-                <a target="_blank" href="{{ root }}/{{ object.id }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
-                {% elif object.dovoljenje %}
-                <a target="_blank" href="{{ root }}/{{ object.id }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
-                {% else %}
-                <a target="_blank" href="{{ object.eksponat.uradnastran }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
-                {% endif %}
+
+    {% for leto in letniki %}
+        <div class="{{ leto.grouper }} flex flex-col lg:flex-row lg:px-6 items-end content-start bg-white">
+
+            <!-- revija znotraj letnika -->
+            {% if selected %}{% else %}<h2 class="font-bold text-xl mb-2 w-40">{{ leto.grouper.ime }}</h2>{% endif %}
+                
+            <!-- posamezne stevilke -->
+            {% for object in leto.list|dictsort:"datum" %}
+            <div class="flex-1 w-full px-3 py-6 text-gray-700 lg:px-0 lg:py-0 {{ object.eksponat.id }}" 
+                 revija="{{ object.eksponat.ime }}">
+                 
                 {% if object.datum %}<p>{{ object.datum|date:"E Y" }}
                 {% else %}<p>{{ object.mesec}} - {{ object.leto }}{% endif %}
                 <br />{{ object.pages }} strani</p>
+                
+                {% if user.is_authenticated %}
+                    <a target="_blank" href="{{ root }}/{{ object.id }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
+                {% elif object.dovoljenje %}
+                    <a target="_blank" href="{{ root }}/{{ object.id }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
+                {% else %}
+                    <a target="_blank" href="{{ object.eksponat.uradnastran }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
+                {% endif %}
             </div>
         {% endfor %}
         </div>
@@ -77,14 +158,10 @@
     {% endfor %}
     </div>
 
-<!-- end container and row -->    
-</div></div>
-{% endblock %}
-
-{% block endbody %}
     <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
     <script type="text/javascript">
         Paddle.Environment.set('sandbox');
         Paddle.Setup({ vendor: 12563 });
     </script>
-{% endblock %}
+
+</body>

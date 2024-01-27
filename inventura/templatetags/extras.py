@@ -35,3 +35,7 @@ def groups_sort(groups):
 def groups_sort_reversed(groups):
     groups.sort(key=lambda group: len(group[1]), reverse=True)
     return groups
+
+@register.filter()
+def get_cover(tiskovina):
+    return tiskovina.naslovnica

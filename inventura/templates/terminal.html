@@ -1,4 +1,5 @@
 {% load static %}
+{% load static tailwind_tags %}
 
 <!DOCTYPE html>
 <html>
@@ -33,8 +34,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <title>Dostop do zbirk Računalniškega muzeja</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link href="{% get_media_prefix %}main.css" rel="stylesheet"></head>
+    <link href="{% get_media_prefix %}main.css" rel="stylesheet">
+    	{% tailwind_css %}
+  </head>
   <body>
+	{% include '_components/header.html' %}
 
     <!-- Application markup -->
     <div id="crt">
