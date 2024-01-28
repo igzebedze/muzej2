@@ -59,23 +59,6 @@
 		</div>
 	</div>
 
-	<!-- table of contents -->
-	<div class="bg-gray-50 border-y-2 border-gray-100">
-		<div class="container mx-auto px-3 pt-6 pb-4 lg:px-6 lg:pt-6">
-			<p class="block text-gray-700 font-semibold pb-3 hover:text-gray-900">
-				Kategorije predmetov na razstavi:</p>
-			{% regroup object.primerki.all|sort_by:'eksponat__kategorija' by eksponat.kategorija as kategorije %}
-			<nav id="kazalo" class="text-sm">
-				<span data-category="all" class="filter inline-flex py-2 px-4 mr-2 mb-2 bg-brand-pink text-white rounded-full font-semibold cursor-pointer hover:brightness-110">Vse</span>
-				{% for kategorija in kategorije|groups_sort_reversed %}
-				<span data-category="{{ kategorija.grouper|lower|cut:' ' }}"
-					class="filter inline-flex py-2 px-4 mr-2 mb-2 rounded-full font-semibold bg-gray-300 text-gray-700 hover:brightness-110 cursor-pointer">
-					{{ kategorija.grouper }} ({{ kategorija.list|length }})
-				</span>
-				{% endfor %}
-			</nav>
-		</div>
-	</div>
 
     <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
     <script type="text/javascript">
