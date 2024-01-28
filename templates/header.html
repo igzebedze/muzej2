@@ -1,0 +1,46 @@
+<header class="fixed h-[90px] top-0 left-0 right-0 w-full z-30 bg-white drop-shadow lg:h-[115px]">
+    <div class="h-3 bg-gradient"></div>
+    <div class="container mx-auto">
+        <div class="flex p-3 justify-between items-center lg:p-6">
+            <a href="https://www.racunalniski-muzej.si" class="block max-w-[100px]">
+                <img class="block" class="w-full"
+                    src="https://www.racunalniski-muzej.si/wp-content/uploads/2019/01/logo20-header2.png"
+                    alt="Računalniški muzej" />
+            </a>
+            <nav id="navigation"
+                class="fixed hidden bg-white z-40 top-[90px] left-0 h-lvh w-full text-lg font-semibold lg:flex lg:static lg:w-auto lg:h-auto">
+                <a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-orange"
+                    href="/eksponat/">Eksponati</a>
+                <a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-pink"
+                    href="/razstava/">Razstave</a>
+                <a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-gray-1"
+                    href="/">Iskalnik</a>
+                <a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-gray-3"
+                    href="https://zbirka.muzej.si/revije/">Revije</a>
+                <a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-gray-3"
+                    href="https://zbirka.muzej.si/evidenca/">Evidenca</a>
+                <a class="block text-gray-700 hover:text-gray-900 border-b-4 border-transparent px-3 py-3 hover:border-brand-green"
+                    target="_blank" href="https://www.racunalniski-muzej.si/nasa-izkaznica/">O muzeju</a>
+            </nav>
+            <div id="navigation-trigger"
+                class="flex items-center justify-center w-[40px] h-[40px] cursor-pointer lg:hidden">
+                <svg aria-haspopup="true" aria-label="Main Menu" xmlns="http://www.w3.org/2000/svg"
+                    class="show-m-menu icon icon-tabler icon-tabler-menu" width="28" height="28" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z"></path>
+                    <line x1="4" y1="8" x2="20" y2="8"></line>
+                    <line x1="4" y1="16" x2="20" y2="16"></line>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <script>
+        const navigation = document.getElementById("navigation");
+        const trigger = document.getElementById("navigation-trigger");
+
+        trigger.addEventListener("click", () => {
+            navigation.classList.toggle("hidden");
+            trigger.classList.toggle("bg-gray-100");
+        });
+    </script>
+</header>

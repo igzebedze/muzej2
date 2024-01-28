@@ -4,6 +4,6 @@
 {% block content %}
 {% url 'login' as auth_login_url %}
 {% blocktrans %}
-Thanks, activation complete!  You may now <a href='{{ auth_login_url }}'>login</a> using the username and password you set at registration.
+Thanks, activation complete!  You may now <a class="inline-flex py-2 px-4 mr-2 rounded-full mb-2 text-gray-700 font-semibold bg-gray-200 hover:bg-brand-pink hover:text-white" href='{{ auth_login_url }}'>login</a> using the username and password you set at registration.
 {% endblocktrans %}
 {% endblock %}

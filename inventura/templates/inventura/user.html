@@ -1,43 +1,84 @@
-{% extends "base.html" %}
 {% load extras %}
-{% include "djpaddle_paddlejs.html" %}
-{% include "djpaddle_post_checkout.html" %}
+{% load static %}
+{% load static tailwind_tags %}
 
-{% block content %}
-<h1>pozdravljen {{ user }}</h1>
-<p><a href="/accounts/logout/">Odjava</a>, <a href="password_change">Spremeni geslo</a></p>
-<p>imas dostop do:</p>
-<ul>
-    {% if user.is_staff %}
-        <li><a href="https://zbirka.muzej.si/admin/">admin</a></li>
-        <li><a href="https://revije.muzej.si">arhiv revij</a></li>
-    {% elif user|has_group:"revije" %}
-        <li><a href="https://revije.muzej.si">arhiv revij</a></li>
-    {% else %}
-        <li><a href="#!" class="paddle_button" data-product="52462">Kupi dostop do arhiva</a></li>
-    {% endif %}
-</ul>
-{% if user.subscriptions %}
-<p>tvoje narocnine:</p>
-{% for s in user.subscriptions.all %}
-<ul>
-    <li>status: {{ s.status }}</li>
-    <li>naslednje placilo: {{ s.next_bill_date }}</li>
-    <li>pricetek narocnine: {{ s.event_time }}</li>
-    <li>stevilo narocnin: {{ s.quantity }}</li>
-    <li>vir: {{ s.source }}</li>
-    <li>plan: {{ s.plan }}</li>
-    <li>cena: {{ s.unit_price }} {{ s.currency }}</li>
-    <li><a target='_blank' href="{{ s.cancel_url }}">preklici narocnino</a></li>
-    <li><a target='_blank' href="{{ s.update_url }}">posodobi narocnino</a></li>
-</ul>
-{% endfor %}
-{% endif %}
-{% endblock %}
-{% block endbody %}
+<head>
+	<title>Računalniški muzej | Uporabniški profil</title>
+	<meta description="" />
+	{% include '../_components/head_common.html' %}
+</head>
+
+<body class="bg-gray-50 pt-[90px] lg:pt-[115px]">
+    {% include "djpaddle_paddlejs.html" %}
+    {% include "djpaddle_post_checkout.html" %}
+    
+	<!-- navigation -->
+	{% include '../_components/header.html' %}
+
+	<!-- hero -->
+	<div class="bg-white lg:py-32">
+		<div class="mx-auto container">
+			<div class="flex flex-col lg:flex-row lg:px-6 items-center">
+				<div class="flex-1 w-full px-3 py-6 text-gray-700 lg:px-0 lg:py-0 order-2 lg:order-1">
+
+                    <h1 class="mb-6 text-3xl lg:text-6xl font-black text-gray-900">Pozdravljen {{ user }}</h1>
+                    <p><a href="/accounts/logout/">Odjava</a>, <a href="password_change">Spremeni geslo</a></p>
+                    <p>imas dostop do:</p>
+                    <ul class="list-disc pl-6 text-lg lg:text-2xl">
+                        {% if user.is_staff %}
+                            <li><a href="https://zbirka.muzej.si/admin/">admin</a></li>
+                            <li><a href="https://revije.muzej.si">arhiv revij</a></li>
+                        {% elif user|has_group:"revije" %}
+                            <li><a href="https://revije.muzej.si">arhiv revij</a></li>
+                        {% else %}
+                            <li><a href="#!" class="paddle_button" data-product="52462">Kupi dostop do arhiva</a></li>
+                        {% endif %}
+                    </ul>
+                    {% if user.subscriptions %}
+                    <p>tvoje narocnine:</p>
+                    {% for s in user.subscriptions.all %}
+                    <ul class="list-disc pl-6 text-lg lg:text-2xl">
+                        <li>status: {{ s.status }}</li>
+                        <li>naslednje placilo: {{ s.next_bill_date }}</li>
+                        <li>pricetek narocnine: {{ s.event_time }}</li>
+                        <li>stevilo narocnin: {{ s.quantity }}</li>
+                        <li>vir: {{ s.source }}</li>
+                        <li>plan: {{ s.plan }}</li>
+                        <li>cena: {{ s.unit_price }} {{ s.currency }}</li>
+                        <li><a target='_blank' href="{{ s.cancel_url }}">preklici narocnino</a></li>
+                        <li><a target='_blank' href="{{ s.update_url }}">posodobi narocnino</a></li>
+                    </ul>
+                    {% endfor %}
+                    {% endif %}                                                 
+				{% if object.fotografija %}
+				<div class="flex w-full lg:basis-1/2 order-1 lg:order-2 lg:pl-12">
+					<img class="block w-full" src="{% get_media_prefix %}{{ object.fotografija }}"	alt="Vzorčna fotografija {{ object.naslov }}" role="img" />
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	<!-- table of contents -->
+	<div class="bg-gray-50 border-y-2 border-gray-100">
+		<div class="container mx-auto px-3 pt-6 pb-4 lg:px-6 lg:pt-6">
+			<p class="block text-gray-700 font-semibold pb-3 hover:text-gray-900">
+				Kategorije predmetov na razstavi:</p>
+			{% regroup object.primerki.all|sort_by:'eksponat__kategorija' by eksponat.kategorija as kategorije %}
+			<nav id="kazalo" class="text-sm">
+				<span data-category="all" class="filter inline-flex py-2 px-4 mr-2 mb-2 bg-brand-pink text-white rounded-full font-semibold cursor-pointer hover:brightness-110">Vse</span>
+				{% for kategorija in kategorije|groups_sort_reversed %}
+				<span data-category="{{ kategorija.grouper|lower|cut:' ' }}"
+					class="filter inline-flex py-2 px-4 mr-2 mb-2 rounded-full font-semibold bg-gray-300 text-gray-700 hover:brightness-110 cursor-pointer">
+					{{ kategorija.grouper }} ({{ kategorija.list|length }})
+				</span>
+				{% endfor %}
+			</nav>
+		</div>
+	</div>
+
     <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
     <script type="text/javascript">
         Paddle.Environment.set('sandbox');
         Paddle.Setup({ vendor: 12563 });
     </script>
-{% endblock %}

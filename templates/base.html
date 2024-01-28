@@ -1,3 +1,4 @@
+{% load static tailwind_tags %}
 <!doctype html>
 <html>
     <head>
@@ -14,10 +15,14 @@
             {% block css %}
             {% endblock %}
         </style>
+    	{% tailwind_css %}
     </head>
-    <body>
+    <body class="bg-gray-50 pt-[90px] lg:pt-[115px]">
+        {% include 'header.html' %}
+        <div class="container mx-auto px-3 py-6 lg:px-6 lg:py-12">
         {% block content %}
         {% endblock %}
+        </div>
         {% block endbody %}
         {% endblock %}
     </body>
