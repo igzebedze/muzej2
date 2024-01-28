@@ -48,11 +48,9 @@
 						href="/admin/inventura/kategorija/{{ object.pk }}/change/">Uredi</a>
 					{% endif %}
 				</div>
-				{% if kategorija.fotografija %}
 				<div class="flex w-full lg:basis-1/2 order-1 lg:order-2 lg:pl-12">
-					<img class="block w-full" src="{% get_media_prefix %}{{ kategorija.fotografija }}"	alt="Vzorčna fotografija kategorije" role="img" />
+					<img class="block w-full" src="{% get_media_prefix %}{{ kategorija.fotka }}"	alt="Vzorčna fotografija kategorije" role="img" />
 				</div>
-				{% endif %}
 			</div>
 		</div>
 	</div>
