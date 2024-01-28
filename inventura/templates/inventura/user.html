@@ -22,8 +22,10 @@
 				<div class="flex-1 w-full px-3 py-6 text-gray-700 lg:px-0 lg:py-0 order-2 lg:order-1">
 
                     <h1 class="mb-6 text-3xl lg:text-6xl font-black text-gray-900">Pozdravljen {{ user }}</h1>
-                    <p><a href="/accounts/logout/">Odjava</a>, <a href="password_change">Spremeni geslo</a></p>
-                    <p>imas dostop do:</p>
+                    <p><a href="/accounts/logout/" class="filter inline-flex py-2 px-4 mr-2 mb-2 rounded-full font-semibold bg-gray-300 text-gray-700 hover:brightness-110 cursor-pointer">Odjava</a>, 
+                        <a href="password_change" class="filter inline-flex py-2 px-4 mr-2 mb-2 rounded-full font-semibold bg-gray-300 text-gray-700 hover:brightness-110 cursor-pointer">Spremeni geslo</a>
+                    </p>
+                    <h3>imas dostop do:</h3>
                     <ul class="list-disc pl-6 text-lg lg:text-2xl">
                         {% if user.is_staff %}
                             <li><a href="https://zbirka.muzej.si/admin/">admin</a></li>
@@ -35,7 +37,7 @@
                         {% endif %}
                     </ul>
                     {% if user.subscriptions %}
-                    <p>tvoje narocnine:</p>
+                    <h3>tvoje narocnine:</h3>
                     {% for s in user.subscriptions.all %}
                     <ul class="list-disc pl-6 text-lg lg:text-2xl">
                         <li>status: {{ s.status }}</li>
