@@ -12,6 +12,7 @@ from muzej2.settings import SLACKWEBHOOK, MEDIA_ROOT, MEDIA_URL, DEBUG
 import requests
 from django.utils.html import mark_safe
 from django.utils.html import escape
+from webcampicture.fields import WebcamPictureField
 
 headers = {
     'Content-type': 'application/json',
@@ -438,6 +439,9 @@ class Primerek(models.Model):
 	)
 	
 	fotografija = models.ImageField(upload_to='primerki', blank=True, null=True,
+		help_text='vzorčna fotografija, ki se uporablja v spletnem katalogu'
+	)
+	webcam = WebcamPictureField(upload_to='primerki', blank=True, null=True,
 		help_text='vzorčna fotografija, ki se uporablja v spletnem katalogu'
 	)
 	fotografije = models.URLField(blank=True, null=True,

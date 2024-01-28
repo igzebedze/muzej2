@@ -1,6 +1,11 @@
 {% extends "admin/base.html" %}
 
 {% block title %}{{ title }} | {{ 'Društvo računalniški muzej' }}{% endblock %}
+{% block extrastyle %}{{ block.super }}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'webcampicture/css/webcampicture.css' %}">
+    <script src="{% static 'webcampicture/js/webcampicture.js' %}"></script>
+{% endblock %}
 
 {% block branding %}
 <h1 id="site-name"><a href="{% url 'admin:index' %}">{{ 'Društvo računalniški muzej' }}</a></h1>

@@ -34,7 +34,8 @@ INSTALLED_APPS = [
     'django_registration',
     'djpaddle',
     'tailwind',
-	'theme'
+	'theme',
+	'webcampicture',
 ]
 
 TAILWIND_APP_NAME = 'theme'
@@ -130,7 +131,9 @@ SESSION_COOKIE_NAME = 'muzejsi'
 
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
 
-
+WEBCAM_BASE64_PREFIX = "data:image/png;base64,"
+WEBCAM_CONTENT_TYPE = "image/png"
+WEBCAM_FILENAME_SUFFIX = ".png"
 
 # Local Settings
 try:
