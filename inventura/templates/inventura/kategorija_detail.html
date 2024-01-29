@@ -76,7 +76,7 @@
   			
 				{% with prefix=l.grouper|to_unicode|add:'-' %}
   				{% if p.tiskovina_set.count > 0 %}
-					<a class="bg-blue" target="_blank" href="/revije/{{ p.tiskovina_set.first.pk }}/">
+					<a class="text-blue-500" target="_blank" href="/revije/{{ p.tiskovina_set.first.pk }}/">
 						{{ p.serijska_st|cut:prefix|add_zeros }}
 					</a>			
 				{% else %}
