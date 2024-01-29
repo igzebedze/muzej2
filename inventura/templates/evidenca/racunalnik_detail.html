@@ -21,7 +21,7 @@
         <dt>Proizvajalec:</dt><dd>{{ racunalnik.proizvajalec }}</dd>
         <dt>Pričetek:</dt><dd>{{ racunalnik.nakup.year }}</dd>
         {% if racunalnik.lastnistvo %}<dt>Status:</dt> <dd>{{ racunalnik.get_lastnistvo_display }}</dd>{% endif %}
-        {% ifnotequal racunalnik.uporaba 'o' %}<dt>Uporaba:</dt><dd>{{ racunalnik.get_uporaba_display }}</dd>{% endifnotequal %}
+        {% if racunalnik.uporaba != 'o' %}<dt>Uporaba:</dt><dd>{{ racunalnik.get_uporaba_display }}</dd>{% endif %}
         {% if racunalnik.generacija %}<dt>Generacija:</dt><dd>
             <img width="30" height="30" title="{{ racunalnik.get_generacija_display }}" alt="{{ racunalnik.get_generacija_display }}" src="{% get_media_prefix %}{{ racunalnik.generacija }}.png" />
             {{ racunalnik.get_generacija_display }}

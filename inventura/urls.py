@@ -37,11 +37,6 @@ urlpatterns = [
     path('adminactions/', include('adminactions.urls')),
     path('home/', HomeView, name='home'),
 
-    path('app/', appView, name='app'),
-    path('app/<int:pk>/', appEksponat),
-    path('app/<str:category>/', appView),
-    path('app/proizvajalec/<int:pk>/', appProizvajalec),
-
 #    path('revije/', revijeIndexView.as_view()),
     path('revije/', revijeYearsView.as_view(), name='index'),
     path('revije/oprojektu/', TemplateView.as_view(template_name='inventura/revijeoprojektu.html'), name='oprojektu'), 

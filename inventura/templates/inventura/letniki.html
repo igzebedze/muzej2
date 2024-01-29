@@ -74,6 +74,7 @@
 					</h1>
 					<p class="mb-6 text-lg lg:text-2xl">{{ eksponat.opis }}</p>
 					<p>{{ eksponat.tiskovina_set.count }} izdaj</p>
+                    {% if eksponat.uradnastran %}<p><a target="_blank" href="{{ eksponat.uradnastran }}">{{ eksponat.uradnastran }}</a></p>{% endif %}
                     <p>Letniki: {{ eksponat.leto_proizvodnje }}</p>
 					{% if user.is_authenticated %}
 					<a target=" _blank" class="mt-4 text-blue-500 hover:underline"

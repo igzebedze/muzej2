@@ -2,7 +2,7 @@
 <div class="detail-info">
 {% if oseba.povzetek %}<p>{{ oseba.povzetek }}</p>{% endif %}
 <dl>
-    {% ifnotequal o.sluzba.count 0 %}
+    {% if o.sluzba.count != 0 %}
         <dt>Sluzbe:</dt>
         <dd>
             {% for o in oseba.sluzba.all %}
@@ -10,7 +10,7 @@
             {% if forloop.last %}{% else %}, {% endif %}
             {% endfor %}
         </dd>
-    {% endifnotequal %}
+    {% endif %}
     {% if oseba.dosezek.all %}
     <dt>Dosežki:</dt>
     <ul>

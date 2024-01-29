@@ -30,7 +30,7 @@
                     <span class="icon">
                         <img width="30" height="30" title="{{ racunalnik.get_generacija_display }}" alt="{{ racunalnik.get_generacija_display }}" src="{% get_media_prefix %}{{ racunalnik.generacija }}.png" />
                     </span>
-                    {% ifequal racunalnik.proizvajalec.drzava "Jugoslavija" %}<span class="year">🇸🇮</span>{% endifequal %}
+                    {% if racunalnik.proizvajalec.drzava = "Jugoslavija" %}<span class="year">🇸🇮</span>{% endif%}
                     <span class="name">
                         {{ racunalnik.nosilec }}
                         {% if racunalnik.organizacija.count > 1 %} + {{ racunalnik.organizacija.count }}{% endif %}
