@@ -66,23 +66,16 @@
 	  <div class="flex flex-col bg-white p-4 border-2 border-gray-100">
 		<h3 class="font-bold text-xl mb-2"><a href="/eksponat/{{ e.pk }}/">{{ e.ime }}</a> ({{ e.st_primerkov|add:e.st_digital }})</h3>
 		<p>{{ e.opis }}</p>
-  		{% regroup e.primerek_set.all by leto_proizvodnje as primerki %}
-  		<table>
+		{% regroup e.vse_revije by leto as primerki %}
+		<table>
   		{% for l in primerki|dictsort:"grouper" %}
   		<tr><td style='width: 3em'><b>{{ l.grouper }}</b></td>
-  			{% for p in l.list|dictsort:"serijska_st" %}
+  			{% for p in l.list|dictsort:"mesec" %}
   			<td style='width: 1.5em'>
-  			
-				{% with prefix=l.grouper|to_unicode|add:'-' %}
-  				{% if p.tiskovina_set.count > 0 %}
-					<a class="text-blue-500" target="_blank" href="/revije/{{ p.tiskovina_set.first.pk }}/">
-						{{ p.serijska_st|cut:prefix|add_zeros }}
-					</a>			
-				{% else %}
-					{{ p.serijska_st|cut:prefix|add_zeros }}
-  				{% endif %}
-				{% endwith %}
-  			
+  			{% if p.digital > 0 %}
+				<a class="text-blue-500" target="_blank" href="/revije/{{ p.digital }}/">{{ p.mesec }}</a>			
+			{% else %}
+				{{ p.mesec }}{% endif %}
 			</a></td>
   			{% endfor %}
   		</tr>

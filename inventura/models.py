@@ -371,6 +371,41 @@ class Eksponat(models.Model):
 		return "%d" % self.tiskovina_set.count()
 	st_digital.short_description = u'Št digital'
 
+	def vse_revije(self):
+		objects = []
+		if self.kategorija.slug == 'revija':
+			tiskovine = self.tiskovina_set.all()
+			primerki = self.primerek_set.all()
+			
+# list of physical magazines in collection			
+			for p in primerki:
+				s = p.serijska_st	#  1998-4 st. 4
+				parts = s.split('-')
+				if len(parts) == 1:
+					continue
+				parts = parts[1].split(' ')
+				o = {
+					'leto': p.leto_proizvodnje,
+					'mesec': int(re.search(r'\d+', parts[0]).group()),
+					'pk': p.pk
+				}
+# if we have connected digital editions add that to output
+				if p.tiskovina_set.all():
+					o['digital'] = p.tiskovina_set.first().pk
+				objects.append(o)
+
+# only add digital editions that don't have physical copy
+			for t in tiskovine:
+				if not t.primerek:
+					o = {
+						'leto': t.leto,
+						'mesec': t.mesec,
+						'digital': t.pk,
+					}
+					objects.append(o)
+
+		return objects
+
 	def __str__(self):
 		if self.tip:
 			return "%s - %s" % (self.ime, self.tip)
