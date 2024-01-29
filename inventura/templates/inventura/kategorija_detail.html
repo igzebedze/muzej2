@@ -72,7 +72,6 @@
   		<tr><td style='width: 3em'><b>{{ l.grouper }}</b></td>
   			{% for p in l.list|dictsort:"serijska_st" %}
   			<td style='width: 1.5em'>
-				{% if p.fotografije is not None %}<a href='{{ p.fotografije }}' target='_blank'>{% endif %}
   			
 				{% with prefix=l.grouper|to_unicode|add:'-' %}
   				{% if p.tiskovina_set.count > 0 %}
