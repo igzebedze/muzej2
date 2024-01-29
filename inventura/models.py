@@ -379,14 +379,13 @@ class Eksponat(models.Model):
 			
 # list of physical magazines in collection			
 			for p in primerki:
-				s = p.serijska_st	#  1998-4 st. 4
-				parts = s.split('-')
-				if len(parts) == 1:
+				if not re.search(r'(\d+)-(\d+)', p.serijska_st):
 					continue
-				parts = parts[1].split(' ')
+				leto = re.search(r'(\d+)-(\d+)', p.serijska_st).group(1)
+				mesec = re.search(r'(\d+)-(\d+)', p.serijska_st).group(2)
 				o = {
-					'leto': p.leto_proizvodnje,
-					'mesec': int(re.search(r'\d+', parts[0]).group()),
+					'leto': int(leto),
+					'mesec': int(mesec),
 					'pk': p.pk
 				}
 # if we have connected digital editions add that to output
@@ -397,9 +396,12 @@ class Eksponat(models.Model):
 # only add digital editions that don't have physical copy
 			for t in tiskovine:
 				if not t.primerek:
+					mesec = t.mesec
+					if not mesec:
+						mesec = 1
 					o = {
-						'leto': t.leto,
-						'mesec': t.mesec,
+						'leto': int(t.leto),
+						'mesec': int(mesec),
 						'digital': t.pk,
 					}
 					objects.append(o)
