@@ -80,7 +80,7 @@ urlpatterns = [
 
 	path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('slides/', include('django.contrib.flatpages.urls')),
+    #path('slides/', include('django.contrib.flatpages.urls')),
     path('search/', include('haystack.urls')),
 
     path('accounts/', include('django_registration.backends.activation.urls')),
@@ -88,6 +88,8 @@ urlpatterns = [
     path('accounts/profile/', user_profile),
     path("paddle/", include("djpaddle.urls", namespace="djpaddle")),
     path("themetest/", include(("theme.urls", 'theme'), namespace='theme')),
+    
+    path('', include('django.contrib.flatpages.urls')),
 ] 
 if settings.DEBUG is True:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
