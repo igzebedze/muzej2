@@ -35,6 +35,13 @@
     <meta description="Dostop do zbirke Računalniškega muzeja" />
     {% include './_components/head_common.html' %}
     <link href="{% get_media_prefix %}main.css" rel="stylesheet">
+    <style>
+      #terminal textarea:focus {
+        outline: none;
+        border: 0;
+        box-shadow: none;
+      }
+    </style>
   </head>
   <body class="bg-gray-50 pt-[90px] lg:pt-[115px]">
 	  {% include '_components/header.html' %}
