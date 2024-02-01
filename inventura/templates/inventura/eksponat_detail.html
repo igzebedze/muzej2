@@ -76,7 +76,7 @@
 					{% else %}
 						<ul>
 							{% for p in object.primerek_set.all %}
-							<li>{{ p }}, {{ p.serijska_st }}
+							<li>{{ p }}
 								{% if p.vhodni_dokument.dovoli_objavo %}
 									| Doniral: {{ p.vhodni_dokument.lastnik }} ({{ p.vhodni_dokument.cas_prevzema|date:"d M Y" }})
 								{% endif%}
