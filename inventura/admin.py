@@ -192,7 +192,7 @@ class PrimerekAdmin(SimpleHistoryAdmin):
 	list_select_related = True
 	#filter_horizontal = ('povezani',)
 	raw_id_fields = ("povezani",)
-	list_display = ('stevilka', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'st_razstav', 'ima_vhod')
+	list_display = ('stevilka', 'kategorija', 'eksponat', 'serijska_st', 'leto_proizvodnje', 'st_razstav', 'ima_vhod')
 #	list_filter = ('lokacija', VhodiCountListFilter, 'eksponat__kategorija')
 	list_filter = ('eksponat__kategorija', 'lokacija', 'polica')
 	readonly_fields = ('inventariziral', 'datum_inventarizacije')

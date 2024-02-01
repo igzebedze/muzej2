@@ -519,7 +519,10 @@ class Primerek(models.Model):
 		return "/admin/inventura/primerek/%d/" % (self.pk,)
 
 	def kategorija(self):
-		return self.eksponat.kategorija	
+		if self.eksponat:
+			return self.eksponat.kategorija	
+		else:
+			return "-"
 
 	def eksponat_name(self):
 		return "%s" % (self.eksponat.ime)
