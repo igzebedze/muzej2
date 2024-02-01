@@ -275,7 +275,7 @@ class RazstavaAdmin(SimpleHistoryAdmin):
 	
 class IzhodAdmin(SimpleHistoryAdmin):
 	filter_horizontal = ('primerki',)
-	list_display = ('prevzemnik', 'ustanova', 'namen')
+	list_display = ('prevzemnik', 'ustanova', 'namen', 'datum_vrnitve')
 	list_filter = ('namen', 'ustanova')
 
 class LokacijaAdmin(admin.ModelAdmin):
