@@ -83,8 +83,10 @@
 								{% if p.fotografija %}
 									| <a target="_blank" href="/media/{{ p.fotografija }}">Fotka</a> 
 								{% endif %}
-								{% if p.lokacija.ime == 'Spletni streznik'%}
+								{% if p.lokacija.ime == 'Spletni streznik' %}
+									{% if p.serijska_st|make_list|first != '/' %}
 									| <a target="_blank" href="{{ p.serijska_st }}">WWW</a>
+									{% endif %}
 								{% endif %}
 								{% if user.is_authenticated %}
 									(<a target="_blank" href="/admin/inventura/primerek/{{ p.pk }}/change/">Uredi</a>)       
