@@ -145,9 +145,9 @@
                 <br />{{ object.pages }} strani</p>
                 
                 {% if user.is_authenticated %}
-                    <a target="_blank" href="{{ root }}/{{ object.id }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
+                    <a target="_blank" href="{{ root }}/{{ object.id }}/"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
                 {% elif object.dovoljenje %}
-                    <a target="_blank" href="{{ root }}/{{ object.id }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
+                    <a target="_blank" href="{{ root }}/{{ object.id }}/"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
                 {% else %}
                     <a target="_blank" href="{{ object.eksponat.uradnastran }}"><img src="{{ object.get_cover_image }}" loading="lazy" /></a>
                 {% endif %}
